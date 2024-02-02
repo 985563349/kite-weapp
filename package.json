@@ -1,0 +1,21 @@
+{
+  "name": "ikun-weapp",
+  "version": "0.0.1",
+  "description": "🐔 A WeChat Mini Program Component Library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/985563349/ikun-weapp.git"
+  },
+  "keywords": [
+    "ikun",
+    "ikun-weapp",
+    "miniprogram"
+  ],
+  "author": "Jee",
+  "license": "MIT",
+  "homepage": "https://github.com/985563349/ikun-weapp#readme"
+}
