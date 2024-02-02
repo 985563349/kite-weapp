@@ -4,7 +4,11 @@
   "description": "🐔 A WeChat Mini Program Component Library",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node scripts/dev.js",
+    "build": "gulp -f scripts/build.js --cwd .",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "repository": {
     "type": "git",
@@ -12,10 +16,22 @@
   },
   "keywords": [
     "ikun",
-    "ikun-weapp",
     "miniprogram"
   ],
   "author": "Jee",
   "license": "MIT",
-  "homepage": "https://github.com/985563349/ikun-weapp#readme"
+  "homepage": "https://github.com/985563349/ikun-weapp#readme",
+  "devDependencies": {
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-typescript": "6.0.0-alpha.1",
+    "minimist": "^1.2.8",
+    "miniprogram-api-typings": "^3.12.2",
+    "sass": "^1.70.0",
+    "typescript": "^5.3.3",
+    "vitepress": "^1.1.3"
+  }
 }

@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "ES6",
+    "target": "ES6",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "lib": ["ESNext", "DOM"],
+    "moduleResolution": "Node",
+    "outDir": "dist",
+    "strict": true,
+    "skipLibCheck": true,
+    "types": ["miniprogram-api-typings"]
+  },
+  "include": ["src/**/*"]
+}
