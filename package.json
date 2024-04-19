@@ -2,7 +2,6 @@
   "name": "ikun-weapp",
   "version": "0.0.1",
   "description": "🐔 A WeChat Mini Program Component Library",
-  "main": "index.js",
   "type": "module",
   "scripts": {
     "dev": "node scripts/dev.js",
@@ -29,6 +28,10 @@
   "author": "Jee",
   "license": "MIT",
   "homepage": "https://github.com/985563349/ikun-weapp#readme",
+  "engines": {
+    "node": ">=20.11.1"
+  },
+  "packageManager": "pnpm@9.0.1",
   "devDependencies": {
     "@commitlint/cli": "^19.2.2",
     "@commitlint/config-conventional": "^19.2.2",
