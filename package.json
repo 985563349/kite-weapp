@@ -14,6 +14,10 @@
     "docs:preview": "vitepress preview docs",
     "prepare": "husky"
   },
+  "lint-staged": {
+    "*.{js,ts}": "eslint",
+    "*.{wxml,js,ts,wxs,scss,json}": "prettier --write"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/985563349/ikun-weapp.git"
@@ -38,6 +42,7 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-typescript": "6.0.0-alpha.1",
     "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "minimist": "^1.2.8",
     "miniprogram-api-typings": "^3.12.2",
     "prettier": "^3.2.5",
