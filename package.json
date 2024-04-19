@@ -3,11 +3,16 @@
   "version": "0.0.1",
   "description": "🐔 A WeChat Mini Program Component Library",
   "type": "module",
+  "miniprogram": "miniprogram_dist",
+  "files": [
+    "miniprogram_dist"
+  ],
   "scripts": {
     "dev": "node scripts/dev.js",
     "build": "gulp -f scripts/build.js --cwd .",
     "lint": "eslint \"src/**/*.{js,ts}\"",
     "format": "prettier \"src/**/*.{wxml,js,ts,wxs,scss,json}\" --write",
+    "release": "release-it",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
@@ -36,6 +41,7 @@
     "@commitlint/cli": "^19.2.2",
     "@commitlint/config-conventional": "^19.2.2",
     "@eslint/js": "^9.0.0",
+    "@release-it/conventional-changelog": "^8.0.1",
     "del": "^5.1.0",
     "eslint": "^9.0.0",
     "globals": "^15.0.0",
@@ -49,6 +55,7 @@
     "minimist": "^1.2.8",
     "miniprogram-api-typings": "^3.12.2",
     "prettier": "^3.2.5",
+    "release-it": "^17.2.0",
     "sass": "^1.70.0",
     "typescript": "^5.3.3",
     "typescript-eslint": "^7.7.0",
