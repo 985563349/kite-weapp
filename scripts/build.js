@@ -1,13 +1,14 @@
-const gulp = require('gulp');
-const ts = require('gulp-typescript');
-const sourcemaps = require('gulp-sourcemaps');
-const sass = require('gulp-sass')(require('sass'));
-const rename = require('gulp-rename');
-const del = require('del');
-const minimist = require('minimist');
+import gulp from 'gulp';
+import ts from 'gulp-typescript';
+import sourcemaps from 'gulp-sourcemaps';
+import gulpSass from 'gulp-sass';
+import dartSass from 'sass';
+import rename from 'gulp-rename';
+import del from 'del';
+import minimist from 'minimist';
 
+const sass = gulpSass(dartSass);
 const argv = minimist(process.argv.slice(2));
-
 const entry = argv.entry || 'src';
 const output = argv.output || 'miniprogram_dist';
 
@@ -58,4 +59,4 @@ if (argv.hot) {
   compilerTasks.push(watch);
 }
 
-exports.default = gulp.series(clean, gulp.parallel(...compilerTasks));
+export default gulp.series(clean, gulp.parallel(...compilerTasks));

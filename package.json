@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "🐔 A WeChat Mini Program Component Library",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "node scripts/dev.js",
     "build": "gulp -f scripts/build.js --cwd .",
