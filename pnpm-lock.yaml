@@ -41,6 +41,9 @@ importers:
       miniprogram-api-typings:
         specifier: ^3.12.2
         version: 3.12.2
+      prettier:
+        specifier: ^3.2.5
+        version: 3.2.5
       sass:
         specifier: ^1.70.0
         version: 1.70.0
@@ -1938,6 +1941,11 @@ packages:
 
   preact@10.19.3:
     resolution: {integrity: sha512-nHHTeFVBTHRGxJXKkKu5hT8C/YWBkPso4/Gad6xuj5dbptt9iF9NZr9pHbPhBrnT2klheu7mHTxTZ/LjwJiEiQ==}
+
+  prettier@3.2.5:
+    resolution: {integrity: sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==}
+    engines: {node: '>=14'}
+    hasBin: true
 
   pretty-hrtime@1.0.3:
     resolution: {integrity: sha512-66hKPCr+72mlfiSjlEB1+45IjXSqvVAIy6mocupoww4tBFE9R9IhwwUGoI4G++Tc9Aq+2rxOt0RFU6gPcrte0A==}
@@ -4551,6 +4559,8 @@ snapshots:
       source-map-js: 1.2.0
 
   preact@10.19.3: {}
+
+  prettier@3.2.5: {}
 
   pretty-hrtime@1.0.3: {}
 
