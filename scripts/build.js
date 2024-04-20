@@ -1,20 +1,18 @@
 import gulp from 'gulp';
 import ts from 'gulp-typescript';
 import sourcemaps from 'gulp-sourcemaps';
-import gulpSass from 'gulp-sass';
-import dartSass from 'sass';
+import less from 'gulp-less';
 import rename from 'gulp-rename';
 import del from 'del';
 import minimist from 'minimist';
 
-const sass = gulpSass(dartSass);
 const argv = minimist(process.argv.slice(2));
 const entry = argv.entry || 'src';
 const output = argv.output || 'miniprogram_dist';
 
 const globs = {
   ts: `${entry}/**/*.ts`,
-  scss: `${entry}/**/*.scss`,
+  less: `${entry}/**/*.less`,
   static: `${entry}/**/*.{wxml,wxs,json}`,
 };
 
@@ -29,11 +27,11 @@ function typescript() {
     .pipe(gulp.dest(output));
 }
 
-function scss() {
+function style() {
   return gulp
-    .src(globs.scss)
+    .src(globs.less)
     .pipe(sourcemaps.init())
-    .pipe(sass())
+    .pipe(less())
     .pipe(rename({ extname: '.wxss' }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(output));
@@ -49,11 +47,11 @@ function clean() {
 
 function watch() {
   gulp.watch(globs.ts, typescript);
-  gulp.watch(globs.scss, scss);
+  gulp.watch(globs.less, style);
   gulp.watch(globs.static, copier);
 }
 
-const compilerTasks = [typescript, scss, copier];
+const compilerTasks = [typescript, style, copier];
 
 if (argv.hot) {
   compilerTasks.push(watch);

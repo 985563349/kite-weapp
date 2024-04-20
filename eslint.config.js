@@ -9,7 +9,7 @@ export default [
   {
     files: ['scripts/**'],
     languageOptions: {
-      global: globals.node,
+      globals: globals.node,
     },
   },
   {
