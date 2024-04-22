@@ -3,10 +3,10 @@ export default {
   verbose: true,
   testEnvironment: 'jsdom',
   moduleFileExtensions: ['js', 'ts'],
-  testMatch: ['<rootDir>/src/**/__test__/**/*.spec.{js,ts}'],
-  collectCoverageFrom: ['<rootDir>/src/**/*.{js,ts}', '!**/__test__/**'],
+  testMatch: ['<rootDir>/src/**/test/**/*.spec.{js,ts}'],
+  collectCoverageFrom: ['<rootDir>/src/**/*.{js,ts}', '!**/test/**'],
   snapshotSerializers: ['miniprogram-simulate/jest-snapshot-plugin'],
   transform: {
-    '^.+\\.(t|j)sx?$': '@swc/jest',
+    '^.+\\.(t|j)s$': '@swc/jest',
   },
 };

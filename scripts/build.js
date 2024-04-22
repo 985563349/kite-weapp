@@ -11,6 +11,7 @@ const entry = argv.entry || 'src';
 const output = argv.output || 'miniprogram_dist';
 
 const globs = {
+  ts: `${entry}/**/*.ts`,
   less: `${entry}/**/*.less`,
   static: `${entry}/**/*.{wxml,wxs,json}`,
 };

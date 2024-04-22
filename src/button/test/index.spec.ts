@@ -1,5 +1,5 @@
-import simulate from 'miniprogram-simulate';
 import { resolve } from 'node:path';
+import simulate from 'miniprogram-simulate';
 
 test('button', () => {
   const id = simulate.load(resolve(__dirname, '../button'));

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button basic 1`] = `
+<main>
+  <k-button>
+    <wx-button
+      class="i-button"
+    >
+      button
+    </wx-button>
+  </k-button>
+</main>
+`;
