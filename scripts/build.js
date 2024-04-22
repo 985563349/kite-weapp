@@ -11,7 +11,6 @@ const entry = argv.entry || 'src';
 const output = argv.output || 'miniprogram_dist';
 
 const globs = {
-  ts: `${entry}/**/*.ts`,
   less: `${entry}/**/*.less`,
   static: `${entry}/**/*.{wxml,wxs,json}`,
 };
@@ -19,8 +18,8 @@ const globs = {
 function typescript() {
   const tsProject = ts.createProject('tsconfig.json');
 
-  return gulp
-    .src(globs.ts)
+  return tsProject
+    .src()
     .pipe(sourcemaps.init())
     .pipe(tsProject())
     .pipe(sourcemaps.write('.'))

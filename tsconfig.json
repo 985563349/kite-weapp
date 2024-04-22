@@ -14,5 +14,6 @@
     "skipLibCheck": true,
     "types": ["miniprogram-api-typings", "node", "jest"]
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*"],
+  "exclude": ["**/*.spec.ts"]
 }
