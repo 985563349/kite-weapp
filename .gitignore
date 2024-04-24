@@ -12,6 +12,7 @@ cache
 dist
 dist-ssr
 miniprogram_dist
+coverage
 *.local
 
 # Editor directories and files
