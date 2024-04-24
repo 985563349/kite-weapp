@@ -12,7 +12,7 @@ const source = 'miniprogram_dist/';
 const target = `example/miniprogram/miniprogram_npm/${pkg.name}`;
 
 function clean() {
-  return del([`${output}/**`, `!${output}/{index,logs}`]);
+  return del([`${output}/**`, `!${output}/{index}`]);
 }
 
 function copier() {

@@ -4,7 +4,8 @@
   "compileType": "miniprogram",
   "setting": {
     "useCompilerPlugins": [
-      "typescript"
+      "typescript",
+      "less"
     ],
     "babelSetting": {
       "ignore": [],
@@ -29,7 +30,7 @@
     "tabIndent": "insertSpaces",
     "tabSize": 2
   },
-  "libVersion": "trial",
+  "libVersion": "2.32.3",
   "packOptions": {
     "ignore": [],
     "include": []

@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "k-button": "ikun-weapp/button/button"
+  }
+}

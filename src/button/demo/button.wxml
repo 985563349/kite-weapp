@@ -1,0 +1,4 @@
+<view>
+  <text>button page</text>
+  <k-button></k-button>
+</view>
