@@ -4,11 +4,10 @@ import sourcemaps from 'gulp-sourcemaps';
 import less from 'gulp-less';
 import rename from 'gulp-rename';
 import del from 'del';
-import minimist from 'minimist';
 
-const argv = minimist(process.argv.slice(2));
-const entry = argv.entry || 'src';
-const output = argv.output || 'miniprogram_dist';
+const entry = 'src';
+const output = 'miniprogram_dist';
+const ignore = ['**/test/**', '**/demo/**'];
 
 const globs = {
   ts: `${entry}/**/*.ts`,
@@ -19,8 +18,8 @@ const globs = {
 function typescript() {
   const tsProject = ts.createProject('tsconfig.json');
 
-  return tsProject
-    .src()
+  return gulp
+    .src(globs.ts, { ignore })
     .pipe(sourcemaps.init())
     .pipe(tsProject())
     .pipe(sourcemaps.write('.'))
@@ -29,7 +28,7 @@ function typescript() {
 
 function style() {
   return gulp
-    .src(globs.less)
+    .src(globs.less, { ignore })
     .pipe(sourcemaps.init())
     .pipe(less())
     .pipe(rename({ extname: '.wxss' }))
@@ -38,23 +37,20 @@ function style() {
 }
 
 function copier() {
-  return gulp.src(globs.static).pipe(gulp.dest(output));
+  return gulp.src(globs.static, { ignore }).pipe(gulp.dest(output));
 }
 
 function clean() {
   return del(`${output}/**`);
 }
 
-function watch() {
+export const build = gulp.series(
+  clean,
+  gulp.parallel(typescript, style, copier)
+);
+
+export const watch = () => {
   gulp.watch(globs.ts, typescript);
   gulp.watch(globs.less, style);
   gulp.watch(globs.static, copier);
-}
-
-const compilerTasks = [typescript, style, copier];
-
-if (argv.hot) {
-  compilerTasks.push(watch);
-}
-
-export default gulp.series(clean, gulp.parallel(...compilerTasks));
+};

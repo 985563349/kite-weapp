@@ -8,8 +8,8 @@
     "miniprogram_dist"
   ],
   "scripts": {
-    "dev": "node scripts/dev.js",
-    "build": "gulp -f scripts/build.js --cwd .",
+    "dev": "gulp -f scripts/gulpfile.js dev --cwd .",
+    "build": "gulp -f scripts/gulpfile.js build --cwd .",
     "lint": "eslint \"src/**/*.{js,ts}\"",
     "format": "prettier \"src/**/*.{wxml,js,ts,wxs,scss,json}\" --write",
     "test": "jest",
