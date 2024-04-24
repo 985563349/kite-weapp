@@ -3,22 +3,28 @@
 layout: home
 
 hero:
-  name: 'ikun weapp'
-  text: '🐔 A WeChat Mini Program Component Library'
-  tagline: My great project tagline
+  name: 'iKun WeApp'
+  text: '微信小程序组件库'
+  tagline: 厉不厉害你坤哥
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: 快速开始
+      link: /guide/quick-start
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: GitHub
+      link: https://github.com/985563349/ikun-weapp
 
 features:
   - title: Feature A
+    icon: 🎤
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   - title: Feature B
+    icon: 💃
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   - title: Feature C
+    icon: 🤟
+    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Feature D
+    icon: 🏀
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
