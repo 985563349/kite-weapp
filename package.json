@@ -13,6 +13,7 @@
     "lint": "eslint \"src/**/*.{js,ts}\"",
     "format": "prettier \"src/**/*.{wxml,js,ts,wxs,scss,json}\" --write",
     "test": "jest",
+    "test:watch": "jest --watch",
     "release": "release-it",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",

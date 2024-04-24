@@ -1,22 +1,10 @@
-import path from 'path';
+import path from 'node:path';
 import simulate from 'miniprogram-simulate';
 
-describe('Button', () => {
-  const button = simulate.load(
-    path.resolve(__dirname, '../button'),
-    'k-button'
-  );
+test('button snapshot', async () => {
+  const id = simulate.load(path.resolve(__dirname, '../demo/button'), 'basic');
+  const container = simulate.render(id);
 
-  test('basic', async () => {
-    const comp = simulate.render(
-      simulate.load({
-        usingComponents: {
-          'k-button': button,
-        },
-        template: `<k-button />`,
-      })
-    );
-    comp.attach(document.createElement('parent-wrapper'));
-    expect(comp.toJSON()).toMatchSnapshot();
-  });
+  container.attach(document.createElement('parent-wrapper'));
+  expect(container.toJSON()).toMatchSnapshot();
 });

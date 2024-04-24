@@ -1,13 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button basic 1`] = `
-<main>
-  <k-button>
-    <wx-button
-      class="i-button"
-    >
-      button
-    </wx-button>
-  </k-button>
-</main>
+exports[`button snapshot 1`] = `
+<basic>
+  <wx-view>
+    <wx-text>
+      button page
+    </wx-text>
+    <k-button />
+  </wx-view>
+</basic>
 `;
