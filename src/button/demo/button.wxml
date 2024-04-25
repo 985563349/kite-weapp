@@ -1,4 +1,31 @@
 <view>
-  <text>button page</text>
-  <k-button></k-button>
+  <view>Button 按钮</view>
+
+  <view>
+    <view>类型</view>
+    <view>
+      <k-button>Default</k-button>
+      <k-button variant="clear">Clear</k-button>
+      <k-button variant="outline">Outline</k-button>
+    </view>
+  </view>
+
+  <view>
+    <view>样式</view>
+    <view>
+      <k-button size="small">Small</k-button>
+      <k-button size="default">Default</k-button>
+      <k-button size="large">large</k-button>
+    </view>
+  </view>
+
+  <view>
+    <view>主题</view>
+    <view>
+      <k-button>Default</k-button>
+      <k-button color="success">Success</k-button>
+      <k-button color="warning">Warning</k-button>
+      <k-button color="danger">dander</k-button>
+    </view>
+  </view>
 </view>

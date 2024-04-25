@@ -1,0 +1,7 @@
+function isArray(value) {
+  return value != null && value.constructor === 'Array';
+}
+
+module.exports = {
+  isArray: isArray,
+};

@@ -1,3 +1,27 @@
+@import '../common/style/variables.less';
+
 .k-button {
-  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  white-space: nowrap;
+  text-align: center;
+  outline: none;
+  border-radius: var(--button-border-radius, @button-border-radius);
+
+  &--warning {
+    background-color: var(--button-warning-background-color, @button-warning-background-color);
+    color: var(--button-warning-color, @button-warning-color);
+  }
+
+  &--success {
+    background-color: var(--button-success-background-color, @button-success-background-color);
+    color: var(--button-success-color, @button-success-color);
+  }
+
+  &--danger {
+    background-color: var(--button-danger--background-color, @button-danger-background-color);
+    color: var(--button-danger-color, @button-danger-color);
+  }
 }

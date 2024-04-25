@@ -1,0 +1,14 @@
+var REGEXP = getRegExp('{|}|"', 'g');
+
+function keys(value) {
+  return JSON.stringify(value)
+    .replace(REGEXP, '')
+    .split(',')
+    .map(function (item) {
+      return item.split(':')[0];
+    });
+}
+
+module.exports = {
+  keys: keys,
+};

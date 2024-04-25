@@ -1,0 +1,6 @@
+var bem = require('./bem.wxs');
+var memoize = require('./memoize.wxs');
+
+module.exports = {
+  bem: memoize(bem),
+};

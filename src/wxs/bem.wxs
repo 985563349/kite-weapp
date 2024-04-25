@@ -1,0 +1,41 @@
+var array = require('./array.wxs');
+var object = require('./object.wxs');
+
+var PREFIX = 'k-';
+
+function join(name, mods) {
+  var basename = PREFIX + name;
+  var classnames = [basename];
+
+  mods.forEach(function (mod) {
+    classnames.push(basename + '--' + mod);
+  });
+
+  return classnames.join(' ');
+}
+
+function traversing(config) {
+  var mods = [];
+
+  if ((typeof config === 'string' && !!config) || typeof config === 'number') {
+    mods.push(config);
+  } else if (array.isArray(config)) {
+    config.forEach(function (item) {
+      mods = mods.concat(traversing(item));
+    });
+  } else if (typeof config === 'object') {
+    object.keys(config).forEach(function (key) {
+      if (config[key]) {
+        mods.push(key);
+      }
+    });
+  }
+
+  return mods;
+}
+
+function bem(name, config) {
+  return join(name, traversing(config));
+}
+
+module.exports = bem;
