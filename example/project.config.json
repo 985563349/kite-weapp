@@ -19,9 +19,9 @@
     "showShadowRootInWxmlPanel": false,
     "packNpmRelationList": [],
     "ignoreUploadUnusedFiles": true,
-    "compileHotReLoad": false,
-    "skylineRenderEnable": true,
-    "es6": true
+    "compileHotReLoad": true,
+    "es6": true,
+    "swc": true
   },
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
@@ -31,10 +31,11 @@
     "tabIndent": "insertSpaces",
     "tabSize": 2
   },
-  "libVersion": "2.32.3",
+  "libVersion": "trial",
   "packOptions": {
     "ignore": [],
     "include": []
   },
-  "appid": "wxb66225a09ffafc18"
+  "appid": "wxb66225a09ffafc18",
+  "projectname": "ikun-weapp"
 }

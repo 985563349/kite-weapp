@@ -1,5 +1,3 @@
-<navigation-bar title="Weixin" back="{{false}}" color="black" background="#FFF"></navigation-bar>
-
 <view>
   <navigator url="/pages/button/button">button</navigator>
 </view>
