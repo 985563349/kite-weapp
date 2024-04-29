@@ -3,7 +3,10 @@ import ts from 'gulp-typescript';
 import sourcemaps from 'gulp-sourcemaps';
 import less from 'gulp-less';
 import rename from 'gulp-rename';
+import gulpif from 'gulp-if';
 import del from 'del';
+
+const isProduction = process.env.NODE_ENV === 'production';
 
 const entry = 'src';
 const output = 'miniprogram_dist';
@@ -20,19 +23,19 @@ function typescript() {
 
   return gulp
     .src(globs.ts, { ignore })
-    .pipe(sourcemaps.init())
+    .pipe(gulpif(!isProduction, sourcemaps.init()))
     .pipe(tsProject())
-    .pipe(sourcemaps.write('.'))
+    .pipe(gulpif(!isProduction, sourcemaps.write('.')))
     .pipe(gulp.dest(output));
 }
 
 function style() {
   return gulp
     .src(globs.less, { ignore })
-    .pipe(sourcemaps.init())
+    .pipe(gulpif(!isProduction, sourcemaps.init()))
     .pipe(less())
     .pipe(rename({ extname: '.wxss' }))
-    .pipe(sourcemaps.write('.'))
+    .pipe(gulpif(!isProduction, sourcemaps.write('.')))
     .pipe(gulp.dest(output));
 }
 
@@ -44,10 +47,7 @@ function clean() {
   return del(`${output}/**`);
 }
 
-export const build = gulp.series(
-  clean,
-  gulp.parallel(typescript, style, copier)
-);
+export const build = gulp.series(clean, gulp.parallel(typescript, style, copier));
 
 export const watch = () => {
   gulp.watch(globs.ts, typescript);

@@ -8,8 +8,8 @@
     "miniprogram_dist"
   ],
   "scripts": {
-    "dev": "gulp -f scripts/gulpfile.js dev --cwd .",
-    "build": "gulp -f scripts/gulpfile.js build --cwd .",
+    "dev": "cross-env NODE_ENV=development gulp -f scripts/gulpfile.js dev --cwd .",
+    "build": "cross-env NODE_ENV=production gulp -f scripts/gulpfile.js build --cwd .",
     "lint": "eslint \"src/**/*.{js,ts}\"",
     "format": "prettier \"src/**/*.{wxml,js,ts,wxs,scss,json}\" --write",
     "test": "jest",
@@ -48,10 +48,12 @@
     "@swc/jest": "^0.2.36",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.12.7",
+    "cross-env": "^7.0.3",
     "del": "^5.1.0",
     "eslint": "^9.0.0",
     "globals": "^15.0.0",
     "gulp": "^4.0.2",
+    "gulp-if": "^3.0.0",
     "gulp-less": "^5.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-sourcemaps": "^3.0.0",
