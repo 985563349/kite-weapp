@@ -10,8 +10,8 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development gulp -f scripts/gulpfile.js dev --cwd .",
     "build": "cross-env NODE_ENV=production gulp -f scripts/gulpfile.js build --cwd .",
-    "lint": "eslint \"src/**/*.{js,ts}\"",
-    "format": "prettier \"src/**/*.{wxml,js,ts,wxs,scss,json}\" --write",
+    "lint": "eslint \"{src,example}/**/*.{js,ts}\"",
+    "format": "prettier \"{src,example,scripts}/**/*.{wxml,js,ts,wxs,scss,json}\" --write",
     "test": "jest",
     "cover": "jest --coverage",
     "release": "release-it",
