@@ -1,11 +1,10 @@
 // Color Palette
 @black: #000;
 @white: #fff;
-@red: #e13c47;
-@green: #2dd55b;
+@red: #f31260;
+@green: #17c964;
 @blue: #006fee;
-@yellow: #dddc21;
-@orange: #f56e35;
+@yellow: #f5a524;
 @gray: #d4d4d8;
 
 // Spacer
@@ -17,18 +16,60 @@
 @spacer-l: var(--spacer-md, 40rpx);
 @spacer-xl: var(--spacer-lg, 48rpx);
 
-// Border
-@radius-default: 24rpx;
+// Font
+@font-size: var(--font-size, 20rpx);
+@font-size-xs: var(--font-size-xs, @font-size);
+@font-size-s: var(--font-size-s, 24rpx);
+@font-size-base: var(--font-size-base, 28rpx);
+@font-size-m: var(--font-size-m, 32rpx);
+@font-size-l: var(--font-size-l, 40rpx);
+@font-size-xl: var(--font-size-xl, 72rpx);
+
+@font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Roboto', sans-serif;
+
+// Radius
+@radius-small: var(--radius-small, 16rpx);
+@radius-default: var(--radius-default, 24rpx);
+@radius-large: var(--radius-large, 28rpx);
+@radius-round: var(--radius-round, 999px);
 
 // Button
-@button-success-color: @white;
-@button-success-background-color: @green;
+@button-font-weight: var(--button-font-weight, 500);
+@button-border-width: var(--button-width, 2px);
+@button-border-radius: var(--button-border-radius, @radius-default);
+@button-round-border-radius: var(--button-round-border-radius, @radius-round);
+@button-disabled-opacity: var(--button-disabled-opacity, 0.5);
+
+@button-small-font-size: var(--button-small-font-size, @font-size-base);
+@button-small-height: var(--button-small-height, 64rpx);
+@button-small-padding-inline: var(--button-small-padding-inline, 24rpx);
+
+@button-default-font-size: var(--button-default-font-size, @font-size-m);
+@button-default-height: var(--button-default-height, 80rpx);
+@button-default-padding-inline: var(--button-default-padding-inline, 32rpx);
+
+@button-large-font-size: var(--button-large-font-size, @font-size-m);
+@button-large-height: var(--button-large-height, 96rpx);
+@button-large-padding-inline: var(--button-large-padding-inline, 40rpx);
+
+@button-default-color: var(--button-default-color, @black);
+@button-default-background-color: var(--button-default-background-color, @gray);
+@button-default-border-color: var(--button-default-border-color, @black);
+
+@button-primary-color: var(--button-primary-color, @white);
+@button-primary-background-color: var(--button-primary-background-color, @blue);
+@button-primary-border-color: @blue;
+
+@button-success-color: var(--button-success-color, @white);
+@button-success-background-color: var(--button-success-background-color, @green);
 @button-success-border-color: @green;
-@button-warning-color: @white;
-@button-warning-background-color: @orange;
-@button-warning-border-color: @orange;
-@button-danger-color: @white;
-@button-danger-background-color: @red;
+
+@button-warning-color: var(--button-warning-color, @black);
+@button-warning-background-color: var(--button-warning-background-color, @yellow);
+@button-warning-border-color: @yellow;
+
+@button-danger-color: var(--button-danger-color, @white);
+@button-danger-background-color: var(--button-danger-background-color, @red);
 @button-danger-border-color: @red;
 @button-border-radius: @radius-default;
 

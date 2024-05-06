@@ -1,5 +1,33 @@
 <wxs src="../wxs/utils.wxs" module="utils" />
 
-<button class="{{ utils.bem('button', [color, size]) }}">
+<button
+  id="{{ kId }}"
+  style="{{ style }}"
+  class="k-class {{ utils.bem('button', [color, expand, shape, size, variant, { disabled }]) }}"
+  hover-class="{{ disabled || loading ? '' : 'k-button--active hover-class' }}"
+  form-type="{{ disabled || loading ? '' : type }}"
+  open-type="{{ disabled || loading ? '' : openType }}"
+  hover-stop-propagation="{{ hoverStopPropagation }}"
+  hover-start-time="{{ hoverStartTime }}"
+  hover-stay-time="{{ hoverStayTime }}"
+  send-message-title="{{ sendMessageTitle }}"
+  send-message-path="{{ sendMessagePath }}"
+  send-message-img="{{ sendMessageImg }}"
+  app-parameter="{{ appParameter }}"
+  show-message-card="{{ showMessageCard }}"
+  phone-number-no-quota-toast="{{ phoneNumberNoQuotaToast }}"
+  lang="{{ lang }}"
+  aria-label="{{ ariaLabel }}"
+  bind:tap="onTap"
+  bind:getuserinfo="getUserInfo"
+  bind:contact="contact"
+  bind:getphonenumber="getPhoneNumber"
+  bind:error="error"
+  bind:opensetting="opensetting"
+  bind:launchapp="launchapp"
+  bind:chooseavatar="chooseavatar"
+  bind:agreeprivacyauthorization="agreeprivacyauthorization"
+>
+  <k-loading wx:if="{{ loading }}" size="sm" color="current" />
   <slot />
 </button>

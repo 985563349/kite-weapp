@@ -1,4 +1,7 @@
 {
   "component": true,
-  "usingComponents": {}
+  "styleIsolation": "apply-shared",
+  "usingComponents": {
+    "k-loading": "../loading/loading"
+  }
 }

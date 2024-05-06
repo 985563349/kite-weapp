@@ -5,17 +5,33 @@
     <view>类型</view>
     <view>
       <k-button>Default</k-button>
-      <k-button variant="clear">Clear</k-button>
-      <k-button variant="outline">Outline</k-button>
+      <k-button color="primary" variant="clear">Clear</k-button>
+      <k-button color="success" variant="outline">Outline</k-button>
     </view>
   </view>
 
   <view>
-    <view>样式</view>
+    <view>图标</view>
     <view>
-      <k-button size="small">Small</k-button>
-      <k-button size="default">Default</k-button>
-      <k-button size="large">large</k-button>
+      <k-button color="primary" loading>Loading</k-button>
+    </view>
+  </view>
+
+  <view>
+    <view>状态</view>
+    <view>
+      <k-button disabled>Default</k-button>
+      <k-button color="primary" variant="clear" disabled>Clear</k-button>
+      <k-button color="success" variant="outline" disabled>Outline</k-button>
+    </view>
+  </view>
+
+  <view>
+    <view>尺寸</view>
+    <view>
+      <k-button size="sm">Small</k-button>
+      <k-button>Default</k-button>
+      <k-button size="lg">large</k-button>
     </view>
   </view>
 
@@ -23,9 +39,20 @@
     <view>主题</view>
     <view>
       <k-button>Default</k-button>
+      <k-button color="primary">Primary</k-button>
       <k-button color="success">Success</k-button>
       <k-button color="warning">Warning</k-button>
-      <k-button color="danger">dander</k-button>
+      <k-button color="danger">Dander</k-button>
+    </view>
+  </view>
+
+  <view>
+    <view>形状</view>
+    <view>
+      <k-button color="danger" shape="round">Success</k-button>
+      <k-button color="warning" shape="round" variant="outline">Success</k-button>
+      <k-button color="success" expand="block" size="lg">Primary</k-button>
+      <k-button color="primary" expand="full" size="lg">Success</k-button>
     </view>
   </view>
 </view>

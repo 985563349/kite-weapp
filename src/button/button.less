@@ -1,27 +1,165 @@
-@import '../common/style/variables.less';
+@import '../common/style/index.less';
 
-.k-button {
+@button: ~'k-button';
+
+.@{button} {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: @spacer-s;
   box-sizing: border-box;
   white-space: nowrap;
   text-align: center;
   outline: none;
-  border-radius: var(--button-border-radius, @button-border-radius);
+  border-radius: @button-border-radius;
+  margin: 0;
+  padding-inline: @button-default-padding-inline;
+  height: @button-default-height;
+  line-height: @button-default-height;
+  font-size: @button-default-font-size;
+  font-weight: @button-font-weight;
+  font-family: @font-family;
+  vertical-align: top;
+  color: @button-default-color;
+  background-color: @button-default-background-color;
 
-  &--warning {
-    background-color: var(--button-warning-background-color, @button-warning-background-color);
-    color: var(--button-warning-color, @button-warning-color);
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    content: '';
+    opacity: 0;
+    background-color: @black;
+  }
+
+  &--active::before {
+    opacity: 0.15;
+  }
+
+  &::after {
+    display: none;
+  }
+
+  &--primary {
+    color: @button-primary-color;
+    background-color: @button-primary-background-color;
   }
 
   &--success {
-    background-color: var(--button-success-background-color, @button-success-background-color);
-    color: var(--button-success-color, @button-success-color);
+    color: @button-success-color;
+    background-color: @button-success-background-color;
+  }
+
+  &--warning {
+    color: @button-warning-color;
+    background-color: @button-warning-background-color;
   }
 
   &--danger {
-    background-color: var(--button-danger--background-color, @button-danger-background-color);
-    color: var(--button-danger-color, @button-danger-color);
+    color: @button-danger-color;
+    background-color: @button-danger-background-color;
+  }
+
+  &--block {
+    display: flex;
+    width: 100%;
+  }
+
+  &--full {
+    display: flex;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  &--round {
+    border-radius: @button-round-border-radius;
+  }
+
+  &--sm {
+    font-size: @button-small-font-size;
+    padding-inline: @button-small-padding-inline;
+    height: @button-small-height;
+    line-height: @button-small-height;
+  }
+
+  &--lg {
+    font-size: @button-large-font-size;
+    padding-inline: @button-large-padding-inline;
+    height: @button-large-height;
+    line-height: @button-large-height;
+  }
+
+  &--clear {
+    background-color: transparent;
+
+    &::before {
+      display: none;
+    }
+
+    &.@{button}--active {
+      opacity: 0.5;
+    }
+
+    &.@{button}--primary {
+      color: @button-primary-background-color;
+    }
+
+    &.@{button}--success {
+      color: @button-success-background-color;
+    }
+
+    &.@{button}--warning {
+      color: @button-warning-background-color;
+    }
+
+    &.@{button}--danger {
+      color: @button-danger-background-color;
+    }
+  }
+
+  &--outline {
+    border-width: @button-border-width;
+    border-style: solid;
+    background-color: transparent;
+
+    &.@{button}--primary {
+      color: @button-primary-background-color;
+
+      &::before {
+        background-color: @button-primary-background-color;
+      }
+    }
+
+    &.@{button}--success {
+      color: @button-success-background-color;
+
+      &::before {
+        background-color: @button-success-background-color;
+      }
+    }
+
+    &.@{button}--warning {
+      color: @button-warning-background-color;
+
+      &::before {
+        background-color: @button-warning-background-color;
+      }
+    }
+
+    &.@{button}--danger {
+      color: @button-danger-background-color;
+
+      &::before {
+        background-color: @button-danger-background-color;
+      }
+    }
+  }
+
+  &--disabled {
+    opacity: @button-disabled-opacity;
   }
 }
