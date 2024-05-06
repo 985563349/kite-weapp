@@ -12,7 +12,7 @@
     "build": "cross-env NODE_ENV=production gulp -f scripts/gulpfile.js build --cwd .",
     "lint": "eslint \"{src,example}/**/*.{js,ts}\"",
     "format": "prettier \"{src,example,scripts}/**/*.{wxml,js,ts,wxs,scss,json}\" --write",
-    "test": "jest",
+    "test": "jest --watch",
     "cover": "jest --coverage",
     "release": "release-it",
     "docs:dev": "vitepress dev docs",
