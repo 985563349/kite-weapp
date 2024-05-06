@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`loading snapshot 1`] = `
+<basic>
+  <wx-view>
+    <wx-view>
+      Spinner 加载
+    </wx-view>
+    <wx-view>
+      <wx-view>
+        尺寸
+      </wx-view>
+      <wx-view>
+        <k-loading
+          size="sm"
+        />
+        <k-loading />
+        <k-loading
+          size="lg"
+        />
+      </wx-view>
+    </wx-view>
+    <wx-view>
+      <wx-view>
+        主题
+      </wx-view>
+      <wx-view>
+        <k-loading />
+        <k-loading
+          color="primary"
+        />
+        <k-loading
+          color="success"
+        />
+        <k-loading
+          color="warning"
+        />
+        <k-loading
+          color="danger"
+        />
+      </wx-view>
+    </wx-view>
+    <wx-view>
+      <wx-view>
+        标签
+      </wx-view>
+      <wx-view>
+        <k-loading
+          label="加载中..."
+        />
+      </wx-view>
+    </wx-view>
+    <wx-view>
+      <wx-view>
+        垂直布局
+      </wx-view>
+      <wx-view>
+        <k-loading
+          label="加载中"
+          vertical="{{true}}"
+        />
+      </wx-view>
+    </wx-view>
+    <wx-view>
+      <wx-view>
+        标签颜色
+      </wx-view>
+      <wx-view>
+        <k-loading
+          label="加载中"
+          vertical="{{true}}"
+        />
+        <k-loading
+          color="primary"
+          label="加载中"
+          vertical="{{true}}"
+        />
+      </wx-view>
+    </wx-view>
+  </wx-view>
+</basic>
+`;

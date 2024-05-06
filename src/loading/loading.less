@@ -1,0 +1,75 @@
+@import '../common/style/variables.less';
+
+@loading: ~'k-loading';
+
+.@{loading} {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: @spacer-s;
+  color: @loading-default-color;
+
+  &__spinner {
+    box-sizing: border-box;
+    border: 2px solid currentColor;
+    border-top-color: transparent;
+    border-radius: 100%;
+    width: @loading-default-size;
+    height: @loading-default-size;
+    animation: circular infinite @loading-animation-duration linear;
+  }
+
+  &--current {
+    color: currentColor;
+  }
+
+  &--primary {
+    color: @loading-primary-color;
+  }
+
+  &--success {
+    color: @loading-success-color;
+  }
+
+  &--warning {
+    color: @loading-warning-color;
+  }
+
+  &--danger {
+    color: @loading-danger-color;
+  }
+
+  &--sm {
+    .@{loading}__spinner {
+      width: @loading-small-size;
+      height: @loading-small-size;
+    }
+  }
+
+  &--lg {
+    .@{loading}__spinner {
+      width: @loading-large-size;
+      height: @loading-large-size;
+    }
+  }
+
+  &--vertical {
+    flex-direction: column;
+    gap: @spacer;
+  }
+
+  &__label {
+    font-size: @loading-label-font-size;
+    line-height: @loading-label-line-height;
+  }
+}
+
+@keyframes circular {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "pages": ["pages/index/index", "pages/button/button"],
+  "pages": ["pages/index/index", "pages/button/button", "pages/loading/loading"],
   "window": {
     "navigationBarTitleText": "ikun weapp",
     "navigationBarBackgroundColor": "@navBgColor",

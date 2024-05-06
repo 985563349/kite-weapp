@@ -1,0 +1,45 @@
+<view>
+  <view>Spinner 加载</view>
+
+  <view>
+    <view>尺寸</view>
+    <view>
+      <k-loading size="sm" />
+      <k-loading />
+      <k-loading size="lg" />
+    </view>
+  </view>
+
+  <view>
+    <view>主题</view>
+    <view>
+      <k-loading />
+      <k-loading color="primary" />
+      <k-loading color="success" />
+      <k-loading color="warning" />
+      <k-loading color="danger" />
+    </view>
+  </view>
+
+  <view>
+    <view>标签</view>
+    <view>
+      <k-loading label="加载中..." />
+    </view>
+  </view>
+
+  <view>
+    <view>垂直布局</view>
+    <view>
+      <k-loading vertical label="加载中" />
+    </view>
+  </view>
+
+  <view>
+    <view>标签颜色</view>
+    <view>
+      <k-loading vertical label="加载中" />
+      <k-loading vertical color="primary" label="加载中" />
+    </view>
+  </view>
+</view>
