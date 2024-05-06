@@ -1,14 +1,11 @@
 var array = require('./array.wxs');
 var object = require('./object.wxs');
 
-var prefix = 'k-';
-
 function join(name, mods) {
-  var basename = prefix + name;
-  var classnames = [basename];
+  var classnames = [name];
 
   mods.forEach(function (mod) {
-    classnames.push(basename + '--' + mod);
+    classnames.push(name + '--' + mod);
   });
 
   return classnames.join(' ');
