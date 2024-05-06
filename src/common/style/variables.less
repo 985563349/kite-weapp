@@ -3,8 +3,19 @@
 @white: #fff;
 @red: #e13c47;
 @green: #2dd55b;
+@blue: #006fee;
 @yellow: #dddc21;
 @orange: #f56e35;
+@gray: #d4d4d8;
+
+// Spacer
+@spacer: var(--spacer, 8rpx);
+@spacer-xs: var(--spacer-xs, @spacer);
+@spacer-s: var(--spacer-s, 16rpx);
+@spacer-base: var(--spacer-s, 24rpx);
+@spacer-m: var(--spacer-sm, 32rpx);
+@spacer-l: var(--spacer-md, 40rpx);
+@spacer-xl: var(--spacer-lg, 48rpx);
 
 // Border
 @radius-default: 24rpx;
@@ -20,3 +31,16 @@
 @button-danger-background-color: @red;
 @button-danger-border-color: @red;
 @button-border-radius: @radius-default;
+
+// Loading
+@loading-animation-duration: var(--loading-animation-duration, 0.8s);
+@loading-label-font-size: var(--loading-label-font-size, 24rpx);
+@loading-label-line-height: var(--loading-label-line-height, 40rpx);
+@loading-small-size: var(--loading-small-size, 40rpx);
+@loading-default-size: var(--loading-small-size, 56rpx);
+@loading-large-size: var(--loading-small-size, 72rpx);
+@loading-default-color: var(--loading-default-color, @gray);
+@loading-primary-color: var(--loading-primary-color, @blue);
+@loading-success-color: var(--loading-success-color, @green);
+@loading-warning-color: var(--loading-warning-color, @yellow);
+@loading-danger-color: var(--loading-danger-color, @red);

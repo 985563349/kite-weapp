@@ -1,0 +1,16 @@
+<wxs src="../wxs/utils.wxs" module="utils" />
+
+<view
+  id="{{ kId }}"
+  style="{{ style }}"
+  class="k-class {{ utils.bem('loading', [{ vertical }, size, color]) }}"
+>
+  <view
+    class="k-loading__spinner"
+    aria-role="{{ ariaRole || 'image' }}"
+    aria-label="{{ ariaLabel || label || 'loading' }}"
+  />
+  <view wx:if="{{ label }}" class="k-loading__label" aria-label="{{ ariaLabel || label }}">
+    {{ label }}
+  </view>
+</view>

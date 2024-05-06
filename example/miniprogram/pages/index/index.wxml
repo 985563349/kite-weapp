@@ -1,3 +1,4 @@
 <view>
   <navigator url="/pages/button/button">button</navigator>
+  <navigator url="/pages/spinner/spinner">spinner</navigator>
 </view>
