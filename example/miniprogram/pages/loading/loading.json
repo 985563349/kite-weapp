@@ -1,4 +1,5 @@
 {
+  "navigationBarTitleText": "Loading",
   "usingComponents": {
     "k-loading": "ikun-weapp/loading/loading"
   }

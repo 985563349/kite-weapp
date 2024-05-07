@@ -1,4 +1,5 @@
 {
+  "navigationBarTitleText": "Space",
   "usingComponents": {
     "k-button": "ikun-weapp/button/button",
     "k-space": "ikun-weapp/space/space"

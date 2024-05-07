@@ -7,9 +7,11 @@
   ],
   "window": {
     "navigationBarTitleText": "ikun weapp",
-    "navigationBarBackgroundColor": "@navBgColor",
-    "navigationBarTextStyle": "@navTxtStyle"
+    "navigationBarTextStyle": "@navigationBarTextStyle",
+    "navigationBarBackgroundColor": "@navigationBarBackgroundColor"
   },
+  "resizable": true,
+  "frameset": true,
   "darkmode": true,
   "themeLocation": "theme.json",
   "componentFramework": "glass-easel",
