@@ -1,0 +1,58 @@
+<view>
+  <view>
+    <view>基本用法</view>
+    <view>
+      <k-space>
+        <k-button>Default</k-button>
+        <k-button color="primary">Primary</k-button>
+        <k-button color="success">Success</k-button>
+      </k-space>
+    </view>
+  </view>
+
+  <view>
+    <view>垂直间距</view>
+    <view>
+      <k-space style="display: flex;" vertical>
+        <k-button expand="block">Default</k-button>
+        <k-button color="primary" expand="block">Primary</k-button>
+        <k-button color="success" expand="block">Success</k-button>
+      </k-space>
+    </view>
+  </view>
+
+  <view>
+    <view>间距大小</view>
+    <view>
+      <k-space size="md">
+        <k-button>Default</k-button>
+        <k-button color="primary">Primary</k-button>
+        <k-button color="success">Success</k-button>
+      </k-space>
+    </view>
+  </view>
+
+  <view>
+    <view>对齐</view>
+    <view>
+      <k-space align="center">
+        <text>center</text>
+        <k-button color="primary" size="lg">Primary</k-button>
+        <view style="padding: 40rpx 20rpx 60rpx; background-color: #d4d4d8">Block</view>
+      </k-space>
+    </view>
+  </view>
+
+  <view>
+    <view>自动换行</view>
+    <view>
+      <k-space wrap>
+        <k-button>Default</k-button>
+        <k-button color="primary">Primary</k-button>
+        <k-button color="success">Success</k-button>
+        <k-button color="warning">Warning</k-button>
+        <k-button color="danger">Danger</k-button>
+      </k-space>
+    </view>
+  </view>
+</view>

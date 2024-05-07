@@ -1,4 +1,5 @@
 <view>
   <navigator url="/pages/button/button">button</navigator>
-  <navigator url="/pages/spinner/spinner">spinner</navigator>
+  <navigator url="/pages/loading/loading">loading</navigator>
+  <navigator url="/pages/space/space">space</navigator>
 </view>

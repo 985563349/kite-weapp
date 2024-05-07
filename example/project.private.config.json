@@ -5,6 +5,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "space",
+          "pathName": "pages/space/space",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "button",
           "pathName": "pages/button/button",
           "query": "",

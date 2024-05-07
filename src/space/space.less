@@ -1,0 +1,40 @@
+@import '../common/style/variables.less';
+
+@space: ~'k-space';
+
+.@{space} {
+  display: inline-flex;
+  gap: @spacer-s;
+
+  &--start {
+    align-items: flex-start;
+  }
+
+  &--center {
+    align-items: center;
+  }
+
+  &--end {
+    align-items: flex-end;
+  }
+
+  &--baseline {
+    align-items: baseline;
+  }
+
+  &--md {
+    gap: @spacer-m;
+  }
+
+  &--lg {
+    gap: @spacer-xl;
+  }
+
+  &--vertical {
+    flex-direction: column;
+  }
+
+  &--wrap {
+    flex-wrap: wrap;
+  }
+}
