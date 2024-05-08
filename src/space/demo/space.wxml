@@ -13,7 +13,7 @@
   <view>
     <view>垂直间距</view>
     <view>
-      <k-space style="display: flex;" vertical>
+      <k-space style="display: flex" vertical>
         <k-button expand="block">Default</k-button>
         <k-button color="primary" expand="block">Primary</k-button>
         <k-button color="success" expand="block">Success</k-button>
@@ -38,7 +38,7 @@
       <k-space align="center">
         <text>center</text>
         <k-button color="primary" size="lg">Primary</k-button>
-        <view style="padding: 40rpx 20rpx 60rpx; background-color: #d4d4d8">Block</view>
+        <view style="padding: 20px 10px 30px; background-color: #d4d4d8">Block</view>
       </k-space>
     </view>
   </view>
