@@ -2,15 +2,15 @@
 
 exports[`should render demo and match snapshot 1`] = `
 <main>
-  <wx-view>
-    <wx-view>
-      Button 按钮
-    </wx-view>
-    <wx-view>
-      <wx-view>
-        类型
-      </wx-view>
-      <wx-view>
+  <k-space
+    size="md"
+    style="padding-bottom: 16px"
+    vertical="{{true}}"
+  >
+    <demo-block
+      title="类型"
+    >
+      <k-space>
         <k-button>
           Default
         </k-button>
@@ -26,26 +26,24 @@ exports[`should render demo and match snapshot 1`] = `
         >
           Outline
         </k-button>
-      </wx-view>
-    </wx-view>
-    <wx-view>
-      <wx-view>
-        图标
-      </wx-view>
-      <wx-view>
+      </k-space>
+    </demo-block>
+    <demo-block
+      title="图标"
+    >
+      <k-space>
         <k-button
           color="primary"
           loading="{{true}}"
         >
           Loading
         </k-button>
-      </wx-view>
-    </wx-view>
-    <wx-view>
-      <wx-view>
-        状态
-      </wx-view>
-      <wx-view>
+      </k-space>
+    </demo-block>
+    <demo-block
+      title="状态"
+    >
+      <k-space>
         <k-button
           disabled="{{true}}"
         >
@@ -65,13 +63,14 @@ exports[`should render demo and match snapshot 1`] = `
         >
           Outline
         </k-button>
-      </wx-view>
-    </wx-view>
-    <wx-view>
-      <wx-view>
-        尺寸
-      </wx-view>
-      <wx-view>
+      </k-space>
+    </demo-block>
+    <demo-block
+      title="尺寸"
+    >
+      <k-space
+        wrap="{{true}}"
+      >
         <k-button
           size="sm"
         >
@@ -85,13 +84,14 @@ exports[`should render demo and match snapshot 1`] = `
         >
           large
         </k-button>
-      </wx-view>
-    </wx-view>
-    <wx-view>
-      <wx-view>
-        主题
-      </wx-view>
-      <wx-view>
+      </k-space>
+    </demo-block>
+    <demo-block
+      title="主题"
+    >
+      <k-space
+        wrap="{{true}}"
+      >
         <k-button>
           Default
         </k-button>
@@ -115,13 +115,14 @@ exports[`should render demo and match snapshot 1`] = `
         >
           Dander
         </k-button>
-      </wx-view>
-    </wx-view>
-    <wx-view>
-      <wx-view>
-        形状
-      </wx-view>
-      <wx-view>
+      </k-space>
+    </demo-block>
+    <demo-block
+      title="形状"
+    >
+      <k-space
+        wrap="{{true}}"
+      >
         <k-button
           color="danger"
           shape="round"
@@ -149,8 +150,8 @@ exports[`should render demo and match snapshot 1`] = `
         >
           Success
         </k-button>
-      </wx-view>
-    </wx-view>
-  </wx-view>
+      </k-space>
+    </demo-block>
+  </k-space>
 </main>
 `;

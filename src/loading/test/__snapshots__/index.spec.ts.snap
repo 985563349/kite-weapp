@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`loading should render loading and match snapshot 1`] = `
+<wx-view
+  class="k-class k-loading"
+  id=""
+  style=""
+>
+  <wx-view
+    ariaLabel="loading"
+    ariaRole="image"
+    class="k-loading__spinner"
+  />
+</wx-view>
+`;

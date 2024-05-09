@@ -6,6 +6,13 @@ describe('button', () => {
     rootPath: path.resolve(__dirname, '../../'),
   });
 
+  test('should render button and match snapshot', () => {
+    const comp = simulate.render(KButton);
+    comp.attach(document.createElement('parent-wrapper'));
+
+    expect(comp.toJSON()).toMatchSnapshot();
+  });
+
   test('should emit click event', async () => {
     const comp = simulate.render(
       simulate.load({

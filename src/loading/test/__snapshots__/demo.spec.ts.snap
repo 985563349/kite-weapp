@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`loading snapshot 1`] = `
-<basic>
-  <wx-view>
-    <wx-view>
-      Spinner 加载
-    </wx-view>
-    <wx-view>
-      <wx-view>
-        尺寸
-      </wx-view>
-      <wx-view>
+exports[`should render demo and match snapshot 1`] = `
+<main>
+  <k-space
+    size="md"
+    style="padding-bottom: 16px"
+    vertical="{{true}}"
+  >
+    <demo-block
+      title="尺寸"
+    >
+      <k-space>
         <k-loading
           size="sm"
         />
@@ -18,13 +18,12 @@ exports[`loading snapshot 1`] = `
         <k-loading
           size="lg"
         />
-      </wx-view>
-    </wx-view>
-    <wx-view>
-      <wx-view>
-        主题
-      </wx-view>
-      <wx-view>
+      </k-space>
+    </demo-block>
+    <demo-block
+      title="主题"
+    >
+      <k-space>
         <k-loading />
         <k-loading
           color="primary"
@@ -38,34 +37,31 @@ exports[`loading snapshot 1`] = `
         <k-loading
           color="danger"
         />
-      </wx-view>
-    </wx-view>
-    <wx-view>
-      <wx-view>
-        标签
-      </wx-view>
-      <wx-view>
+      </k-space>
+    </demo-block>
+    <demo-block
+      title="标签"
+    >
+      <k-space>
         <k-loading
           label="加载中..."
         />
-      </wx-view>
-    </wx-view>
-    <wx-view>
-      <wx-view>
-        垂直布局
-      </wx-view>
-      <wx-view>
+      </k-space>
+    </demo-block>
+    <demo-block
+      title="垂直布局"
+    >
+      <k-space>
         <k-loading
           label="加载中"
           vertical="{{true}}"
         />
-      </wx-view>
-    </wx-view>
-    <wx-view>
-      <wx-view>
-        标签颜色
-      </wx-view>
-      <wx-view>
+      </k-space>
+    </demo-block>
+    <demo-block
+      title="标签颜色"
+    >
+      <k-space>
         <k-loading
           label="加载中"
           vertical="{{true}}"
@@ -75,8 +71,8 @@ exports[`loading snapshot 1`] = `
           label="加载中"
           vertical="{{true}}"
         />
-      </wx-view>
-    </wx-view>
-  </wx-view>
-</basic>
+      </k-space>
+    </demo-block>
+  </k-space>
+</main>
 `;

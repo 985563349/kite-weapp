@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`button should render button and match snapshot 1`] = `
+<wx-button
+  appParameter=""
+  ariaLabel=""
+  class="k-class k-button"
+  formType=""
+  hoverClass="k-button--active hover-class"
+  hoverStartTime="{{20}}"
+  hoverStayTime="{{70}}"
+  hoverStopPropagation="{{false}}"
+  id=""
+  lang="en"
+  openType=""
+  phoneNumberNoQuotaToast="{{false}}"
+  sendMessageImg=""
+  sendMessagePath=""
+  sendMessageTitle=""
+  showMessageCard="{{false}}"
+  style=""
+  bind:agreeprivacyauthorization="agreeprivacyauthorization"
+  bind:chooseavatar="chooseavatar"
+  bind:contact="contact"
+  bind:error="error"
+  bind:getphonenumber="getPhoneNumber"
+  bind:getuserinfo="getUserInfo"
+  bind:launchapp="launchapp"
+  bind:opensetting="opensetting"
+  bind:tap="onTap"
+/>
+`;
