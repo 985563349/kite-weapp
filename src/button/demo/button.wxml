@@ -1,58 +1,50 @@
-<view>
-  <view>Button 按钮</view>
-
-  <view>
-    <view>类型</view>
-    <view>
+<k-space style="padding-bottom: 16px" size="md" vertical>
+  <demo-block title="类型">
+    <k-space>
       <k-button>Default</k-button>
       <k-button color="primary" variant="clear">Clear</k-button>
       <k-button color="success" variant="outline">Outline</k-button>
-    </view>
-  </view>
+    </k-space>
+  </demo-block>
 
-  <view>
-    <view>图标</view>
-    <view>
+  <demo-block title="图标">
+    <k-space>
       <k-button color="primary" loading>Loading</k-button>
-    </view>
-  </view>
+    </k-space>
+  </demo-block>
 
-  <view>
-    <view>状态</view>
-    <view>
+  <demo-block title="状态">
+    <k-space>
       <k-button disabled>Default</k-button>
       <k-button color="primary" variant="clear" disabled>Clear</k-button>
       <k-button color="success" variant="outline" disabled>Outline</k-button>
-    </view>
-  </view>
+    </k-space>
+  </demo-block>
 
-  <view>
-    <view>尺寸</view>
-    <view>
+  <demo-block title="尺寸">
+    <k-space wrap>
       <k-button size="sm">Small</k-button>
       <k-button>Default</k-button>
       <k-button size="lg">large</k-button>
-    </view>
-  </view>
+    </k-space>
+  </demo-block>
 
-  <view>
-    <view>主题</view>
-    <view>
+  <demo-block title="主题">
+    <k-space wrap>
       <k-button>Default</k-button>
       <k-button color="primary">Primary</k-button>
       <k-button color="success">Success</k-button>
       <k-button color="warning">Warning</k-button>
       <k-button color="danger">Dander</k-button>
-    </view>
-  </view>
+    </k-space>
+  </demo-block>
 
-  <view>
-    <view>形状</view>
-    <view>
+  <demo-block title="形状">
+    <k-space wrap>
       <k-button color="danger" shape="round">Success</k-button>
       <k-button color="warning" shape="round" variant="outline">Success</k-button>
       <k-button color="success" expand="block" size="lg">Primary</k-button>
       <k-button color="primary" expand="full" size="lg">Success</k-button>
-    </view>
-  </view>
-</view>
+    </k-space>
+  </demo-block>
+</k-space>

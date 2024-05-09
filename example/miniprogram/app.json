@@ -10,6 +10,9 @@
     "navigationBarTextStyle": "@navigationBarTextStyle",
     "navigationBarBackgroundColor": "@navigationBarBackgroundColor"
   },
+  "usingComponents": {
+    "demo-block": "./components/demo-block/demo-block"
+  },
   "resizable": true,
   "frameset": true,
   "darkmode": true,

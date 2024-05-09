@@ -1,45 +1,38 @@
-<view>
-  <view>Spinner 加载</view>
-
-  <view>
-    <view>尺寸</view>
-    <view>
+<k-space style="padding-bottom: 16px" size="md" vertical>
+  <demo-block title="尺寸">
+    <k-space>
       <k-loading size="sm" />
       <k-loading />
       <k-loading size="lg" />
-    </view>
-  </view>
+    </k-space>
+  </demo-block>
 
-  <view>
-    <view>主题</view>
-    <view>
+  <demo-block title="主题">
+    <k-space>
       <k-loading />
       <k-loading color="primary" />
       <k-loading color="success" />
       <k-loading color="warning" />
       <k-loading color="danger" />
-    </view>
-  </view>
+    </k-space>
+  </demo-block>
 
-  <view>
-    <view>标签</view>
-    <view>
+  <demo-block title="标签">
+    <k-space>
       <k-loading label="加载中..." />
-    </view>
-  </view>
+    </k-space>
+  </demo-block>
 
-  <view>
-    <view>垂直布局</view>
-    <view>
+  <demo-block title="垂直布局">
+    <k-space>
       <k-loading vertical label="加载中" />
-    </view>
-  </view>
+    </k-space>
+  </demo-block>
 
-  <view>
-    <view>标签颜色</view>
-    <view>
+  <demo-block title="标签颜色">
+    <k-space>
       <k-loading vertical label="加载中" />
       <k-loading vertical color="primary" label="加载中" />
-    </view>
-  </view>
-</view>
+    </k-space>
+  </demo-block>
+</k-space>
