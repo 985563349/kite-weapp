@@ -1,0 +1,10 @@
+<wxs src="./transition.wxs" module="computed" />
+
+<view
+  id="{{ kId }}"
+  class="k-class k-transition {{ transitionClassNames }}"
+  style="{{ computed.transitionStyle({ display, transitionDuration, style }) }}"
+  bind:transitionend="onTransitionEnd"
+>
+  <slot />
+</view>

@@ -2,4 +2,5 @@
   <navigator url="/pages/button/button">button</navigator>
   <navigator url="/pages/loading/loading">loading</navigator>
   <navigator url="/pages/space/space">space</navigator>
+  <navigator url="/pages/transition/transition">transition</navigator>
 </view>

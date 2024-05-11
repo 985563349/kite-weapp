@@ -1,0 +1,37 @@
+var object = require('./object.wxs');
+var array = require('./array.wxs');
+
+function kebabCase(word) {
+  return word
+    .replace(getRegExp('[A-Z]', 'g'), function (i) {
+      return '-' + i;
+    })
+    .toLowerCase();
+}
+
+function style(styles) {
+  if (array.isArray(styles)) {
+    return styles
+      .map(style)
+      .filter(function (item) {
+        return item != null && item !== '';
+      })
+      .join(';');
+  }
+
+  if (object.isObject(styles)) {
+    return object
+      .keys(styles)
+      .filter(function (key) {
+        return styles[key] != null && styles[key] !== '';
+      })
+      .map(function (key) {
+        return [kebabCase(key), [styles[key]]].join(':');
+      })
+      .join(';');
+  }
+
+  return styles;
+}
+
+module.exports = style;

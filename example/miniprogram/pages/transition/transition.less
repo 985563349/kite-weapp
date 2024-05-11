@@ -1,0 +1,16 @@
+.block {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}
+
+.k-custom-enter-active,
+.k-custom-leave-active {
+  transition-property: background-color, transform;
+}
+
+.k-custom-enter,
+.k-custom-leave-to {
+  background-color: red;
+  transform: rotate(-360deg) translate3d(-100%, -100%, 0);
+}

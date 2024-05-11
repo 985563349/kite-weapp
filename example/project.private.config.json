@@ -5,6 +5,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "transition",
+          "pathName": "pages/transition/transition",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "space",
           "pathName": "pages/space/space",
           "query": "",

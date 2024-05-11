@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render demo and match snapshot 1`] = `
+<main>
+  <k-space
+    size="md"
+    style="padding-bottom: 16px"
+    vertical="{{true}}"
+  >
+    <demo-block
+      title="基础用法"
+    >
+      <k-space
+        vertical="{{true}}"
+      >
+        <k-space
+          wrap="{{true}}"
+        >
+          <k-button
+            color="primary"
+            size="sm"
+            variant="clear"
+            bind:click="onClickFade"
+          >
+            Fade
+          </k-button>
+        </k-space>
+        <k-transition
+          kClass="block"
+          visible="{{false}}"
+        />
+      </k-space>
+    </demo-block>
+    <demo-block
+      title="自定义动画"
+    >
+      <k-space>
+        <k-button
+          color="primary"
+          size="sm"
+          variant="clear"
+          bind:click="onClickCustom"
+        >
+          Custom
+        </k-button>
+        <k-transition
+          duration="{{
+            {
+              "enter": 300,
+              "leave": 1000,
+            }
+          }}"
+          enterActiveClass="k-enter-active-class"
+          enterClass="k-enter-class"
+          kClass="block"
+          leaveActiveClass="k-leave-active-class"
+          leaveToClass="k-leave-to-class"
+          name=""
+          visible="{{false}}"
+          bind:after-enter="onAfterEnter"
+          bind:after-leave="onAfterLeave"
+          bind:before-enter="onBeforeEnter"
+          bind:before-leave="onBeforeLeave"
+          bind:enter="onEnter"
+          bind:leave="onLeave"
+        />
+      </k-space>
+    </demo-block>
+  </k-space>
+</main>
+`;
