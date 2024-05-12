@@ -5,6 +5,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "overlay",
+          "pathName": "pages/overlay/overlay",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "transition",
           "pathName": "pages/transition/transition",
           "query": "",
