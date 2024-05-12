@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`overlay should render overlay add match snapshot 1`] = `
+<wx-view
+  class="k-class k-transition "
+  id=""
+  style="display: none;z-index: 11000; "
+  bind:transitionend="onTransitionEnd"
+/>
+`;

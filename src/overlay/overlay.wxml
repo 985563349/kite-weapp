@@ -1,0 +1,13 @@
+<k-transition
+  id="{{ kId }}"
+  visible="{{ visible }}"
+  k-class="k-class k-overlay"
+  style="z-index: {{ zIndex }}; {{ style }}"
+  duration="{{ duration }}"
+  bind:tap="onTap"
+  catch:touchmove="{{ lockScroll ? 'noop' : '' }}"
+  aria-role="{{ ariaRole || 'button' }}"
+  aria-label="{{ ariaLabel || 'close' }}"
+>
+  <slot />
+</k-transition>
