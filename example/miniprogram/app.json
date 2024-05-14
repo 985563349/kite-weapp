@@ -6,7 +6,8 @@
     "pages/space/space",
     "pages/transition/transition",
     "pages/overlay/overlay",
-    "pages/col/col"
+    "pages/col/col",
+    "pages/icon/icon"
   ],
   "window": {
     "navigationBarTitleText": "ikun weapp",

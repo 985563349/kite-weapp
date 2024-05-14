@@ -1,0 +1,37 @@
+var utils = require('../wxs/utils.wxs');
+
+function isImage(name) {
+  return name.indexOf('/') !== -1;
+}
+
+function iconClass(data) {
+  var classnames = [];
+
+  if (data.prefix) {
+    classnames.push(data.prefix);
+  }
+
+  if (isImage(data.name)) {
+    classnames.push('k-icon--image');
+  } else if (data.prefix && data.name) {
+    classnames.push(data.prefix + '-' + data.name);
+  }
+
+  return classnames.join(' ');
+}
+
+function iconStyle(data) {
+  return utils.style([
+    {
+      color: data.color,
+      fontSize: utils.addUnit(data.size),
+    },
+    data.style,
+  ]);
+}
+
+module.exports = {
+  isImage: isImage,
+  iconClass: iconClass,
+  iconStyle: iconStyle,
+};

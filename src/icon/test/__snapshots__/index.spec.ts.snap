@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`icon should render icon and match snapshot 1`] = `
+<wx-view
+  class="k-class k-icon"
+  id=""
+  style=""
+  bind:tap="onTap"
+/>
+`;

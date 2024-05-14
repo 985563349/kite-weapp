@@ -5,6 +5,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "icon",
+          "pathName": "pages/icon/icon",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "grid",
           "pathName": "pages/col/col",
           "query": "",

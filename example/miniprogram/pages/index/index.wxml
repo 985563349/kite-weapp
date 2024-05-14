@@ -5,4 +5,5 @@
   <navigator url="/pages/transition/transition">transition</navigator>
   <navigator url="/pages/overlay/overlay">overlay</navigator>
   <navigator url="/pages/col/col">grid</navigator>
+  <navigator url="/pages/icon/icon">icon</navigator>
 </view>

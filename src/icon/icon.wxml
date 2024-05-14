@@ -1,0 +1,15 @@
+<wxs src="./icon.wxs" module="computed" />
+
+<view
+  id="{{ kId }}"
+  style="{{ computed.iconStyle({ style, color, size }) }}"
+  class="k-class {{ computed.iconClass({ prefix, name }) }}"
+  bind:tap="onTap"
+>
+  <image
+    wx:if="{{ computed.isImage(name) }}"
+    class="k-icon__image"
+    src="{{ name }}"
+    mode="aspectFit"
+  />
+</view>

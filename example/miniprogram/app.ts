@@ -1,4 +1,4 @@
 // app.ts
-App<IAppOption>({
+App({
   globalData: {},
 });
