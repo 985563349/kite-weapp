@@ -1,0 +1,54 @@
+export type FrameRequestCallback = (timestamp: number) => void;
+
+type QueueRecordRaw = {
+  id: number;
+  callback: FrameRequestCallback;
+  cancelled: boolean;
+};
+
+const queue: QueueRecordRaw[] = [];
+const frameDuration = 1000 / 60;
+
+let last = 0;
+let id = 0;
+
+export function requestAnimationFrame(callback: FrameRequestCallback) {
+  if (queue.length === 0) {
+    const now = performance.now();
+    const next = Math.max(0, frameDuration - (now - last));
+    last = next + now;
+
+    setTimeout(() => {
+      const cp = queue.slice(0);
+      queue.length = 0;
+
+      for (let i = 0; i < cp.length; i++) {
+        if (!cp[i].cancelled) {
+          try {
+            cp[i].callback(last);
+          } catch (error) {
+            setTimeout(() => {
+              throw error;
+            }, 0);
+          }
+        }
+      }
+    }, Math.round(next));
+  }
+
+  queue.push({
+    id: ++id,
+    callback,
+    cancelled: false,
+  });
+
+  return id;
+}
+
+export function cancelAnimationFrame(id: number) {
+  for (let i = 0; i < queue.length; i++) {
+    if (queue[i].id === id) {
+      queue[i].cancelled = true;
+    }
+  }
+}

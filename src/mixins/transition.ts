@@ -1,4 +1,4 @@
-import { requestAnimationFrame } from '../common/utils';
+import { requestAnimationFrame } from '../common/raf';
 import { isObject } from '../common/validator';
 
 type DataOption = {
