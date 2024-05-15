@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "Overlay",
-  "usingComponents": {
-    "k-space": "ikun-weapp/space/space",
-    "k-button": "ikun-weapp/button/button",
-    "k-overlay": "ikun-weapp/overlay/overlay"
-  }
-}

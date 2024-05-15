@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "Loading",
-  "usingComponents": {
-    "k-space": "ikun-weapp/space/space",
-    "k-loading": "ikun-weapp/loading/loading"
-  }
-}

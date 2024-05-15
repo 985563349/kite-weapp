@@ -10,10 +10,13 @@ lerna-debug.log*
 node_modules
 cache
 dist
-dist-ssr
 miniprogram_dist
+miniprogram_npm
 coverage
 *.local
+
+example/miniprogram/pages/*
+!example/miniprogram/pages/index
 
 # Editor directories and files
 .vscode/*
