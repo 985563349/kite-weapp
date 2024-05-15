@@ -1,0 +1,20 @@
+@col: ~'k-col';
+
+.@{col} {
+  display: block;
+  box-sizing: border-box;
+}
+
+.generate(@n, @i: 1) when(@i <= @n) {
+  .@{col}--@{i} {
+    width: (@i * 100% / @n);
+  }
+
+  .@{col}--offset-@{i} {
+    margin-left: (@i * 100% / @n);
+  }
+
+  .generate(@n, (@i + 1));
+}
+
+.generate(24);

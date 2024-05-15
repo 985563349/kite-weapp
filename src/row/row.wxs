@@ -1,0 +1,22 @@
+var array = require('../wxs/array.wxs');
+var style = require('../wxs/style.wxs');
+var utils = require('../wxs/utils.wxs');
+
+function rowStyle(data) {
+  var gutter = array.ensureArray(data.gutter);
+  var margin = gutter[0] ? utils.addUnit(-gutter[0] / 2) : null;
+  var gap = gutter[1] ? utils.addUnit(gutter[1]) : null;
+
+  return style([
+    {
+      'margin-left': margin,
+      'margin-right': margin,
+      'row-gap': gap,
+    },
+    data.style,
+  ]);
+}
+
+module.exports = {
+  rowStyle: rowStyle,
+};

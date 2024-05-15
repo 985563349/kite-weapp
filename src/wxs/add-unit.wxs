@@ -1,0 +1,9 @@
+var REGEXP = getRegExp('^-?\d+(\.\d+)?$');
+
+function addUnit(value) {
+  if (value == null) return;
+
+  return REGEXP.test('' + value) ? value + 'px' : value;
+}
+
+module.exports = addUnit;

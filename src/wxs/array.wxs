@@ -2,6 +2,11 @@ function isArray(value) {
   return value != null && value.constructor === 'Array';
 }
 
+function ensureArray(value) {
+  return isArray(value) ? value : [value];
+}
+
 module.exports = {
   isArray: isArray,
+  ensureArray: ensureArray,
 };
