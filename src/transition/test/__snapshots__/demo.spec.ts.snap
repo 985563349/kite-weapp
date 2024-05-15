@@ -50,12 +50,8 @@ exports[`should render demo and match snapshot 1`] = `
               "leave": 1000,
             }
           }}"
-          enterActiveClass="k-enter-active-class"
-          enterClass="k-enter-class"
           kClass="block"
-          leaveActiveClass="k-leave-active-class"
-          leaveToClass="k-leave-to-class"
-          name=""
+          name="custom"
           visible="{{false}}"
           bind:after-enter="onAfterEnter"
           bind:after-leave="onAfterLeave"
