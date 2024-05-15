@@ -4,4 +4,5 @@
   <navigator url="/pages/space/space">space</navigator>
   <navigator url="/pages/transition/transition">transition</navigator>
   <navigator url="/pages/overlay/overlay">overlay</navigator>
+  <navigator url="/pages/col/col">grid</navigator>
 </view>

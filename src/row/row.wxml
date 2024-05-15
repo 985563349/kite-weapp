@@ -1,0 +1,10 @@
+<wxs src="../wxs/utils.wxs" module="utils" />
+<wxs src="./row.wxs" module="computed" />
+
+<view
+  id="{{ kId }}"
+  style="{{ computed.rowStyle({ gutter, style }) }}"
+  class="k-class {{ utils.bem('k-row', [justify, align, { wrap }]) }}"
+>
+  <slot />
+</view>

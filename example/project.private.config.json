@@ -5,6 +5,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "grid",
+          "pathName": "pages/col/col",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "overlay",
           "pathName": "pages/overlay/overlay",
           "query": "",
