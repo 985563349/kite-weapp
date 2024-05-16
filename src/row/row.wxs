@@ -1,5 +1,4 @@
 var array = require('../wxs/array.wxs');
-var style = require('../wxs/style.wxs');
 var utils = require('../wxs/utils.wxs');
 
 function rowStyle(data) {
@@ -7,7 +6,7 @@ function rowStyle(data) {
   var margin = gutter[0] ? utils.addUnit(-gutter[0] / 2) : null;
   var gap = gutter[1] ? utils.addUnit(gutter[1]) : null;
 
-  return style([
+  return utils.style([
     {
       'margin-left': margin,
       'margin-right': margin,

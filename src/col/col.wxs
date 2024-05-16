@@ -1,10 +1,9 @@
-var style = require('../wxs/style.wxs');
 var utils = require('../wxs/utils.wxs');
 
 function colStyle(data) {
   var padding = data.gutter ? utils.addUnit(data.gutter / 2) : null;
 
-  return style([
+  return utils.style([
     {
       'padding-left': padding,
       'padding-right': padding,

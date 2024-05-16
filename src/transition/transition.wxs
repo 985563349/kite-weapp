@@ -1,9 +1,9 @@
-var style = require('../wxs/style.wxs');
+var utils = require('../wxs/utils.wxs');
 
 function transitionStyle(data) {
   var duration = data.transitionDuration ? data.transitionDuration + 'ms' : null;
 
-  return style([
+  return utils.style([
     {
       '-webkit-transition-duration': duration,
       'transition-duration': duration,
