@@ -1,0 +1,69 @@
+@import '../common/style/variables.less';
+
+@flex: ~'k-flex';
+
+.@{flex} {
+  display: flex;
+
+  &--vertical {
+    flex-direction: column;
+  }
+
+  &--start {
+    justify-content: flex-start;
+  }
+
+  &--end {
+    justify-content: flex-end;
+  }
+
+  &--center {
+    justify-content: center;
+  }
+
+  &--space-between {
+    justify-content: space-between;
+  }
+
+  &--space-around {
+    justify-content: space-around;
+  }
+
+  &--space-evenly {
+    justify-content: space-evenly;
+  }
+
+  &--top {
+    align-items: flex-start;
+  }
+
+  &--bottom {
+    align-items: flex-end;
+  }
+
+  &--middle {
+    align-items: center;
+  }
+
+  &--wrap {
+    flex-wrap: wrap;
+  }
+
+  &--wrap-reverse {
+    flex-wrap: wrap-reverse;
+  }
+
+  &--sm {
+    gap: @spacer-xs;
+  }
+  
+  &--md {
+    gap: @spacer-s;
+  }
+  
+  &--lg {
+    gap: @spacer-m;
+  }
+
+}
+

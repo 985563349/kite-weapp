@@ -1,0 +1,9 @@
+<wxs src="../wxs/utils.wxs" module="utils" />
+
+<view
+  id="{{ kId }}"
+  style="{{ style }}"
+  class="{{ utils.bem('k-flex', [justify, align, gap, wrap, { vertical }]) }} k-class"
+>
+  <slot />
+</view>

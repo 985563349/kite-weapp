@@ -8,7 +8,8 @@
     "pages/overlay/overlay",
     "pages/col/col",
     "pages/icon/icon",
-    "pages/cell/cell"
+    "pages/cell/cell",
+    "pages/flex/flex"
   ],
   "window": {
     "navigationBarTitleText": "Kite",
