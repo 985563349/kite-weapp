@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "flex",
+  "usingComponents": {
+    "k-button": "kite-weapp/button/button",
+    "k-space": "kite-weapp/space/space",
+    "k-flex": "kite-weapp/flex/flex"
+  }
+}

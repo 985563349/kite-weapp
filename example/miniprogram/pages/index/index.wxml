@@ -4,6 +4,7 @@
     <k-cell title="Grid 栅格" url="/pages/col/col" arrow clickable />
     <k-cell title="Icon 图标" url="/pages/icon/icon" arrow clickable />
     <k-cell title="Space 间距" url="/pages/space/space" arrow clickable border="{{ false }}" />
+    <k-cell title="Flex 弹性布局" url="/pages/flex/flex" arrow clickable border="{{ false }}" />
   </k-cell-group>
 
   <k-cell-group title="数据展示" variant="card">

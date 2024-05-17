@@ -5,6 +5,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "flex",
+          "pathName": "pages/flex/flex",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "cell",
           "pathName": "pages/cell/cell",
           "query": "",
