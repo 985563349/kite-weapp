@@ -1,26 +1,34 @@
 // Color Palette
-@black: #000;
-@white: #fff;
-@red: #f31260;
-@green: #17c964;
-@blue: #006fee;
-@yellow: #f5a524;
-@gray: #d4d4d8;
+@black-color: var(--black-color, #000);
+@white-color: var(--white-color, #fff);
+@default-color: var(--default-color, #d4d4d8);
+@danger-color: var(--danger-color, #f31260);
+@success-color: var(--success-color, #17c964);
+@primary-color: var(--primary-color, #006fee);
+@warning-color: var(--warning-color, #f5a524);
+
+@text-color: var(--text-color, #18181c);
+@text-secondary-color: var(--text-secondary-color, #a1a1aa);
+@text-placeholder-color: var(--text-placeholder-color, #d4d4d8);
+
+@background-color: var(--background-color, #fff);
+@active-background-color: var(--active-background-color, #f4f4f5);
 
 // Spacer
-@spacer-xs: var(--spacer-xs, 8px);
-@spacer-s: var(--spacer-s, 12px);
-@spacer-m: var(--spacer-m, 16px);
-@spacer-l: var(--spacer-l, 24px);
-@spacer-xl: var(--spacer-xl, 32px);
+@spacer-xs: var(--spacer-xs, 4px);
+@spacer-s: var(--spacer-s, 8px);
+@spacer-m: var(--spacer-m, 12px);
+@spacer-l: var(--spacer-l, 16px);
+@spacer-xl: var(--spacer-xl, 24px);
+@spacer-2xl: var(--spacer-xl, 32px);
 
 // Font
 @font-size-xs: var(--font-size-xs, 12px);
 @font-size-s: var(--font-size-s, 14px);
-@font-size-base: var(--font-size-base, 16px);
-@font-size-m: var(--font-size-m, 18px);
-@font-size-l: var(--font-size-l, 20px);
-@font-size-xl: var(--font-size-xl, 24px);
+@font-size-m: var(--font-size-m, 16px);
+@font-size-l: var(--font-size-l, 18px);
+@font-size-xl: var(--font-size-xl, 20px);
+@font-size-2xl: var(--font-size-xl, 24px);
 
 @font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Roboto', sans-serif;
 
@@ -39,7 +47,7 @@
 @button-round-border-radius: var(--button-round-border-radius, @radius-round);
 @button-disabled-opacity: var(--button-disabled-opacity, 0.5);
 
-@button-small-font-size: var(--button-small-font-size, @font-size-base);
+@button-small-font-size: var(--button-small-font-size, @font-size-m);
 @button-small-height: var(--button-small-height, 32px);
 @button-small-padding-inline: var(--button-small-padding-inline, 12px);
 
@@ -51,25 +59,25 @@
 @button-large-height: var(--button-large-height, 48px);
 @button-large-padding-inline: var(--button-large-padding-inline, 20px);
 
-@button-default-color: var(--button-default-color, @black);
-@button-default-background-color: var(--button-default-background-color, @gray);
-@button-default-border-color: var(--button-default-border-color, @black);
+@button-default-color: var(--button-default-color, @black-color);
+@button-default-background-color: var(--button-default-background-color, @default-color);
+@button-default-border-color: var(--button-default-border-color, @black-color);
 
-@button-primary-color: var(--button-primary-color, @white);
-@button-primary-background-color: var(--button-primary-background-color, @blue);
-@button-primary-border-color: @blue;
+@button-primary-color: var(--button-primary-color, @white-color);
+@button-primary-background-color: var(--button-primary-background-color, @primary-color);
+@button-primary-border-color: @primary-color;
 
-@button-success-color: var(--button-success-color, @white);
-@button-success-background-color: var(--button-success-background-color, @green);
-@button-success-border-color: @green;
+@button-success-color: var(--button-success-color, @white-color);
+@button-success-background-color: var(--button-success-background-color, @success-color);
+@button-success-border-color: @success-color;
 
-@button-warning-color: var(--button-warning-color, @black);
-@button-warning-background-color: var(--button-warning-background-color, @yellow);
-@button-warning-border-color: @yellow;
+@button-warning-color: var(--button-warning-color, @black-color);
+@button-warning-background-color: var(--button-warning-background-color, @warning-color);
+@button-warning-border-color: @warning-color;
 
-@button-danger-color: var(--button-danger-color, @white);
-@button-danger-background-color: var(--button-danger-background-color, @red);
-@button-danger-border-color: @red;
+@button-danger-color: var(--button-danger-color, @white-color);
+@button-danger-background-color: var(--button-danger-background-color, @danger-color);
+@button-danger-border-color: @danger-color;
 
 // Loading
 @loading-animation-duration: var(--loading-animation-duration, 0.8s);
@@ -77,11 +85,11 @@
 @loading-small-size: var(--loading-small-size, 20px);
 @loading-default-size: var(--loading-small-size, 28px);
 @loading-large-size: var(--loading-small-size, 36px);
-@loading-default-color: var(--loading-default-color, @gray);
-@loading-primary-color: var(--loading-primary-color, @blue);
-@loading-success-color: var(--loading-success-color, @green);
-@loading-warning-color: var(--loading-warning-color, @yellow);
-@loading-danger-color: var(--loading-danger-color, @red);
+@loading-default-color: var(--loading-default-color, @default-color);
+@loading-primary-color: var(--loading-primary-color, @primary-color);
+@loading-success-color: var(--loading-success-color, @success-color);
+@loading-warning-color: var(--loading-warning-color, @warning-color);
+@loading-danger-color: var(--loading-danger-color, @danger-color);
 
 // Overlay
 @overlay-background-color: var(--overlay-background-color, rgba(0, 0, 0, 0.6));
