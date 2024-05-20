@@ -6,4 +6,5 @@
   <navigator url="/pages/overlay/overlay">overlay</navigator>
   <navigator url="/pages/col/col">grid</navigator>
   <navigator url="/pages/icon/icon">icon</navigator>
+  <navigator url="/pages/cell/cell">cell</navigator>
 </view>

@@ -6,7 +6,9 @@
   "keywords": [],
   "author": "",
   "license": "",
-  "dependencies": {},
+  "dependencies": {
+    "kite-weapp": "^0.0.1"
+  },
   "devDependencies": {
     "miniprogram-api-typings": "^2.8.3-1"
   }

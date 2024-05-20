@@ -1,0 +1,18 @@
+@import '../common/style/index.less';
+
+@cell-group: ~'k-cell-group';
+
+.@{cell-group} {
+  &__title {
+    padding: @cell-group-title-padding-block @cell-group-title-padding-inline;
+    line-height: @cell-group-title-line-height;
+    font-size: @cell-group-title-font-size;
+    color: @cell-group-title-color;
+  }
+
+  &--card {
+    margin: 0 @cell-group-card-margin-inline;
+    border-radius: @cell-group-card-border-radius;
+    overflow: hidden;
+  }
+}
