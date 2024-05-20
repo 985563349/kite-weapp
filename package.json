@@ -1,7 +1,7 @@
 {
   "name": "kite-weapp",
   "version": "0.0.1",
-  "description": "🐔 A WeChat Mini Program Component Library",
+  "description": "A WeChat Mini Program Component Library",
   "type": "module",
   "miniprogram": "miniprogram_dist",
   "files": [

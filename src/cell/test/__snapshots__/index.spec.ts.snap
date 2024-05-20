@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`cell should render cell and match snapshot 1`] = `
+<wx-view
+  ariaLabel=""
+  ariaRole=""
+  class="k-class k-cell"
+  hoverClass="k-cell--hover "
+  hoverStayTime="70"
+  id=""
+  style=""
+  bind:tap="onTap"
+>
+  <wx-view
+    class="k-cell__title title-class"
+  >
+    <wx-view
+      class="k-cell__label label-class"
+    >
+      
+    </wx-view>
+  </wx-view>
+  <wx-view
+    class="k-cell__value value-class"
+  />
+</wx-view>
+`;

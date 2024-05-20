@@ -1,0 +1,51 @@
+<k-space style="padding-bottom: 16px; width: 100%" size="md" vertical>
+  <demo-block title="基础用法">
+    <k-cell title="单元格" value="内容" required />
+    <k-cell title="单元格" value="内容" label="描述信息" border="{{ false }}" />
+  </demo-block>
+
+  <demo-block title="卡片风格">
+    <k-cell-group title="分组1" variant="card">
+      <k-cell title="单元格" value="内容" />
+      <k-cell title="单元格" value="内容" label="描述信息" border="{{ false }}" />
+    </k-cell-group>
+  </demo-block>
+
+  <demo-block title="单元格大小">
+    <k-cell title="单元格" value="内容" size="large" />
+    <k-cell title="单元格" value="内容" label="描述信息" size="large" border="{{ false }}" />
+  </demo-block>
+
+  <demo-block title="展示图标">
+    <k-cell title="单元格" value="内容" icon="location" border="{{ false }}" />
+  </demo-block>
+
+  <demo-block title="展示箭头">
+    <k-cell title="单元格" arrow clickable />
+    <k-cell title="单元格" value="内容" arrow clickable border="{{ false }}" />
+  </demo-block>
+
+  <demo-block title="页面导航">
+    <k-cell title="路由跳转" url="/pages/index/index" arrow clickable border="{{ false }}" />
+  </demo-block>
+
+  <demo-block title="分组标题">
+    <k-cell-group title="分组1">
+      <k-cell title="单元格" value="内容" border="{{ false }}" />
+    </k-cell-group>
+
+    <k-cell-group title="分组2">
+      <k-cell title="单元格" value="内容" border="{{ false }}" />
+    </k-cell-group>
+  </demo-block>
+
+  <demo-block title="使用插槽">
+    <k-cell title="单元格" value="内容" icon="store" border="{{ false }}">
+      <k-icon name="search" style="line-height: inherit" slot="right-icon" />
+    </k-cell>
+  </demo-block>
+
+  <demo-block title="垂直居中">
+    <k-cell title="单元格" value="内容" label="描述信息" center border="{{ false }}" />
+  </demo-block>
+</k-space>

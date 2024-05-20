@@ -1,0 +1,44 @@
+@import '../variables.less';
+
+.hairline-common() {
+  position: absolute;
+  box-sizing: border-box;
+  content: '';
+  pointer-events: none;
+}
+
+.hairline-top(@color: @border-color, @width: 1px) {
+  .hairline-common();
+  top: 0;
+  right: 0;
+  left: 0;
+  border-top: @width solid @color;
+  transform: scaleY(0.5);
+}
+
+.hairline-right(@color: @border-color, @width: 1px) {
+  .hairline-common();
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-right: @width solid @color;
+  transform: scaleX(0.5);
+}
+
+.hairline-bottom(@color: @border-color, @width: 1px) {
+  .hairline-common();
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-bottom: @width solid @color;
+  transform: scaleY(0.5);
+}
+
+.hairline-right(@color: @border-color, @width: 1px) {
+  .hairline-common();
+  top: 0;
+  left: 0;
+  bottom: 0;
+  border-left: @width solid @color;
+  transform: scaleX(0.5);
+}

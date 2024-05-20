@@ -1,0 +1,9 @@
+<wxs src="../wxs/utils.wxs" module="utils" />
+
+<view wx:if="{{ title }}" class="{{ utils.bem('k-cell-group__title', [variant]) }} title-class">
+  {{ title }}
+</view>
+
+<view id="{{ kId }}" style="{{ style }}" class="{{ utils.bem('k-cell-group', [variant]) }} k-class">
+  <slot />
+</view>

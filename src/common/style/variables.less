@@ -14,6 +14,8 @@
 @background-color: var(--background-color, #fff);
 @active-background-color: var(--active-background-color, #f4f4f5);
 
+@border-color: var(--border-color, #e4e4e7);
+
 // Spacer
 @spacer-xs: var(--spacer-xs, 4px);
 @spacer-s: var(--spacer-s, 8px);
@@ -79,12 +81,44 @@
 @button-danger-background-color: var(--button-danger-background-color, @danger-color);
 @button-danger-border-color: @danger-color;
 
+// Cell
+@cell-font-size: var(--cell-font-size, @font-size-s);
+@cell-large-font-size: var(--cell-large-font-size, @font-size-m);
+@cell-label-font-size: var(--cell-label-font-size, @font-size-xs);
+@cell-large-label-font-size: var(--cell-large-label-font-size, @font-size-s);
+@cell-icon-size: var(--cell-icon-size, 16px);
+@cell-line-height: var(--cell-line-height, 24px);
+
+@cell-padding-inline: var(--cell-padding-inline, @spacer-l);
+@cell-padding-block: var(--cell-padding-block, @spacer-m);
+@cell-large-padding-block: var(--cell-large-padding-block, @spacer-l);
+@cell-border-spacer: var(--cell-border-spacer, @spacer-l);
+
+@cell-color: var(--cell-color, @text-color);
+@cell-label-color: var(--cell-label-color, @text-secondary-color);
+@cell-value-color: var(--cell-value-color, @text-secondary-color);
+@cell-right-icon-color: var(--cell-right-icon-color, @text-secondary-color);
+@cell-background-color: var(--cell-background-color, @background-color);
+@cell-active-background-color: var(--cell-active-background-color, @active-background-color);
+@cell-required-color: var(--cell-required-color, @danger-color);
+
+// Cell Group
+@cell-group-card-margin-inline: var(--cell-group-card-margin-inline, @spacer-l);
+@cell-group-card-border-radius: var(--cell-group-card-border-radius, @radius-m);
+@cell-group-title-padding-inline: var(--cell-group-title-padding-inline, @spacer-l);
+@cell-group-title-padding-block: var(--cell-group-title-padding-block, @spacer-l);
+@cell-group-title-font-size: var(--cell-group-title-font-size, @font-size-s);
+@cell-group-title-line-height: var(--cell-group-title-line-height, 16px);
+@cell-group-title-color: var(--cell-group-title-color, @text-secondary-color);
+
 // Loading
 @loading-animation-duration: var(--loading-animation-duration, 0.8s);
-@loading-label-font-size: var(--loading-label-font-size, 12px);
+
 @loading-small-size: var(--loading-small-size, 20px);
 @loading-default-size: var(--loading-small-size, 28px);
 @loading-large-size: var(--loading-small-size, 36px);
+@loading-label-font-size: var(--loading-label-font-size, @font-size-xs);
+
 @loading-default-color: var(--loading-default-color, @default-color);
 @loading-primary-color: var(--loading-primary-color, @primary-color);
 @loading-success-color: var(--loading-success-color, @success-color);
