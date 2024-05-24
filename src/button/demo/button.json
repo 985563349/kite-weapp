@@ -1,7 +1,7 @@
 {
   "navigationBarTitleText": "Button",
   "usingComponents": {
-    "k-space": "ikun-weapp/space/space",
-    "k-button": "ikun-weapp/button/button"
+    "k-space": "kite-weapp/space/space",
+    "k-button": "kite-weapp/button/button"
   }
 }

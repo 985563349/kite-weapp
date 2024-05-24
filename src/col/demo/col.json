@@ -1,7 +1,7 @@
 {
   "navigationBarTitleText": "Grid",
   "usingComponents": {
-    "k-row": "ikun-weapp/row/row",
-    "k-col": "ikun-weapp/col/col"
+    "k-row": "kite-weapp/row/row",
+    "k-col": "kite-weapp/col/col"
   }
 }

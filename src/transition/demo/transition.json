@@ -1,8 +1,8 @@
 {
   "navigationBarTitleText": "Transition",
   "usingComponents": {
-    "k-space": "ikun-weapp/space/space",
-    "k-button": "ikun-weapp/button/button",
-    "k-transition": "ikun-weapp/transition/transition"
+    "k-space": "kite-weapp/space/space",
+    "k-button": "kite-weapp/button/button",
+    "k-transition": "kite-weapp/transition/transition"
   }
 }

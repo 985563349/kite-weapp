@@ -1,9 +1,9 @@
 {
   "navigationBarTitleText": "Icon",
   "usingComponents": {
-    "k-space": "ikun-weapp/space/space",
-    "k-row": "ikun-weapp/row/row",
-    "k-col": "ikun-weapp/col/col",
-    "k-icon": "ikun-weapp/icon/icon"
+    "k-space": "kite-weapp/space/space",
+    "k-row": "kite-weapp/row/row",
+    "k-col": "kite-weapp/col/col",
+    "k-icon": "kite-weapp/icon/icon"
   }
 }

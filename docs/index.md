@@ -12,7 +12,7 @@ hero:
       link: /guide/quick-start
     - theme: alt
       text: GitHub
-      link: https://github.com/985563349/ikun-weapp
+      link: https://github.com/985563349/kite-weapp
 
 features:
   - title: Feature A

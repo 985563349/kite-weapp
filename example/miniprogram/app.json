@@ -10,7 +10,7 @@
     "pages/icon/icon"
   ],
   "window": {
-    "navigationBarTitleText": "ikun weapp",
+    "navigationBarTitleText": "Kite",
     "navigationBarTextStyle": "@navigationBarTextStyle",
     "navigationBarBackgroundColor": "@navigationBarBackgroundColor"
   },

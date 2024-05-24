@@ -1,5 +1,5 @@
 {
-  "name": "ikun-weapp",
+  "name": "kite-weapp",
   "version": "0.0.1",
   "description": "🐔 A WeChat Mini Program Component Library",
   "type": "module",
@@ -26,15 +26,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/985563349/ikun-weapp.git"
+    "url": "git+https://github.com/985563349/kite-weapp.git"
   },
   "keywords": [
-    "ikun",
+    "kite",
     "miniprogram"
   ],
   "author": "Jee",
   "license": "MIT",
-  "homepage": "https://github.com/985563349/ikun-weapp#readme",
+  "homepage": "https://github.com/985563349/kite-weapp#readme",
   "engines": {
     "node": ">=20.11.1"
   },

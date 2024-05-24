@@ -1,3 +1,3 @@
-<h1 align="center">ikun-weapp</h1>
+<h1 align="center">kite-weapp</h1>
 
-<p>🐔 A WeChat Mini Program Component Library.</p>
+<p>A WeChat Mini Program Component Library.</p>

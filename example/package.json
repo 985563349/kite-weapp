@@ -1,14 +1,12 @@
 {
-  "name": "ikun-weapp",
+  "name": "kite-weapp",
   "version": "0.0.1",
   "description": "",
-  "scripts": {
-  },
+  "scripts": {},
   "keywords": [],
   "author": "",
   "license": "",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "miniprogram-api-typings": "^2.8.3-1"
   }
