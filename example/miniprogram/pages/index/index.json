@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "k-cell": "kite-weapp/cell/cell",
+    "k-cell-group": "kite-weapp/cell-group/cell-group"
+  }
 }

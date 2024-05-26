@@ -22,7 +22,7 @@
 
   <demo-block title="基础图标" wrap>
     <k-row gutter="{{ [16, 16] }}">
-      <k-col span="8" wx:for="{{ icons }}" wx:key="index" k-class="col">
+      <k-col span="8" wx:for="{{ icons }}" wx:key="index">
         <k-icon name="{{ item }}" size="32px" />
         <text class="text">{{ item }}</text>
       </k-col>
