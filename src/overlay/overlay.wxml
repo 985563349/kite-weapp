@@ -1,7 +1,7 @@
 <k-transition
   id="{{ kId }}"
   visible="{{ visible }}"
-  k-class="k-class k-overlay"
+  k-class="k-overlay k-class"
   style="z-index: {{ zIndex }}; {{ style }}"
   duration="{{ duration }}"
   bind:tap="onTap"

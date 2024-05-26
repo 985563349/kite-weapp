@@ -4,7 +4,7 @@ exports[`cell should render cell and match snapshot 1`] = `
 <wx-view
   ariaLabel=""
   ariaRole=""
-  class="k-class k-cell"
+  class="k-cell k-class"
   hoverClass="k-cell--hover "
   hoverStayTime="70"
   id=""

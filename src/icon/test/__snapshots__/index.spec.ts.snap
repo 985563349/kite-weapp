@@ -2,7 +2,7 @@
 
 exports[`icon should render icon and match snapshot 1`] = `
 <wx-view
-  class="k-class k-icon"
+  class="k-icon k-class"
   id=""
   style=""
   bind:tap="onTap"

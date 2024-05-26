@@ -2,7 +2,7 @@
 
 exports[`loading should render loading and match snapshot 1`] = `
 <wx-view
-  class="k-class k-loading"
+  class="k-loading k-class"
   id=""
   style=""
 >

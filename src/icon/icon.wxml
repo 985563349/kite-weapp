@@ -3,7 +3,7 @@
 <view
   id="{{ kId }}"
   style="{{ computed.iconStyle({ style, color, size }) }}"
-  class="k-class {{ computed.iconClass({ prefix, name }) }}"
+  class="{{ computed.iconClass({ prefix, name }) }} k-class"
   bind:tap="onTap"
 >
   <image

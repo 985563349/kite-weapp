@@ -4,7 +4,7 @@ exports[`button should render button and match snapshot 1`] = `
 <wx-button
   appParameter=""
   ariaLabel=""
-  class="k-class k-button"
+  class="k-button k-class"
   formType=""
   hoverClass="k-button--active hover-class"
   hoverStartTime="{{20}}"

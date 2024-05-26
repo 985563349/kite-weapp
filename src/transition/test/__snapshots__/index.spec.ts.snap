@@ -2,7 +2,7 @@
 
 exports[`transition should render transition add match snapshot 1`] = `
 <wx-view
-  class="k-class k-transition "
+  class="k-transition  k-class"
   id=""
   style="display: none"
   bind:transitionend="onTransitionEnd"

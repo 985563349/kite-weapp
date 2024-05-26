@@ -2,7 +2,7 @@
 
 exports[`overlay should render overlay add match snapshot 1`] = `
 <wx-view
-  class="k-class k-transition "
+  class="k-transition  k-class"
   id=""
   style="display: none;z-index: 11000; "
   bind:transitionend="onTransitionEnd"

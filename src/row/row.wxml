@@ -4,7 +4,7 @@
 <view
   id="{{ kId }}"
   style="{{ computed.rowStyle({ gutter, style }) }}"
-  class="k-class {{ utils.bem('k-row', [justify, align, { wrap }]) }}"
+  class="{{ utils.bem('k-row', [justify, align, { wrap }]) }} k-class"
 >
   <slot />
 </view>

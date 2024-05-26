@@ -2,7 +2,7 @@
 
 <view
   id="{{ kId }}"
-  class="k-class k-transition {{ transitionClassNames }}"
+  class="k-transition {{ transitionClassNames }} k-class"
   style="{{ computed.transitionStyle({ display, transitionDuration, style }) }}"
   bind:transitionend="onTransitionEnd"
 >

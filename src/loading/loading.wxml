@@ -3,7 +3,7 @@
 <view
   id="{{ kId }}"
   style="{{ style }}"
-  class="k-class {{ utils.bem('k-loading', [{ vertical }, size, color]) }}"
+  class="{{ utils.bem('k-loading', [{ vertical }, size, color]) }} k-class"
 >
   <view
     class="k-loading__spinner"

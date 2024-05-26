@@ -3,7 +3,7 @@
 <view
   id="{{ kId }}"
   style="{{ style }}"
-  class="k-class {{ utils.bem('k-space', [align, size, { vertical, wrap }]) }}"
+  class="{{ utils.bem('k-space', [align, size, { vertical, wrap }]) }} k-class"
 >
   <slot />
 </view>

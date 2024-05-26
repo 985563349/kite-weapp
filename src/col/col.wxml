@@ -3,7 +3,7 @@
 
 <view
   id="{{ kId }}"
-  class="k-class {{ utils.bem('k-col', [span]) }} {{ offset ? 'k-col--offset-' + offset : '' }}"
+  class="{{ utils.bem('k-col', [span]) }} {{ offset ? 'k-col--offset-' + offset : '' }} k-class"
   style="{{ computed.colStyle({ gutter, style }) }}"
 >
   <slot />

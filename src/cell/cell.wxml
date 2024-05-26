@@ -3,7 +3,7 @@
 <view
   id="{{ kId }}"
   style="{{ style }}"
-  class="k-class {{ utils.bem('k-cell', [size, { center, borderless: !border, clickable, required }]) }}"
+  class="{{ utils.bem('k-cell', [size, { center, borderless: !border, clickable, required }]) }} k-class"
   hover-stay-time="70"
   hover-class="k-cell--hover {{ clickable ? 'hover-class' : '' }}"
   bind:tap="onTap"
