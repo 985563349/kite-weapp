@@ -1,14 +1,12 @@
 <k-space style="padding-bottom: 16px" size="md" vertical>
   <demo-block title="基本布局">
     <k-flex>
-      <k-button>Default</k-button>
-      <k-button color="primary">Primary</k-button>
-      <k-button color="success">Success</k-button>
+      <view wx:for="{{ 4 }}" wx:key="index" class="block"></view>
     </k-flex>
   </demo-block>
 
   <demo-block title="vertical布局">
-    <k-flex vertical>
+    <k-flex vertical gap="sm">
       <k-button>Default</k-button>
       <k-button color="primary">Primary</k-button>
       <k-button color="success">Success</k-button>
@@ -16,23 +14,23 @@
   </demo-block>
 
   <demo-block title="对齐方式">
-    <k-flex justify="center" align="center">
-      <k-button>start</k-button>
-      <k-button color="primary">center</k-button>
-      <k-button color="success">end</k-button>
+    <k-flex justify="center" align="center" gap="sm" k-class="layout">
+      <k-button>Default</k-button>
+      <k-button color="primary">Primary</k-button>
+      <k-button color="success">Success</k-button>
     </k-flex>
   </demo-block>
 
   <demo-block title="间距">
-    <k-flex gap="lg">
-      <k-button>small</k-button>
-      <k-button color="primary">middle</k-button>
-      <k-button color="success">large</k-button>
+    <k-flex gap="md">
+      <k-button>Default</k-button>
+      <k-button color="primary">Primary</k-button>
+      <k-button color="success">Success</k-button>
     </k-flex>
   </demo-block>
 
   <demo-block title="自动换行">
-    <k-flex wrap="wrap" gap="sm">
+    <k-flex wrap="wrap" gap="sm" k-class="layout">
       <k-button>Default</k-button>
       <k-button color="primary">Primary</k-button>
       <k-button color="success">Success</k-button>

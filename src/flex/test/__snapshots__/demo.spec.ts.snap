@@ -11,25 +11,25 @@ exports[`should render demo and match snapshot 1`] = `
       title="基本布局"
     >
       <k-flex>
-        <k-button>
-          Default
-        </k-button>
-        <k-button
-          color="primary"
-        >
-          Primary
-        </k-button>
-        <k-button
-          color="success"
-        >
-          Success
-        </k-button>
+        <wx-view
+          class="block"
+        />
+        <wx-view
+          class="block"
+        />
+        <wx-view
+          class="block"
+        />
+        <wx-view
+          class="block"
+        />
       </k-flex>
     </demo-block>
     <demo-block
       title="vertical布局"
     >
       <k-flex
+        gap="sm"
         vertical="{{true}}"
       >
         <k-button>
@@ -52,20 +52,22 @@ exports[`should render demo and match snapshot 1`] = `
     >
       <k-flex
         align="center"
+        gap="sm"
         justify="center"
+        kClass="layout"
       >
         <k-button>
-          start
+          Default
         </k-button>
         <k-button
           color="primary"
         >
-          center
+          Primary
         </k-button>
         <k-button
           color="success"
         >
-          end
+          Success
         </k-button>
       </k-flex>
     </demo-block>
@@ -73,20 +75,20 @@ exports[`should render demo and match snapshot 1`] = `
       title="间距"
     >
       <k-flex
-        gap="lg"
+        gap="md"
       >
         <k-button>
-          small
+          Default
         </k-button>
         <k-button
           color="primary"
         >
-          middle
+          Primary
         </k-button>
         <k-button
           color="success"
         >
-          large
+          Success
         </k-button>
       </k-flex>
     </demo-block>
@@ -95,6 +97,7 @@ exports[`should render demo and match snapshot 1`] = `
     >
       <k-flex
         gap="sm"
+        kClass="layout"
         wrap="wrap"
       >
         <k-button>
