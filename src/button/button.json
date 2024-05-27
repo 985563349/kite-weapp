@@ -2,6 +2,7 @@
   "component": true,
   "styleIsolation": "apply-shared",
   "usingComponents": {
-    "k-loading": "../loading/loading"
+    "k-loading": "../loading/loading",
+    "k-icon": "../icon/icon"
   }
 }

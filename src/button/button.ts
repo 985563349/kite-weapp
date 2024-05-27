@@ -22,6 +22,8 @@ KComponent({
 
     loading: Boolean,
 
+    icon: String,
+
     hoverStopPropagation: Boolean,
 
     hoverStartTime: {

@@ -9,6 +9,7 @@
 
   <demo-block title="图标">
     <k-space>
+      <k-button color="primary" icon="add">Button</k-button>
       <k-button color="primary" loading>Loading</k-button>
     </k-space>
   </demo-block>
@@ -43,6 +44,7 @@
     <k-space wrap>
       <k-button color="danger" shape="round">Success</k-button>
       <k-button color="warning" shape="round" variant="outline">Success</k-button>
+      <k-button color="primary" shape="circle" icon="add" />
       <k-button color="success" expand="block" size="lg">Primary</k-button>
       <k-button color="primary" expand="full" size="lg">Success</k-button>
     </k-space>

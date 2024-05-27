@@ -34,6 +34,12 @@ exports[`should render demo and match snapshot 1`] = `
       <k-space>
         <k-button
           color="primary"
+          icon="add"
+        >
+          Button
+        </k-button>
+        <k-button
+          color="primary"
           loading="{{true}}"
         >
           Loading
@@ -136,6 +142,11 @@ exports[`should render demo and match snapshot 1`] = `
         >
           Success
         </k-button>
+        <k-button
+          color="primary"
+          icon="add"
+          shape="circle"
+        />
         <k-button
           color="success"
           expand="block"

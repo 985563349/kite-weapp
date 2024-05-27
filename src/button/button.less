@@ -7,7 +7,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: @spacer-s;
+  gap: @spacer-xs;
   box-sizing: border-box;
   white-space: nowrap;
   text-align: center;
@@ -37,6 +37,11 @@
     background-color: @black-color;
   }
 
+  &__icon {
+    line-height: inherit;
+    font-size: 1.2em;
+  }
+
   &--active::before {
     opacity: 0.15;
   }
@@ -63,21 +68,6 @@
   &--danger {
     color: @button-danger-color;
     background-color: @button-danger-background-color;
-  }
-
-  &--block {
-    display: flex;
-    width: 100%;
-  }
-
-  &--full {
-    display: flex;
-    width: 100%;
-    border-radius: 0;
-  }
-
-  &--round {
-    border-radius: @button-round-border-radius;
   }
 
   &--sm {
@@ -160,6 +150,44 @@
         background-color: @button-danger-background-color;
       }
     }
+  }
+
+  &--round {
+    border-radius: calc(@button-default-height / 2);
+
+    &.@{button}--sm {
+      border-radius: calc(@button-small-height / 2);
+    }
+
+    &.@{button}--lg {
+      border-radius: calc(@button-large-height / 2);
+    }
+  }
+
+  &--circle {
+    min-width: @button-default-height;
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 50%;
+
+    &.@{button}--sm {
+      min-width: @button-small-height;
+    }
+
+    &.@{button}--lg {
+      min-width: @button-large-height;
+    }
+  }
+
+  &--block {
+    display: flex;
+    width: 100%;
+  }
+
+  &--full {
+    display: flex;
+    width: 100%;
+    border-radius: 0;
   }
 
   &--disabled {

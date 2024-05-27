@@ -3,7 +3,7 @@
 <button
   id="{{ kId }}"
   style="{{ style }}"
-  class="{{ utils.bem('k-button', [color, expand, shape, size, variant, { disabled }]) }} k-class"
+  class="{{ utils.bem('k-button', [color, size, variant, shape, expand, { disabled }]) }} k-class"
   hover-class="{{ disabled || loading ? '' : 'k-button--active hover-class' }}"
   form-type="{{ disabled || loading ? '' : type }}"
   open-type="{{ disabled || loading ? '' : openType }}"
@@ -29,5 +29,8 @@
   bind:agreeprivacyauthorization="agreeprivacyauthorization"
 >
   <k-loading wx:if="{{ loading }}" size="sm" color="current" />
+
+  <k-icon wx:elif="{{ icon }}" name="{{ icon }}" k-class="k-button__icon" />
+
   <slot />
 </button>
