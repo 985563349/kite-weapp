@@ -5,7 +5,7 @@
         <k-button color="primary" size="sm" variant="clear" bind:click="onClickFade">Fade</k-button>
       </k-space>
 
-      <k-transition visible="{{ visible }}" k-class="block" />
+      <k-transition visible="{{ visible }}" name="fade" k-class="block" />
     </k-space>
   </demo-block>
 

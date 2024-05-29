@@ -27,6 +27,7 @@ exports[`should render demo and match snapshot 1`] = `
         </k-space>
         <k-transition
           kClass="block"
+          name="fade"
           visible="{{false}}"
         />
       </k-space>

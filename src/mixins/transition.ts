@@ -1,7 +1,13 @@
 import { requestAnimationFrame } from '../common/raf';
 import { isObject } from '../common/validator';
 
+type DurationOption = {
+  enter: number;
+  leave: number;
+};
+
 type DataOption = {
+  mounted: boolean;
   display: boolean;
   transitionDuration?: number;
   transitionClassNames: string;
@@ -39,11 +45,6 @@ type CustomInstanceProperty = {
   status: 'enter' | 'leave';
 };
 
-type DurationOption = {
-  enter: number;
-  leave: number;
-};
-
 export default function transition() {
   return Behavior<DataOption, PropertyOption, MethodOption, CustomInstanceProperty>({
     properties: {
@@ -66,6 +67,7 @@ export default function transition() {
     },
 
     data: {
+      mounted: false,
       display: false,
       transitionClassNames: '',
     },
@@ -157,7 +159,7 @@ export default function transition() {
         const { visible, display } = this.data;
 
         if (!visible && display) {
-          this.setData({ display: false });
+          this.setData({ display: false, transitionClassNames: '' });
         }
       },
     },
