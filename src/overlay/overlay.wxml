@@ -1,13 +1,14 @@
-<k-transition
+<wxs src="../wxs/utils.wxs" module="utils" />
+<wxs src="./overlay.wxs" module="computed" />
+
+<view
+  wx:if="{{ mounted }}"
   id="{{ kId }}"
-  visible="{{ visible }}"
-  k-class="k-overlay k-class"
-  style="z-index: {{ zIndex }}; {{ style }}"
-  duration="{{ duration }}"
+  class="k-overlay {{ transitionClassNames }} k-class"
+  style="{{ computed.overlayStyle({ display, transitionDuration, zIndex, style }) }}"
   bind:tap="onTap"
   catch:touchmove="{{ lockScroll ? 'noop' : '' }}"
   aria-role="{{ ariaRole || 'button' }}"
   aria-label="{{ ariaLabel || 'close' }}"
->
-  <slot />
-</k-transition>
+  bind:transitionend="onTransitionEnd"
+/>

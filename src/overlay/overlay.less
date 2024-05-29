@@ -10,3 +10,14 @@
   height: 100%;
   background-color: @overlay-background-color;
 }
+
+.k-fade-enter-active,
+.k-fade-leave-active {
+  transition-timing-function: ease;
+  transition-property: opacity;
+}
+
+.k-fade-enter,
+.k-fade-leave-to {
+  opacity: 0;
+}

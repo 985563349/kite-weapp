@@ -9,6 +9,7 @@ describe('overlay', () => {
   test('should render overlay add match snapshot', () => {
     const comp = simulate.render(KOverlay);
     comp.attach(document.createElement('parent-wrapper'));
+    comp.setData({ mounted: true });
 
     expect(comp.toJSON()).toMatchSnapshot();
   });

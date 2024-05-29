@@ -2,9 +2,13 @@
 
 exports[`overlay should render overlay add match snapshot 1`] = `
 <wx-view
-  class="k-transition  k-class"
+  ariaLabel="close"
+  ariaRole="button"
+  class="k-overlay  k-class"
   id=""
-  style="display: none;z-index: 11000; "
+  style="z-index:11000;display: none"
+  bind:tap="onTap"
+  catch:touchmove="noop"
   bind:transitionend="onTransitionEnd"
 />
 `;

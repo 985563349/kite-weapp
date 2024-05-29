@@ -1,7 +1,5 @@
 {
   "component": true,
   "styleIsolation": "apply-shared",
-  "usingComponents": {
-    "k-transition": "../transition/transition"
-  }
+  "usingComponents": {}
 }

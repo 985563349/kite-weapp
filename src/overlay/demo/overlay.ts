@@ -1,16 +1,15 @@
 Component({
   data: {
     visible: false,
-    visibleEmbedded: false,
   },
 
   methods: {
-    onClick() {
-      this.setData({ visible: !this.data.visible });
+    onClickOpen() {
+      this.setData({ visible: true });
     },
 
-    onClickEmbedded() {
-      this.setData({ visibleEmbedded: !this.data.visibleEmbedded });
+    onClickClose() {
+      this.setData({ visible: false });
     },
 
     noop() {},

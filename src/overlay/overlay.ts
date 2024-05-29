@@ -1,17 +1,11 @@
 import KComponent from '../common/component';
+import transition from '../mixins/transition';
 
 KComponent({
   properties: {
     kId: String,
 
-    visible: Boolean,
-
     style: String,
-
-    duration: {
-      type: Number,
-      value: 300,
-    },
 
     zIndex: {
       type: Number,
@@ -27,6 +21,8 @@ KComponent({
 
     ariaLabel: String,
   },
+
+  behaviors: [transition('fade')],
 
   methods: {
     onTap() {

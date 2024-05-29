@@ -45,7 +45,7 @@ type CustomInstanceProperty = {
   status: 'enter' | 'leave';
 };
 
-export default function transition() {
+export default function transition(name = 'transition') {
   return Behavior<DataOption, PropertyOption, MethodOption, CustomInstanceProperty>({
     properties: {
       visible: {
@@ -62,7 +62,7 @@ export default function transition() {
 
       name: {
         type: String,
-        value: 'fade',
+        value: name,
       },
     },
 

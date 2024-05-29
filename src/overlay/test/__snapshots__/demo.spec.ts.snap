@@ -14,39 +14,14 @@ exports[`should render demo and match snapshot 1`] = `
         color="primary"
         size="sm"
         variant="clear"
-        bind:click="onClick"
+        bind:click="onClickOpen"
       >
         Open
       </k-button>
       <k-overlay
         visible="{{false}}"
-        bind:click="onClick"
+        bind:click="onClickClose"
       />
-    </demo-block>
-    <demo-block
-      title="嵌入内容"
-    >
-      <k-button
-        color="primary"
-        size="sm"
-        variant="clear"
-        bind:click="onClickEmbedded"
-      >
-        Open
-      </k-button>
-      <k-overlay
-        visible="{{false}}"
-        bind:click="onClickEmbedded"
-      >
-        <wx-view
-          class="content"
-        >
-          <wx-view
-            class="block"
-            catch:tap="noop"
-          />
-        </wx-view>
-      </k-overlay>
     </demo-block>
   </k-space>
 </main>
