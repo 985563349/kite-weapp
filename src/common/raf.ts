@@ -7,14 +7,14 @@ type QueueRecordRaw = {
 };
 
 const queue: QueueRecordRaw[] = [];
-const frameDuration = 1000 / 60;
+const frameDuration = 1000 / 30;
 
 let last = 0;
 let id = 0;
 
 export function requestAnimationFrame(callback: FrameRequestCallback) {
   if (queue.length === 0) {
-    const now = performance.now();
+    const now = Date.now();
     const next = Math.max(0, frameDuration - (now - last));
     last = next + now;
 
