@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`popup should render overlay add match snapshot 1`] = `
+<wx-view
+  class="k-popup k-popup--center  k-class"
+  id=""
+  style="z-index:11000;display: none"
+  bind:transitionend="onTransitionEnd"
+/>
+`;

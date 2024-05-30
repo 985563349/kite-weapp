@@ -1,0 +1,78 @@
+<k-flex style="padding-bottom: 16px" gap="md" vertical>
+  <demo-block title="基础用法">
+    <k-button color="primary" size="sm" variant="clear" bind:click="onClickBasicOpen">
+      Open
+    </k-button>
+
+    <k-popup style="padding: 100px" visible="{{ basic }}" bind:close="onClickBasicClose" />
+  </demo-block>
+
+  <demo-block title="弹出位置">
+    <k-space>
+      <k-button color="primary" size="sm" variant="clear" bind:click="onClickTopOpen">
+        Top
+      </k-button>
+
+      <k-button color="primary" size="sm" variant="clear" bind:click="onClickRightOpen">
+        Right
+      </k-button>
+
+      <k-button color="primary" size="sm" variant="clear" bind:click="onClickBottomOpen">
+        Bottom
+      </k-button>
+
+      <k-button color="primary" size="sm" variant="clear" bind:click="onClickLeftOpen">
+        Left
+      </k-button>
+    </k-space>
+
+    <k-popup
+      style="height: 260px"
+      visible="{{ top }}"
+      placement="top"
+      bind:close="onClickTopClose"
+    />
+
+    <k-popup
+      style="width: 20%; height: 100%"
+      visible="{{ right }}"
+      placement="right"
+      bind:close="onClickRightClose"
+    />
+
+    <k-popup
+      style="height: 260px"
+      visible="{{ bottom }}"
+      placement="bottom"
+      bind:close="onClickBottomClose"
+    />
+
+    <k-popup
+      style="width: 20%; height: 100%"
+      visible="{{ left }}"
+      placement="left"
+      bind:close="onClickLeftClose"
+    />
+  </demo-block>
+
+  <demo-block title="形状">
+    <k-button color="primary" size="sm" variant="clear" bind:click="onClickRoundOpen">
+      Round
+    </k-button>
+
+    <k-popup
+      style="padding: 100px"
+      visible="{{ round }}"
+      shape="round"
+      bind:close="onClickRoundClose"
+    />
+  </demo-block>
+
+  <demo-block title="关闭按钮">
+    <k-button color="primary" size="sm" variant="clear" bind:click="onClickCloseOpen">
+      Open
+    </k-button>
+
+    <k-popup style="padding: 100px" visible="{{ close }}" closable bind:close="onClickCloseClose" />
+  </demo-block>
+</k-flex>

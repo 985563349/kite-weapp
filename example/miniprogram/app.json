@@ -2,14 +2,15 @@
   "pages": [
     "pages/index/index",
     "pages/button/button",
-    "pages/loading/loading",
-    "pages/space/space",
-    "pages/transition/transition",
-    "pages/overlay/overlay",
     "pages/col/col",
     "pages/icon/icon",
+    "pages/space/space",
+    "pages/flex/flex",
     "pages/cell/cell",
-    "pages/flex/flex"
+    "pages/loading/loading",
+    "pages/overlay/overlay",
+    "pages/popup/popup",
+    "pages/transition/transition"
   ],
   "window": {
     "navigationBarTitleText": "Kite",
