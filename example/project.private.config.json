@@ -61,6 +61,13 @@
           "scene": null
         },
         {
+          "name": "popup",
+          "pathName": "pages/popup/popup",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "transition",
           "pathName": "pages/transition/transition",
           "query": "",

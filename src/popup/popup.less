@@ -1,0 +1,107 @@
+@import '../common/style/variables.less';
+
+@popup: ~'k-popup';
+
+.@{popup} {
+  position: fixed;
+  overflow-y: auto;
+  max-height: 100%;
+  transition-timing-function: ease;
+  -webkit-overflow-scrolling: touch;
+  background-color: @popup-background-color;
+
+  &--top {
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    &.@{popup}--round {
+      border-bottom-left-radius: @popup-border-radius;
+      border-bottom-right-radius: @popup-border-radius;
+    }
+  }
+
+  &--right {
+    top: 50%;
+    right: 0;
+    transform: translate3d(0, -50%, 0);
+
+    &.@{popup}--round {
+      border-top-left-radius: @popup-border-radius;
+      border-bottom-left-radius: @popup-border-radius;
+    }
+  }
+
+  &--bottom {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    &.@{popup}--round {
+      border-top-left-radius: @popup-border-radius;
+      border-top-right-radius: @popup-border-radius;
+    }
+  }
+
+  &--left {
+    top: 50%;
+    left: 0;
+    transform: translate3d(0, -50%, 0);
+
+    &.@{popup}--round {
+      border-top-right-radius: @popup-border-radius;
+      border-bottom-right-radius: @popup-border-radius;
+    }
+  }
+
+  &--center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &.@{popup}--round {
+      border-radius: @popup-border-radius;
+    }
+  }
+}
+
+.k-top-enter-active,
+.k-top-leave-active,
+.k-right-enter-active,
+.k-right-leave-active,
+.k-bottom-enter-active,
+.k-bottom-leave-active,
+.k-left-enter-active,
+.k-left-leave-active {
+  transition-property: transform;
+}
+
+.k-top-enter,
+.k-top-leave-to {
+  transform: translate3d(0, -100%, 0);
+}
+
+.k-right-enter,
+.k-right-leave-to {
+  transform: translate3d(100%, -50%, 0);
+}
+
+.k-bottom-enter,
+.k-bottom-leave-to {
+  transform: translate3d(0, 100%, 0);
+}
+
+.k-left-enter,
+.k-left-leave-to {
+  transform: translate3d(-100%, -50%, 0);
+}
+
+.k-center-enter-active,
+.k-center-leave-active {
+  transition-property: opacity;
+}
+
+.k-center-enter,
+.k-center-leave-to {
+  opacity: 0;
+}

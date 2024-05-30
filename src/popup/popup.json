@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "styleIsolation": "apply-shared",
+  "usingComponents": {
+    "k-overlay": "../overlay/overlay",
+    "k-icon": "../icon/icon"
+  }
+}
