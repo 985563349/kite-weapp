@@ -1,12 +1,12 @@
-<k-space style="padding-bottom: 16px" size="md" vertical>
+<k-flex style="padding-bottom: 16px" gap="md" vertical>
   <demo-block title="基本布局">
     <k-flex>
       <view wx:for="{{ 4 }}" wx:key="index" class="block"></view>
     </k-flex>
   </demo-block>
 
-  <demo-block title="vertical布局">
-    <k-flex vertical gap="sm">
+  <demo-block title="垂直布局">
+    <k-flex gap="sm" vertical>
       <k-button>Default</k-button>
       <k-button color="primary">Primary</k-button>
       <k-button color="success">Success</k-button>
@@ -22,7 +22,7 @@
   </demo-block>
 
   <demo-block title="间距">
-    <k-flex gap="md">
+    <k-flex gap="lg">
       <k-button>Default</k-button>
       <k-button color="primary">Primary</k-button>
       <k-button color="success">Success</k-button>
@@ -38,4 +38,4 @@
       <k-button color="danger">Danger</k-button>
     </k-flex>
   </demo-block>
-</k-space>
+</k-flex>

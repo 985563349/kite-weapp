@@ -1,4 +1,4 @@
-<view>
+<view style="padding-bottom: 16px">
   <k-cell-group title="基础" variant="card">
     <k-cell title="Button 按钮" url="/pages/button/button" arrow clickable />
     <k-cell title="Grid 栅格" url="/pages/col/col" arrow clickable />

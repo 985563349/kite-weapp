@@ -2,8 +2,8 @@
 
 exports[`should render demo and match snapshot 1`] = `
 <main>
-  <k-space
-    size="md"
+  <k-flex
+    gap="md"
     style="padding-bottom: 16px"
     vertical="{{true}}"
   >
@@ -126,6 +126,6 @@ exports[`should render demo and match snapshot 1`] = `
         </k-button>
       </k-space>
     </demo-block>
-  </k-space>
+  </k-flex>
 </main>
 `;

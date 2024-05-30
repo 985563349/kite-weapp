@@ -1,7 +1,7 @@
-<k-space style="padding-bottom: 16px" size="md" vertical>
+<k-flex style="padding-bottom: 16px" gap="md" vertical>
   <demo-block title="基础用法">
     <k-button color="primary" size="sm" variant="clear" bind:click="onClickOpen">Open</k-button>
 
     <k-overlay visible="{{ visible }}" bind:click="onClickClose" />
   </demo-block>
-</k-space>
+</k-flex>

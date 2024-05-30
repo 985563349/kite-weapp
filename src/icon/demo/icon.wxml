@@ -1,20 +1,20 @@
-<k-space style="padding-bottom: 16px" size="md" vertical>
+<k-flex style="padding-bottom: 16px" gap="md" vertical>
   <demo-block title="基础用法">
-    <k-space wrap>
+    <k-space>
       <k-icon name="message" size="32px" />
       <k-icon name="user" size="32px" />
     </k-space>
   </demo-block>
 
   <demo-block title="图标颜色">
-    <k-space wrap>
+    <k-space>
       <k-icon name="store" size="32px" color="#006fee" />
       <k-icon name="fire" size="32px" color="#f31260" />
     </k-space>
   </demo-block>
 
   <demo-block title="图标大小">
-    <k-space wrap align="center">
+    <k-space>
       <k-icon name="location" size="32px" />
       <k-icon name="location" size="48px" />
     </k-space>
@@ -28,4 +28,4 @@
       </k-col>
     </k-row>
   </demo-block>
-</k-space>
+</k-flex>

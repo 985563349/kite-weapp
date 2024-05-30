@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "Grid",
   "usingComponents": {
+    "k-flex": "kite-weapp/flex/flex",
     "k-row": "kite-weapp/row/row",
     "k-col": "kite-weapp/col/col"
   }

@@ -1,7 +1,7 @@
 {
   "navigationBarTitleText": "Overlay",
   "usingComponents": {
-    "k-space": "kite-weapp/space/space",
+    "k-flex": "kite-weapp/flex/flex",
     "k-button": "kite-weapp/button/button",
     "k-overlay": "kite-weapp/overlay/overlay"
   }

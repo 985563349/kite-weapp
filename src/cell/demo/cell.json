@@ -1,7 +1,7 @@
 {
   "navigationBarTitleText": "Cell",
   "usingComponents": {
-    "k-space": "kite-weapp/space/space",
+    "k-flex": "kite-weapp/flex/flex",
     "k-cell-group": "kite-weapp/cell-group/cell-group",
     "k-cell": "kite-weapp/cell/cell",
     "k-icon": "kite-weapp/icon/icon"

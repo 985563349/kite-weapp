@@ -1,23 +1,21 @@
-<k-space style="padding-bottom: 16px" size="md" vertical>
-  <demo-block title="基础用法">
-    <k-space vertical>
-      <k-space wrap>
-        <k-button color="primary" size="sm" variant="clear" bind:click="onClickFade">Fade</k-button>
-      </k-space>
+<k-flex style="padding-bottom: 16px" gap="md" vertical>
+  <demo-block title="淡入淡出">
+    <k-space align="start" vertical>
+      <k-button color="primary" size="sm" variant="clear" bind:click="onClickFade">Fade</k-button>
 
       <k-transition visible="{{ visible }}" name="fade" k-class="block" />
     </k-space>
   </demo-block>
 
-  <demo-block title="自定义动画">
-    <k-space>
-      <k-button color="primary" size="sm" variant="clear" bind:click="onClickCustom"
-        >Custom</k-button
+  <demo-block title="旋转">
+    <k-space align="start" vertical>
+      <k-button color="primary" size="sm" variant="clear" bind:click="onClickRotate"
+        >Rotate</k-button
       >
 
       <k-transition
-        visible="{{ customVisible }}"
-        name="custom"
+        visible="{{ rotateVisible }}"
+        name="rotate"
         duration="{{ { enter: 300, leave: 1000 } }}"
         k-class="block"
         bind:before-enter="onBeforeEnter"
@@ -29,4 +27,4 @@
       />
     </k-space>
   </demo-block>
-</k-space>
+</k-flex>

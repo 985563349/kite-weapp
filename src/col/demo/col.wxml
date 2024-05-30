@@ -1,4 +1,4 @@
-<k-space style="padding-bottom: 16px" size="md" vertical>
+<k-flex style="padding-bottom: 16px" gap="md" vertical>
   <demo-block title="基础用法">
     <k-row>
       <k-col span="8">span:8</k-col>
@@ -49,4 +49,4 @@
       <k-col span="4" style="height: 80px">span:4</k-col>
     </k-row>
   </demo-block>
-</k-space>
+</k-flex>

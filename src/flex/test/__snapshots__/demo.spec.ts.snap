@@ -2,8 +2,8 @@
 
 exports[`should render demo and match snapshot 1`] = `
 <main>
-  <k-space
-    size="md"
+  <k-flex
+    gap="md"
     style="padding-bottom: 16px"
     vertical="{{true}}"
   >
@@ -26,7 +26,7 @@ exports[`should render demo and match snapshot 1`] = `
       </k-flex>
     </demo-block>
     <demo-block
-      title="vertical布局"
+      title="垂直布局"
     >
       <k-flex
         gap="sm"
@@ -75,7 +75,7 @@ exports[`should render demo and match snapshot 1`] = `
       title="间距"
     >
       <k-flex
-        gap="md"
+        gap="lg"
       >
         <k-button>
           Default
@@ -125,6 +125,6 @@ exports[`should render demo and match snapshot 1`] = `
         </k-button>
       </k-flex>
     </demo-block>
-  </k-space>
+  </k-flex>
 </main>
 `;

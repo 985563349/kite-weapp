@@ -2,29 +2,26 @@
 
 exports[`should render demo and match snapshot 1`] = `
 <main>
-  <k-space
-    size="md"
+  <k-flex
+    gap="md"
     style="padding-bottom: 16px"
     vertical="{{true}}"
   >
     <demo-block
-      title="基础用法"
+      title="淡入淡出"
     >
       <k-space
+        align="start"
         vertical="{{true}}"
       >
-        <k-space
-          wrap="{{true}}"
+        <k-button
+          color="primary"
+          size="sm"
+          variant="clear"
+          bind:click="onClickFade"
         >
-          <k-button
-            color="primary"
-            size="sm"
-            variant="clear"
-            bind:click="onClickFade"
-          >
-            Fade
-          </k-button>
-        </k-space>
+          Fade
+        </k-button>
         <k-transition
           kClass="block"
           name="fade"
@@ -33,16 +30,19 @@ exports[`should render demo and match snapshot 1`] = `
       </k-space>
     </demo-block>
     <demo-block
-      title="自定义动画"
+      title="旋转"
     >
-      <k-space>
+      <k-space
+        align="start"
+        vertical="{{true}}"
+      >
         <k-button
           color="primary"
           size="sm"
           variant="clear"
-          bind:click="onClickCustom"
+          bind:click="onClickRotate"
         >
-          Custom
+          Rotate
         </k-button>
         <k-transition
           duration="{{
@@ -52,7 +52,7 @@ exports[`should render demo and match snapshot 1`] = `
             }
           }}"
           kClass="block"
-          name="custom"
+          name="rotate"
           visible="{{false}}"
           bind:after-enter="onAfterEnter"
           bind:after-leave="onAfterLeave"
@@ -63,6 +63,6 @@ exports[`should render demo and match snapshot 1`] = `
         />
       </k-space>
     </demo-block>
-  </k-space>
+  </k-flex>
 </main>
 `;

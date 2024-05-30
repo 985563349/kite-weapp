@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "Loading",
   "usingComponents": {
+    "k-flex": "kite-weapp/flex/flex",
     "k-space": "kite-weapp/space/space",
     "k-loading": "kite-weapp/loading/loading"
   }

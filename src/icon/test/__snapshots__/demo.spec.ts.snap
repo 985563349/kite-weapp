@@ -2,17 +2,15 @@
 
 exports[`should render demo and match snapshot 1`] = `
 <main>
-  <k-space
-    size="md"
+  <k-flex
+    gap="md"
     style="padding-bottom: 16px"
     vertical="{{true}}"
   >
     <demo-block
       title="基础用法"
     >
-      <k-space
-        wrap="{{true}}"
-      >
+      <k-space>
         <k-icon
           name="message"
           size="32px"
@@ -26,9 +24,7 @@ exports[`should render demo and match snapshot 1`] = `
     <demo-block
       title="图标颜色"
     >
-      <k-space
-        wrap="{{true}}"
-      >
+      <k-space>
         <k-icon
           color="#006fee"
           name="store"
@@ -44,10 +40,7 @@ exports[`should render demo and match snapshot 1`] = `
     <demo-block
       title="图标大小"
     >
-      <k-space
-        align="center"
-        wrap="{{true}}"
-      >
+      <k-space>
         <k-icon
           name="location"
           size="32px"
@@ -1541,6 +1534,6 @@ exports[`should render demo and match snapshot 1`] = `
         </k-col>
       </k-row>
     </demo-block>
-  </k-space>
+  </k-flex>
 </main>
 `;

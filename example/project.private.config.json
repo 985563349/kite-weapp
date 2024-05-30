@@ -5,6 +5,34 @@
     "miniprogram": {
       "list": [
         {
+          "name": "button",
+          "pathName": "pages/button/button",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "grid",
+          "pathName": "pages/col/col",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "icon",
+          "pathName": "pages/icon/icon",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "space",
+          "pathName": "pages/space/space",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "flex",
           "pathName": "pages/flex/flex",
           "query": "",
@@ -19,15 +47,8 @@
           "scene": null
         },
         {
-          "name": "icon",
-          "pathName": "pages/icon/icon",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "grid",
-          "pathName": "pages/col/col",
+          "name": "loading",
+          "pathName": "pages/loading/loading",
           "query": "",
           "launchMode": "default",
           "scene": null
@@ -42,27 +63,6 @@
         {
           "name": "transition",
           "pathName": "pages/transition/transition",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "space",
-          "pathName": "pages/space/space",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "button",
-          "pathName": "pages/button/button",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "loading",
-          "pathName": "pages/loading/loading",
           "query": "",
           "launchMode": "default",
           "scene": null

@@ -1,7 +1,7 @@
 Component({
   data: {
     visible: false,
-    customVisible: false,
+    rotateVisible: false,
   },
 
   methods: {
@@ -12,10 +12,10 @@ Component({
       }, 500);
     },
 
-    onClickCustom() {
-      this.setData({ customVisible: true });
+    onClickRotate() {
+      this.setData({ rotateVisible: true });
       setTimeout(() => {
-        this.setData({ customVisible: false });
+        this.setData({ rotateVisible: false });
       }, 1000);
     },
 

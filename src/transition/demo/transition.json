@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "Transition",
   "usingComponents": {
+    "k-flex": "kite-weapp/flex/flex",
     "k-space": "kite-weapp/space/space",
     "k-button": "kite-weapp/button/button",
     "k-transition": "kite-weapp/transition/transition"

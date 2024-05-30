@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "Icon",
   "usingComponents": {
+    "k-flex": "kite-weapp/flex/flex",
     "k-space": "kite-weapp/space/space",
     "k-row": "kite-weapp/row/row",
     "k-col": "kite-weapp/col/col",
