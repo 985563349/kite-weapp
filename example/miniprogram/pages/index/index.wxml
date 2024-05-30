@@ -12,6 +12,7 @@
   </k-cell-group>
 
   <k-cell-group title="反馈" variant="card">
+    <k-cell title="ActionSheet 动作面板" url="/pages/action-sheet/action-sheet" arrow clickable />
     <k-cell title="Loading 加载" url="/pages/loading/loading" arrow clickable />
     <k-cell title="Overlay 遮罩层" url="/pages/overlay/overlay" arrow clickable />
     <k-cell title="Popup 弹出层" url="/pages/popup/popup" arrow clickable border="{{ false }}" />

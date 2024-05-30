@@ -1,0 +1,41 @@
+<k-popup
+  visible="{{ visible }}"
+  style="background-color: transparent"
+  placement="bottom"
+  shape="round"
+  overlay="{{ overlay }}"
+  overlay-closable="{{ overlayClosable }}"
+  z-index="{{ zIndex }}"
+  bind:click-overlay="onClickOverlay"
+>
+  <view id="{{ kId }}" class="k-action-sheet k-class">
+    <view class="k-action-sheet-content">
+      <view wx:if="{{ options && options.length }}" class="k-action-sheet-group">
+        <view wx:if="{{ title || subTitle }}" class="k-action-sheet-header">
+          <view class="k-action-sheet__title">{{ title }}</view>
+          <view class="k-action-sheet__sub-title">{{ subTitle }}</view>
+        </view>
+
+        <k-button
+          wx:for="{{ options }}"
+          wx:key="index"
+          color="{{ item.color }}"
+          variant="clear"
+          expand="full"
+          size="lg"
+          disabled="{{ item.disabled }}"
+          data-index="{{ index }}"
+          bind:click="onSelect"
+        >
+          {{ item.label }}
+        </k-button>
+      </view>
+
+      <view class="k-action-sheet-group">
+        <k-button variant="clear" expand="full" size="lg" bind:click="onCancel"
+          >{{ cancelText }}</k-button
+        >
+      </view>
+    </view>
+  </view>
+</k-popup>

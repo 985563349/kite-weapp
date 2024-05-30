@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "ActionSheet",
+  "usingComponents": {
+    "k-flex": "kite-weapp/flex/flex",
+    "k-button": "kite-weapp/button/button",
+    "k-action-sheet": "kite-weapp/action-sheet/action-sheet"
+  }
+}

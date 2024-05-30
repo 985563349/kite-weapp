@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render demo and match snapshot 1`] = `
+<main>
+  <k-flex
+    gap="md"
+    style="padding-bottom: 16px"
+    vertical="{{true}}"
+  >
+    <demo-block
+      title="基础用法"
+    >
+      <k-button
+        color="primary"
+        variant="clear"
+        bind:click="onClickBasicOpen"
+      >
+        Open
+      </k-button>
+      <k-action-sheet
+        cancelText="Cancel"
+        options="{{
+          [
+            {
+              "label": "Delete",
+              "value": 0,
+            },
+            {
+              "label": "Share",
+              "value": 1,
+            },
+          ]
+        }}"
+        visible="{{false}}"
+        bind:close="onClickBasicClose"
+        bind:selected="onSelect"
+      />
+    </demo-block>
+    <demo-block
+      title="选项颜色"
+    >
+      <k-button
+        color="primary"
+        variant="clear"
+        bind:click="onClickColorOpen"
+      >
+        Open
+      </k-button>
+      <k-action-sheet
+        cancelText="Cancel"
+        options="{{
+          [
+            {
+              "color": "danger",
+              "label": "Delete",
+              "value": 0,
+            },
+            {
+              "color": "primary",
+              "label": "Share",
+              "value": 1,
+            },
+          ]
+        }}"
+        visible="{{false}}"
+        bind:close="onClickColorClose"
+      />
+    </demo-block>
+    <demo-block
+      title="选项状态"
+    >
+      <k-button
+        color="primary"
+        variant="clear"
+        bind:click="onClickStateOpen"
+      >
+        Open
+      </k-button>
+      <k-action-sheet
+        cancelText="Cancel"
+        options="{{
+          [
+            {
+              "color": "danger",
+              "disabled": true,
+              "label": "Delete",
+              "value": 0,
+            },
+            {
+              "color": "primary",
+              "label": "Share",
+              "value": 1,
+            },
+          ]
+        }}"
+        visible="{{false}}"
+        bind:close="onClickStateClose"
+      />
+    </demo-block>
+    <demo-block
+      title="标题信息"
+    >
+      <k-button
+        color="primary"
+        variant="clear"
+        bind:click="onClickTitleOpen"
+      >
+        Open
+      </k-button>
+      <k-action-sheet
+        cancelText="Cancel"
+        options="{{
+          [
+            {
+              "color": "danger",
+              "label": "Delete",
+              "value": 0,
+            },
+            {
+              "color": "primary",
+              "label": "Share",
+              "value": 1,
+            },
+          ]
+        }}"
+        title="Actions"
+        visible="{{false}}"
+        bind:close="onClickTitleClose"
+      />
+    </demo-block>
+  </k-flex>
+</main>
+`;
