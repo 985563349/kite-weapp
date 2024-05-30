@@ -1,0 +1,35 @@
+@import '../common/style/variables.less';
+
+@action-sheet: ~'k-action-sheet';
+
+.@{action-sheet} {
+  padding: 0 @action-sheet-spacer;
+  padding-bottom: @action-sheet-spacer;
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: @action-sheet-spacer;
+  }
+
+  &-group {
+    border-radius: @action-sheet-border-radius;
+    background-color: @action-sheet-background-color;
+    overflow: hidden;
+  }
+
+  &-header {
+    display: flex;
+    flex-direction: column;
+    gap: @spacer-xs;
+    box-sizing: border-box;
+    padding: @action-sheet-header-padding-inline @action-sheet-header-padding-block;
+    text-align: center;
+    font-size: @action-sheet-title-font-size;
+    color: @action-sheet-title-color;
+  }
+
+  &__title {
+    font-weight: @font-weight-bold;
+  }
+}

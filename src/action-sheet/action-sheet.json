@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "styleIsolation": "apply-shared",
+  "usingComponents": {
+    "k-popup": "../popup/popup",
+    "k-button": "../button/button"
+  }
+}
