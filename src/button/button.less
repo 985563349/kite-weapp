@@ -12,8 +12,8 @@
   white-space: nowrap;
   text-align: center;
   outline: none;
-  border-radius: @button-border-radius;
   margin: 0;
+  border-radius: @button-default-border-radius;
   padding-left: @button-default-padding-inline;
   padding-right: @button-default-padding-inline;
   height: @button-default-height;
@@ -38,8 +38,7 @@
   }
 
   &__icon {
-    line-height: inherit;
-    font-size: 1.2em;
+    font-size: 1.4em;
   }
 
   &--active::before {
@@ -71,19 +70,21 @@
   }
 
   &--sm {
-    font-size: @button-small-font-size;
+    border-radius: @button-small-border-radius;
     padding-left: @button-small-padding-inline;
     padding-right: @button-small-padding-inline;
     height: @button-small-height;
     line-height: @button-small-height;
+    font-size: @button-small-font-size;
   }
 
   &--lg {
-    font-size: @button-large-font-size;
+    border-radius: @button-large-border-radius;
     padding-left: @button-large-padding-inline;
     padding-right: @button-large-padding-inline;
     height: @button-large-height;
     line-height: @button-large-height;
+    font-size: @button-large-font-size;
   }
 
   &--clear {
