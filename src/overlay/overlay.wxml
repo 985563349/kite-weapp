@@ -1,4 +1,3 @@
-<wxs src="../wxs/utils.wxs" module="utils" />
 <wxs src="./overlay.wxs" module="computed" />
 
 <view
