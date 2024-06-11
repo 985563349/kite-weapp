@@ -16,7 +16,11 @@
     "noUnusedParameters": true,
     "strict": true,
     "strictPropertyInitialization": true,
-    "lib": ["ES2020"]
+    "lib": ["ES2020"],
+    "types": ["miniprogram-api-typings"],
+    "paths": {
+      "kite-weapp/*": ["./miniprogram/miniprogram_npm/kite-weapp/*"]
+    }
   },
   "include": ["./**/*.ts"],
   "exclude": ["node_modules"]

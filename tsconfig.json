@@ -12,7 +12,10 @@
     "outDir": "dist",
     "strict": true,
     "skipLibCheck": true,
-    "types": ["miniprogram-api-typings", "node", "jest"]
+    "types": ["miniprogram-api-typings", "node", "jest"],
+    "paths": {
+      "kite-weapp/*": ["src/*"]
+    }
   },
   "include": ["src/**/*"],
   "exclude": ["**/*.spec.ts"]

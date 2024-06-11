@@ -7,9 +7,9 @@
   "author": "",
   "license": "",
   "dependencies": {
-    "kite-weapp": "^0.0.1"
+    "kite-weapp": "file:.."
   },
   "devDependencies": {
-    "miniprogram-api-typings": "^2.8.3-1"
+    "miniprogram-api-typings": "^3.12.2"
   }
 }

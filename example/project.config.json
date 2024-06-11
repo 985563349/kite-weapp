@@ -17,7 +17,13 @@
     "minified": true,
     "enhance": true,
     "showShadowRootInWxmlPanel": false,
-    "packNpmRelationList": [],
+    "packNpmManually": true,
+    "packNpmRelationList": [
+      {
+        "packageJsonPath": "./package.json",
+        "miniprogramNpmDistDir": "./miniprogram/"
+      }
+    ],
     "ignoreUploadUnusedFiles": true,
     "compileHotReLoad": true,
     "es6": true,
