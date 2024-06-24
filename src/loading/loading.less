@@ -1,5 +1,18 @@
 @import '../common/style/variables.less';
 
+@loading-default-color: var(--loading-default-color, @default-color);
+@loading-primary-color: var(--loading-primary-color, @primary-color);
+@loading-success-color: var(--loading-success-color, @success-color);
+@loading-warning-color: var(--loading-warning-color, @warning-color);
+@loading-danger-color: var(--loading-danger-color, @danger-color);
+
+@loading-small-size: var(--loading-small-size, 20px);
+@loading-default-size: var(--loading-small-size, 28px);
+@loading-large-size: var(--loading-small-size, 36px);
+@loading-label-font-size: var(--loading-label-font-size, @font-size-xs);
+
+@loading-animation-duration: var(--loading-animation-duration, 0.8s);
+
 @loading: ~'k-loading';
 
 .@{loading} {

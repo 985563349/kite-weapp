@@ -1,5 +1,15 @@
 @import '../common/style/variables.less';
 
+@action-sheet-border-radius: var(--action-sheet-border-radius, @radius-l);
+@action-sheet-spacer: var(--action-sheet-spacer, 8px);
+@action-sheet-background-color: var(--action-sheet-background-color, rgba(255, 255, 255, 1));
+
+@action-sheet-header-padding-inline: var(--action-sheet-header-padding-inline, 12px);
+@action-sheet-header-padding-block: var(--action-sheet-header-padding-inline, 12px);
+
+@action-sheet-title-font-size: var(--action-sheet-title-font-size, @font-size-s);
+@action-sheet-title-color: var(--action-sheet-title-color, @text-secondary-color);
+
 @action-sheet: ~'k-action-sheet';
 
 .@{action-sheet} {

@@ -1,4 +1,43 @@
-@import '../common/style/index.less';
+@import '../common/style/variables.less';
+
+@button-default-color: var(--button-default-color, @black-color);
+@button-default-background-color: var(--button-default-background-color, @default-color);
+@button-default-border-color: var(--button-default-border-color, @black-color);
+
+@button-primary-color: var(--button-primary-color, @white-color);
+@button-primary-background-color: var(--button-primary-background-color, @primary-color);
+@button-primary-border-color: @primary-color;
+
+@button-success-color: var(--button-success-color, @white-color);
+@button-success-background-color: var(--button-success-background-color, @success-color);
+@button-success-border-color: @success-color;
+
+@button-warning-color: var(--button-warning-color, @black-color);
+@button-warning-background-color: var(--button-warning-background-color, @warning-color);
+@button-warning-border-color: @warning-color;
+
+@button-danger-color: var(--button-danger-color, @white-color);
+@button-danger-background-color: var(--button-danger-background-color, @danger-color);
+@button-danger-border-color: @danger-color;
+
+@button-small-border-radius: var(--button-small-border-radius, @radius-s);
+@button-small-padding-inline: var(--button-small-padding-inline, 12px);
+@button-small-height: var(--button-small-height, 30px);
+@button-small-font-size: var(--button-small-font-size, @font-size-s);
+
+@button-default-border-radius: var(--button-default-border-radius, @radius-m);
+@button-default-padding-inline: var(--button-default-padding-inline, 16px);
+@button-default-height: var(--button-default-height, 44px);
+@button-default-font-size: var(--button-default-font-size, @font-size-m);
+
+@button-large-border-radius: var(--button-large-border-radius, @radius-l);
+@button-large-padding-inline: var(--button-large-padding-inline, 20px);
+@button-large-height: var(--button-large-height, 50px);
+@button-large-font-size: var(--button-large-font-size, @font-size-l);
+
+@button-disabled-opacity: var(--button-disabled-opacity, 0.5);
+@button-border-width: var(--button-border-width, 2px);
+@button-font-weight: var(--button-font-weight, @font-weight-bold);
 
 @button: ~'k-button';
 

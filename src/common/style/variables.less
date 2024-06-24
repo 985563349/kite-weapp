@@ -14,6 +14,7 @@
 @background-color: var(--background-color, #fff);
 @active-background-color: var(--active-background-color, #f4f4f5);
 
+// Theme
 @border-color: var(--border-color, #e4e4e7);
 
 // Spacer
@@ -24,6 +25,13 @@
 @spacer-xl: var(--spacer-xl, 24px);
 @spacer-2xl: var(--spacer-xl, 32px);
 
+// Radius
+@radius-xs: var(--radius-xs, 4px);
+@radius-s: var(--radius-s, 8px);
+@radius-m: var(--radius-m, 12px);
+@radius-l: var(--radius-l, 16px);
+@radius-xl: var(--radius-xl, 24px);
+
 // Font
 @font-size-xs: var(--font-size-xs, 12px);
 @font-size-s: var(--font-size-s, 14px);
@@ -33,114 +41,4 @@
 @font-size-2xl: var(--font-size-xl, 24px);
 
 @font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Roboto', sans-serif;
-@font-weight-bold: 600;
-
-// Radius
-@radius-xs: var(--radius-xs, 4px);
-@radius-s: var(--radius-s, 8px);
-@radius-m: var(--radius-m, 12px);
-@radius-l: var(--radius-l, 16px);
-@radius-xl: var(--radius-xl, 24px);
-
-// Button
-@button-disabled-opacity: var(--button-disabled-opacity, 0.5);
-@button-border-width: var(--button-border-width, 2px);
-@button-font-weight: var(--button-font-weight, 500);
-
-@button-small-border-radius: var(--button-small-border-radius, @radius-s);
-@button-small-padding-inline: var(--button-small-padding-inline, 12px);
-@button-small-height: var(--button-small-height, 30px);
-@button-small-font-size: var(--button-small-font-size, @font-size-s);
-
-@button-default-border-radius: var(--button-default-border-radius, @radius-m);
-@button-default-padding-inline: var(--button-default-padding-inline, 16px);
-@button-default-height: var(--button-default-height, 44px);
-@button-default-font-size: var(--button-default-font-size, @font-size-m);
-
-@button-large-border-radius: var(--button-large-border-radius, @radius-l);
-@button-large-padding-inline: var(--button-large-padding-inline, 20px);
-@button-large-height: var(--button-large-height, 50px);
-@button-large-font-size: var(--button-large-font-size, @font-size-l);
-
-@button-default-color: var(--button-default-color, @black-color);
-@button-default-background-color: var(--button-default-background-color, @default-color);
-@button-default-border-color: var(--button-default-border-color, @black-color);
-
-@button-primary-color: var(--button-primary-color, @white-color);
-@button-primary-background-color: var(--button-primary-background-color, @primary-color);
-@button-primary-border-color: @primary-color;
-
-@button-success-color: var(--button-success-color, @white-color);
-@button-success-background-color: var(--button-success-background-color, @success-color);
-@button-success-border-color: @success-color;
-
-@button-warning-color: var(--button-warning-color, @black-color);
-@button-warning-background-color: var(--button-warning-background-color, @warning-color);
-@button-warning-border-color: @warning-color;
-
-@button-danger-color: var(--button-danger-color, @white-color);
-@button-danger-background-color: var(--button-danger-background-color, @danger-color);
-@button-danger-border-color: @danger-color;
-
-// Cell
-@cell-font-size: var(--cell-font-size, @font-size-s);
-@cell-large-font-size: var(--cell-large-font-size, @font-size-m);
-@cell-label-font-size: var(--cell-label-font-size, @font-size-xs);
-@cell-large-label-font-size: var(--cell-large-label-font-size, @font-size-s);
-@cell-icon-size: var(--cell-icon-size, 16px);
-@cell-line-height: var(--cell-line-height, 24px);
-
-@cell-padding-inline: var(--cell-padding-inline, @spacer-l);
-@cell-padding-block: var(--cell-padding-block, @spacer-m);
-@cell-large-padding-block: var(--cell-large-padding-block, @spacer-l);
-@cell-border-spacer: var(--cell-border-spacer, @spacer-l);
-
-@cell-color: var(--cell-color, @text-color);
-@cell-label-color: var(--cell-label-color, @text-secondary-color);
-@cell-value-color: var(--cell-value-color, @text-secondary-color);
-@cell-right-icon-color: var(--cell-right-icon-color, @text-secondary-color);
-@cell-background-color: var(--cell-background-color, @background-color);
-@cell-active-background-color: var(--cell-active-background-color, @active-background-color);
-@cell-required-color: var(--cell-required-color, @danger-color);
-
-// Cell Group
-@cell-group-card-margin-inline: var(--cell-group-card-margin-inline, @spacer-l);
-@cell-group-card-border-radius: var(--cell-group-card-border-radius, @radius-m);
-@cell-group-title-padding-inline: var(--cell-group-title-padding-inline, @spacer-l);
-@cell-group-title-padding-block: var(--cell-group-title-padding-block, @spacer-l);
-@cell-group-title-font-size: var(--cell-group-title-font-size, @font-size-s);
-@cell-group-title-line-height: var(--cell-group-title-line-height, 16px);
-@cell-group-title-color: var(--cell-group-title-color, @text-secondary-color);
-
-// Loading
-@loading-animation-duration: var(--loading-animation-duration, 0.8s);
-
-@loading-small-size: var(--loading-small-size, 20px);
-@loading-default-size: var(--loading-small-size, 28px);
-@loading-large-size: var(--loading-small-size, 36px);
-@loading-label-font-size: var(--loading-label-font-size, @font-size-xs);
-
-@loading-default-color: var(--loading-default-color, @default-color);
-@loading-primary-color: var(--loading-primary-color, @primary-color);
-@loading-success-color: var(--loading-success-color, @success-color);
-@loading-warning-color: var(--loading-warning-color, @warning-color);
-@loading-danger-color: var(--loading-danger-color, @danger-color);
-
-// Overlay
-@overlay-background-color: var(--overlay-background-color, rgba(0, 0, 0, 0.6));
-
-// Popup
-@popup-border-radius: var(--popup-border-radius, @radius-l);
-@popup-background-color: var(--popup-background-color, @white-color);
-@popup-close-icon-size: var(--popup-close-icon-size, @font-size-m);
-@popup-close-icon-spacer: var(--popup-close-icon-spacer, 16px);
-@popup-close-icon-color: var(--popup-close-icon-color, @text-secondary-color);
-
-// ActionSheet
-@action-sheet-spacer: var(--action-sheet-spacer, 8px);
-@action-sheet-border-radius: var(--action-sheet-border-radius, @radius-l);
-@action-sheet-background-color: var(--action-sheet-background-color, @white-color);
-@action-sheet-header-padding-inline: var(--action-sheet-header-padding-inline, 12px);
-@action-sheet-header-padding-block: var(--action-sheet-header-padding-inline, 12px);
-@action-sheet-title-font-size: var(--action-sheet-title-font-size, @font-size-s);
-@action-sheet-title-color: var(--action-sheet-title-color, @text-secondary-color);
+@font-weight-bold: 500;
