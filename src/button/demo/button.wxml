@@ -3,6 +3,7 @@
     <k-space wrap>
       <k-button>Default</k-button>
       <k-button color="primary">Primary</k-button>
+      <k-button color="secondary">Secondary</k-button>
       <k-button color="success">Success</k-button>
       <k-button color="warning">Warning</k-button>
       <k-button color="danger">Dander</k-button>
@@ -10,10 +11,21 @@
   </demo-block>
 
   <demo-block title="变体">
-    <k-space>
+    <k-space wrap>
       <k-button>Default</k-button>
+      <k-button variant="clear">Clear</k-button>
       <k-button color="primary" variant="clear">Clear</k-button>
+      <k-button color="success" variant="clear">Clear</k-button>
+      <k-button color="secondary" variant="clear">Clear</k-button>
+      <k-button color="warning" variant="clear">Clear</k-button>
+      <k-button color="danger" variant="clear">Clear</k-button>
+
+      <k-button variant="outline">Outline</k-button>
+      <k-button color="primary" variant="outline">Outline</k-button>
       <k-button color="success" variant="outline">Outline</k-button>
+      <k-button color="secondary" variant="outline">Outline</k-button>
+      <k-button color="warning" variant="outline">Outline</k-button>
+      <k-button color="danger" variant="outline">Outline</k-button>
     </k-space>
   </demo-block>
 

@@ -1,24 +1,34 @@
 @import '../common/style/variables.less';
 
-@button-default-color: var(--button-default-color, @black-color);
-@button-default-background-color: var(--button-default-background-color, @default-color);
-@button-default-border-color: var(--button-default-border-color, @black-color);
+@button-default-text-color: var(--button-default-text-color, @text-color);
+@button-default-color: var(--button-default-color, @default-color);
+@button-default-active-color: var(--button-default-active-color, @default-active-color);
+@button-default-fill-color: var(--button-default-fill-color, @default-bg-active-color);
 
-@button-primary-color: var(--button-primary-color, @white-color);
-@button-primary-background-color: var(--button-primary-background-color, @primary-color);
-@button-primary-border-color: @primary-color;
+@button-primary-text-color: var(--button-primary-text-color, @white-color);
+@button-primary-color: var(--button-primary-color, @primary-color);
+@button-primary-active-color: var(--button-primary-active-color, @primary-active-color);
+@button-primary-fill-color: var(--button-primary-fill-color, @primary-bg-active-color);
 
-@button-success-color: var(--button-success-color, @white-color);
-@button-success-background-color: var(--button-success-background-color, @success-color);
-@button-success-border-color: @success-color;
+@button-secondary-text-color: var(--button-secondary-text-color, @white-color);
+@button-secondary-color: var(--button-secondary-color, @secondary-color);
+@button-secondary-active-color: var(--button-secondary-active-color, @secondary-active-color);
+@button-secondary-fill-color: var(--button-secondary-fill-color, @secondary-bg-active-color);
 
-@button-warning-color: var(--button-warning-color, @black-color);
-@button-warning-background-color: var(--button-warning-background-color, @warning-color);
-@button-warning-border-color: @warning-color;
+@button-success-text-color: var(--button-success-text-color, @dark-color);
+@button-success-color: var(--button-success-color, @success-color);
+@button-success-active-color: var(--button-success-active-color, @success-active-color);
+@button-success-fill-color: var(--button-success-fill-color, @success-bg-active-color);
 
-@button-danger-color: var(--button-danger-color, @white-color);
-@button-danger-background-color: var(--button-danger-background-color, @danger-color);
-@button-danger-border-color: @danger-color;
+@button-warning-text-color: var(--button-warning-text-color, @dark-color);
+@button-warning-color: var(--button-warning-color, @warning-color);
+@button-warning-active-color: var(--button-warning-active-color, @warning-active-color);
+@button-warning-fill-color: var(--button-warning-fill-color, @warning-bg-active-color);
+
+@button-danger-text-color: var(--button-danger-text-color, @white-color);
+@button-danger-color: var(--button-danger-color, @danger-color);
+@button-danger-active-color: var(--button-danger-active-color, @danger-active-color);
+@button-danger-fill-color: var(--button-danger-fill-color, @danger-bg-active-color);
 
 @button-small-border-radius: var(--button-small-border-radius, @radius-s);
 @button-small-padding-inline: var(--button-small-padding-inline, 12px);
@@ -35,9 +45,9 @@
 @button-large-height: var(--button-large-height, 50px);
 @button-large-font-size: var(--button-large-font-size, @font-size-l);
 
-@button-disabled-opacity: var(--button-disabled-opacity, 0.5);
 @button-border-width: var(--button-border-width, 2px);
 @button-font-weight: var(--button-font-weight, @font-weight-bold);
+@button-disabled-opacity: var(--button-disabled-opacity, 0.5);
 
 @button: ~'k-button';
 
@@ -61,27 +71,15 @@
   font-weight: @button-font-weight;
   font-family: @font-family;
   vertical-align: top;
-  color: @button-default-color;
-  background-color: @button-default-background-color;
-
-  &::before {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    transform: translate(-50%, -50%);
-    content: '';
-    opacity: 0;
-    background-color: @black-color;
-  }
+  color: @button-default-text-color;
+  background-color: @button-default-color;
 
   &__icon {
     font-size: 1.4em;
   }
 
-  &--active::before {
-    opacity: 0.15;
+  &--active {
+    background-color: @button-default-active-color;
   }
 
   &::after {
@@ -89,23 +87,48 @@
   }
 
   &--primary {
-    color: @button-primary-color;
-    background-color: @button-primary-background-color;
+    color: @button-primary-text-color;
+    background-color: @button-primary-color;
+
+    &.@{button}--active {
+      background-color: @button-primary-active-color;
+    }
+  }
+
+  &--secondary {
+    color: @button-secondary-text-color;
+    background-color: @button-secondary-color;
+
+    &.@{button}--active {
+      background-color: @button-secondary-active-color;
+    }
   }
 
   &--success {
-    color: @button-success-color;
-    background-color: @button-success-background-color;
+    color: @button-success-text-color;
+    background-color: @button-success-color;
+
+    &.@{button}--active {
+      background-color: @button-success-active-color;
+    }
   }
 
   &--warning {
-    color: @button-warning-color;
-    background-color: @button-warning-background-color;
+    color: @button-warning-text-color;
+    background-color: @button-warning-color;
+
+    &.@{button}--active {
+      background-color: @button-warning-active-color;
+    }
   }
 
   &--danger {
-    color: @button-danger-color;
-    background-color: @button-danger-background-color;
+    color: @button-danger-text-color;
+    background-color: @button-danger-color;
+
+    &.@{button}--active {
+      background-color: @button-danger-active-color;
+    }
   }
 
   &--sm {
@@ -129,28 +152,48 @@
   &--clear {
     background-color: transparent;
 
-    &::before {
-      display: none;
-    }
-
     &.@{button}--active {
-      opacity: 0.5;
+      background-color: @button-default-fill-color;
     }
 
     &.@{button}--primary {
-      color: @button-primary-background-color;
+      color: @button-primary-color;
+
+      &.@{button}--active {
+        background-color: @button-primary-fill-color;
+      }
+    }
+
+    &.@{button}--secondary {
+      color: @button-secondary-color;
+
+      &.@{button}--active {
+        background-color: @button-secondary-fill-color;
+      }
     }
 
     &.@{button}--success {
-      color: @button-success-background-color;
+      color: @button-success-color;
+
+      &.@{button}--active {
+        background-color: @button-success-fill-color;
+      }
     }
 
     &.@{button}--warning {
-      color: @button-warning-background-color;
+      color: @button-warning-color;
+
+      &.@{button}--active {
+        background-color: @button-warning-fill-color;
+      }
     }
 
     &.@{button}--danger {
-      color: @button-danger-background-color;
+      color: @button-danger-color;
+
+      &.@{button}--active {
+        background-color: @button-danger-fill-color;
+      }
     }
   }
 
@@ -159,35 +202,52 @@
     border-style: solid;
     background-color: transparent;
 
-    &.@{button}--primary {
-      color: @button-primary-background-color;
+    &.@{button}--active {
+      background-color: @button-default-fill-color;
+    }
 
-      &::before {
-        background-color: @button-primary-background-color;
+    &.@{button}--primary {
+      border-color: @button-primary-color;
+      color: @button-primary-color;
+
+      &.@{button}--active {
+        background-color: @button-primary-fill-color;
+      }
+    }
+
+    &.@{button}--secondary {
+      border-color: @button-secondary-color;
+      color: @button-secondary-color;
+
+      &.@{button}--active {
+        background-color: @button-secondary-fill-color;
       }
     }
 
     &.@{button}--success {
-      color: @button-success-background-color;
+      border-color: @button-success-color;
+      color: @button-success-color;
 
-      &::before {
-        background-color: @button-success-background-color;
+      &.@{button}--active {
+        background-color: @button-success-fill-color;
       }
     }
 
     &.@{button}--warning {
-      color: @button-warning-background-color;
+      border-color: @button-warning-color;
+      color: @button-warning-color;
 
-      &::before {
-        background-color: @button-warning-background-color;
+      &.@{button}--active {
+        background-color: @button-warning-fill-color;
       }
     }
 
     &.@{button}--danger {
-      color: @button-danger-background-color;
+      border-color: @button-danger-color;
+      color: @button-danger-color;
 
-      &::before {
-        background-color: @button-danger-background-color;
+      &.@{button}--active {
+        background-color: @button-danger-fill-color;
       }
     }
   }
