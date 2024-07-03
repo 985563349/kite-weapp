@@ -1,18 +1,20 @@
-import KComponent from '../common/component';
+import KComponent from '../shared/component';
 
 KComponent({
+  externalClasses: ['k-spinner-class', 'k-label-class'],
+
   properties: {
     kId: String,
 
-    size: String,
+    style: String,
 
-    color: String,
+    type: String,
+
+    size: String,
 
     vertical: Boolean,
 
     label: String,
-
-    style: String,
 
     ariaRole: String,
 

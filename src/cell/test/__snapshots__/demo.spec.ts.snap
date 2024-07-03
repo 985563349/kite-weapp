@@ -10,23 +10,23 @@ exports[`should render demo and match snapshot 1`] = `
     <demo-block
       title="基础用法"
     >
-      <k-cell
-        required="{{true}}"
-        title="单元格"
-        value="内容"
-      />
-      <k-cell
-        border="{{false}}"
-        label="描述信息"
-        title="单元格"
-        value="内容"
-      />
+      <k-cell-group>
+        <k-cell
+          title="单元格"
+          value="内容"
+        />
+        <k-cell
+          border="{{false}}"
+          label="描述信息"
+          title="单元格"
+          value="内容"
+        />
+      </k-cell-group>
     </demo-block>
     <demo-block
       title="卡片风格"
     >
       <k-cell-group
-        title="分组1"
         variant="card"
       >
         <k-cell
@@ -44,18 +44,20 @@ exports[`should render demo and match snapshot 1`] = `
     <demo-block
       title="单元格大小"
     >
-      <k-cell
-        size="large"
-        title="单元格"
-        value="内容"
-      />
-      <k-cell
-        border="{{false}}"
-        label="描述信息"
-        size="large"
-        title="单元格"
-        value="内容"
-      />
+      <k-cell-group>
+        <k-cell
+          size="large"
+          title="单元格"
+          value="内容"
+        />
+        <k-cell
+          border="{{false}}"
+          label="描述信息"
+          size="large"
+          title="单元格"
+          value="内容"
+        />
+      </k-cell-group>
     </demo-block>
     <demo-block
       title="展示图标"
@@ -70,18 +72,20 @@ exports[`should render demo and match snapshot 1`] = `
     <demo-block
       title="展示箭头"
     >
-      <k-cell
-        arrow="{{true}}"
-        clickable="{{true}}"
-        title="单元格"
-      />
-      <k-cell
-        arrow="{{true}}"
-        border="{{false}}"
-        clickable="{{true}}"
-        title="单元格"
-        value="内容"
-      />
+      <k-cell-group>
+        <k-cell
+          arrow="{{true}}"
+          clickable="{{true}}"
+          title="单元格"
+        />
+        <k-cell
+          arrow="{{true}}"
+          border="{{false}}"
+          clickable="{{true}}"
+          title="单元格"
+          value="内容"
+        />
+      </k-cell-group>
     </demo-block>
     <demo-block
       title="页面导航"

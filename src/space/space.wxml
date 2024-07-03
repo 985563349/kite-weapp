@@ -1,9 +1,10 @@
-<wxs src="../wxs/utils.wxs" module="utils" />
+<wxs src="../shared/wxs/utils.wxs" module="utils" />
+<wxs src="./space.wxs" module="computed" />
 
 <view
   id="{{ kId }}"
-  style="{{ style }}"
-  class="{{ utils.bem('k-space', [align, size, { vertical, wrap }]) }} k-class"
+  style="{{ computed.spaceStyle({ size, style }) }}"
+  class="{{ computed.spaceClass({ size, align, vertical, wrap }) }} k-class"
 >
   <slot />
 </view>

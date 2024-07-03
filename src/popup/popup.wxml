@@ -1,9 +1,9 @@
-<wxs src="../wxs/utils.wxs" module="utils" />
+<wxs src="../shared/wxs/utils.wxs" module="utils" />
 <wxs src="./popup.wxs" module="computed" />
 
 <k-overlay
   wx:if="{{ overlay }}"
-  visible="{{ visible }}"
+  open="{{ open }}"
   duration="{{ duration }}"
   lock-scroll="{{ lockScroll }}"
   zIndex="{{ zIndex }}"

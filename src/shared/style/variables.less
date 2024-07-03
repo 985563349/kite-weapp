@@ -1,0 +1,153 @@
+@primary-50: var(--k-primary-50, #e5f1ff);
+@primary-100: var(--k-primary-100, #cce4ff);
+@primary-200: var(--k-primary-200, #94c6ff);
+@primary-300: var(--k-primary-300, #61abff);
+@primary-400: var(--k-primary-400, #298dff);
+@primary-500: var(--k-primary-500, #0072f5);
+@primary-600: var(--k-primary-600, #005ac2);
+@primary-700: var(--k-primary-700, #004594);
+@primary-800: var(--k-primary-800, #002d61);
+@primary-900: var(--k-primary-900, #001833);
+
+@secondary-50: var(--k-secondary-50, #f2eafa);
+@secondary-100: var(--k-secondary-100, #e5d5f6);
+@secondary-200: var(--k-secondary-200, #cbabed);
+@secondary-300: var(--k-secondary-300, #b181e4);
+@secondary-400: var(--k-secondary-400, #9757db);
+@secondary-500: var(--k-secondary-500, #7d2dd2);
+@secondary-600: var(--k-secondary-600, #6424a8);
+@secondary-700: var(--k-secondary-700, #4b1b7e);
+@secondary-800: var(--k-secondary-800, #321254);
+@secondary-900: var(--k-secondary-900, #19092a);
+
+@success-50: var(--k-success-50, #e4fcee);
+@success-100: var(--k-success-100, #cdf9e0);
+@success-200: var(--k-success-200, #9bf3c1);
+@success-300: var(--k-success-300, #64ed9f);
+@success-400: var(--k-success-400, #32e780);
+@success-500: var(--k-success-500, #18c964);
+@success-600: var(--k-success-600, #139f50);
+@success-700: var(--k-success-700, #0e763b);
+@success-800: var(--k-success-800, #0a5229);
+@success-900: var(--k-success-900, #052915);
+
+@warning-50: var(--k-warning-50, #fef7eb);
+@warning-100: var(--k-warning-100, #fdedd3);
+@warning-200: var(--k-warning-200, #fbdba7);
+@warning-300: var(--k-warning-300, #f9c97b);
+@warning-400: var(--k-warning-400, #f7b74f);
+@warning-500: var(--k-warning-500, #f5a524);
+@warning-600: var(--k-warning-600, #d7880a);
+@warning-700: var(--k-warning-700, #a16607);
+@warning-800: var(--k-warning-800, #6b4405);
+@warning-900: var(--k-warning-900, #362202);
+
+@danger-50: var(--k-danger-50, #fee7ef);
+@danger-100: var(--k-danger-100, #fdcedf);
+@danger-200: var(--k-danger-200, #faa3c1);
+@danger-300: var(--k-danger-300, #f872a1);
+@danger-400: var(--k-danger-400, #f64784);
+@danger-500: var(--k-danger-500, #f31664);
+@danger-600: var(--k-danger-600, #cc0a4e);
+@danger-700: var(--k-danger-700, #96083a);
+@danger-800: var(--k-danger-800, #660527);
+@danger-900: var(--k-danger-900, #310213);
+
+@gray-50: var(--k-gray-50, #f2f2f3);
+@gray-100: var(--k-gray-100, #e2e2e4);
+@gray-200: var(--k-gray-200, #c7c7cc);
+@gray-300: var(--k-gray-300, #aaaab1);
+@gray-400: var(--k-gray-400, #8f8f98);
+@gray-500: var(--k-gray-500, #73737d);
+@gray-600: var(--k-gray-600, #5d5d65);
+@gray-700: var(--k-gray-700, #44444a);
+@gray-800: var(--k-gray-800, #2e2e32);
+@gray-900: var(--k-gray-900, #161618);
+
+@border-color: var(--k-border-color, rgba(17, 17, 17, 0.15));
+
+@page-bg-color: var(--k-page-bg-color, #f0f2f5);
+@component-bg-color: var(--k-component-bg-color, #ffffff);
+@component-bg-color-active: var(--k-component-bg-color-active, #e7e8ea);
+@spotlight-bg-color: var(--k-spotlight-bg-color, rgba(0, 0, 0, 0.75));
+@overlay-bg-color: var(--k-overlay-bg-color, rgba(0, 0, 0, 0.65));
+
+@text-color: var(--k-text-color, rgba(0, 0, 0, 0.85));
+@text-color-secondary: var(--k-text-color-secondary, rgba(0, 0, 0, 0.65));
+@text-color-placeholder: var(--k-text-color-placeholder, rgba(0, 0, 0, 0.45));
+@text-color-anti: var(--k-text-color-anti, rgba(255, 255, 255, 0.85));
+@text-color-system: var(--k-text-color-system, rgba(0, 0, 0, 1));
+
+// Alias Token
+@default-bg-color: var(--k-default-bg-color, @gray-50);
+@default-bg-color-active: var(--k-default-bg-color-active, @gray-100);
+@default-color: var(--k-default-color, @gray-200);
+@default-color-active: var(--k-default-color-active, @gray-300);
+
+@primary-bg-color: var(--k-primary-bg-color, @primary-50);
+@primary-bg-color-active: var(--k-primary-bg-color-active, @primary-100);
+@primary-color: var(--k-primary-color, @primary-500);
+@primary-color-active: var(--k-primary-color-active, @primary-600);
+
+@secondary-bg-color: var(--k-secondary-bg-color, @secondary-50);
+@secondary-bg-color-active: var(--k-secondary-bg-color-active, @secondary-100);
+@secondary-color: var(--k-secondary-color, @secondary-500);
+@secondary-color-active: var(--k-secondary-color-active, @secondary-600);
+
+@success-bg-color: var(--k-success-bg-color, @success-50);
+@success-bg-color-active: var(--k-success-bg-color-active, @success-100);
+@success-color: var(--k-success-color, @success-500);
+@success-color-active: var(--k-success-color-active, @success-600);
+
+@warning-bg-color: var(--k-warning-bg-color, @warning-50);
+@warning-bg-color-active: var(--k-warning-bg-color-active, @warning-100);
+@warning-color: var(--k-warning-color, @warning-500);
+@warning-color-active: var(--k-warning-color-active, @warning-600);
+
+@danger-bg-color: var(--k-danger-bg-color, @danger-50);
+@danger-bg-color-active: var(--k-danger-bg-color-active, @danger-100);
+@danger-color: var(--k-danger-color, @danger-500);
+@danger-color-active: var(--k-danger-color-active, @danger-600);
+
+// Color
+@white-color: var(--k-white-color, #ffffff);
+@dark-color: var(--k-dark-color, #000000);
+
+// Spacer
+@spacer-xs: var(--k-spacer-xs, 6px);
+@spacer-s: var(--k-spacer-s, 8px);
+@spacer-m: var(--k-spacer-m, 12px);
+@spacer-l: var(--k-spacer-l, 16px);
+@spacer-xl: var(--k-spacer-xl, 24px);
+@spacer-2xl: var(--k-spacer-2xl, 32px);
+
+// Radius
+@radius-xs: var(--k-radius-xs, 6px);
+@radius-s: var(--k-radius-s, 8px);
+@radius-m: var(--k-radius-m, 12px);
+@radius-l: var(--k-radius-l, 16px);
+@radius-xl: var(--k-radius-xl, 24px);
+
+// Font
+@font-size-xs: var(--k-font-size-xs, 12px);
+@font-size-s: var(--k-font-size-s, 14px);
+@font-size-m: var(--k-font-size-m, 16px);
+@font-size-l: var(--k-font-size-l, 18px);
+@font-size-xl: var(--k-font-size-xl, 20px);
+@font-size-2xl: var(--k-font-size-2xl, 24px);
+
+@font-weight-bold: 500;
+
+// Line Height
+@line-height-xs: var(--k-line-height-xs, 16px);
+@line-height-s: var(--k-line-height-s, 20px);
+@line-height-m: var(--k-line-height-m, 24px);
+@line-height-l: var(--k-line-height-l, 28px);
+@line-height-xl: var(--k-line-height-xl, 28px);
+@line-height-2xl: var(--k-line-height-2xl, 32px);
+
+// Screen
+@screen-sm: 768px;
+@screen-md: 992px;
+@screen-lg: 1200px;
+@screen-xl: 1920px;

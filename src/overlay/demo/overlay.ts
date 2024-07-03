@@ -1,15 +1,15 @@
 Component({
   data: {
-    visible: false,
+    open: false,
   },
 
   methods: {
     onClickOpen() {
-      this.setData({ visible: true });
+      this.setData({ open: true });
     },
 
     onClickClose() {
-      this.setData({ visible: false });
+      this.setData({ open: false });
     },
 
     noop() {},

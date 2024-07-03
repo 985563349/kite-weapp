@@ -1,4 +1,4 @@
-@import '../common/style/variables.less';
+@import '../shared/style/variables.less';
 
 @space: ~'k-space';
 
@@ -22,12 +22,20 @@
     align-items: baseline;
   }
 
-  &--md {
-    gap: @spacer-l;
+  &--col-gap-middle {
+    column-gap: @spacer-l;
   }
 
-  &--lg {
-    gap: @spacer-2xl;
+  &--col-gap-large {
+    column-gap: @spacer-2xl;
+  }
+
+  &--row-gap-middle {
+    row-gap: @spacer-l;
+  }
+
+  &--row-gap-large {
+    row-gap: @spacer-2xl;
   }
 
   &--vertical {

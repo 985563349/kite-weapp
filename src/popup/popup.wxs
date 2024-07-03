@@ -1,4 +1,4 @@
-var utils = require('../wxs/utils.wxs');
+var utils = require('../shared/wxs/utils.wxs');
 
 function popupStyle(data) {
   var duration = data.transitionDuration ? data.transitionDuration + 'ms' : null;

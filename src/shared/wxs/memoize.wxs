@@ -6,13 +6,7 @@
 function isPrimitive(value) {
   var type = typeof value;
 
-  return (
-    type === 'boolean' ||
-    type === 'number' ||
-    type === 'string' ||
-    type === 'undefined' ||
-    value === null
-  );
+  return type === 'boolean' || type === 'number' || type === 'string' || type === 'undefined' || value === null;
 }
 
 function apply(fn, args) {

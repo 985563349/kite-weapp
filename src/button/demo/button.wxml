@@ -1,79 +1,62 @@
 <k-flex style="padding-bottom: 16px" gap="md" vertical>
-  <demo-block title="颜色">
+  <demo-block title="类型">
     <k-space wrap>
       <k-button>Default</k-button>
-      <k-button color="primary">Primary</k-button>
-      <k-button color="secondary">Secondary</k-button>
-      <k-button color="success">Success</k-button>
-      <k-button color="warning">Warning</k-button>
-      <k-button color="danger">Dander</k-button>
-    </k-space>
-  </demo-block>
-
-  <demo-block title="变体">
-    <k-space wrap>
-      <k-button>Default</k-button>
-      <k-button variant="clear">Clear</k-button>
-      <k-button color="primary" variant="clear">Clear</k-button>
-      <k-button color="success" variant="clear">Clear</k-button>
-      <k-button color="secondary" variant="clear">Clear</k-button>
-      <k-button color="warning" variant="clear">Clear</k-button>
-      <k-button color="danger" variant="clear">Clear</k-button>
-
-      <k-button variant="outline">Outline</k-button>
-      <k-button color="primary" variant="outline">Outline</k-button>
-      <k-button color="success" variant="outline">Outline</k-button>
-      <k-button color="secondary" variant="outline">Outline</k-button>
-      <k-button color="warning" variant="outline">Outline</k-button>
-      <k-button color="danger" variant="outline">Outline</k-button>
+      <k-button type="primary">Primary</k-button>
+      <k-button type="secondary">Secondary</k-button>
+      <k-button type="success">Success</k-button>
+      <k-button type="warning">Warning</k-button>
+      <k-button type="danger">Dander</k-button>
     </k-space>
   </demo-block>
 
   <demo-block title="尺寸">
-    <k-space wrap>
-      <k-button size="sm">Small</k-button>
-      <k-button>Default</k-button>
-      <k-button size="lg">large</k-button>
+    <k-space>
+      <k-button type="primary" size="small">Small</k-button>
+      <k-button type="primary">Default</k-button>
+      <k-button type="primary" size="large">Large</k-button>
+    </k-space>
+  </demo-block>
+
+  <demo-block title="变体">
+    <k-space>
+      <k-button type="primary">Default</k-button>
+      <k-button type="secondary" variant="ghost">Ghost</k-button>
+      <k-button variant="outline">Outline</k-button>
     </k-space>
   </demo-block>
 
   <demo-block title="禁用">
     <k-space>
-      <k-button disabled>Default</k-button>
-      <k-button color="primary" variant="clear" disabled>Clear</k-button>
-      <k-button color="success" variant="outline" disabled>Outline</k-button>
+      <k-button type="primary" disabled>Primary</k-button>
+      <k-button type="success" disabled>Success</k-button>
     </k-space>
   </demo-block>
 
   <demo-block title="加载">
     <k-space>
-      <k-button loading>Default</k-button>
-      <k-button color="primary" variant="clear" loading>Clear</k-button>
-      <k-button color="success" variant="outline" loading>Outline</k-button>
+      <k-button type="primary" loading />
+      <k-button type="primary" variant="outline" loading>Primary</k-button>
     </k-space>
   </demo-block>
 
   <demo-block title="图标">
-    <k-space>
-      <k-button icon="heart">Default</k-button>
-      <k-button color="primary" variant="clear" icon="heart">Clear</k-button>
-      <k-button color="success" variant="outline" icon="heart">Outline</k-button>
-    </k-space>
+    <k-button type="danger" icon="heart">Danger</k-button>
   </demo-block>
 
   <demo-block title="形状">
-    <k-space wrap>
-      <k-button color="primary" shape="round">Primary</k-button>
-      <k-button color="warning" shape="round">Warning</k-button>
-      <k-button color="primary" shape="circle" icon="add" />
-      <k-button color="warning" shape="circle" icon="add" />
+    <k-space>
+      <k-button type="primary">Default</k-button>
+      <k-button type="secondary" shape="round">Round</k-button>
+      <k-button type="success" icon="add" shape="circle" />
+      <k-button type="warning" shape="square">Square</k-button>
     </k-space>
   </demo-block>
 
   <demo-block title="展开">
-    <k-space style="display: flex" vertical>
-      <k-button color="success" expand="block" size="lg">Primary</k-button>
-      <k-button color="primary" expand="full" size="lg">Success</k-button>
+    <k-space style="display: flex" vertical align="start">
+      <k-button type="primary">Default</k-button>
+      <k-button type="primary" expand="block">Block</k-button>
     </k-space>
   </demo-block>
 </k-flex>

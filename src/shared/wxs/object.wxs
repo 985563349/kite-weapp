@@ -1,8 +1,6 @@
-var REGEXP = getRegExp('{|}|"', 'g');
-
 function keys(value) {
   return JSON.stringify(value)
-    .replace(REGEXP, '')
+    .replace(getRegExp('{|}|"', 'g'), '')
     .split(',')
     .map(function (item) {
       return item.split(':')[0];

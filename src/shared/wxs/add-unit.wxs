@@ -1,0 +1,9 @@
+var validator = require('./validator.wxs');
+
+function addUnit(value) {
+  if (value == null) return;
+
+  return validator.isNumeric(value) ? value + 'px' : value;
+}
+
+module.exports = addUnit;

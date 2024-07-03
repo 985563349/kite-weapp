@@ -1,21 +1,21 @@
-import KComponent from '../common/component';
+import KComponent from '../shared/component';
 
 KComponent({
   properties: {
     kId: String,
 
+    style: String,
+
     name: String,
 
-    size: String,
-
     color: String,
+
+    size: String,
 
     prefix: {
       type: String,
       value: 'k-icon',
     },
-
-    style: String,
   },
 
   methods: {

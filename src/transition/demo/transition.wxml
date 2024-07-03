@@ -1,7 +1,7 @@
 <k-flex style="padding-bottom: 16px" gap="md" vertical>
   <demo-block title="淡入淡出">
     <k-space align="start" vertical>
-      <k-button color="primary" size="sm" variant="clear" bind:click="onClickFade">Fade</k-button>
+      <k-button type="primary" size="sm" variant="clear" bind:click="onClickFade">Fade</k-button>
 
       <k-transition visible="{{ visible }}" name="fade" k-class="block" />
     </k-space>
@@ -9,9 +9,7 @@
 
   <demo-block title="旋转">
     <k-space align="start" vertical>
-      <k-button color="primary" size="sm" variant="clear" bind:click="onClickRotate"
-        >Rotate</k-button
-      >
+      <k-button type="primary" size="sm" variant="clear" bind:click="onClickRotate">Rotate</k-button>
 
       <k-transition
         visible="{{ rotateVisible }}"

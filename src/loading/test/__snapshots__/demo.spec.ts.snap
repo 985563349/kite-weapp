@@ -8,34 +8,43 @@ exports[`should render demo and match snapshot 1`] = `
     vertical="{{true}}"
   >
     <demo-block
-      title="尺寸"
-    >
-      <k-space>
-        <k-loading
-          size="sm"
-        />
-        <k-loading />
-        <k-loading
-          size="lg"
-        />
-      </k-space>
-    </demo-block>
-    <demo-block
       title="主题"
     >
       <k-space>
         <k-loading />
         <k-loading
-          color="primary"
+          type="primary"
         />
         <k-loading
-          color="success"
+          type="secondary"
         />
         <k-loading
-          color="warning"
+          type="success"
         />
         <k-loading
-          color="danger"
+          type="warning"
+        />
+        <k-loading
+          type="danger"
+        />
+      </k-space>
+    </demo-block>
+    <demo-block
+      title="尺寸"
+    >
+      <k-space
+        align="start"
+      >
+        <k-loading
+          label="加载中..."
+          size="small"
+        />
+        <k-loading
+          label="加载中..."
+        />
+        <k-loading
+          label="加载中..."
+          size="large"
         />
       </k-space>
     </demo-block>
@@ -67,8 +76,8 @@ exports[`should render demo and match snapshot 1`] = `
           vertical="{{true}}"
         />
         <k-loading
-          color="primary"
           label="加载中"
+          type="primary"
           vertical="{{true}}"
         />
       </k-space>

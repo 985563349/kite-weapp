@@ -1,47 +1,46 @@
 <k-flex style="padding-bottom: 16px" gap="md" vertical>
   <demo-block title="基础用法">
-    <k-button color="primary" variant="clear" bind:click="onClickBasicOpen">Open</k-button>
+    <k-button type="primary" variant="clear" bind:click="onClickBasicOpen">Open</k-button>
 
     <k-action-sheet
-      visible="{{ basic }}"
+      open="{{ basic }}"
       options="{{ basicOptions }}"
-      cancel-text="Cancel"
       bind:selected="onSelect"
-      bind:close="onClickBasicClose"
+      bind:cancel="onClickBasicCancel"
     />
   </demo-block>
 
   <demo-block title="选项颜色">
-    <k-button color="primary" variant="clear" bind:click="onClickColorOpen">Open</k-button>
+    <k-button type="primary" variant="clear" bind:click="onClickColorOpen">Open</k-button>
 
     <k-action-sheet
-      visible="{{ color }}"
+      open="{{ color }}"
       options="{{ colorOptions }}"
       cancel-text="Cancel"
-      bind:close="onClickColorClose"
+      bind:cancel="onClickColorCancel"
     />
   </demo-block>
 
   <demo-block title="选项状态">
-    <k-button color="primary" variant="clear" bind:click="onClickStateOpen">Open</k-button>
+    <k-button type="primary" variant="clear" bind:click="onClickStateOpen">Open</k-button>
 
     <k-action-sheet
-      visible="{{ state }}"
+      open="{{ state }}"
       options="{{ stateOptions }}"
       cancel-text="Cancel"
-      bind:close="onClickStateClose"
+      bind:cancel="onClickStateCancel"
     />
   </demo-block>
 
   <demo-block title="标题信息">
-    <k-button color="primary" variant="clear" bind:click="onClickTitleOpen">Open</k-button>
+    <k-button type="primary" variant="clear" bind:click="onClickTitleOpen">Open</k-button>
 
     <k-action-sheet
-      visible="{{ title }}"
+      open="{{ title }}"
       title="Actions"
       options="{{ titleOptions }}"
       cancel-text="Cancel"
-      bind:close="onClickTitleClose"
+      bind:cancel="onClickTitleCancel"
     />
   </demo-block>
 </k-flex>

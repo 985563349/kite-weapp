@@ -9,16 +9,16 @@ Component({
       { label: 'Share', value: 1 },
     ],
     colorOptions: [
-      { label: 'Delete', value: 0, color: 'danger' },
-      { label: 'Share', value: 1, color: 'primary' },
+      { label: 'Delete', value: 0, color: 'var(--k-danger-color)' },
+      { label: 'Share', value: 1, color: 'var(--k-primary-color)' },
     ],
     stateOptions: [
-      { label: 'Delete', value: 0, color: 'danger', disabled: true },
-      { label: 'Share', value: 1, color: 'primary' },
+      { label: 'Delete', value: 0, color: 'var(--k-danger-color)', disabled: true },
+      { label: 'Share', value: 1, color: 'var(--k-primary-color)' },
     ],
     titleOptions: [
-      { label: 'Delete', value: 0, color: 'danger' },
-      { label: 'Share', value: 1, color: 'primary' },
+      { label: 'Delete', value: 0 },
+      { label: 'Share', value: 1 },
     ],
   },
 
@@ -31,7 +31,7 @@ Component({
       this.setData({ basic: true });
     },
 
-    onClickBasicClose() {
+    onClickBasicCancel() {
       this.setData({ basic: false });
     },
 
@@ -39,7 +39,7 @@ Component({
       this.setData({ color: true });
     },
 
-    onClickColorClose() {
+    onClickColorCancel() {
       this.setData({ color: false });
     },
 
@@ -47,7 +47,7 @@ Component({
       this.setData({ state: true });
     },
 
-    onClickStateClose() {
+    onClickStateCancel() {
       this.setData({ state: false });
     },
 
@@ -55,7 +55,7 @@ Component({
       this.setData({ title: true });
     },
 
-    onClickTitleClose() {
+    onClickTitleCancel() {
       this.setData({ title: false });
     },
   },

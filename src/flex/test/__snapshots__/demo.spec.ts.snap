@@ -32,16 +32,18 @@ exports[`should render demo and match snapshot 1`] = `
         gap="sm"
         vertical="{{true}}"
       >
-        <k-button>
-          Default
-        </k-button>
         <k-button
-          color="primary"
+          type="primary"
         >
           Primary
         </k-button>
         <k-button
-          color="success"
+          type="secondary"
+        >
+          Secondary
+        </k-button>
+        <k-button
+          type="success"
         >
           Success
         </k-button>
@@ -56,16 +58,18 @@ exports[`should render demo and match snapshot 1`] = `
         justify="center"
         kClass="layout"
       >
-        <k-button>
-          Default
-        </k-button>
         <k-button
-          color="primary"
+          type="primary"
         >
           Primary
         </k-button>
         <k-button
-          color="success"
+          type="secondary"
+        >
+          Secondary
+        </k-button>
+        <k-button
+          type="success"
         >
           Success
         </k-button>
@@ -77,16 +81,18 @@ exports[`should render demo and match snapshot 1`] = `
       <k-flex
         gap="lg"
       >
-        <k-button>
-          Default
-        </k-button>
         <k-button
-          color="primary"
+          type="primary"
         >
           Primary
         </k-button>
         <k-button
-          color="success"
+          type="secondary"
+        >
+          Secondary
+        </k-button>
+        <k-button
+          type="success"
         >
           Success
         </k-button>
@@ -104,22 +110,27 @@ exports[`should render demo and match snapshot 1`] = `
           Default
         </k-button>
         <k-button
-          color="primary"
+          type="primary"
         >
           Primary
         </k-button>
         <k-button
-          color="success"
+          type="secondary"
+        >
+          Secondary
+        </k-button>
+        <k-button
+          type="success"
         >
           Success
         </k-button>
         <k-button
-          color="warning"
+          type="warning"
         >
           Warning
         </k-button>
         <k-button
-          color="danger"
+          type="danger"
         >
           Danger
         </k-button>

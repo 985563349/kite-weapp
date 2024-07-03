@@ -19,12 +19,6 @@
   </k-cell-group>
 
   <k-cell-group title="动画" variant="card">
-    <k-cell
-      title="Transition 过渡动画"
-      url="/pages/transition/transition"
-      arrow
-      clickable
-      border="{{ false }}"
-    />
+    <k-cell title="Transition 过渡动画" url="/pages/transition/transition" arrow clickable border="{{ false }}" />
   </k-cell-group>
 </view>

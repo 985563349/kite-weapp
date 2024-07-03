@@ -1,19 +1,20 @@
 <k-flex style="padding-bottom: 16px" gap="md" vertical>
-  <demo-block title="尺寸">
-    <k-space>
-      <k-loading size="sm" />
-      <k-loading />
-      <k-loading size="lg" />
-    </k-space>
-  </demo-block>
-
   <demo-block title="主题">
     <k-space>
       <k-loading />
-      <k-loading color="primary" />
-      <k-loading color="success" />
-      <k-loading color="warning" />
-      <k-loading color="danger" />
+      <k-loading type="primary" />
+      <k-loading type="secondary" />
+      <k-loading type="success" />
+      <k-loading type="warning" />
+      <k-loading type="danger" />
+    </k-space>
+  </demo-block>
+
+  <demo-block title="尺寸">
+    <k-space align="start">
+      <k-loading size="small" label="加载中..." />
+      <k-loading label="加载中..." />
+      <k-loading size="large" label="加载中..." />
     </k-space>
   </demo-block>
 
@@ -32,7 +33,7 @@
   <demo-block title="标签颜色">
     <k-space>
       <k-loading vertical label="加载中" />
-      <k-loading vertical color="primary" label="加载中" />
+      <k-loading vertical type="primary" label="加载中" />
     </k-space>
   </demo-block>
 </k-flex>

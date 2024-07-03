@@ -1,10 +1,11 @@
-@import '../common/style/variables.less';
+@import '../shared/style/variables.less';
 
-@popup-border-radius: var(--popup-border-radius, @radius-l);
-@popup-background-color: var(--popup-background-color, rgba(255, 255, 255, 1));
-@popup-close-icon-size: var(--popup-close-icon-size, @font-size-m);
-@popup-close-icon-spacer: var(--popup-close-icon-spacer, 16px);
-@popup-close-icon-color: var(--popup-close-icon-color, @text-secondary-color);
+@popup-border-radius: var(--k-popup-border-radius, @radius-l);
+@popup-bg-color: var(--k-popup-bg-color, @component-bg-color);
+@popup-close-icon-size: var(--k-popup-close-icon-size, @font-size-m);
+@popup-close-icon-offset: var(--k-popup-close-icon-offset, 12px);
+@popup-close-icon-color: var(--k-popup-close-icon-color, @text-color-placeholder);
+@popup-close-icon-color-active: var(--k-popup-close-icon-color-active, @text-color);
 
 @popup: ~'k-popup';
 
@@ -14,7 +15,7 @@
   max-height: 100%;
   transition-timing-function: ease;
   -webkit-overflow-scrolling: touch;
-  background-color: @popup-background-color;
+  background-color: @popup-bg-color;
 
   &--top {
     top: 0;
@@ -77,10 +78,14 @@
 
   &__close {
     position: absolute;
-    top: @popup-close-icon-spacer;
-    right: @popup-close-icon-spacer;
+    top: @popup-close-icon-offset;
+    right: @popup-close-icon-offset;
     font-size: @popup-close-icon-size;
     color: @popup-close-icon-color;
+
+    &:active {
+      color: @popup-close-icon-color-active;
+    }
   }
 }
 

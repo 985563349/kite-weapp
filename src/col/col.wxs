@@ -1,17 +1,61 @@
-var utils = require('../wxs/utils.wxs');
+var utils = require('../shared/wxs/utils.wxs');
+var object = require('../shared/wxs/object.wxs');
+var validator = require('../shared/wxs/validator.wxs');
+
+function parsetFlex(flex) {
+  if (validator.isNumeric(flex)) {
+    return flex + ' ' + flex + ' ' + 'auto';
+  }
+
+  if (validator.isStyleUnitValue(flex)) {
+    return '0 0 ' + flex;
+  }
+
+  return flex;
+}
 
 function colStyle(data) {
   var padding = data.gutter ? utils.addUnit(data.gutter / 2) : null;
 
   return utils.style([
     {
-      'padding-left': padding,
-      'padding-right': padding,
+      paddingLeft: padding,
+      paddingRight: padding,
+      flex: parsetFlex(data.flex),
     },
     data.style,
   ]);
 }
 
+function colClass(data) {
+  var mods = [data.span];
+
+  ['offset', 'push', 'pull', 'order'].forEach(function (prop) {
+    if (data[prop] != null) {
+      mods.push(prop + '-' + data[prop]);
+    }
+  });
+
+  ['xs', 'sm', 'md', 'lg', 'xl'].forEach(function (size) {
+    var options = data[size];
+
+    if (object.isObject(options)) {
+      object.keys(options).forEach(function (prop) {
+        if (prop === 'span') {
+          mods.push(size + '-' + options[prop]);
+        } else {
+          mods.push(size + '-' + prop + '-' + options[prop]);
+        }
+      });
+    } else if (options != null) {
+      mods.push(size + '-' + options);
+    }
+  });
+
+  return utils.bem('k-col', mods);
+}
+
 module.exports = {
   colStyle: colStyle,
+  colClass: colClass,
 };

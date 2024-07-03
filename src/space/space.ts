@@ -1,4 +1,4 @@
-import KComponent from '../common/component';
+import KComponent from '../shared/component';
 
 KComponent({
   properties: {
@@ -6,9 +6,12 @@ KComponent({
 
     style: String,
 
-    align: String,
+    size: {
+      type: String,
+      optionalTypes: [Number, Array],
+    },
 
-    size: String,
+    align: String,
 
     vertical: Boolean,
 

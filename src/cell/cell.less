@@ -1,25 +1,25 @@
-@import '../common/style/variables.less';
-@import '../common/style/hairline.less';
+@import '../shared/style/variables.less';
+@import '../shared/style/mixins/hairline.less';
 
-@cell-padding-inline: var(--cell-padding-inline, 16px);
-@cell-padding-block: var(--cell-padding-block, 12px);
-@cell-large-padding-block: var(--cell-large-padding-block, 16px);
-@cell-border-spacer: var(--cell-border-spacer, 16px);
+@cell-padding-block: var(--k-cell-padding-block, 12px);
+@cell-padding-inline: var(--k-cell-padding-inline, 16px);
+@cell-line-height: var(--k-cell-line-height, 24px);
+@cell-font-size: var(--k-cell-font-size, @font-size-s);
+@cell-color: var(--k-cell-color, @text-color);
+@cell-bg-color: var(--k-cell-bg-color, @component-bg-color);
+@cell-bg-color-active: var(--k-cell-bg-color-active, @component-bg-color-active);
 
-@cell-font-size: var(--cell-font-size, @font-size-s);
-@cell-large-font-size: var(--cell-large-font-size, @font-size-m);
-@cell-label-font-size: var(--cell-label-font-size, @font-size-xs);
-@cell-large-label-font-size: var(--cell-large-label-font-size, @font-size-s);
-@cell-icon-size: var(--cell-icon-size, 16px);
-@cell-line-height: var(--cell-line-height, 24px);
+@cell-label-line-height: var(--k-cell-label-line-height, @line-height-xs);
+@cell-label-font-size: var(--k-cell-label-font-size, @font-size-xs);
+@cell-label-color: var(--k-cell-label-color, @text-color-placeholder);
+@cell-value-color: var(--k-cell-value-color, @text-color-placeholder);
+@cell-icon-size: var(--k-cell-icon-size, 16px);
+@cell-right-icon-color: var(--k-cell-right-icon-color, @text-color-placeholder);
 
-@cell-color: var(--cell-color, @text-color);
-@cell-label-color: var(--cell-label-color, @text-secondary-color);
-@cell-value-color: var(--cell-value-color, @text-secondary-color);
-@cell-right-icon-color: var(--cell-right-icon-color, @text-secondary-color);
-@cell-background-color: var(--cell-background-color, @background-color);
-@cell-active-background-color: var(--cell-active-background-color, @active-background-color);
-@cell-required-color: var(--cell-required-color, @danger-color);
+@cell-large-padding-block: var(--k-cell-large-padding-block, 16px);
+@cell-large-font-size: var(--k-cell-large-font-size, @font-size-m);
+@cell-large-label-line-height: var(--k-cell-large-label-line-height, @line-height-s);
+@cell-large-label-font-size: var(--k-cell-large-label-font-size, @font-size-s);
 
 @cell: ~'k-cell';
 
@@ -29,31 +29,10 @@
   gap: @spacer-xs;
   box-sizing: border-box;
   padding: @cell-padding-block @cell-padding-inline;
-  font-size: @cell-font-size;
   line-height: @cell-line-height;
+  font-size: @cell-font-size;
   color: @cell-color;
-  background-color: @cell-background-color;
-
-  &::after {
-    .hairline-bottom();
-    left: @cell-border-spacer;
-    right: @cell-border-spacer;
-  }
-
-  &--borderless {
-    &::after {
-      display: none;
-    }
-  }
-
-  &--required {
-    &::before {
-      position: absolute;
-      transform: translateX(-100%);
-      content: '*';
-      color: @cell-required-color;
-    }
-  }
+  background-color: @cell-bg-color;
 
   &__value {
     flex: 1;
@@ -66,6 +45,7 @@
 
   &__label {
     margin-top: @spacer-xs;
+    line-height: @cell-label-line-height;
     font-size: @cell-label-font-size;
     color: @cell-label-color;
 
@@ -91,15 +71,24 @@
     font-size: @cell-large-font-size;
 
     .@{cell}__label {
+      line-height: @cell-large-label-line-height;
       font-size: @cell-large-label-font-size;
     }
   }
 
-  &--clickable&--hover {
-    background-color: @cell-active-background-color;
-  }
-
   &--center {
     align-items: center;
+  }
+
+  &--border {
+    &::after {
+      .hairline-bottom();
+      left: @cell-padding-inline;
+      right: @cell-padding-inline;
+    }
+  }
+
+  &--clickable&--active {
+    background-color: @cell-bg-color-active;
   }
 }

@@ -8,7 +8,7 @@ exports[`should render demo and match snapshot 1`] = `
     vertical="{{true}}"
   >
     <demo-block
-      title="颜色"
+      title="类型"
     >
       <k-space
         wrap="{{true}}"
@@ -17,24 +17,52 @@ exports[`should render demo and match snapshot 1`] = `
           Default
         </k-button>
         <k-button
-          color="primary"
+          type="primary"
         >
           Primary
         </k-button>
         <k-button
-          color="success"
+          type="secondary"
+        >
+          Secondary
+        </k-button>
+        <k-button
+          type="success"
         >
           Success
         </k-button>
         <k-button
-          color="warning"
+          type="warning"
         >
           Warning
         </k-button>
         <k-button
-          color="danger"
+          type="danger"
         >
           Dander
+        </k-button>
+      </k-space>
+    </demo-block>
+    <demo-block
+      title="尺寸"
+    >
+      <k-space>
+        <k-button
+          size="small"
+          type="primary"
+        >
+          Small
+        </k-button>
+        <k-button
+          type="primary"
+        >
+          Default
+        </k-button>
+        <k-button
+          size="large"
+          type="primary"
+        >
+          Large
         </k-button>
       </k-space>
     </demo-block>
@@ -42,41 +70,21 @@ exports[`should render demo and match snapshot 1`] = `
       title="变体"
     >
       <k-space>
-        <k-button>
+        <k-button
+          type="primary"
+        >
           Default
         </k-button>
         <k-button
-          color="primary"
-          variant="clear"
+          type="secondary"
+          variant="ghost"
         >
-          Clear
+          Ghost
         </k-button>
         <k-button
-          color="success"
           variant="outline"
         >
           Outline
-        </k-button>
-      </k-space>
-    </demo-block>
-    <demo-block
-      title="尺寸"
-    >
-      <k-space
-        wrap="{{true}}"
-      >
-        <k-button
-          size="sm"
-        >
-          Small
-        </k-button>
-        <k-button>
-          Default
-        </k-button>
-        <k-button
-          size="lg"
-        >
-          large
         </k-button>
       </k-space>
     </demo-block>
@@ -86,22 +94,15 @@ exports[`should render demo and match snapshot 1`] = `
       <k-space>
         <k-button
           disabled="{{true}}"
+          type="primary"
         >
-          Default
+          Primary
         </k-button>
         <k-button
-          color="primary"
           disabled="{{true}}"
-          variant="clear"
+          type="success"
         >
-          Clear
-        </k-button>
-        <k-button
-          color="success"
-          disabled="{{true}}"
-          variant="outline"
-        >
-          Outline
+          Success
         </k-button>
       </k-space>
     </demo-block>
@@ -111,100 +112,73 @@ exports[`should render demo and match snapshot 1`] = `
       <k-space>
         <k-button
           loading="{{true}}"
-        >
-          Default
-        </k-button>
+          type="primary"
+        />
         <k-button
-          color="primary"
           loading="{{true}}"
-          variant="clear"
-        >
-          Clear
-        </k-button>
-        <k-button
-          color="success"
-          loading="{{true}}"
+          type="primary"
           variant="outline"
         >
-          Outline
+          Primary
         </k-button>
       </k-space>
     </demo-block>
     <demo-block
       title="图标"
     >
-      <k-space>
-        <k-button
-          icon="heart"
-        >
-          Default
-        </k-button>
-        <k-button
-          color="primary"
-          icon="heart"
-          variant="clear"
-        >
-          Clear
-        </k-button>
-        <k-button
-          color="success"
-          icon="heart"
-          variant="outline"
-        >
-          Outline
-        </k-button>
-      </k-space>
+      <k-button
+        icon="heart"
+        type="danger"
+      >
+        Danger
+      </k-button>
     </demo-block>
     <demo-block
       title="形状"
     >
-      <k-space
-        wrap="{{true}}"
-      >
+      <k-space>
         <k-button
-          color="primary"
-          shape="round"
+          type="primary"
         >
-          Primary
+          Default
         </k-button>
         <k-button
-          color="warning"
           shape="round"
+          type="secondary"
         >
-          Warning
+          Round
         </k-button>
         <k-button
-          color="primary"
           icon="add"
           shape="circle"
+          type="success"
         />
         <k-button
-          color="warning"
-          icon="add"
-          shape="circle"
-        />
+          shape="square"
+          type="warning"
+        >
+          Square
+        </k-button>
       </k-space>
     </demo-block>
     <demo-block
       title="展开"
     >
       <k-space
+        align="start"
         style="display: flex"
         vertical="{{true}}"
       >
         <k-button
-          color="success"
-          expand="block"
-          size="lg"
+          type="primary"
         >
-          Primary
+          Default
         </k-button>
         <k-button
-          color="primary"
-          expand="full"
-          size="lg"
+          expand="block"
+          type="primary"
         >
-          Success
+          Block
         </k-button>
       </k-space>
     </demo-block>

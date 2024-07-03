@@ -1,52 +1,157 @@
 <k-flex style="padding-bottom: 16px" gap="md" vertical>
   <demo-block title="基础用法">
     <k-row>
-      <k-col span="8">span:8</k-col>
-      <k-col span="8">span:8</k-col>
-      <k-col span="8">span:8</k-col>
+      <k-col span="24">col</k-col>
     </k-row>
 
     <k-row>
-      <k-col span="4">span:4</k-col>
-      <k-col span="10" offset="4">offset:4, span:10</k-col>
+      <k-col span="12">col-12</k-col>
+      <k-col span="12">col-12</k-col>
     </k-row>
 
     <k-row>
-      <k-col span="12" offset="12">offset: 12, span:12</k-col>
+      <k-col span="8">col-8</k-col>
+      <k-col span="8">col-8</k-col>
+      <k-col span="8">col-8</k-col>
+    </k-row>
+
+    <k-row>
+      <k-col span="6">col-6</k-col>
+      <k-col span="6">col-6</k-col>
+      <k-col span="6">col-6</k-col>
+      <k-col span="6">col-6</k-col>
     </k-row>
   </demo-block>
 
-  <demo-block title="间距">
-    <k-row gutter="{{ [20, 20] }}">
-      <k-col span="8">span:8</k-col>
-      <k-col span="8">span:8</k-col>
-      <k-col span="8">span:8</k-col>
-      <k-col span="8">span:8</k-col>
-      <k-col span="8">span:8</k-col>
-      <k-col span="8">span:8</k-col>
+  <demo-block title="区块间距">
+    <k-row gutter="{{ [16, 24] }}">
+      <k-col span="6">col-6</k-col>
+      <k-col span="6">col-6</k-col>
+      <k-col span="6">col-6</k-col>
+      <k-col span="6">col-6</k-col>
+      <k-col span="6">col-6</k-col>
+      <k-col span="6">col-6</k-col>
+      <k-col span="6">col-6</k-col>
+      <k-col span="6">col-6</k-col>
+    </k-row>
+  </demo-block>
+
+  <demo-block title="左右偏移">
+    <k-row>
+      <k-col span="8">col-8</k-col>
+      <k-col span="8" offset="8">col-8 offset-8</k-col>
+    </k-row>
+
+    <k-row>
+      <k-col span="6" offset="6">col-6 offset-6</k-col>
+      <k-col span="6" offset="6">col-6 offset-6</k-col>
+    </k-row>
+
+    <k-row>
+      <k-col span="12" offset="6">col-12 offset-6</k-col>
+    </k-row>
+  </demo-block>
+
+  <demo-block title="栅格排序">
+    <k-row>
+      <k-col span="16" push="8">col-16 push-8</k-col>
+      <k-col span="8" pull="16">col-8 pull-16</k-col>
     </k-row>
   </demo-block>
 
   <demo-block title="排版">
+    <k-row justify="start" k-class="layout">
+      <k-col span="4">col-4</k-col>
+      <k-col span="4">col-4</k-col>
+      <k-col span="4">col-4</k-col>
+      <k-col span="4">col-4</k-col>
+    </k-row>
+
     <k-row justify="center" k-class="layout">
-      <k-col span="4">span:4</k-col>
-      <k-col span="4">span:4</k-col>
-      <k-col span="4">span:4</k-col>
-      <k-col span="4">span:4</k-col>
+      <k-col span="4">col-4</k-col>
+      <k-col span="4">col-4</k-col>
+      <k-col span="4">col-4</k-col>
+      <k-col span="4">col-4</k-col>
+    </k-row>
+
+    <k-row justify="end" k-class="layout">
+      <k-col span="4">col-4</k-col>
+      <k-col span="4">col-4</k-col>
+      <k-col span="4">col-4</k-col>
+      <k-col span="4">col-4</k-col>
     </k-row>
 
     <k-row justify="space-between" k-class="layout">
-      <k-col span="4">span:4</k-col>
-      <k-col span="4">span:4</k-col>
-      <k-col span="4">span:4</k-col>
-      <k-col span="4">span:4</k-col>
+      <k-col span="4">col-4</k-col>
+      <k-col span="4">col-4</k-col>
+      <k-col span="4">col-4</k-col>
+      <k-col span="4">col-4</k-col>
+    </k-row>
+
+    <k-row justify="space-around" k-class="layout">
+      <k-col span="4">col-4</k-col>
+      <k-col span="4">col-4</k-col>
+      <k-col span="4">col-4</k-col>
+      <k-col span="4">col-4</k-col>
+    </k-row>
+
+    <k-row justify="space-evenly" k-class="layout">
+      <k-col span="4">col-4</k-col>
+      <k-col span="4">col-4</k-col>
+      <k-col span="4">col-4</k-col>
+      <k-col span="4">col-4</k-col>
+    </k-row>
+  </demo-block>
+
+  <demo-block title="对齐">
+    <k-row justify="center" align="top" k-class="layout">
+      <k-col span="4" style="height: 100px">col-4</k-col>
+      <k-col span="4" style="height: 50px">col-4</k-col>
+      <k-col span="4" style="height: 120px">col-4</k-col>
+      <k-col span="4" style="height: 80px">col-4</k-col>
     </k-row>
 
     <k-row justify="space-around" align="middle" k-class="layout">
-      <k-col span="4" style="height: 100px">span:4</k-col>
-      <k-col span="4" style="height: 50px">span:4</k-col>
-      <k-col span="4" style="height: 120px">span:4</k-col>
-      <k-col span="4" style="height: 80px">span:4</k-col>
+      <k-col span="4" style="height: 100px">col-4</k-col>
+      <k-col span="4" style="height: 50px">col-4</k-col>
+      <k-col span="4" style="height: 120px">col-4</k-col>
+      <k-col span="4" style="height: 80px">col-4</k-col>
+    </k-row>
+
+    <k-row justify="space-between" align="bottom" k-class="layout">
+      <k-col span="4" style="height: 100px">col-4</k-col>
+      <k-col span="4" style="height: 50px">col-4</k-col>
+      <k-col span="4" style="height: 120px">col-4</k-col>
+      <k-col span="4" style="height: 80px">col-4</k-col>
+    </k-row>
+  </demo-block>
+
+  <demo-block title="排序">
+    <k-row>
+      <k-col span="6" order="4">1 col-6 order-4</k-col>
+      <k-col span="6" order="3">2 col-6 order-3</k-col>
+      <k-col span="6" order="2">3 col-6 order-2</k-col>
+      <k-col span="6" order="1">4 col-6 order-1</k-col>
+    </k-row>
+  </demo-block>
+
+  <demo-block title="Flex填充">
+    <k-row>
+      <k-col flex="2">2 / 5</k-col>
+      <k-col flex="3">3 / 5</k-col>
+    </k-row>
+
+    <k-row>
+      <k-col flex="100px">100px</k-col>
+      <k-col flex="auto">Fill Rest</k-col>
+    </k-row>
+  </demo-block>
+
+  <demo-block title="响应式">
+    <k-row>
+      <k-col xs="2" sm="4" md="6" lg="8" xl="10">Col</k-col>
+      <k-col xs="20" sm="16" md="12" lg="8" xl="4">Col</k-col>
+      <k-col xs="2" sm="4" md="6" lg="8" xl="10">Col</k-col>
     </k-row>
   </demo-block>
 </k-flex>

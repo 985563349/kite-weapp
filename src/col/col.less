@@ -1,20 +1,74 @@
+@import '../shared/style/variables.less';
+
 @col: ~'k-col';
+@columns: 24;
 
 .@{col} {
-  display: block;
+  position: relative;
   box-sizing: border-box;
+  max-width: 100%;
+  min-height: 1px;
 }
 
-.generate(@n, @i: 1) when(@i <= @n) {
-  .@{col}--@{i} {
-    width: (@i * 100% / @n);
-  }
+.generate();
 
-  .@{col}--offset-@{i} {
-    margin-left: (@i * 100% / @n);
-  }
+.generate(xs-);
 
-  .generate(@n, (@i + 1));
+@media (min-width: @screen-sm) {
+  .generate(sm-);
 }
 
-.generate(24);
+@media (min-width: @screen-md) {
+  .generate(md-);
+}
+
+@media (min-width: @screen-lg) {
+  .generate(lg-);
+}
+
+@media (min-width: @screen-xl) {
+  .generate(xl-);
+}
+
+.generate (@prefix: ~'') {
+  .generate-columns(@columns, @prefix);
+}
+
+.generate-columns(@total, @prefix, @index: @total) when(@index > 0) {
+  .@{col}--@{prefix}@{index} {
+    display: block;
+    flex: 0 0 percentage(@index / @total);
+    max-width: percentage(@index / @total);
+  }
+  .@{col}--@{prefix}offset-@{index} {
+    margin-left: percentage(@index / @total);
+  }
+  .@{col}--@{prefix}push-@{index} {
+    left: percentage(@index / @total);
+  }
+  .@{col}--@{prefix}pull-@{index} {
+    right: percentage(@index / @total);
+  }
+  .@{col}--@{prefix}order-@{index} {
+    order: @index;
+  }
+  .generate-columns(@total, @prefix, @index - 1);
+}
+
+.generate-columns(@total, @prefix, @index: @total) when(@index = 0) {
+  .@{col}--@{prefix}@{index} {
+    display: none;
+  }
+  .@{col}--@{prefix}offset-@{index} {
+    margin-left: 0;
+  }
+  .@{col}--@{prefix}push-@{index} {
+    left: auto;
+  }
+  .@{col}--@{prefix}pull-@{index} {
+    right: auto;
+  }
+  .@{col}--@{prefix}order-@{index} {
+    order: @index;
+  }
+}

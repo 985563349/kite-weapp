@@ -1,0 +1,43 @@
+var utils = require('../shared/wxs/utils.wxs');
+var array = require('../shared/wxs/array.wxs');
+var validator = require('../shared/wxs/validator.wxs');
+
+function spaceStyle(data) {
+  var gapStyle = {};
+
+  var sizes = array.isArray(data.size) ? data.size : [data.size, data.size];
+  var columnGap = validator.isNumeric(sizes[0]) ? utils.addUnit(sizes[0]) : null;
+  var rowGap = validator.isNumeric(sizes[1]) ? utils.addUnit(sizes[1]) : null;
+
+  if (columnGap !== rowGap) {
+    gapStyle.columnGap = columnGap;
+    gapStyle.rowGap = rowGap;
+  } else {
+    gapStyle.gap = columnGap;
+  }
+
+  return utils.style([gapStyle, data.style]);
+}
+
+function spaceClass(data) {
+  var mods = [data.align, { vertical: data.vertical, wrap: data.wrap }];
+
+  var sizes = array.isArray(data.size) ? data.size : [data.size, data.size];
+  var columnSize = !validator.isNumeric(sizes[0]) ? sizes[0] : null;
+  var rowSize = !validator.isNumeric(sizes[1]) ? sizes[1] : null;
+
+  if (columnSize) {
+    mods.unshift('col-gap-' + columnSize);
+  }
+
+  if (rowSize) {
+    mods.unshift('row-gap-' + rowSize);
+  }
+
+  return utils.bem('k-space', mods);
+}
+
+module.exports = {
+  spaceStyle: spaceStyle,
+  spaceClass: spaceClass,
+};

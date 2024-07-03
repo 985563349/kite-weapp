@@ -20,7 +20,7 @@ function traversing(config) {
     config.forEach(function (item) {
       mods = mods.concat(traversing(item));
     });
-  } else if (typeof config === 'object') {
+  } else if (object.isObject(config)) {
     object.keys(config).forEach(function (key) {
       if (config[key]) {
         mods.push(key);

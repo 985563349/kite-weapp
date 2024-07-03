@@ -11,16 +11,18 @@ exports[`should render demo and match snapshot 1`] = `
       title="基本用法"
     >
       <k-space>
-        <k-button>
-          Default
-        </k-button>
         <k-button
-          color="primary"
+          type="primary"
         >
           Primary
         </k-button>
         <k-button
-          color="success"
+          type="secondary"
+        >
+          Secondary
+        </k-button>
+        <k-button
+          type="success"
         >
           Success
         </k-button>
@@ -30,23 +32,22 @@ exports[`should render demo and match snapshot 1`] = `
       title="垂直间距"
     >
       <k-space
+        align="start"
         style="display: flex"
         vertical="{{true}}"
       >
         <k-button
-          expand="block"
-        >
-          Default
-        </k-button>
-        <k-button
-          color="primary"
-          expand="block"
+          type="primary"
         >
           Primary
         </k-button>
         <k-button
-          color="success"
-          expand="block"
+          type="secondary"
+        >
+          Secondary
+        </k-button>
+        <k-button
+          type="success"
         >
           Success
         </k-button>
@@ -56,18 +57,20 @@ exports[`should render demo and match snapshot 1`] = `
       title="间距大小"
     >
       <k-space
-        size="md"
+        size="middle"
       >
-        <k-button>
-          Default
-        </k-button>
         <k-button
-          color="primary"
+          type="primary"
         >
           Primary
         </k-button>
         <k-button
-          color="success"
+          type="secondary"
+        >
+          Secondary
+        </k-button>
+        <k-button
+          type="success"
         >
           Success
         </k-button>
@@ -83,8 +86,8 @@ exports[`should render demo and match snapshot 1`] = `
           center
         </wx-text>
         <k-button
-          color="primary"
           size="lg"
+          type="primary"
         >
           Primary
         </k-button>
@@ -105,22 +108,27 @@ exports[`should render demo and match snapshot 1`] = `
           Default
         </k-button>
         <k-button
-          color="primary"
+          type="primary"
         >
           Primary
         </k-button>
         <k-button
-          color="success"
+          type="secondary"
+        >
+          Secondary
+        </k-button>
+        <k-button
+          type="success"
         >
           Success
         </k-button>
         <k-button
-          color="warning"
+          type="warning"
         >
           Warning
         </k-button>
         <k-button
-          color="danger"
+          type="danger"
         >
           Danger
         </k-button>

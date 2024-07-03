@@ -1,53 +1,55 @@
-@import '../common/style/variables.less';
+@import '../shared/style/variables.less';
 
-@button-default-text-color: var(--button-default-text-color, @text-color);
-@button-default-color: var(--button-default-color, @default-color);
-@button-default-active-color: var(--button-default-active-color, @default-active-color);
-@button-default-fill-color: var(--button-default-fill-color, @default-bg-active-color);
+@button-border-width: var(--k-button-border-width, 2px);
+@button-font-weight: var(--k-button-font-weight, @font-weight-bold);
+@button-disabled-opacity: var(--k-button-disabled-opacity, 0.5);
+@button-icon-size: var(--k-button-icon-size, 1.2em);
+@button-loading-size: var(--k-button-loading-size, 1em);
 
-@button-primary-text-color: var(--button-primary-text-color, @white-color);
-@button-primary-color: var(--button-primary-color, @primary-color);
-@button-primary-active-color: var(--button-primary-active-color, @primary-active-color);
-@button-primary-fill-color: var(--button-primary-fill-color, @primary-bg-active-color);
+@button-default-color: var(--k-button-default-color, @text-color-system);
+@button-default-bg-color: var(--k-button-default-bg-color, @default-color);
+@button-default-bg-color-active: var(--k-button-default-bg-color-active, @default-color-active);
+@button-default-fill-color: var(--k-button-default-fill-color, @default-bg-color-active);
 
-@button-secondary-text-color: var(--button-secondary-text-color, @white-color);
-@button-secondary-color: var(--button-secondary-color, @secondary-color);
-@button-secondary-active-color: var(--button-secondary-active-color, @secondary-active-color);
-@button-secondary-fill-color: var(--button-secondary-fill-color, @secondary-bg-active-color);
+@button-primary-color: var(--k-button-primary-color, @white-color);
+@button-primary-bg-color: var(--k-button-primary-bg-color, @primary-color);
+@button-primary-bg-color-active: var(--k-button-primary-bg-color-active, @primary-color-active);
+@button-primary-fill-color: var(--k-button-primary-fill-color, @primary-bg-color-active);
 
-@button-success-text-color: var(--button-success-text-color, @dark-color);
-@button-success-color: var(--button-success-color, @success-color);
-@button-success-active-color: var(--button-success-active-color, @success-active-color);
-@button-success-fill-color: var(--button-success-fill-color, @success-bg-active-color);
+@button-secondary-color: var(--k-button-secondary-color, @white-color);
+@button-secondary-bg-color: var(--k-button-secondary-bg-color, @secondary-color);
+@button-secondary-bg-color-active: var(--k-button-secondary-bg-color-active, @secondary-color-active);
+@button-secondary-fill-color: var(--k-button-secondary-fill-color, @secondary-bg-color-active);
 
-@button-warning-text-color: var(--button-warning-text-color, @dark-color);
-@button-warning-color: var(--button-warning-color, @warning-color);
-@button-warning-active-color: var(--button-warning-active-color, @warning-active-color);
-@button-warning-fill-color: var(--button-warning-fill-color, @warning-bg-active-color);
+@button-success-color: var(--k-button-success-color, @dark-color);
+@button-success-bg-color: var(--k-button-success-bg-color, @success-color);
+@button-success-bg-color-active: var(--k-button-success-bg-color-active, @success-color-active);
+@button-success-fill-color: var(--k-button-success-fill-color, @success-bg-color-active);
 
-@button-danger-text-color: var(--button-danger-text-color, @white-color);
-@button-danger-color: var(--button-danger-color, @danger-color);
-@button-danger-active-color: var(--button-danger-active-color, @danger-active-color);
-@button-danger-fill-color: var(--button-danger-fill-color, @danger-bg-active-color);
+@button-warning-color: var(--k-button-warning-color, @dark-color);
+@button-warning-bg-color: var(--k-button-warning-bg-color, @warning-color);
+@button-warning-bg-color-active: var(--k-button-warning-bg-color-active, @warning-color-active);
+@button-warning-fill-color: var(--k-button-warning-fill-color, @warning-bg-color-active);
 
-@button-small-border-radius: var(--button-small-border-radius, @radius-s);
-@button-small-padding-inline: var(--button-small-padding-inline, 12px);
-@button-small-height: var(--button-small-height, 30px);
-@button-small-font-size: var(--button-small-font-size, @font-size-s);
+@button-danger-color: var(--k-button-danger-color, @white-color);
+@button-danger-bg-color: var(--k-button-danger-bg-color, @danger-color);
+@button-danger-bg-color-active: var(--k-button-danger-bg-color-active, @danger-color-active);
+@button-danger-fill-color: var(--k-button-danger-fill-color, @danger-bg-color-active);
 
-@button-default-border-radius: var(--button-default-border-radius, @radius-m);
-@button-default-padding-inline: var(--button-default-padding-inline, 16px);
-@button-default-height: var(--button-default-height, 44px);
-@button-default-font-size: var(--button-default-font-size, @font-size-m);
+@button-small-border-radius: var(--k-button-small-border-radius, @radius-s);
+@button-small-padding-inline: var(--k-button-small-padding-inline, 12px);
+@button-small-height: var(--k-button-small-height, 30px);
+@button-small-font-size: var(--k-button-small-font-size, @font-size-s);
 
-@button-large-border-radius: var(--button-large-border-radius, @radius-l);
-@button-large-padding-inline: var(--button-large-padding-inline, 20px);
-@button-large-height: var(--button-large-height, 50px);
-@button-large-font-size: var(--button-large-font-size, @font-size-l);
+@button-default-border-radius: var(--k-button-default-border-radius, @radius-m);
+@button-default-padding-inline: var(--k-button-default-padding-inline, 16px);
+@button-default-height: var(--k-button-default-height, 44px);
+@button-default-font-size: var(--k-button-default-font-size, @font-size-m);
 
-@button-border-width: var(--button-border-width, 2px);
-@button-font-weight: var(--button-font-weight, @font-weight-bold);
-@button-disabled-opacity: var(--button-disabled-opacity, 0.5);
+@button-large-border-radius: var(--k-button-large-border-radius, @radius-l);
+@button-large-padding-inline: var(--k-button-large-padding-inline, 20px);
+@button-large-height: var(--k-button-large-height, 50px);
+@button-large-font-size: var(--k-button-large-font-size, @font-size-l);
 
 @button: ~'k-button';
 
@@ -59,27 +61,19 @@
   gap: @spacer-xs;
   box-sizing: border-box;
   white-space: nowrap;
-  text-align: center;
   outline: none;
   margin: 0;
   border-radius: @button-default-border-radius;
   padding-left: @button-default-padding-inline;
   padding-right: @button-default-padding-inline;
   height: @button-default-height;
-  line-height: @button-default-height;
   font-size: @button-default-font-size;
   font-weight: @button-font-weight;
-  font-family: @font-family;
-  vertical-align: top;
-  color: @button-default-text-color;
-  background-color: @button-default-color;
-
-  &__icon {
-    font-size: 1.4em;
-  }
+  color: @button-default-color;
+  background-color: @button-default-bg-color;
 
   &--active {
-    background-color: @button-default-active-color;
+    background-color: @button-default-bg-color-active;
   }
 
   &::after {
@@ -87,69 +81,67 @@
   }
 
   &--primary {
-    color: @button-primary-text-color;
-    background-color: @button-primary-color;
+    color: @button-primary-color;
+    background-color: @button-primary-bg-color;
 
     &.@{button}--active {
-      background-color: @button-primary-active-color;
+      background-color: @button-primary-bg-color-active;
     }
   }
 
   &--secondary {
-    color: @button-secondary-text-color;
-    background-color: @button-secondary-color;
+    color: @button-secondary-color;
+    background-color: @button-secondary-bg-color;
 
     &.@{button}--active {
-      background-color: @button-secondary-active-color;
+      background-color: @button-secondary-bg-color-active;
     }
   }
 
   &--success {
-    color: @button-success-text-color;
-    background-color: @button-success-color;
+    color: @button-success-color;
+    background-color: @button-success-bg-color;
 
     &.@{button}--active {
-      background-color: @button-success-active-color;
+      background-color: @button-success-bg-color-active;
     }
   }
 
   &--warning {
-    color: @button-warning-text-color;
-    background-color: @button-warning-color;
+    color: @button-warning-color;
+    background-color: @button-warning-bg-color;
 
     &.@{button}--active {
-      background-color: @button-warning-active-color;
+      background-color: @button-warning-bg-color-active;
     }
   }
 
   &--danger {
-    color: @button-danger-text-color;
-    background-color: @button-danger-color;
+    color: @button-danger-color;
+    background-color: @button-danger-bg-color;
 
     &.@{button}--active {
-      background-color: @button-danger-active-color;
+      background-color: @button-danger-bg-color-active;
     }
   }
 
-  &--sm {
+  &--small {
     border-radius: @button-small-border-radius;
     padding-left: @button-small-padding-inline;
     padding-right: @button-small-padding-inline;
     height: @button-small-height;
-    line-height: @button-small-height;
     font-size: @button-small-font-size;
   }
 
-  &--lg {
+  &--large {
     border-radius: @button-large-border-radius;
     padding-left: @button-large-padding-inline;
     padding-right: @button-large-padding-inline;
     height: @button-large-height;
-    line-height: @button-large-height;
     font-size: @button-large-font-size;
   }
 
-  &--clear {
+  &--ghost {
     background-color: transparent;
 
     &.@{button}--active {
@@ -157,7 +149,7 @@
     }
 
     &.@{button}--primary {
-      color: @button-primary-color;
+      color: @button-primary-bg-color;
 
       &.@{button}--active {
         background-color: @button-primary-fill-color;
@@ -165,7 +157,7 @@
     }
 
     &.@{button}--secondary {
-      color: @button-secondary-color;
+      color: @button-secondary-bg-color;
 
       &.@{button}--active {
         background-color: @button-secondary-fill-color;
@@ -173,7 +165,7 @@
     }
 
     &.@{button}--success {
-      color: @button-success-color;
+      color: @button-success-bg-color;
 
       &.@{button}--active {
         background-color: @button-success-fill-color;
@@ -181,7 +173,7 @@
     }
 
     &.@{button}--warning {
-      color: @button-warning-color;
+      color: @button-warning-bg-color;
 
       &.@{button}--active {
         background-color: @button-warning-fill-color;
@@ -189,7 +181,7 @@
     }
 
     &.@{button}--danger {
-      color: @button-danger-color;
+      color: @button-danger-bg-color;
 
       &.@{button}--active {
         background-color: @button-danger-fill-color;
@@ -207,8 +199,8 @@
     }
 
     &.@{button}--primary {
-      border-color: @button-primary-color;
-      color: @button-primary-color;
+      border-color: @button-primary-bg-color;
+      color: @button-primary-bg-color;
 
       &.@{button}--active {
         background-color: @button-primary-fill-color;
@@ -216,8 +208,8 @@
     }
 
     &.@{button}--secondary {
-      border-color: @button-secondary-color;
-      color: @button-secondary-color;
+      border-color: @button-secondary-bg-color;
+      color: @button-secondary-bg-color;
 
       &.@{button}--active {
         background-color: @button-secondary-fill-color;
@@ -225,8 +217,8 @@
     }
 
     &.@{button}--success {
-      border-color: @button-success-color;
-      color: @button-success-color;
+      border-color: @button-success-bg-color;
+      color: @button-success-bg-color;
 
       &.@{button}--active {
         background-color: @button-success-fill-color;
@@ -234,8 +226,8 @@
     }
 
     &.@{button}--warning {
-      border-color: @button-warning-color;
-      color: @button-warning-color;
+      border-color: @button-warning-bg-color;
+      color: @button-warning-bg-color;
 
       &.@{button}--active {
         background-color: @button-warning-fill-color;
@@ -243,13 +235,26 @@
     }
 
     &.@{button}--danger {
-      border-color: @button-danger-color;
-      color: @button-danger-color;
+      border-color: @button-danger-bg-color;
+      color: @button-danger-bg-color;
 
       &.@{button}--active {
         background-color: @button-danger-fill-color;
       }
     }
+  }
+
+  &--disabled {
+    opacity: @button-disabled-opacity;
+  }
+
+  &__loading {
+    width: @button-loading-size !important;
+    height: @button-loading-size !important;
+  }
+
+  &__icon {
+    font-size: @button-icon-size !important;
   }
 
   &--round {
@@ -279,18 +284,12 @@
     }
   }
 
-  &--block {
-    display: flex;
-    width: 100%;
-  }
-
-  &--full {
-    display: flex;
-    width: 100%;
+  &--square {
     border-radius: 0;
   }
 
-  &--disabled {
-    opacity: @button-disabled-opacity;
+  &--block {
+    display: flex;
+    width: 100%;
   }
 }

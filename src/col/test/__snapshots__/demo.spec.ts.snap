@@ -12,83 +12,170 @@ exports[`should render demo and match snapshot 1`] = `
     >
       <k-row>
         <k-col
-          span="8"
+          span="24"
         >
-          span:8
-        </k-col>
-        <k-col
-          span="8"
-        >
-          span:8
-        </k-col>
-        <k-col
-          span="8"
-        >
-          span:8
+          col
         </k-col>
       </k-row>
       <k-row>
         <k-col
-          span="4"
-        >
-          span:4
-        </k-col>
-        <k-col
-          offset="4"
-          span="10"
-        >
-          offset:4, span:10
-        </k-col>
-      </k-row>
-      <k-row>
-        <k-col
-          offset="12"
           span="12"
         >
-          offset: 12, span:12
+          col-12
+        </k-col>
+        <k-col
+          span="12"
+        >
+          col-12
+        </k-col>
+      </k-row>
+      <k-row>
+        <k-col
+          span="8"
+        >
+          col-8
+        </k-col>
+        <k-col
+          span="8"
+        >
+          col-8
+        </k-col>
+        <k-col
+          span="8"
+        >
+          col-8
+        </k-col>
+      </k-row>
+      <k-row>
+        <k-col
+          span="6"
+        >
+          col-6
+        </k-col>
+        <k-col
+          span="6"
+        >
+          col-6
+        </k-col>
+        <k-col
+          span="6"
+        >
+          col-6
+        </k-col>
+        <k-col
+          span="6"
+        >
+          col-6
         </k-col>
       </k-row>
     </demo-block>
     <demo-block
-      title="间距"
+      title="区块间距"
     >
       <k-row
         gutter="{{
           [
-            20,
-            20,
+            16,
+            24,
           ]
         }}"
       >
         <k-col
-          span="8"
+          span="6"
         >
-          span:8
+          col-6
         </k-col>
+        <k-col
+          span="6"
+        >
+          col-6
+        </k-col>
+        <k-col
+          span="6"
+        >
+          col-6
+        </k-col>
+        <k-col
+          span="6"
+        >
+          col-6
+        </k-col>
+        <k-col
+          span="6"
+        >
+          col-6
+        </k-col>
+        <k-col
+          span="6"
+        >
+          col-6
+        </k-col>
+        <k-col
+          span="6"
+        >
+          col-6
+        </k-col>
+        <k-col
+          span="6"
+        >
+          col-6
+        </k-col>
+      </k-row>
+    </demo-block>
+    <demo-block
+      title="左右偏移"
+    >
+      <k-row>
         <k-col
           span="8"
         >
-          span:8
+          col-8
         </k-col>
         <k-col
+          offset="8"
           span="8"
         >
-          span:8
+          col-8 offset-8
+        </k-col>
+      </k-row>
+      <k-row>
+        <k-col
+          offset="6"
+          span="6"
+        >
+          col-6 offset-6
         </k-col>
         <k-col
-          span="8"
+          offset="6"
+          span="6"
         >
-          span:8
+          col-6 offset-6
+        </k-col>
+      </k-row>
+      <k-row>
+        <k-col
+          offset="6"
+          span="12"
+        >
+          col-12 offset-6
+        </k-col>
+      </k-row>
+    </demo-block>
+    <demo-block
+      title="栅格排序"
+    >
+      <k-row>
+        <k-col
+          push="8"
+          span="16"
+        >
+          col-16 push-8
         </k-col>
         <k-col
+          pull="16"
           span="8"
         >
-          span:8
-        </k-col>
-        <k-col
-          span="8"
-        >
-          span:8
+          col-8 pull-16
         </k-col>
       </k-row>
     </demo-block>
@@ -96,28 +183,78 @@ exports[`should render demo and match snapshot 1`] = `
       title="排版"
     >
       <k-row
+        justify="start"
+        kClass="layout"
+      >
+        <k-col
+          span="4"
+        >
+          col-4
+        </k-col>
+        <k-col
+          span="4"
+        >
+          col-4
+        </k-col>
+        <k-col
+          span="4"
+        >
+          col-4
+        </k-col>
+        <k-col
+          span="4"
+        >
+          col-4
+        </k-col>
+      </k-row>
+      <k-row
         justify="center"
         kClass="layout"
       >
         <k-col
           span="4"
         >
-          span:4
+          col-4
         </k-col>
         <k-col
           span="4"
         >
-          span:4
+          col-4
         </k-col>
         <k-col
           span="4"
         >
-          span:4
+          col-4
         </k-col>
         <k-col
           span="4"
         >
-          span:4
+          col-4
+        </k-col>
+      </k-row>
+      <k-row
+        justify="end"
+        kClass="layout"
+      >
+        <k-col
+          span="4"
+        >
+          col-4
+        </k-col>
+        <k-col
+          span="4"
+        >
+          col-4
+        </k-col>
+        <k-col
+          span="4"
+        >
+          col-4
+        </k-col>
+        <k-col
+          span="4"
+        >
+          col-4
         </k-col>
       </k-row>
       <k-row
@@ -127,22 +264,106 @@ exports[`should render demo and match snapshot 1`] = `
         <k-col
           span="4"
         >
-          span:4
+          col-4
         </k-col>
         <k-col
           span="4"
         >
-          span:4
+          col-4
         </k-col>
         <k-col
           span="4"
         >
-          span:4
+          col-4
         </k-col>
         <k-col
           span="4"
         >
-          span:4
+          col-4
+        </k-col>
+      </k-row>
+      <k-row
+        justify="space-around"
+        kClass="layout"
+      >
+        <k-col
+          span="4"
+        >
+          col-4
+        </k-col>
+        <k-col
+          span="4"
+        >
+          col-4
+        </k-col>
+        <k-col
+          span="4"
+        >
+          col-4
+        </k-col>
+        <k-col
+          span="4"
+        >
+          col-4
+        </k-col>
+      </k-row>
+      <k-row
+        justify="space-evenly"
+        kClass="layout"
+      >
+        <k-col
+          span="4"
+        >
+          col-4
+        </k-col>
+        <k-col
+          span="4"
+        >
+          col-4
+        </k-col>
+        <k-col
+          span="4"
+        >
+          col-4
+        </k-col>
+        <k-col
+          span="4"
+        >
+          col-4
+        </k-col>
+      </k-row>
+    </demo-block>
+    <demo-block
+      title="对齐"
+    >
+      <k-row
+        align="top"
+        justify="center"
+        kClass="layout"
+      >
+        <k-col
+          span="4"
+          style="height: 100px"
+        >
+          col-4
+        </k-col>
+        <k-col
+          span="4"
+          style="height: 50px"
+        >
+          col-4
+        </k-col>
+        <k-col
+          span="4"
+          style="height: 120px"
+        >
+          col-4
+        </k-col>
+        <k-col
+          span="4"
+          style="height: 80px"
+        >
+          col-4
         </k-col>
       </k-row>
       <k-row
@@ -154,25 +375,146 @@ exports[`should render demo and match snapshot 1`] = `
           span="4"
           style="height: 100px"
         >
-          span:4
+          col-4
         </k-col>
         <k-col
           span="4"
           style="height: 50px"
         >
-          span:4
+          col-4
         </k-col>
         <k-col
           span="4"
           style="height: 120px"
         >
-          span:4
+          col-4
         </k-col>
         <k-col
           span="4"
           style="height: 80px"
         >
-          span:4
+          col-4
+        </k-col>
+      </k-row>
+      <k-row
+        align="bottom"
+        justify="space-between"
+        kClass="layout"
+      >
+        <k-col
+          span="4"
+          style="height: 100px"
+        >
+          col-4
+        </k-col>
+        <k-col
+          span="4"
+          style="height: 50px"
+        >
+          col-4
+        </k-col>
+        <k-col
+          span="4"
+          style="height: 120px"
+        >
+          col-4
+        </k-col>
+        <k-col
+          span="4"
+          style="height: 80px"
+        >
+          col-4
+        </k-col>
+      </k-row>
+    </demo-block>
+    <demo-block
+      title="排序"
+    >
+      <k-row>
+        <k-col
+          order="4"
+          span="6"
+        >
+          1 col-6 order-4
+        </k-col>
+        <k-col
+          order="3"
+          span="6"
+        >
+          2 col-6 order-3
+        </k-col>
+        <k-col
+          order="2"
+          span="6"
+        >
+          3 col-6 order-2
+        </k-col>
+        <k-col
+          order="1"
+          span="6"
+        >
+          4 col-6 order-1
+        </k-col>
+      </k-row>
+    </demo-block>
+    <demo-block
+      title="Flex填充"
+    >
+      <k-row>
+        <k-col
+          flex="2"
+        >
+          2 / 5
+        </k-col>
+        <k-col
+          flex="3"
+        >
+          3 / 5
+        </k-col>
+      </k-row>
+      <k-row>
+        <k-col
+          flex="100px"
+        >
+          100px
+        </k-col>
+        <k-col
+          flex="auto"
+        >
+          Fill Rest
+        </k-col>
+      </k-row>
+    </demo-block>
+    <demo-block
+      title="响应式"
+    >
+      <k-row>
+        <k-col
+          lg="8"
+          md="6"
+          sm="4"
+          xl="10"
+          xs="2"
+        >
+          Col
+        </k-col>
+        <k-col
+          lg="8"
+          md="12"
+          sm="16"
+          xl="4"
+          xs="20"
+        >
+          Col
+        </k-col>
+        <k-col
+          lg="8"
+          md="6"
+          sm="4"
+          xl="10"
+          xs="2"
+        >
+          Col
         </k-col>
       </k-row>
     </demo-block>

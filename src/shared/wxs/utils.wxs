@@ -5,7 +5,6 @@ var style = require('./style.wxs');
 
 module.exports = {
   bem: memoize(bem),
-  memoize: memoize,
   addUnit: addUnit,
   style: style,
 };

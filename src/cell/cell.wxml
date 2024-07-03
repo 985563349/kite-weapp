@@ -1,11 +1,11 @@
-<wxs src="../wxs/utils.wxs" module="utils" />
+<wxs src="../shared/wxs/utils.wxs" module="utils" />
 
 <view
   id="{{ kId }}"
   style="{{ style }}"
-  class="{{ utils.bem('k-cell', [size, { center, borderless: !border, clickable, required }]) }} k-class"
+  class="{{ utils.bem('k-cell', [size, { center, border, clickable }]) }} k-class"
   hover-stay-time="70"
-  hover-class="k-cell--hover {{ clickable ? 'hover-class' : '' }}"
+  hover-class="k-cell--active {{ clickable ? 'hover-class' : '' }}"
   bind:tap="onTap"
   aria-role="{{ ariaRole || (arrow ? 'button' : '') }}"
   aria-label="{{ ariaLabel }}"
@@ -13,16 +13,16 @@
   <k-icon wx:if="{{ icon }}" k-class="k-cell__left-icon" name="{{ icon }}" />
   <slot wx:else name="icon" />
 
-  <view class="k-cell__title title-class">
+  <view class="k-cell__title k-title-class">
     <block wx:if="{{ title }}">{{ title }}</block>
 
-    <view class="k-cell__label label-class">
+    <view class="k-cell__label k-label-class">
       <block wx:if="label">{{ label }}</block>
       <slot wx:else name="label" />
     </view>
   </view>
 
-  <view class="k-cell__value value-class">
+  <view class="k-cell__value k-value-class">
     <block wx:if="{{ value }}">{{ value }}</block>
     <slot wx:else />
   </view>

@@ -26,12 +26,12 @@ exports[`should render demo and match snapshot 1`] = `
     >
       <k-space>
         <k-icon
-          color="#006fee"
+          color="#298dff"
           name="store"
           size="32px"
         />
         <k-icon
-          color="#f31260"
+          color="#f64784"
           name="fire"
           size="32px"
         />
@@ -47,7 +47,7 @@ exports[`should render demo and match snapshot 1`] = `
         />
         <k-icon
           name="location"
-          size="48px"
+          size="40px"
         />
       </k-space>
     </demo-block>

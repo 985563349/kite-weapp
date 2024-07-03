@@ -1,17 +1,19 @@
-@import '../common/style/variables.less';
+@import '../shared/style/variables.less';
 
-@loading-default-color: var(--loading-default-color, @default-color);
-@loading-primary-color: var(--loading-primary-color, @primary-color);
-@loading-success-color: var(--loading-success-color, @success-color);
-@loading-warning-color: var(--loading-warning-color, @warning-color);
-@loading-danger-color: var(--loading-danger-color, @danger-color);
+@loading-default-color: var(--k-loading-default-color, @default-color);
+@loading-primary-color: var(--k-loading-primary-color, @primary-color);
+@loading-secondary-color: var(--k-loading-secondary-color, @secondary-color);
+@loading-success-color: var(--k-loading-success-color, @success-color);
+@loading-warning-color: var(--k-loading-warning-color, @warning-color);
+@loading-danger-color: var(--k-loading-danger-color, @danger-color);
 
-@loading-small-size: var(--loading-small-size, 20px);
-@loading-default-size: var(--loading-small-size, 28px);
-@loading-large-size: var(--loading-small-size, 36px);
-@loading-label-font-size: var(--loading-label-font-size, @font-size-xs);
+@loading-small-size: var(--k-loading-small-size, 20px);
+@loading-default-size: var(--k-loading-default-size, 26px);
+@loading-large-size: var(--k-loading-large-size, 32px);
+@loading-label-line-height: var(--k-loading-label-line-height, @line-height-xs);
+@loading-label-font-size: var(--k-loading-label-font-size, @font-size-xs);
 
-@loading-animation-duration: var(--loading-animation-duration, 0.8s);
+@loading-animation-duration: var(--k-loading-animation-duration, 0.8s);
 
 @loading: ~'k-loading';
 
@@ -19,10 +21,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: @spacer-s;
   color: @loading-default-color;
 
   &__spinner {
+    display: inline-flex;
     box-sizing: border-box;
     border: 2px solid currentColor;
     border-top-color: transparent;
@@ -32,12 +34,12 @@
     animation: circular infinite @loading-animation-duration linear;
   }
 
-  &--current {
-    color: currentColor;
-  }
-
   &--primary {
     color: @loading-primary-color;
+  }
+
+  &--secondary {
+    color: @loading-secondary-color;
   }
 
   &--success {
@@ -52,14 +54,14 @@
     color: @loading-danger-color;
   }
 
-  &--sm {
+  &--small {
     .@{loading}__spinner {
       width: @loading-small-size;
       height: @loading-small-size;
     }
   }
 
-  &--lg {
+  &--large {
     .@{loading}__spinner {
       width: @loading-large-size;
       height: @loading-large-size;
@@ -68,11 +70,22 @@
 
   &--vertical {
     flex-direction: column;
-    gap: @spacer-s;
+
+    .@{loading}__label {
+      &:not(:empty) {
+        margin-left: 0;
+        margin-top: @spacer-s;
+      }
+    }
   }
 
   &__label {
+    line-height: @loading-label-line-height;
     font-size: @loading-label-font-size;
+
+    &:not(:empty) {
+      margin-left: @spacer-s;
+    }
   }
 }
 

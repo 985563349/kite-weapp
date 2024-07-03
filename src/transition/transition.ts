@@ -1,4 +1,4 @@
-import KComponent from '../common/component';
+import KComponent from '../shared/component';
 import transition from '../mixins/transition';
 
 KComponent({

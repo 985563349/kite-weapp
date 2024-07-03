@@ -1,5 +1,5 @@
-import { requestAnimationFrame } from '../common/raf';
-import { isObject } from '../common/validator';
+import { requestAnimationFrame } from '../shared/raf';
+import { isObject } from '../shared/validator';
 
 type DurationOption = {
   enter: number;
@@ -14,22 +14,16 @@ type DataOption = {
 };
 
 type PropertyOption = {
-  visible: {
-    type: typeof Boolean;
-    value?: boolean;
-    observer?: string;
-  };
-
   duration: {
     type: typeof Object;
     optionalTypes: [typeof Number];
     value?: DurationOption;
   };
-
   name: {
     type: typeof String;
     value?: string;
   };
+  [visibleProperty: string]: WechatMiniprogram.Component.AllProperty;
 };
 
 type MethodOption = {
@@ -45,10 +39,17 @@ type CustomInstanceProperty = {
   status: 'enter' | 'leave';
 };
 
-export default function transition(name = 'transition') {
+type TransitionOptions = {
+  visibleProperty?: string;
+  name?: string;
+};
+
+export default function transition(options: TransitionOptions = {}) {
+  const { visibleProperty = 'visible', name = 'transition' } = options;
+
   return Behavior<DataOption, PropertyOption, MethodOption, CustomInstanceProperty>({
     properties: {
-      visible: {
+      [visibleProperty]: {
         type: Boolean,
         value: false,
         observer: 'observeVisible',
@@ -150,13 +151,13 @@ export default function transition(name = 'transition') {
       },
 
       onTransitionEnd() {
-        // prevent transition property from causing the function to execute repeatedly.
-        if (this.transitionEnded) return;
+        if (this.transitionEnded) return; // prevent transition property from causing the function to execute repeatedly.
 
         this.triggerEvent(`after-${this.status}`);
         this.transitionEnded = true;
 
-        const { visible, display } = this.data;
+        const visible = this.data[visibleProperty];
+        const { display } = this.data;
 
         if (!visible && display) {
           this.setData({ display: false, transitionClassNames: '' });

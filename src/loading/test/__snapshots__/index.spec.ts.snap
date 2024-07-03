@@ -9,7 +9,11 @@ exports[`loading should render loading and match snapshot 1`] = `
   <wx-view
     ariaLabel="loading"
     ariaRole="image"
-    class="k-loading__spinner"
+    class="k-loading__spinner k-spinner-class"
+  />
+  <wx-view
+    ariaLabel=""
+    class="k-loading__label k-label-class"
   />
 </wx-view>
 `;

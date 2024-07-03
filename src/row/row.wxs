@@ -1,16 +1,17 @@
-var array = require('../wxs/array.wxs');
-var utils = require('../wxs/utils.wxs');
+var array = require('../shared/wxs/array.wxs');
+var utils = require('../shared/wxs/utils.wxs');
 
 function rowStyle(data) {
   var gutter = array.ensureArray(data.gutter);
+
   var margin = gutter[0] ? utils.addUnit(-gutter[0] / 2) : null;
-  var gap = gutter[1] ? utils.addUnit(gutter[1]) : null;
+  var rowGap = gutter[1] ? utils.addUnit(gutter[1]) : null;
 
   return utils.style([
     {
-      'margin-left': margin,
-      'margin-right': margin,
-      'row-gap': gap,
+      marginLeft: margin,
+      marginRight: margin,
+      rowGap: rowGap,
     },
     data.style,
   ]);

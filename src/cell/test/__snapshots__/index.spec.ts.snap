@@ -4,24 +4,24 @@ exports[`cell should render cell and match snapshot 1`] = `
 <wx-view
   ariaLabel=""
   ariaRole=""
-  class="k-cell k-class"
-  hoverClass="k-cell--hover "
+  class="k-cell k-cell--border k-class"
+  hoverClass="k-cell--active "
   hoverStayTime="70"
   id=""
   style=""
   bind:tap="onTap"
 >
   <wx-view
-    class="k-cell__title title-class"
+    class="k-cell__title k-title-class"
   >
     <wx-view
-      class="k-cell__label label-class"
+      class="k-cell__label k-label-class"
     >
       
     </wx-view>
   </wx-view>
   <wx-view
-    class="k-cell__value value-class"
+    class="k-cell__value k-value-class"
   />
 </wx-view>
 `;

@@ -1,5 +1,5 @@
-import KComponent from '../common/component';
-import { ensureArray } from '../common/utils';
+import KComponent from '../shared/component';
+import { ensureArray } from '../shared/utils';
 
 KComponent({
   properties: {
@@ -8,6 +8,7 @@ KComponent({
     gutter: {
       type: Array,
       optionalTypes: [Number],
+      observer: 'observerGutter',
     },
 
     justify: String,
@@ -32,6 +33,17 @@ KComponent({
           target.setData({ gutter });
         }
       },
+    },
+  },
+
+  methods: {
+    observerGutter() {
+      const [gutter] = ensureArray(this.data.gutter);
+      const children = this.getRelationNodes('../col/col');
+
+      children.forEach((child) => {
+        child.setData({ gutter });
+      });
     },
   },
 });

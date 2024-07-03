@@ -1,16 +1,13 @@
-<wxs src="../wxs/utils.wxs" module="utils" />
+<wxs src="../shared/wxs/utils.wxs" module="utils" />
 
-<view
-  id="{{ kId }}"
-  style="{{ style }}"
-  class="{{ utils.bem('k-loading', [{ vertical }, size, color]) }} k-class"
->
+<view id="{{ kId }}" style="{{ style }}" class="{{ utils.bem('k-loading', [type, size, { vertical }]) }} k-class">
   <view
-    class="k-loading__spinner"
+    class="k-loading__spinner k-spinner-class"
     aria-role="{{ ariaRole || 'image' }}"
     aria-label="{{ ariaLabel || label || 'loading' }}"
   />
-  <view wx:if="{{ label }}" class="k-loading__label" aria-label="{{ ariaLabel || label }}">
-    {{ label }}
+  <view class="k-loading__label k-label-class" aria-label="{{ ariaLabel || label }}">
+    <block wx:if="{{ label }}">{{ label }}</block>
+    <slot wx:else name="label" />
   </view>
 </view>

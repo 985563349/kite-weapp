@@ -1,40 +1,43 @@
+<wxs src="../shared/wxs/utils.wxs" module="utils" />
+
 <k-popup
-  visible="{{ visible }}"
+  open="{{ open }}"
   style="background-color: transparent"
   placement="bottom"
   shape="round"
   overlay="{{ overlay }}"
   overlay-closable="{{ overlayClosable }}"
+  duration="{{ duration }}"
+  lock-scroll="{{ lockScroll }}"
   z-index="{{ zIndex }}"
   bind:click-overlay="onClickOverlay"
 >
   <view id="{{ kId }}" class="k-action-sheet k-class">
     <view class="k-action-sheet-content">
       <view wx:if="{{ options && options.length }}" class="k-action-sheet-group">
-        <view wx:if="{{ title || subTitle }}" class="k-action-sheet-header">
-          <view class="k-action-sheet__title">{{ title }}</view>
-          <view class="k-action-sheet__sub-title">{{ subTitle }}</view>
+        <view class="k-action-sheet-header">
+          <view wx:if="{{ title }}" class="k-action-sheet__title">{{ title }}</view>
+          <slot wx:else name="title" />
         </view>
 
-        <k-button
+        <button
           wx:for="{{ options }}"
           wx:key="index"
-          color="{{ item.color }}"
-          variant="clear"
-          expand="full"
-          size="lg"
-          disabled="{{ item.disabled }}"
+          class="{{ utils.bem('k-action-sheet__item', [{ disabled: item.disabled }]) }} {{ item.class }}"
+          hover-class="{{ item.disabled ? '' : 'k-action-sheet__item--active' }}"
+          style="{{ item.color ? 'color: ' + item.color : '' }}"
           data-index="{{ index }}"
-          bind:click="onSelect"
+          bind:tap="onSelect"
         >
+          <k-icon wx:if="{{ item.icon }}" name="{{ item.icon }}" k-class="k-action-sheet__item-icon" />
           {{ item.label }}
-        </k-button>
+        </button>
       </view>
 
-      <view class="k-action-sheet-group">
-        <k-button variant="clear" expand="full" size="lg" bind:click="onCancel"
-          >{{ cancelText }}</k-button
-        >
+      <view wx:if="{{ cancelText }}" class="k-action-sheet-group">
+        <button class="k-action-sheet__cancel" hover-class="k-action-sheet__cancel--active" bind:tap="onCancel">
+          {{ cancelText }}
+        </button>
       </view>
     </view>
   </view>
