@@ -61,6 +61,13 @@
           "scene": null
         },
         {
+          "name": "dialog",
+          "pathName": "pages/dialog/dialog",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "overlay",
           "pathName": "pages/overlay/overlay",
           "query": "",

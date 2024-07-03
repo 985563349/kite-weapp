@@ -3,6 +3,9 @@ export default {
   verbose: true,
   testEnvironment: 'jsdom',
   moduleFileExtensions: ['js', 'ts'],
+  moduleNameMapper: {
+    '^kite-weapp/(.*)': '<rootDir>/src/$1',
+  },
   testMatch: ['<rootDir>/src/**/test/**/*.spec.{js,ts}'],
   collectCoverageFrom: ['<rootDir>/src/**/*.{js,ts}', '!**/test/**'],
   coverageProvider: 'v8',
