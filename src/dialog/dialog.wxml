@@ -1,0 +1,47 @@
+<wxs src="./dialog.wxs" module="computed" />
+
+<k-popup
+  open="{{ open }}"
+  k-id="{{ kId }}"
+  k-class="k-dialog k-class"
+  style="{{ computed.dialogStyle({ width, style }) }}"
+  shape="round"
+  overlay="{{ overlay }}"
+  overlay-closable="{{ overlayClosable }}"
+  duration="{{ duration }}"
+  lock-scroll="{{ lockScroll }}"
+  z-index="{{ zIndex }}"
+  bind:click-overlay="onClickOverlay"
+>
+  <view class="k-dialog-header">
+    <view wx:if="{{ title }}" class="k-dialog__title">{{ title }}</view>
+    <slot wx:else name="title" />
+  </view>
+
+  <view class="k-dialog-body">
+    <view wx:if="{{ content }}" class="k-dialog__content">{{ content }}</view>
+    <slot wx:else />
+  </view>
+
+  <view class="k-dialog-footer">
+    <button
+      wx:if="{{ showCancelButton }}"
+      class="k-dialog__cancel"
+      hover-class="{{ cancelLoading ? '' : 'k-dialog__cancel--active' }}"
+      bind:tap="onCancel"
+    >
+      <k-loading wx:if="{{ cancelLoading }}" style="color: currentColor" k-spinner-class="k-dialog__cancel-loading" />
+      <block wx:else>{{ cancelText }}</block>
+    </button>
+
+    <button
+      wx:if="{{ showConfirmButton }}"
+      class="k-dialog__confirm"
+      hover-class="{{ confirmLoading ? '' : 'k-dialog__confirm--active' }}"
+      bind:tap="onConfirm"
+    >
+      <k-loading wx:if="{{ confirmLoading }}" style="color: currentColor" k-spinner-class="k-dialog__confirm-loading" />
+      <block wx:else>{{ confirmText }}</block>
+    </button>
+  </view>
+</k-popup>

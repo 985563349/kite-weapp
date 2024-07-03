@@ -1,0 +1,14 @@
+var utils = require('../shared/wxs/utils.wxs');
+
+function dialogStyle(data) {
+  return utils.style([
+    {
+      width: utils.addUnit(data.width),
+    },
+    data.style,
+  ]);
+}
+
+module.exports = {
+  dialogStyle: dialogStyle,
+};

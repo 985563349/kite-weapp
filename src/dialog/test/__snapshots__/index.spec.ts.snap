@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`dialog should render dialog and match snapshot 1`] = `
+<main>
+  <wx-view
+    ariaLabel="close"
+    ariaRole="button"
+    class="k-overlay k-fade-enter-to k-fade-enter-active enter-to-class enter-active-class k-class"
+    id=""
+    style="-webkit-transition-duration:300ms;transition-duration:300ms;z-index:11000"
+    bind:tap="onTap"
+    catch:touchmove="noop"
+    bind:transitionend="onTransitionEnd"
+  />
+  <wx-view
+    class="k-popup k-popup--center k-popup--round k-center-enter-to k-center-enter-active enter-to-class enter-active-class k-class"
+    id=""
+    style="-webkit-transition-duration:300ms;transition-duration:300ms;z-index:11000;width:320px"
+    bind:transitionend="onTransitionEnd"
+  >
+    <wx-view
+      class="k-dialog-header"
+    />
+    <wx-view
+      class="k-dialog-body"
+    />
+    <wx-view
+      class="k-dialog-footer"
+    >
+      <wx-button
+        class="k-dialog__cancel"
+        hoverClass="k-dialog__cancel--active"
+        bind:tap="onCancel"
+      >
+        Cancel
+      </wx-button>
+      <wx-button
+        class="k-dialog__confirm"
+        hoverClass="k-dialog__confirm--active"
+        bind:tap="onConfirm"
+      >
+        Confirm
+      </wx-button>
+    </wx-view>
+  </wx-view>
+</main>
+`;
