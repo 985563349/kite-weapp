@@ -3,7 +3,7 @@
     <k-button type="primary" variant="clear" bind:click="onClickBasicOpen">Open</k-button>
 
     <k-action-sheet
-      visible="{{ basic }}"
+      open="{{ basic }}"
       options="{{ basicOptions }}"
       bind:select="onSelect"
       bind:cancel="onClickBasicCancel"
@@ -14,7 +14,7 @@
     <k-button type="primary" variant="clear" bind:click="onClickColorOpen">Open</k-button>
 
     <k-action-sheet
-      visible="{{ color }}"
+      open="{{ color }}"
       options="{{ colorOptions }}"
       cancel-text="Cancel"
       bind:cancel="onClickColorCancel"
@@ -25,7 +25,7 @@
     <k-button type="primary" variant="clear" bind:click="onClickStateOpen">Open</k-button>
 
     <k-action-sheet
-      visible="{{ state }}"
+      open="{{ state }}"
       options="{{ stateOptions }}"
       cancel-text="Cancel"
       bind:cancel="onClickStateCancel"
@@ -36,7 +36,7 @@
     <k-button type="primary" variant="clear" bind:click="onClickTitleOpen">Open</k-button>
 
     <k-action-sheet
-      visible="{{ title }}"
+      open="{{ title }}"
       title="Actions"
       options="{{ titleOptions }}"
       cancel-text="Cancel"

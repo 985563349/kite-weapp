@@ -49,6 +49,7 @@ exports[`should render demo and match snapshot 1`] = `
       </k-button>
       <k-action-sheet
         cancelText="Cancel"
+        open="{{false}}"
         options="{{
           [
             {
@@ -80,6 +81,7 @@ exports[`should render demo and match snapshot 1`] = `
       </k-button>
       <k-action-sheet
         cancelText="Cancel"
+        open="{{false}}"
         options="{{
           [
             {
@@ -112,6 +114,7 @@ exports[`should render demo and match snapshot 1`] = `
       </k-button>
       <k-action-sheet
         cancelText="Cancel"
+        open="{{false}}"
         options="{{
           [
             {

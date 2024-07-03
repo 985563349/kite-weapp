@@ -20,8 +20,8 @@ exports[`should render demo and match snapshot 1`] = `
          Open 
       </k-button>
       <k-popup
+        open="{{false}}"
         style="padding: 100px"
-        visible="{{false}}"
         bind:close="onClickBasicClose"
       />
     </demo-block>
@@ -64,27 +64,27 @@ exports[`should render demo and match snapshot 1`] = `
         </k-button>
       </k-space>
       <k-popup
+        open="{{false}}"
         placement="top"
         style="height: 260px"
-        visible="{{false}}"
         bind:close="onClickTopClose"
       />
       <k-popup
+        open="{{false}}"
         placement="right"
         style="width: 20%; height: 100%"
-        visible="{{false}}"
         bind:close="onClickRightClose"
       />
       <k-popup
+        open="{{false}}"
         placement="bottom"
         style="height: 260px"
-        visible="{{false}}"
         bind:close="onClickBottomClose"
       />
       <k-popup
+        open="{{false}}"
         placement="left"
         style="width: 20%; height: 100%"
-        visible="{{false}}"
         bind:close="onClickLeftClose"
       />
     </demo-block>
@@ -101,9 +101,9 @@ exports[`should render demo and match snapshot 1`] = `
          Round 
       </k-button>
       <k-popup
+        open="{{false}}"
         shape="round"
         style="padding: 100px"
-        visible="{{false}}"
         bind:close="onClickRoundClose"
       />
     </demo-block>
@@ -121,8 +121,8 @@ exports[`should render demo and match snapshot 1`] = `
       </k-button>
       <k-popup
         closable="{{true}}"
+        open="{{false}}"
         style="padding: 100px"
-        visible="{{false}}"
         bind:close="onClickCloseClose"
       />
     </demo-block>

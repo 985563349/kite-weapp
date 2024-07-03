@@ -76,7 +76,7 @@ exports[`should render demo and match snapshot 1`] = `
         <k-button
           type="primary"
         >
-          Default
+          Primary
         </k-button>
         <k-button
           type="secondary"

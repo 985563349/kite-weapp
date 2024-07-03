@@ -6,7 +6,7 @@ KComponent({
   properties: {
     type: String,
 
-    size: String,
+    style: String,
 
     vertical: Boolean,
 

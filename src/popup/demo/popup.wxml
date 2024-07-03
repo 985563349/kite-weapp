@@ -2,7 +2,7 @@
   <demo-block title="基础用法" padding>
     <k-button type="primary" size="sm" variant="clear" bind:click="onClickBasicOpen"> Open </k-button>
 
-    <k-popup style="padding: 100px" visible="{{ basic }}" bind:close="onClickBasicClose" />
+    <k-popup style="padding: 100px" open="{{ basic }}" bind:close="onClickBasicClose" />
   </demo-block>
 
   <demo-block title="弹出位置" padding>
@@ -34,6 +34,6 @@
   <demo-block title="关闭按钮" padding>
     <k-button type="primary" size="sm" variant="clear" bind:click="onClickCloseOpen"> Open </k-button>
 
-    <k-popup style="padding: 100px" visible="{{ close }}" closable bind:close="onClickCloseClose" />
+    <k-popup style="padding: 100px" open="{{ close }}" closable bind:close="onClickCloseClose" />
   </demo-block>
 </k-flex>
