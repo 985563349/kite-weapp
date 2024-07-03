@@ -1,0 +1,14 @@
+function isNumeric(value) {
+  // prettier-ignore
+  return getRegExp('^-?\d+(\.\d+)?$').test('' + value);
+}
+
+function isStyleUnitValue(value) {
+  // prettier-ignore
+  return getRegExp('^\d+(\.\d+)?(px|em|rem|%)$').test('' + value);
+}
+
+module.exports = {
+  isNumeric: isNumeric,
+  isStyleUnitValue: isStyleUnitValue,
+};
