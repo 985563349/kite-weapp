@@ -1,0 +1,19 @@
+var utils = require('../shared/wxs/utils.wxs');
+
+function toastStyle(data) {
+  var duration = data.transitionDuration ? data.transitionDuration + 'ms' : null;
+
+  return utils.style([
+    {
+      '-webkit-transition-duration': duration,
+      'transition-duration': duration,
+      'z-index': data.zIndex,
+    },
+    data.display ? null : 'display: none',
+    data.style,
+  ]);
+}
+
+module.exports = {
+  toastStyle: toastStyle,
+};

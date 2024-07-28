@@ -12,6 +12,7 @@
     "pages/loading/loading",
     "pages/overlay/overlay",
     "pages/popup/popup",
+    "pages/toast/toast",
     "pages/transition/transition"
   ],
   "window": {

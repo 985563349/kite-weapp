@@ -1,0 +1,81 @@
+@import '../shared/style/variables.less';
+
+@toast-position-top-offset: var(--k-toast-position-top-offset, 20%);
+@toast-position-bottom-offset: var(--k-toast-position-bottom-offset, 20%);
+@toast-border-radius: var(--k-border-radius, @radius-m);
+@toast-padding: var(--k-toast-padding, 20px);
+@toast-width: var(--k-toast-width, 120px);
+@toast-min-height: var(--k-toast-min-height, 120px);
+@toast-line-height: var(--k-toast-line-height, @line-height-s);
+@toast-font-size: var(--k-toast-font-size, @font-size-s);
+@toast-color: var(--k-toast-color, @white-color);
+@toast-bg-color: var(--k-toast-bg-color, @spotlight-bg-color);
+
+@toast-text-max-width: var(--k-toast-text-max-width, 70%);
+@toast-text-padding-block: var(--k-toast-text-padding-block, 12px);
+@toast-text-padding-inline: var(--k-toast-text-padding-inline, 20px);
+
+@toast-loading-size: var(--k-toast-icon-size, 30px);
+@toast-icon-size: var(--k-toast-icon-size, 36px);
+
+@toast: ~'k-toast';
+
+.@{toast} {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  box-sizing: border-box;
+  border-radius: @toast-border-radius;
+  margin: 0 auto;
+  padding: @toast-text-padding-block @toast-text-padding-inline;
+  width: fit-content;
+  max-width: @toast-text-max-width;
+  line-height: @toast-line-height;
+  font-size: @toast-font-size;
+  white-space: pre-wrap;
+  word-break: break-all;
+  text-align: center;
+  color: @toast-color;
+  background-color: @toast-bg-color;
+
+  &--icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: @spacer-s;
+    padding: @toast-padding;
+    width: @toast-width;
+    min-height: @toast-min-height;
+  }
+
+  &--top {
+    top: @toast-position-top-offset;
+  }
+
+  &--bottom {
+    top: auto;
+    bottom: @toast-position-bottom-offset;
+  }
+
+  &__loading {
+    width: @toast-loading-size !important;
+    height: @toast-loading-size !important;
+  }
+
+  &__icon {
+    font-size: @toast-icon-size !important;
+  }
+}
+
+.k-fade-enter-active,
+.k-fade-leave-active {
+  transition-property: opacity;
+}
+
+.k-fade-enter,
+.k-fade-leave-to {
+  opacity: 0;
+}
