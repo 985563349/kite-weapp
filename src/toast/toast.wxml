@@ -1,0 +1,28 @@
+<wxs src="../shared/wxs/utils.wxs" module="utils" />
+<wxs src="./toast.wxs" module="computed" />
+
+<k-overlay
+  wx:if="{{ overlay }}"
+  open="{{ open }}"
+  lock-scroll="{{ lockScroll }}"
+  zIndex="{{ zIndex }}"
+  style="background-color: transparent"
+/>
+
+<view
+  wx:if="{{ mounted }}"
+  id="{{ kId }}"
+  class="{{ utils.bem('k-toast', [position, (type && type !== 'html' ? 'icon' : '')]) }} {{ transitionClassNames }} k-class"
+  style="{{ computed.toastStyle({ display, transitionDuration, zIndex, style }) }}"
+  catch:touchmove="noop"
+  bind:transitionend="onTransitionEnd"
+>
+  <rich-text wx:if="{{ type === 'html' }}" />
+  <block wx:else>
+    <k-loading wx:if="{{ type === 'loading' }}" style="color: currentColor" k-spinner-class="k-toast__loading" />
+    <k-icon wx:elif="{{ type }}" name="{{ iconMap[type] || type }}" k-class="k-toast__icon" />
+
+    <text wx:if="{{ message }}" aria-role="alert">{{ message }}</text>
+    <slot wx:else name="message" />
+  </block>
+</view>

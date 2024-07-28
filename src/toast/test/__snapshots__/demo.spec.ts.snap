@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render demo and match snapshot 1`] = `
+<main>
+  <k-flex
+    gap="md"
+    style="padding-bottom: 16px"
+    vertical="{{true}}"
+  >
+    <demo-block
+      title="基础用法"
+    >
+      <k-space
+        wrap="{{true}}"
+      >
+        <k-button
+          type="primary"
+          bind:click="showTextToast"
+        >
+          Text
+        </k-button>
+        <k-button
+          type="primary"
+          bind:click="showLoadingToast"
+        >
+          Loading
+        </k-button>
+        <k-button
+          type="primary"
+          bind:click="showSuccessToast"
+        >
+          Success
+        </k-button>
+        <k-button
+          type="primary"
+          bind:click="showWarningToast"
+        >
+          Warning
+        </k-button>
+        <k-button
+          type="primary"
+          bind:click="showErrorToast"
+        >
+          Error
+        </k-button>
+      </k-space>
+    </demo-block>
+    <demo-block
+      title="弹出位置"
+    >
+      <k-space>
+        <k-button
+          type="primary"
+          bind:click="showTopToast"
+        >
+          Top
+        </k-button>
+        <k-button
+          type="primary"
+          bind:click="showBottomToast"
+        >
+          Bottom
+        </k-button>
+      </k-space>
+    </demo-block>
+  </k-flex>
+  <k-toast
+    id="k-toast"
+  />
+</main>
+`;

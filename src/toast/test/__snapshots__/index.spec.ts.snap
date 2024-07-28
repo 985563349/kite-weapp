@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`toast should render toast add match snapshot 1`] = `
+<wx-view
+  class="k-toast  k-class"
+  id=""
+  style="z-index:11000;display: none"
+  catch:touchmove="noop"
+  bind:transitionend="onTransitionEnd"
+/>
+`;

@@ -5,6 +5,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "action-sheet",
+          "pathName": "pages/action-sheet/action-sheet",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "button",
           "pathName": "pages/button/button",
           "query": "",
@@ -77,6 +84,13 @@
         {
           "name": "popup",
           "pathName": "pages/popup/popup",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "toast",
+          "pathName": "pages/toast/toast",
           "query": "",
           "launchMode": "default",
           "scene": null
