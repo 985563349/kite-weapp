@@ -38,7 +38,7 @@ KComponent({
     },
   },
 
-  behaviors: [transition({ visibleProperty: 'open' })],
+  behaviors: [transition()],
 
   lifetimes: {
     created() {
@@ -56,7 +56,7 @@ KComponent({
     },
 
     onClickClose() {
-      if (this.data.open) {
+      if (this.data.visible) {
         this.triggerEvent('close');
       }
     },
@@ -64,7 +64,7 @@ KComponent({
     observePlacement() {
       const { placement } = this.data;
 
-      this.setData({ name: placement });
+      this.setData({ transition: placement });
     },
   },
 });

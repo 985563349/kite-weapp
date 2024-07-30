@@ -3,7 +3,7 @@
 <button
   id="{{ kId }}"
   style="{{ style }}"
-  class="{{ utils.bem('k-button', [type, size, variant, shape, expand, { disabled }]) }} k-class"
+  class="{{ utils.bem('k-button', [type, size, variant, shape, expand, { disabled, loading }]) }} k-class"
   hover-class="{{ disabled || loading ? '' : 'k-button--active hover-class' }}"
   form-type="{{ disabled || loading ? '' : formType }}"
   open-type="{{ disabled || loading ? '' : openType }}"

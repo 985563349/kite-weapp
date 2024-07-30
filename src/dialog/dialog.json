@@ -3,6 +3,6 @@
   "styleIsolation": "apply-shared",
   "usingComponents": {
     "k-popup": "../popup/popup",
-    "k-loading": "../loading/loading"
+    "k-button": "../button/button"
   }
 }

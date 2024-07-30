@@ -127,10 +127,10 @@ exports[`should render demo and match snapshot 1`] = `
       title="图标"
     >
       <k-button
-        icon="heart"
-        type="danger"
+        icon="search"
+        type="primary"
       >
-        Danger
+        Search
       </k-button>
     </demo-block>
     <demo-block

@@ -20,12 +20,6 @@ KComponent({
 
     overlay: Boolean,
 
-    duration: {
-      type: Object,
-      optionalTypes: [Number],
-      value: { enter: 300, leave: 300 },
-    },
-
     selector: String,
 
     context: Object,
@@ -36,7 +30,7 @@ KComponent({
     },
   },
 
-  behaviors: [transition({ visibleProperty: 'open', name: 'fade' })],
+  behaviors: [transition({ transition: 'fade' })],
 
   data: {
     iconMap: {

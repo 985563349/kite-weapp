@@ -41,7 +41,7 @@
   </demo-block>
 
   <demo-block title="图标">
-    <k-button type="danger" icon="heart">Danger</k-button>
+    <k-button type="primary" icon="search">Search</k-button>
   </demo-block>
 
   <demo-block title="形状">

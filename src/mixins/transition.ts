@@ -1,4 +1,4 @@
-import { requestAnimationFrame } from '../shared/raf';
+import { requestAnimationFrame, frameDuration } from '../shared/raf';
 import { isObject } from '../shared/validator';
 
 type DurationOption = {
@@ -14,16 +14,20 @@ type DataOption = {
 };
 
 type PropertyOption = {
+  visible: {
+    type: typeof Boolean;
+    value?: boolean;
+    observer?: string;
+  };
+  transition: {
+    type: typeof String;
+    value?: string;
+  };
   duration: {
     type: typeof Object;
     optionalTypes: [typeof Number];
     value?: DurationOption;
   };
-  name: {
-    type: typeof String;
-    value?: string;
-  };
-  [visibleProperty: string]: WechatMiniprogram.Component.AllProperty;
 };
 
 type MethodOption = {
@@ -40,30 +44,29 @@ type CustomInstanceProperty = {
 };
 
 type TransitionOptions = {
-  visibleProperty?: string;
-  name?: string;
+  transition?: string;
 };
 
 export default function transition(options: TransitionOptions = {}) {
-  const { visibleProperty = 'visible', name = 'transition' } = options;
+  const { transition = 'transition' } = options;
 
   return Behavior<DataOption, PropertyOption, MethodOption, CustomInstanceProperty>({
     properties: {
-      [visibleProperty]: {
+      visible: {
         type: Boolean,
         value: false,
         observer: 'observeVisible',
+      },
+
+      transition: {
+        type: String,
+        value: transition,
       },
 
       duration: {
         type: Object,
         optionalTypes: [Number],
         value: { enter: 300, leave: 300 },
-      },
-
-      name: {
-        type: String,
-        value: name,
       },
     },
 
@@ -86,7 +89,7 @@ export default function transition(options: TransitionOptions = {}) {
         this.enterTransitionPromise = new Promise((resolve) => {
           if (this.status === 'enter') return;
 
-          const { duration, name } = this.data;
+          const { duration, transition } = this.data;
           const transitionDuration = isObject(duration) ? duration.enter : duration;
 
           this.status = 'enter';
@@ -100,16 +103,16 @@ export default function transition(options: TransitionOptions = {}) {
               mounted: true,
               display: true,
               transitionDuration,
-              transitionClassNames: `k-${name}-enter k-${name}-enter-active enter-class enter-active-class`,
+              transitionClassNames: `k-${transition}-enter k-${transition}-enter-active enter-class enter-active-class`,
             });
 
             requestAnimationFrame(() => {
               if (this.status !== 'enter') return;
 
-              this.setData({
-                transitionClassNames: `k-${name}-enter-to k-${name}-enter-active enter-to-class enter-active-class`,
-              });
               this.transitionEnded = false;
+              this.setData({
+                transitionClassNames: `k-${transition}-enter-to k-${transition}-enter-active enter-to-class enter-active-class`,
+              });
               resolve();
             });
           });
@@ -122,7 +125,7 @@ export default function transition(options: TransitionOptions = {}) {
         this.enterTransitionPromise.then(() => {
           if (!this.data.display) return;
 
-          const { duration, name } = this.data;
+          const { duration, transition } = this.data;
           const transitionDuration = isObject(duration) ? duration.leave : duration;
 
           this.status = 'leave';
@@ -134,17 +137,29 @@ export default function transition(options: TransitionOptions = {}) {
             this.triggerEvent('leave');
             this.setData({
               transitionDuration,
-              transitionClassNames: `k-${name}-leave k-${name}-leave-active leave-class leave-active-class`,
+              transitionClassNames: `k-${transition}-leave k-${transition}-leave-active leave-class leave-active-class`,
             });
 
             requestAnimationFrame(() => {
               if (this.status !== 'leave') return;
 
-              this.setData({
-                transitionClassNames: `k-${name}-leave-to k-${name}-leave-active leave-to-class leave-active-class`,
-              });
-              this.enterTransitionPromise = null;
               this.transitionEnded = false;
+              this.enterTransitionPromise = null;
+              this.setData({
+                transitionClassNames: `k-${transition}-leave-to k-${transition}-leave-active leave-to-class leave-active-class`,
+              });
+
+              /**
+               * prevent transitionend from failing to trigger.
+               *
+               * delaying the two-frame event ensures that the timer executes after the transitionEnd event executes.
+               */
+              setTimeout(
+                () => {
+                  this.onTransitionEnd();
+                },
+                transitionDuration + frameDuration * 2
+              );
             });
           });
         });
@@ -156,8 +171,7 @@ export default function transition(options: TransitionOptions = {}) {
         this.triggerEvent(`after-${this.status}`);
         this.transitionEnded = true;
 
-        const visible = this.data[visibleProperty];
-        const { display } = this.data;
+        const { visible, display } = this.data;
 
         if (!visible && display) {
           this.setData({ display: false, transitionClassNames: '' });

@@ -6,11 +6,12 @@ describe('toast', () => {
     rootPath: path.resolve(__dirname, '../../'),
   });
 
-  test('should render toast add match snapshot', () => {
+  test('should render toast add match snapshot', async () => {
     const comp = simulate.render(kToast);
     comp.attach(document.createElement('parent-wrapper'));
-    comp.setData({ mounted: true });
+    comp.setData({ visible: true });
 
+    await simulate.sleep(16 * 3); // wait three frames for the animation to complete.
     expect(comp.toJSON()).toMatchSnapshot();
   });
 });

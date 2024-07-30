@@ -1,18 +1,18 @@
 import path from 'node:path';
 import simulate from 'miniprogram-simulate';
 
-describe('overlay', () => {
-  const KOverlay = simulate.load(path.resolve(__dirname, '../overlay'), 'k-overlay', {
+describe('action-sheet', () => {
+  const KActionSheet = simulate.load(path.resolve(__dirname, '../action-sheet'), 'k-action-sheet', {
     rootPath: path.resolve(__dirname, '../../'),
   });
 
-  test('should render overlay add match snapshot', async () => {
+  test('should render dialog and match snapshot', async () => {
     const comp = simulate.render(
       simulate.load({
         usingComponents: {
-          'k-overlay': KOverlay,
+          'k-action-sheet': KActionSheet,
         },
-        template: `<k-overlay visible />`,
+        template: `<k-action-sheet visible />`,
       })
     );
     comp.attach(document.createElement('parent-wrapper'));

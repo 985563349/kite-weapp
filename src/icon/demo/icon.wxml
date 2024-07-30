@@ -1,7 +1,7 @@
 <k-flex style="padding-bottom: 16px" gap="md" vertical>
   <demo-block title="基础用法">
     <k-space>
-      <k-icon name="message" size="32px" />
+      <k-icon name="home" size="32px" />
       <k-icon name="user" size="32px" />
     </k-space>
   </demo-block>
@@ -9,7 +9,7 @@
   <demo-block title="图标颜色">
     <k-space>
       <k-icon name="store" size="32px" color="#298dff" />
-      <k-icon name="fire" size="32px" color="#f64784" />
+      <k-icon name="star" size="32px" color="#f64784" />
     </k-space>
   </demo-block>
 
@@ -22,7 +22,7 @@
 
   <demo-block title="基础图标" wrap>
     <k-row gutter="{{ [16, 16] }}">
-      <k-col span="8" wx:for="{{ icons }}" wx:key="index">
+      <k-col span="6" wx:for="{{ icons }}" wx:key="index">
         <k-icon name="{{ item }}" size="32px" />
         <text class="text">{{ item }}</text>
       </k-col>

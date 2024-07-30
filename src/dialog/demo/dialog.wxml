@@ -13,7 +13,12 @@
 
   <k-dialog id="k-dialog" />
 
-  <k-dialog open="{{ open }}" title="Title" bind:confirm="onClickComponentConfirm" bind:cancel="onClickComponentCancel">
+  <k-dialog
+    visible="{{ visible }}"
+    title="Title"
+    bind:confirm="onClickComponentConfirm"
+    bind:cancel="onClickComponentCancel"
+  >
     <view>If the solution is ugly, then there must be a better solution, but it has not been discovered yet.</view>
   </k-dialog>
 </k-flex>

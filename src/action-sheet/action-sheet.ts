@@ -6,7 +6,7 @@ KComponent({
 
     style: String,
 
-    open: Boolean,
+    visible: Boolean,
 
     options: {
       type: Array,
@@ -58,7 +58,7 @@ KComponent({
     },
 
     onCancel() {
-      if (this.data.open) {
+      if (this.data.visible) {
         this.triggerEvent('cancel');
       }
     },

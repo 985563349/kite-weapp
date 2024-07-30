@@ -12,7 +12,7 @@ exports[`should render demo and match snapshot 1`] = `
     >
       <k-space>
         <k-icon
-          name="message"
+          name="home"
           size="32px"
         />
         <k-icon
@@ -32,7 +32,7 @@ exports[`should render demo and match snapshot 1`] = `
         />
         <k-icon
           color="#f64784"
-          name="fire"
+          name="star"
           size="32px"
         />
       </k-space>
@@ -64,20 +64,7 @@ exports[`should render demo and match snapshot 1`] = `
         }}"
       >
         <k-col
-          span="8"
-        >
-          <k-icon
-            name="arrow-up-circle"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            arrow-up-circle
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="info-circle"
@@ -90,33 +77,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
-        >
-          <k-icon
-            name="smile"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            smile
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="user-search"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            user-search
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="eye-off"
@@ -129,111 +90,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
-        >
-          <k-icon
-            name="file-search"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            file-search
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="file-checked"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            file-checked
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="thumb-up"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            thumb-up
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="user-list"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            user-list
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="wifi"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            wifi
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="system"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            system
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="list"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            list
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="map"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            map
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="close-circle"
@@ -246,124 +103,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
-        >
-          <k-icon
-            name="adjustment"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            adjustment
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="fullscreen"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            fullscreen
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="fire"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            fire
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="link"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            link
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="layout"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            layout
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="tree"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            tree
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="sensors"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            sensors
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="cake"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            cake
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="code"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            code
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="minus-circle"
@@ -376,20 +116,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
-        >
-          <k-icon
-            name="internet"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            internet
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="check-circle"
@@ -402,202 +129,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
-        >
-          <k-icon
-            name="bluetooth"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            bluetooth
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="cpu"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            cpu
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="cloud"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            cloud
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="battery"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            battery
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="water"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            water
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="database"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            database
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="fullscreen-exit"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            fullscreen-exit
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="video-camera"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            video-camera
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="service"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            service
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="view-list"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            view-list
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="cube"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            cube
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="book"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            book
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="task"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            task
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="fingerprint"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            fingerprint
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="message"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            message
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="home"
@@ -610,7 +142,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="setting"
@@ -623,7 +155,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="location"
@@ -636,7 +168,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="chevron-left"
@@ -649,7 +181,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="chevron-up"
@@ -662,7 +194,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="user"
@@ -675,7 +207,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="chevron-right"
@@ -688,20 +220,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
-        >
-          <k-icon
-            name="heart"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            heart
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="menu"
@@ -714,7 +233,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="history"
@@ -727,7 +246,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="search"
@@ -740,20 +259,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
-        >
-          <k-icon
-            name="ticket"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            ticket
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="chevron-down"
@@ -766,98 +272,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
-        >
-          <k-icon
-            name="scan"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            scan
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="sound-low"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            sound-low
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="file-edit"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            file-edit
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="call"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            call
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="edit"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            edit
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="earphone"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            earphone
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="share"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            share
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="star"
@@ -870,7 +285,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="error-circle"
@@ -883,7 +298,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="notification"
@@ -896,7 +311,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="file"
@@ -909,20 +324,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
-        >
-          <k-icon
-            name="crown"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            crown
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="eye"
@@ -935,33 +337,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
-        >
-          <k-icon
-            name="gift"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            gift
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="layers"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            layers
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="store"
@@ -974,20 +350,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
-        >
-          <k-icon
-            name="image"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            image
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="delete"
@@ -1000,7 +363,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="file-tray"
@@ -1013,7 +376,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="upload"
@@ -1026,7 +389,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="download"
@@ -1039,7 +402,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="close"
@@ -1052,33 +415,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
-        >
-          <k-icon
-            name="filter"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            filter
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="card"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            card
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="zoom-out"
@@ -1091,7 +428,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="export"
@@ -1104,20 +441,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
-        >
-          <k-icon
-            name="focus"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            focus
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="zoom-in"
@@ -1130,20 +454,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
-        >
-          <k-icon
-            name="calendar"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            calendar
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="locked"
@@ -1156,7 +467,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="unlocked"
@@ -1169,7 +480,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="desktop"
@@ -1182,46 +493,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
-        >
-          <k-icon
-            name="tag"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            tag
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="cut"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            cut
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="copy"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            copy
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="pause-circle"
@@ -1234,7 +506,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="add"
@@ -1247,20 +519,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
-        >
-          <k-icon
-            name="basketball"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            basketball
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="folder"
@@ -1273,7 +532,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="play-circle"
@@ -1286,33 +545,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
-        >
-          <k-icon
-            name="magic"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            magic
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="compass"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            compass
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="help-circle"
@@ -1325,33 +558,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
-        >
-          <k-icon
-            name="scan-face"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            scan-face
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="qrcode"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            qrcode
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="phone"
@@ -1364,7 +571,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="import"
@@ -1377,33 +584,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
-        >
-          <k-icon
-            name="navigation"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            navigation
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="refresh"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            refresh
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="swap"
@@ -1416,98 +597,7 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
-        >
-          <k-icon
-            name="balloon"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            balloon
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="chart-pie"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            chart-pie
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="price-tag"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            price-tag
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="power-off"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            power-off
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="hospital"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            hospital
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="chart-bar"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            chart-bar
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="print"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            print
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="email"
@@ -1517,19 +607,6 @@ exports[`should render demo and match snapshot 1`] = `
             class="text"
           >
             email
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="shop"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            shop
           </wx-text>
         </k-col>
       </k-row>

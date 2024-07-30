@@ -5,7 +5,7 @@ export type DialogAction = 'confirm' | 'cancel';
 export type DialogDispatch = (action: DialogAction) => any;
 
 export interface DialogOptions {
-  open?: boolean;
+  visible?: boolean;
   width?: number | string;
   title?: string;
   content?: string;
@@ -28,7 +28,7 @@ export interface DialogOptions {
 }
 
 const defaultOptions: DialogOptions = {
-  open: true,
+  visible: true,
   width: 320,
   title: '',
   content: '',

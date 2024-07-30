@@ -6,11 +6,18 @@ describe('popup', () => {
     rootPath: path.resolve(__dirname, '../../'),
   });
 
-  test('should render popup add match snapshot', () => {
-    const comp = simulate.render(KPopup);
+  test('should render popup add match snapshot', async () => {
+    const comp = simulate.render(
+      simulate.load({
+        usingComponents: {
+          'k-popup': KPopup,
+        },
+        template: `<k-popup visible />`,
+      })
+    );
     comp.attach(document.createElement('parent-wrapper'));
-    comp.setData({ mounted: true });
 
+    await simulate.sleep(16 * 3); // wait three frames for the animation to complete.
     expect(comp.toJSON()).toMatchSnapshot();
   });
 });
