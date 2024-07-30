@@ -1,7 +1,7 @@
 type ToastContext = WechatMiniprogram.Component.TrivialInstance | WechatMiniprogram.Page.TrivialInstance;
 
 export interface ToastOptions {
-  open?: boolean;
+  visible?: boolean;
   type?: string;
   message?: string | number;
   position?: string;
@@ -18,7 +18,7 @@ export interface ToastInstance extends WechatMiniprogram.Component.TrivialInstan
 }
 
 const defaultOptions: ToastOptions = {
-  open: true,
+  visible: true,
   type: '',
   message: '',
   position: '',
@@ -45,8 +45,8 @@ function Toast(options: ToastOptions) {
   }
 
   toast.close = () => {
-    if (toast.data.open) {
-      toast.setData({ open: false });
+    if (toast.data.visible) {
+      toast.setData({ visible: false });
       options.onClose?.();
     }
   };

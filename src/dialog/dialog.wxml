@@ -1,7 +1,7 @@
 <wxs src="./dialog.wxs" module="computed" />
 
 <k-popup
-  open="{{ open }}"
+  visible="{{ visible }}"
   k-id="{{ kId }}"
   k-class="k-dialog k-class"
   style="{{ computed.dialogStyle({ width, style }) }}"
@@ -24,24 +24,29 @@
   </view>
 
   <view class="k-dialog-footer">
-    <button
+    <k-button
       wx:if="{{ showCancelButton }}"
-      class="k-dialog__cancel"
-      hover-class="{{ cancelLoading ? '' : 'k-dialog__cancel--active' }}"
+      k-class="k-dialog__cancel"
+      hover-class="k-dialog__cancel--active"
+      variant="ghost"
+      shape="square"
+      loading="{{ cancelLoading }}"
       bind:tap="onCancel"
     >
-      <k-loading wx:if="{{ cancelLoading }}" style="color: currentColor" k-spinner-class="k-dialog__cancel-loading" />
-      <block wx:else>{{ cancelText }}</block>
-    </button>
+      <block>{{ cancelText }}</block>
+    </k-button>
 
-    <button
+    <k-button
       wx:if="{{ showConfirmButton }}"
-      class="k-dialog__confirm"
-      hover-class="{{ confirmLoading ? '' : 'k-dialog__confirm--active' }}"
+      k-class="k-dialog__confirm"
+      hover-class="k-dialog__confirm--active"
+      variant="ghost"
+      type="primary"
+      shape="square"
+      loading="{{ confirmLoading }}"
       bind:tap="onConfirm"
     >
-      <k-loading wx:if="{{ confirmLoading }}" style="color: currentColor" k-spinner-class="k-dialog__confirm-loading" />
-      <block wx:else>{{ confirmText }}</block>
-    </button>
+      <block>{{ confirmText }}</block>
+    </k-button>
   </view>
 </k-popup>

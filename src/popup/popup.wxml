@@ -3,7 +3,7 @@
 
 <k-overlay
   wx:if="{{ overlay }}"
-  open="{{ open }}"
+  visible="{{ visible }}"
   duration="{{ duration }}"
   lock-scroll="{{ lockScroll }}"
   zIndex="{{ zIndex }}"

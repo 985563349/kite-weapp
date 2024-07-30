@@ -22,11 +22,11 @@ KComponent({
     ariaLabel: String,
   },
 
-  behaviors: [transition({ visibleProperty: 'open', name: 'fade' })],
+  behaviors: [transition({ transition: 'fade' })],
 
   methods: {
     onTap() {
-      if (this.data.open) {
+      if (this.data.visible) {
         this.triggerEvent('click');
       }
     },

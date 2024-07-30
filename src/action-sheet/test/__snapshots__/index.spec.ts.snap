@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`popup should render popup add match snapshot 1`] = `
+exports[`action-sheet should render dialog and match snapshot 1`] = `
 <main>
   <wx-view
     ariaLabel="close"
@@ -13,10 +13,14 @@ exports[`popup should render popup add match snapshot 1`] = `
     bind:transitionend="onTransitionEnd"
   />
   <wx-view
-    class="k-popup k-popup--center k-center-enter-to k-center-enter-active enter-to-class enter-active-class k-class"
+    class="k-popup k-popup--bottom k-popup--round k-bottom-enter-to k-bottom-enter-active enter-to-class enter-active-class k-class"
     id=""
-    style="-webkit-transition-duration:300ms;transition-duration:300ms;z-index:11000"
+    style="-webkit-transition-duration:300ms;transition-duration:300ms;z-index:11000;background-color: transparent"
     bind:transitionend="onTransitionEnd"
-  />
+  >
+    <wx-view
+      class="k-action-sheet-content"
+    />
+  </wx-view>
 </main>
 `;

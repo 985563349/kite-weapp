@@ -8,7 +8,7 @@ KComponent({
 
     style: String,
 
-    open: Boolean,
+    visible: Boolean,
 
     width: {
       value: 320,
@@ -82,19 +82,15 @@ KComponent({
 
   methods: {
     triggerDispatch(action: DialogAction) {
-      if (!this.data.open) {
-        return;
-      }
-
-      const debounceSetData = debounce(this.setData.bind(this), this.data.loadingDelay);
       const { dispatch } = this.data;
+      const debounceSetData = debounce(this.setData.bind(this), this.data.loadingDelay);
 
       if (typeof dispatch === 'function') {
         debounceSetData({ [`${action}Loading`]: true });
 
         Promise.resolve(dispatch(action))
           .then(
-            () => this.setData({ open: false, dispatch: null }),
+            () => this.setData({ visible: false, dispatch: null }),
             () => {}
           )
           .finally(() => debounceSetData({ [`${action}Loading`]: false }));
@@ -104,10 +100,18 @@ KComponent({
     },
 
     onConfirm() {
+      if (!this.data.visible) {
+        return;
+      }
+
       this.triggerDispatch('confirm');
     },
 
     onCancel() {
+      if (!this.data.visible) {
+        return;
+      }
+
       this.triggerDispatch('cancel');
     },
 
@@ -118,7 +122,7 @@ KComponent({
         const { dispatch } = this.data;
 
         if (typeof dispatch === 'function') {
-          this.setData({ open: false, dispatch: null });
+          this.setData({ visible: false, dispatch: null });
           Promise.resolve(dispatch('cancel')).catch(() => {});
         }
 

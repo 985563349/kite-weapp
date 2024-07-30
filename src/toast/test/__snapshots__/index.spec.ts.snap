@@ -2,9 +2,9 @@
 
 exports[`toast should render toast add match snapshot 1`] = `
 <wx-view
-  class="k-toast  k-class"
+  class="k-toast k-fade-enter-to k-fade-enter-active enter-to-class enter-active-class k-class"
   id=""
-  style="z-index:11000;display: none"
+  style="-webkit-transition-duration:300ms;transition-duration:300ms;z-index:11000"
   catch:touchmove="noop"
   bind:transitionend="onTransitionEnd"
 />

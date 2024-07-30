@@ -1,6 +1,10 @@
 @import '../shared/style/variables.less';
 
-@loading-default-color: var(--k-loading-default-color, @default-color);
+@loading-size: var(--k-loading-size, 26px);
+@loading-label-line-height: var(--k-loading-label-line-height, @line-height-s);
+@loading-label-font-size: var(--k-loading-label-font-size, @font-size-s);
+@loading-color: var(--k-loading-color, @default-color);
+
 @loading-primary-color: var(--k-loading-primary-color, @primary-color);
 @loading-secondary-color: var(--k-loading-secondary-color, @secondary-color);
 @loading-success-color: var(--k-loading-success-color, @success-color);
@@ -8,10 +12,12 @@
 @loading-danger-color: var(--k-loading-danger-color, @danger-color);
 
 @loading-small-size: var(--k-loading-small-size, 20px);
-@loading-default-size: var(--k-loading-default-size, 26px);
+@loading-small-label-line-height: var(--k-loading-small-label-line-height, @line-height-xs);
+@loading-small-label-font-size: var(--k-loading-small-label-font-size, @font-size-xs);
+
 @loading-large-size: var(--k-loading-large-size, 32px);
-@loading-label-line-height: var(--k-loading-label-line-height, @line-height-xs);
-@loading-label-font-size: var(--k-loading-label-font-size, @font-size-xs);
+@loading-large-label-line-height: var(--k-loading-large-label-line-height, @line-height-m);
+@loading-large-label-font-size: var(--k-loading-large-label-font-size, @font-size-m);
 
 @loading-animation-duration: var(--k-loading-animation-duration, 0.8s);
 
@@ -21,7 +27,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: @loading-default-color;
+  color: @loading-color;
 
   &__spinner {
     display: inline-flex;
@@ -29,8 +35,8 @@
     border: 2px solid currentColor;
     border-top-color: transparent;
     border-radius: 100%;
-    width: @loading-default-size;
-    height: @loading-default-size;
+    width: @loading-size;
+    height: @loading-size;
     animation: circular infinite @loading-animation-duration linear;
   }
 
@@ -59,6 +65,11 @@
       width: @loading-small-size;
       height: @loading-small-size;
     }
+
+    .@{loading}__label {
+      line-height: @loading-small-label-line-height;
+      font-size: @loading-small-label-font-size;
+    }
   }
 
   &--large {
@@ -66,25 +77,33 @@
       width: @loading-large-size;
       height: @loading-large-size;
     }
+
+    .@{loading}__label {
+      line-height: @loading-large-label-line-height;
+      font-size: @loading-large-label-font-size;
+    }
   }
 
   &--vertical {
     flex-direction: column;
 
     .@{loading}__label {
-      &:not(:empty) {
-        margin-left: 0;
-        margin-top: @spacer-s;
+      margin-left: 0;
+      margin-top: @spacer-s;
+
+      &:empty {
+        margin-top: 0;
       }
     }
   }
 
   &__label {
+    margin-left: @spacer-s;
     line-height: @loading-label-line-height;
     font-size: @loading-label-font-size;
 
-    &:not(:empty) {
-      margin-left: @spacer-s;
+    &:empty {
+      margin-left: 0;
     }
   }
 }

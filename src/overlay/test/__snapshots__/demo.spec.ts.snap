@@ -19,7 +19,7 @@ exports[`should render demo and match snapshot 1`] = `
         Open
       </k-button>
       <k-overlay
-        open="{{false}}"
+        visible="{{false}}"
         bind:click="onClickClose"
       />
     </demo-block>
