@@ -8,392 +8,161 @@ exports[`should render demo and match snapshot 1`] = `
     vertical="{{true}}"
   >
     <demo-block
+      padding="{{true}}"
       title="基础用法"
     >
       <k-space>
         <k-icon
-          name="message"
-          size="32px"
+          name="star"
+          size="32"
         />
         <k-icon
-          name="user"
-          size="32px"
+          name="camera"
+          size="32"
         />
       </k-space>
     </demo-block>
     <demo-block
+      padding="{{true}}"
       title="图标颜色"
     >
       <k-space>
         <k-icon
           color="#298dff"
-          name="store"
-          size="32px"
+          name="star"
+          size="32"
         />
         <k-icon
           color="#f64784"
-          name="fire"
-          size="32px"
+          name="delete"
+          size="32"
         />
       </k-space>
     </demo-block>
     <demo-block
+      padding="{{true}}"
       title="图标大小"
     >
       <k-space>
         <k-icon
-          name="location"
-          size="32px"
+          name="star"
+          size="32"
         />
         <k-icon
-          name="location"
-          size="40px"
+          name="star"
+          size="40"
         />
       </k-space>
     </demo-block>
     <demo-block
+      padding="{{true}}"
       title="基础图标"
-      wrap="{{true}}"
     >
       <k-row
         gutter="{{
           [
-            16,
+            0,
             16,
           ]
         }}"
       >
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="arrow-up-circle"
-            size="32px"
+            name="camera-filled"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            arrow-up-circle
+            camera-filled
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="info-circle"
-            size="32px"
+            name="camera"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            info-circle
+            camera
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="smile"
-            size="32px"
+            name="caret-down"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            smile
+            caret-down
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="user-search"
-            size="32px"
+            name="caret-left"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            user-search
+            caret-left
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="eye-off"
-            size="32px"
+            name="caret-right"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            eye-off
+            caret-right
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="file-search"
-            size="32px"
+            name="caret-up"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            file-search
+            caret-up
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="file-checked"
-            size="32px"
+            name="check-circle-filled"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            file-checked
+            check-circle-filled
           </wx-text>
         </k-col>
         <k-col
-          span="8"
-        >
-          <k-icon
-            name="thumb-up"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            thumb-up
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="user-list"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            user-list
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="wifi"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            wifi
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="system"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            system
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="list"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            list
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="map"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            map
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="close-circle"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            close-circle
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="adjustment"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            adjustment
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="fullscreen"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            fullscreen
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="fire"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            fire
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="link"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            link
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="layout"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            layout
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="tree"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            tree
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="sensors"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            sensors
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="cake"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            cake
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="code"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            code
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="minus-circle"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            minus-circle
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="internet"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            internet
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="check-circle"
-            size="32px"
+            size="32"
           />
           <wx-text
             class="text"
@@ -402,648 +171,76 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="bluetooth"
-            size="32px"
+            name="check"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            bluetooth
+            check
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="cpu"
-            size="32px"
+            name="clock-circle-filled"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            cpu
+            clock-circle-filled
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="cloud"
-            size="32px"
+            name="clock-circle"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            cloud
+            clock-circle
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="battery"
-            size="32px"
+            name="close-circle-filled"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            battery
+            close-circle-filled
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="water"
-            size="32px"
+            name="close-circle"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            water
+            close-circle
           </wx-text>
         </k-col>
         <k-col
-          span="8"
-        >
-          <k-icon
-            name="database"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            database
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="fullscreen-exit"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            fullscreen-exit
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="video-camera"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            video-camera
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="service"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            service
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="view-list"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            view-list
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="cube"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            cube
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="book"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            book
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="task"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            task
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="fingerprint"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            fingerprint
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="message"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            message
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="home"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            home
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="setting"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            setting
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="location"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            location
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="chevron-left"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            chevron-left
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="chevron-up"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            chevron-up
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="user"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            user
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="chevron-right"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            chevron-right
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="heart"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            heart
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="menu"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            menu
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="history"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            history
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="search"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            search
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="ticket"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            ticket
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="chevron-down"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            chevron-down
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="scan"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            scan
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="sound-low"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            sound-low
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="file-edit"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            file-edit
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="call"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            call
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="edit"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            edit
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="earphone"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            earphone
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="share"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            share
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="star"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            star
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="error-circle"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            error-circle
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="notification"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            notification
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="file"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            file
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="crown"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            crown
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="eye"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            eye
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="gift"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            gift
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="layers"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            layers
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="store"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            store
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="image"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            image
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="delete"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            delete
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="file-tray"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            file-tray
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="upload"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            upload
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="download"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            download
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
+          span="6"
         >
           <k-icon
             name="close"
-            size="32px"
+            size="32"
           />
           <wx-text
             class="text"
@@ -1052,180 +249,336 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="filter"
-            size="32px"
+            name="delete"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            filter
+            delete
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="card"
-            size="32px"
+            name="delete-filled"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            card
+            delete-filled
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="zoom-out"
-            size="32px"
+            name="down-circle-filled"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            zoom-out
+            down-circle-filled
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="export"
-            size="32px"
+            name="down-circle"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            export
+            down-circle
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="focus"
-            size="32px"
+            name="down"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            focus
+            down
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="zoom-in"
-            size="32px"
+            name="download"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            zoom-in
+            download
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="calendar"
-            size="32px"
+            name="edit-filled"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            calendar
+            edit-filled
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="locked"
-            size="32px"
+            name="edit"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            locked
+            edit
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="unlocked"
-            size="32px"
+            name="ellipsis"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            unlocked
+            ellipsis
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="desktop"
-            size="32px"
+            name="exclamation-circle-filled"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            desktop
+            exclamation-circle-filled
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="tag"
-            size="32px"
+            name="exclamation-circle"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            tag
+            exclamation-circle
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="cut"
-            size="32px"
+            name="fast-backward"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            cut
+            fast-backward
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="copy"
-            size="32px"
+            name="fast-forward"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            copy
+            fast-forward
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
+        >
+          <k-icon
+            name="heart-filled"
+            size="32"
+          />
+          <wx-text
+            class="text"
+          >
+            heart-filled
+          </wx-text>
+        </k-col>
+        <k-col
+          span="6"
+        >
+          <k-icon
+            name="heart"
+            size="32"
+          />
+          <wx-text
+            class="text"
+          >
+            heart
+          </wx-text>
+        </k-col>
+        <k-col
+          span="6"
+        >
+          <k-icon
+            name="info-circle-filled"
+            size="32"
+          />
+          <wx-text
+            class="text"
+          >
+            info-circle-filled
+          </wx-text>
+        </k-col>
+        <k-col
+          span="6"
+        >
+          <k-icon
+            name="info-circle"
+            size="32"
+          />
+          <wx-text
+            class="text"
+          >
+            info-circle
+          </wx-text>
+        </k-col>
+        <k-col
+          span="6"
+        >
+          <k-icon
+            name="left-circle-filled"
+            size="32"
+          />
+          <wx-text
+            class="text"
+          >
+            left-circle-filled
+          </wx-text>
+        </k-col>
+        <k-col
+          span="6"
+        >
+          <k-icon
+            name="left-circle"
+            size="32"
+          />
+          <wx-text
+            class="text"
+          >
+            left-circle
+          </wx-text>
+        </k-col>
+        <k-col
+          span="6"
+        >
+          <k-icon
+            name="left"
+            size="32"
+          />
+          <wx-text
+            class="text"
+          >
+            left
+          </wx-text>
+        </k-col>
+        <k-col
+          span="6"
+        >
+          <k-icon
+            name="line"
+            size="32"
+          />
+          <wx-text
+            class="text"
+          >
+            line
+          </wx-text>
+        </k-col>
+        <k-col
+          span="6"
+        >
+          <k-icon
+            name="minus-circle-filled"
+            size="32"
+          />
+          <wx-text
+            class="text"
+          >
+            minus-circle-filled
+          </wx-text>
+        </k-col>
+        <k-col
+          span="6"
+        >
+          <k-icon
+            name="minus-circle"
+            size="32"
+          />
+          <wx-text
+            class="text"
+          >
+            minus-circle
+          </wx-text>
+        </k-col>
+        <k-col
+          span="6"
+        >
+          <k-icon
+            name="minus"
+            size="32"
+          />
+          <wx-text
+            class="text"
+          >
+            minus
+          </wx-text>
+        </k-col>
+        <k-col
+          span="6"
+        >
+          <k-icon
+            name="pause-circle-filled"
+            size="32"
+          />
+          <wx-text
+            class="text"
+          >
+            pause-circle-filled
+          </wx-text>
+        </k-col>
+        <k-col
+          span="6"
         >
           <k-icon
             name="pause-circle"
-            size="32px"
+            size="32"
           />
           <wx-text
             class="text"
@@ -1234,50 +587,63 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="add"
-            size="32px"
+            name="pause"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            add
+            pause
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="basketball"
-            size="32px"
+            name="picture-filled"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            basketball
+            picture-filled
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="folder"
-            size="32px"
+            name="picture"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            folder
+            picture
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
+        >
+          <k-icon
+            name="play-circle-filled"
+            size="32"
+          />
+          <wx-text
+            class="text"
+          >
+            play-circle-filled
+          </wx-text>
+        </k-col>
+        <k-col
+          span="6"
         >
           <k-icon
             name="play-circle"
-            size="32px"
+            size="32"
           />
           <wx-text
             class="text"
@@ -1286,128 +652,232 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="magic"
-            size="32px"
+            name="plus-circle-filled"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            magic
+            plus-circle-filled
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="compass"
-            size="32px"
+            name="plus-circle"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            compass
+            plus-circle
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="help-circle"
-            size="32px"
+            name="plus"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            help-circle
+            plus
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="scan-face"
-            size="32px"
+            name="question-circle-filled"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            scan-face
+            question-circle-filled
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="qrcode"
-            size="32px"
+            name="question-circle"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            qrcode
+            question-circle
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="phone"
-            size="32px"
+            name="right-circle-filled"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            phone
+            right-circle-filled
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="import"
-            size="32px"
+            name="right-circle"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            import
+            right-circle
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="navigation"
-            size="32px"
+            name="right"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            navigation
+            right
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="refresh"
-            size="32px"
+            name="search"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            refresh
+            search
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
+        >
+          <k-icon
+            name="star-2"
+            size="32"
+          />
+          <wx-text
+            class="text"
+          >
+            star-2
+          </wx-text>
+        </k-col>
+        <k-col
+          span="6"
+        >
+          <k-icon
+            name="star"
+            size="32"
+          />
+          <wx-text
+            class="text"
+          >
+            star
+          </wx-text>
+        </k-col>
+        <k-col
+          span="6"
+        >
+          <k-icon
+            name="step-backward"
+            size="32"
+          />
+          <wx-text
+            class="text"
+          >
+            step-backward
+          </wx-text>
+        </k-col>
+        <k-col
+          span="6"
+        >
+          <k-icon
+            name="step-forward"
+            size="32"
+          />
+          <wx-text
+            class="text"
+          >
+            step-forward
+          </wx-text>
+        </k-col>
+        <k-col
+          span="6"
+        >
+          <k-icon
+            name="stop-filled"
+            size="32"
+          />
+          <wx-text
+            class="text"
+          >
+            stop-filled
+          </wx-text>
+        </k-col>
+        <k-col
+          span="6"
+        >
+          <k-icon
+            name="stop"
+            size="32"
+          />
+          <wx-text
+            class="text"
+          >
+            stop
+          </wx-text>
+        </k-col>
+        <k-col
+          span="6"
+        >
+          <k-icon
+            name="swap-left"
+            size="32"
+          />
+          <wx-text
+            class="text"
+          >
+            swap-left
+          </wx-text>
+        </k-col>
+        <k-col
+          span="6"
+        >
+          <k-icon
+            name="swap-right"
+            size="32"
+          />
+          <wx-text
+            class="text"
+          >
+            swap-right
+          </wx-text>
+        </k-col>
+        <k-col
+          span="6"
         >
           <k-icon
             name="swap"
-            size="32px"
+            size="32"
           />
           <wx-text
             class="text"
@@ -1416,120 +886,81 @@ exports[`should render demo and match snapshot 1`] = `
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="balloon"
-            size="32px"
+            name="up-circle-filled"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            balloon
+            up-circle-filled
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="chart-pie"
-            size="32px"
+            name="up-circle"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            chart-pie
+            up-circle
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="price-tag"
-            size="32px"
+            name="up"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            price-tag
+            up
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="power-off"
-            size="32px"
+            name="upload"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            power-off
+            upload
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="hospital"
-            size="32px"
+            name="zoom-in"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            hospital
+            zoom-in
           </wx-text>
         </k-col>
         <k-col
-          span="8"
+          span="6"
         >
           <k-icon
-            name="chart-bar"
-            size="32px"
+            name="zoom-out"
+            size="32"
           />
           <wx-text
             class="text"
           >
-            chart-bar
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="print"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            print
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="email"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            email
-          </wx-text>
-        </k-col>
-        <k-col
-          span="8"
-        >
-          <k-icon
-            name="shop"
-            size="32px"
-          />
-          <wx-text
-            class="text"
-          >
-            shop
+            zoom-out
           </wx-text>
         </k-col>
       </k-row>

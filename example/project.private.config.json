@@ -5,13 +5,6 @@
     "miniprogram": {
       "list": [
         {
-          "name": "action-sheet",
-          "pathName": "pages/action-sheet/action-sheet",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
           "name": "button",
           "pathName": "pages/button/button",
           "query": "",
@@ -47,15 +40,15 @@
           "scene": null
         },
         {
-          "name": "cell",
-          "pathName": "pages/cell/cell",
+          "name": "loading",
+          "pathName": "pages/loading/loading",
           "query": "",
           "launchMode": "default",
           "scene": null
         },
         {
-          "name": "loading",
-          "pathName": "pages/loading/loading",
+          "name": "cell",
+          "pathName": "pages/cell/cell",
           "query": "",
           "launchMode": "default",
           "scene": null

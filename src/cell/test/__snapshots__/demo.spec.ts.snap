@@ -4,7 +4,7 @@ exports[`should render demo and match snapshot 1`] = `
 <main>
   <k-flex
     gap="md"
-    style="padding-bottom: 16px; width: 100%"
+    style="padding-bottom: 16px"
     vertical="{{true}}"
   >
     <demo-block

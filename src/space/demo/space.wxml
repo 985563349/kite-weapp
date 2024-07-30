@@ -1,5 +1,5 @@
 <k-flex style="padding-bottom: 16px" gap="md" vertical>
-  <demo-block title="基本用法">
+  <demo-block title="基本用法" padding>
     <k-space>
       <k-button type="primary">Primary</k-button>
       <k-button type="secondary">Secondary</k-button>
@@ -7,23 +7,23 @@
     </k-space>
   </demo-block>
 
-  <demo-block title="垂直间距">
-    <k-space style="display: flex" vertical align="start">
+  <demo-block title="垂直间距" padding>
+    <k-space vertical align="start">
       <k-button type="primary">Primary</k-button>
       <k-button type="secondary">Secondary</k-button>
       <k-button type="success">Success</k-button>
     </k-space>
   </demo-block>
 
-  <demo-block title="间距大小">
-    <k-space size="middle">
+  <demo-block title="间距大小" padding>
+    <k-space size="16">
       <k-button type="primary">Primary</k-button>
       <k-button type="secondary">Secondary</k-button>
       <k-button type="success">Success</k-button>
     </k-space>
   </demo-block>
 
-  <demo-block title="对齐">
+  <demo-block title="对齐" padding>
     <k-space align="center">
       <text>center</text>
       <k-button type="primary" size="lg">Primary</k-button>
@@ -31,7 +31,7 @@
     </k-space>
   </demo-block>
 
-  <demo-block title="自动换行">
+  <demo-block title="自动换行" padding>
     <k-space wrap>
       <k-button>Default</k-button>
       <k-button type="primary">Primary</k-button>

@@ -1,11 +1,13 @@
 Component({
   options: {
-    multipleSlots: true,
-    addGlobalClass: true,
     virtualHost: true,
   },
 
   properties: {
+    style: String,
+
     title: String,
+
+    padding: Boolean,
   },
 });

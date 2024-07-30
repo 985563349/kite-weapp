@@ -5,7 +5,7 @@ function isNumeric(value) {
 
 function isStyleUnitValue(value) {
   // prettier-ignore
-  return getRegExp('^\d+(\.\d+)?(px|em|rem|%)$').test('' + value);
+  return getRegExp('^\d+(\.\d+)?(px|rpx|em|rem|%)$').test('' + value);
 }
 
 module.exports = {

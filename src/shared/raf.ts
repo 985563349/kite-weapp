@@ -6,11 +6,12 @@ type QueueRecordRaw = {
   cancelled: boolean;
 };
 
-const queue: QueueRecordRaw[] = [];
-const frameDuration = 1000 / 30;
+export const frameDuration = 1000 / 30;
 
-let last = 0;
+const queue: QueueRecordRaw[] = [];
+
 let id = 0;
+let last = 0;
 
 export function requestAnimationFrame(callback: FrameRequestCallback) {
   if (queue.length === 0) {

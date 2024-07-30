@@ -8,6 +8,7 @@ exports[`should render demo and match snapshot 1`] = `
     vertical="{{true}}"
   >
     <demo-block
+      padding="{{true}}"
       title="基础用法"
     >
       <k-button
@@ -18,6 +19,7 @@ exports[`should render demo and match snapshot 1`] = `
       </k-button>
     </demo-block>
     <demo-block
+      padding="{{true}}"
       title="异步关闭"
     >
       <k-button
@@ -28,6 +30,7 @@ exports[`should render demo and match snapshot 1`] = `
       </k-button>
     </demo-block>
     <demo-block
+      padding="{{true}}"
       title="组件用法"
     >
       <k-button
@@ -41,8 +44,8 @@ exports[`should render demo and match snapshot 1`] = `
       id="k-dialog"
     />
     <k-dialog
-      open="{{false}}"
       title="Title"
+      visible="{{false}}"
       bind:cancel="onClickComponentCancel"
       bind:confirm="onClickComponentConfirm"
     >

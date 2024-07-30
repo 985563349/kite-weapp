@@ -3,10 +3,6 @@ import transition from '../mixins/transition';
 
 KComponent({
   properties: {
-    kId: String,
-
-    style: String,
-
     placement: {
       type: String,
       value: 'center',
@@ -23,14 +19,23 @@ KComponent({
       value: true,
     },
 
+    overlayStyle: String,
+
     shape: String,
 
     closable: Boolean,
+
+    safeArea: {
+      type: Boolean,
+      value: true,
+    },
 
     lockScroll: {
       type: Boolean,
       value: true,
     },
+
+    rootPortal: Boolean,
 
     zIndex: {
       type: Number,
@@ -38,7 +43,7 @@ KComponent({
     },
   },
 
-  behaviors: [transition({ visibleProperty: 'open' })],
+  behaviors: [transition()],
 
   lifetimes: {
     created() {
@@ -55,16 +60,16 @@ KComponent({
       }
     },
 
-    onClickClose() {
-      if (this.data.open) {
+    onClose() {
+      if (this.data.visible) {
         this.triggerEvent('close');
       }
     },
 
     observePlacement() {
-      const { placement } = this.data;
-
-      this.setData({ name: placement });
+      this.setData({ name: this.data.placement });
     },
+
+    noop() {},
   },
 });

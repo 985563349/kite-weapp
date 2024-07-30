@@ -12,7 +12,7 @@ describe('dialog', () => {
         usingComponents: {
           'k-dialog': KDialog,
         },
-        template: `<k-dialog open />`,
+        template: `<k-dialog visible />`,
       })
     );
     comp.attach(document.createElement('parent-wrapper'));

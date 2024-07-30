@@ -1,44 +1,46 @@
 <wxs src="../shared/wxs/utils.wxs" module="utils" />
 
 <k-popup
-  open="{{ open }}"
+  visible="{{ visible }}"
+  k-id="{{ id }}"
+  k-class="k-action-sheet k-class"
   style="background-color: transparent"
   placement="bottom"
   shape="round"
   overlay="{{ overlay }}"
   overlay-closable="{{ overlayClosable }}"
+  overlay-style="{{ overlayStyle }}"
   duration="{{ duration }}"
   lock-scroll="{{ lockScroll }}"
+  root-portal="{{ rootPortal }}"
   z-index="{{ zIndex }}"
   bind:click-overlay="onClickOverlay"
 >
-  <view id="{{ kId }}" class="k-action-sheet k-class">
-    <view class="k-action-sheet-content">
-      <view wx:if="{{ options && options.length }}" class="k-action-sheet-group">
-        <view class="k-action-sheet-header">
-          <view wx:if="{{ title }}" class="k-action-sheet__title">{{ title }}</view>
-          <slot wx:else name="title" />
-        </view>
-
-        <button
-          wx:for="{{ options }}"
-          wx:key="index"
-          class="{{ utils.bem('k-action-sheet__item', [{ disabled: item.disabled }]) }} {{ item.class }}"
-          hover-class="{{ item.disabled ? '' : 'k-action-sheet__item--active' }}"
-          style="{{ item.color ? 'color: ' + item.color : '' }}"
-          data-index="{{ index }}"
-          bind:tap="onSelect"
-        >
-          <k-icon wx:if="{{ item.icon }}" name="{{ item.icon }}" k-class="k-action-sheet__item-icon" />
-          {{ item.label }}
-        </button>
+  <view class="k-action-sheet-content">
+    <view wx:if="{{ options && options.length }}" class="k-action-sheet-group">
+      <view class="k-action-sheet-header">
+        <view wx:if="{{ title }}" class="k-action-sheet__title">{{ title }}</view>
+        <slot wx:else name="title" />
       </view>
 
-      <view wx:if="{{ cancelText }}" class="k-action-sheet-group">
-        <button class="k-action-sheet__cancel" hover-class="k-action-sheet__cancel--active" bind:tap="onCancel">
-          {{ cancelText }}
-        </button>
-      </view>
+      <button
+        wx:for="{{ options }}"
+        wx:key="index"
+        class="{{ utils.bem('k-action-sheet__item', [{ disabled: item.disabled }]) }} {{ item.class }}"
+        hover-class="{{ item.disabled ? '' : 'k-action-sheet__item--active' }}"
+        style="{{ item.color ? 'color: ' + item.color : '' }}"
+        data-index="{{ index }}"
+        bind:tap="onSelect"
+      >
+        <k-icon wx:if="{{ item.icon }}" name="{{ item.icon }}" k-class="k-action-sheet__item-icon" />
+        {{ item.label }}
+      </button>
+    </view>
+
+    <view wx:if="{{ cancelText }}" class="k-action-sheet-group">
+      <button class="k-action-sheet__cancel" hover-class="k-action-sheet__cancel--active" bind:tap="onCancel">
+        {{ cancelText }}
+      </button>
     </view>
   </view>
 </k-popup>

@@ -1,15 +1,19 @@
 @import '../shared/style/variables.less';
 
 @button-border-width: var(--k-button-border-width, 2px);
+@button-border-radius: var(--k-button-border-radius, @radius-m);
+@button-padding-inline: var(--k-button-padding-inline, 16px);
+@button-height: var(--k-button-height, 44px);
+@button-font-family: var(--k-button-font-family, 'PingFang SC');
+@button-font-size: var(--k-button-font-size, @font-size-m);
 @button-font-weight: var(--k-button-font-weight, @font-weight-bold);
-@button-disabled-opacity: var(--k-button-disabled-opacity, 0.5);
-@button-icon-size: var(--k-button-icon-size, 1.2em);
+@button-color: var(--k-button-color, @text-color-system);
+@button-bg-color: var(--k-button-bg-color, @default-color);
+@button-bg-color-active: var(--k-button-bg-color-active, @default-color-active);
+@button-fill-color: var(--k-button-fill-color, @default-bg-color-active);
+@button-disabled-opacity: var(--k-button-disabled-opacity, @disabled-opacity);
+@button-icon-size: var(--k-button-icon-size, 1em);
 @button-loading-size: var(--k-button-loading-size, 1em);
-
-@button-default-color: var(--k-button-default-color, @text-color-system);
-@button-default-bg-color: var(--k-button-default-bg-color, @default-color);
-@button-default-bg-color-active: var(--k-button-default-bg-color-active, @default-color-active);
-@button-default-fill-color: var(--k-button-default-fill-color, @default-bg-color-active);
 
 @button-primary-color: var(--k-button-primary-color, @white-color);
 @button-primary-bg-color: var(--k-button-primary-bg-color, @primary-color);
@@ -41,11 +45,6 @@
 @button-small-height: var(--k-button-small-height, 30px);
 @button-small-font-size: var(--k-button-small-font-size, @font-size-s);
 
-@button-default-border-radius: var(--k-button-default-border-radius, @radius-m);
-@button-default-padding-inline: var(--k-button-default-padding-inline, 16px);
-@button-default-height: var(--k-button-default-height, 44px);
-@button-default-font-size: var(--k-button-default-font-size, @font-size-m);
-
 @button-large-border-radius: var(--k-button-large-border-radius, @radius-l);
 @button-large-padding-inline: var(--k-button-large-padding-inline, 20px);
 @button-large-height: var(--k-button-large-height, 50px);
@@ -63,17 +62,18 @@
   white-space: nowrap;
   outline: none;
   margin: 0;
-  border-radius: @button-default-border-radius;
-  padding-left: @button-default-padding-inline;
-  padding-right: @button-default-padding-inline;
-  height: @button-default-height;
-  font-size: @button-default-font-size;
+  border-radius: @button-border-radius;
+  padding-left: @button-padding-inline;
+  padding-right: @button-padding-inline;
+  height: @button-height;
+  font-family: @button-font-family;
+  font-size: @button-font-size;
   font-weight: @button-font-weight;
-  color: @button-default-color;
-  background-color: @button-default-bg-color;
+  color: @button-color;
+  background-color: @button-bg-color;
 
   &--active {
-    background-color: @button-default-bg-color-active;
+    background-color: @button-bg-color-active;
   }
 
   &::after {
@@ -145,7 +145,7 @@
     background-color: transparent;
 
     &.@{button}--active {
-      background-color: @button-default-fill-color;
+      background-color: @button-fill-color;
     }
 
     &.@{button}--primary {
@@ -195,7 +195,7 @@
     background-color: transparent;
 
     &.@{button}--active {
-      background-color: @button-default-fill-color;
+      background-color: @button-fill-color;
     }
 
     &.@{button}--primary {
@@ -244,7 +244,8 @@
     }
   }
 
-  &--disabled {
+  &--disabled,
+  &--loading {
     opacity: @button-disabled-opacity;
   }
 
@@ -258,7 +259,7 @@
   }
 
   &--round {
-    border-radius: calc(@button-default-height / 2);
+    border-radius: calc(@button-height / 2);
 
     &.@{button}--sm {
       border-radius: calc(@button-small-height / 2);
@@ -270,7 +271,7 @@
   }
 
   &--circle {
-    min-width: @button-default-height;
+    min-width: @button-height;
     padding-left: 0;
     padding-right: 0;
     border-radius: 50%;

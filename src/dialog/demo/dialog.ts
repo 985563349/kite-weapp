@@ -2,7 +2,7 @@ import Dialog from 'kite-weapp/dialog/index';
 
 Component({
   data: {
-    open: false,
+    visible: false,
   },
 
   methods: {
@@ -10,9 +10,6 @@ Component({
       Dialog({
         title: 'Title',
         content: 'If the solution is ugly, then there must be a better solution, but it has not been discovered yet.',
-        onCancel() {
-          console.log('cancel');
-        },
         onConfirm() {
           console.log('confirm');
         },
@@ -20,7 +17,7 @@ Component({
     },
 
     onClickAsyncOpen() {
-      Dialog({
+      Dialog.confirm({
         title: 'Title',
         content: 'If the solution is ugly, then there must be a better solution, but it has not been discovered yet.',
         onCancel() {
@@ -43,16 +40,16 @@ Component({
     },
 
     onClickComponentOpen() {
-      this.setData({ open: true });
+      this.setData({ visible: true });
     },
 
     onClickComponentCancel() {
-      this.setData({ open: false });
+      this.setData({ visible: false });
       console.log('cancel');
     },
 
     onClickComponentConfirm() {
-      this.setData({ open: false });
+      this.setData({ visible: false });
       console.log('confirm');
     },
   },

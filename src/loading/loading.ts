@@ -4,10 +4,6 @@ KComponent({
   externalClasses: ['k-spinner-class', 'k-label-class'],
 
   properties: {
-    kId: String,
-
-    style: String,
-
     type: String,
 
     size: String,

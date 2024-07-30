@@ -2,46 +2,71 @@
 
 exports[`dialog should render dialog and match snapshot 1`] = `
 <main>
-  <wx-view
-    ariaLabel="close"
-    ariaRole="button"
-    class="k-overlay k-fade-enter-to k-fade-enter-active enter-to-class enter-active-class k-class"
-    id=""
-    style="-webkit-transition-duration:300ms;transition-duration:300ms;z-index:11000"
-    bind:tap="onTap"
-    catch:touchmove="noop"
-    bind:transitionend="onTransitionEnd"
-  />
-  <wx-view
-    class="k-popup k-popup--center k-popup--round k-center-enter-to k-center-enter-active enter-to-class enter-active-class k-class"
-    id=""
-    style="-webkit-transition-duration:300ms;transition-duration:300ms;z-index:11000;width:320px"
-    bind:transitionend="onTransitionEnd"
+  <wx-root-portal
+    enable="{{false}}"
   >
     <wx-view
-      class="k-dialog-header"
+      ariaLabel="close"
+      ariaRole="button"
+      class="k-overlay k-fade-enter-to k-fade-enter-active enter-to-class enter-active-class k-class"
+      id=""
+      style="-webkit-transition-duration:300ms;transition-duration:300ms;z-index:11000"
+      bind:tap="onTap"
+      catch:touchmove="noop"
+      bind:transitionend="onTransitionEnd"
     />
+  </wx-root-portal>
+  <wx-root-portal
+    enable="{{false}}"
+  >
     <wx-view
-      class="k-dialog-body"
-    />
-    <wx-view
-      class="k-dialog-footer"
+      class="k-popup k-popup--center k-popup--round k-center-enter-to k-center-enter-active enter-to-class enter-active-class k-class"
+      id=""
+      style="-webkit-transition-duration:300ms;transition-duration:300ms;z-index:11000;width:320px"
+      catch:touchmove="noop"
+      bind:transitionend="onTransitionEnd"
     >
-      <wx-button
-        class="k-dialog__cancel"
-        hoverClass="k-dialog__cancel--active"
-        bind:tap="onCancel"
+      <wx-view
+        class="k-dialog-header"
+      />
+      <wx-view
+        class="k-dialog-body"
+      />
+      <wx-view
+        class="k-dialog-footer"
       >
-        Cancel
-      </wx-button>
-      <wx-button
-        class="k-dialog__confirm"
-        hoverClass="k-dialog__confirm--active"
-        bind:tap="onConfirm"
-      >
-        Confirm
-      </wx-button>
+        <wx-button
+          appParameter=""
+          ariaLabel=""
+          class="k-button k-button--primary k-button--ghost k-button--square k-class"
+          formType=""
+          hoverClass="k-button--active hover-class"
+          hoverStartTime="{{20}}"
+          hoverStayTime="{{70}}"
+          hoverStopPropagation="{{false}}"
+          id=""
+          lang="en"
+          openType=""
+          phoneNumberNoQuotaToast="{{false}}"
+          sendMessageImg=""
+          sendMessagePath=""
+          sendMessageTitle=""
+          showMessageCard="{{false}}"
+          style=""
+          bind:agreeprivacyauthorization="agreeprivacyauthorization"
+          bind:chooseavatar="chooseavatar"
+          bind:contact="contact"
+          bind:error="error"
+          bind:getphonenumber="getPhoneNumber"
+          bind:getuserinfo="getUserInfo"
+          bind:launchapp="launchapp"
+          bind:opensetting="opensetting"
+          bind:tap="onTap"
+        >
+          Confirm
+        </wx-button>
+      </wx-view>
     </wx-view>
-  </wx-view>
+  </wx-root-portal>
 </main>
 `;

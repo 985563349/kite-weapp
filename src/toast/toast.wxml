@@ -3,9 +3,9 @@
 
 <k-overlay
   wx:if="{{ overlay }}"
-  open="{{ open }}"
+  visible="{{ visible }}"
   lock-scroll="{{ lockScroll }}"
-  zIndex="{{ zIndex }}"
+  z-index="{{ zIndex }}"
   style="background-color: transparent"
 />
 
@@ -20,9 +20,9 @@
   <rich-text wx:if="{{ type === 'html' }}" />
   <block wx:else>
     <k-loading wx:if="{{ type === 'loading' }}" style="color: currentColor" k-spinner-class="k-toast__loading" />
-    <k-icon wx:elif="{{ type }}" name="{{ iconMap[type] || type }}" k-class="k-toast__icon" />
+    <k-icon wx:elif="{{ type }}" name="{{ icon || iconMap[type] }}" k-class="k-toast__icon" />
 
-    <text wx:if="{{ message }}" aria-role="alert">{{ message }}</text>
-    <slot wx:else name="message" />
+    <text wx:if="{{ content }}" aria-role="alert">{{ content }}</text>
+    <slot wx:else name="content" />
   </block>
 </view>

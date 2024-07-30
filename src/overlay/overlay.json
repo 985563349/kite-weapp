@@ -1,5 +1,7 @@
 {
   "component": true,
   "styleIsolation": "apply-shared",
-  "usingComponents": {}
+  "usingComponents": {
+    "k-root-portal": "../root-portal/root-portal"
+  }
 }

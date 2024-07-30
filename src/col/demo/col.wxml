@@ -23,8 +23,8 @@
     </k-row>
   </demo-block>
 
-  <demo-block title="区块间距">
-    <k-row gutter="{{ [16, 24] }}">
+  <demo-block title="区块间距" style="overflow: hidden">
+    <k-row gutter="{{ [16, 16] }}">
       <k-col span="6">col-6</k-col>
       <k-col span="6">col-6</k-col>
       <k-col span="6">col-6</k-col>
@@ -43,8 +43,8 @@
     </k-row>
 
     <k-row>
-      <k-col span="6" offset="6">col-6 offset-6</k-col>
-      <k-col span="6" offset="6">col-6 offset-6</k-col>
+      <k-col span="8" offset="4">col-8 offset-4</k-col>
+      <k-col span="8" offset="4">col-8 offset-4</k-col>
     </k-row>
 
     <k-row>
@@ -147,11 +147,26 @@
     </k-row>
   </demo-block>
 
+  <demo-block title="自动换行">
+    <k-row wrap>
+      <k-col span="8">col-8</k-col>
+      <k-col span="8">col-8</k-col>
+      <k-col span="8">col-8</k-col>
+      <k-col span="8">col-8</k-col>
+    </k-row>
+  </demo-block>
+
   <demo-block title="响应式">
     <k-row>
       <k-col xs="2" sm="4" md="6" lg="8" xl="10">Col</k-col>
       <k-col xs="20" sm="16" md="12" lg="8" xl="4">Col</k-col>
       <k-col xs="2" sm="4" md="6" lg="8" xl="10">Col</k-col>
+    </k-row>
+
+    <k-row>
+      <k-col xs="{{ { span: 5, offset: 1 } }}" lg="{{ { span: 6, offset: 2 } }}">Col</k-col>
+      <k-col xs="{{ { span: 11, offset: 1 } }}" lg="{{ { span: 6, offset: 2 } }}">Col</k-col>
+      <k-col xs="{{ { span: 5, offset: 1 } }}" lg="{{ { span: 6, offset: 2 } }}">Col</k-col>
     </k-row>
   </demo-block>
 </k-flex>

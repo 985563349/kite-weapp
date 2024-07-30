@@ -1,5 +1,5 @@
 <k-flex style="padding-bottom: 16px" gap="md" vertical>
-  <demo-block title="基础用法">
+  <demo-block title="基础用法" padding>
     <k-space wrap>
       <k-button type="primary" bind:click="showTextToast">Text</k-button>
       <k-button type="primary" bind:click="showLoadingToast">Loading</k-button>
@@ -9,7 +9,7 @@
     </k-space>
   </demo-block>
 
-  <demo-block title="弹出位置">
+  <demo-block title="弹出位置" padding>
     <k-space>
       <k-button type="primary" bind:click="showTopToast">Top</k-button>
       <k-button type="primary" bind:click="showBottomToast">Bottom</k-button>

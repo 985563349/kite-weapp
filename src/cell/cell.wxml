@@ -5,7 +5,7 @@
   style="{{ style }}"
   class="{{ utils.bem('k-cell', [size, { center, border, clickable }]) }} k-class"
   hover-stay-time="70"
-  hover-class="k-cell--active {{ clickable ? 'hover-class' : '' }}"
+  hover-class="{{ clickable ? 'k-cell--active hover-class' : '' }}"
   bind:tap="onTap"
   aria-role="{{ ariaRole || (arrow ? 'button' : '') }}"
   aria-label="{{ ariaLabel }}"
@@ -15,6 +15,7 @@
 
   <view class="k-cell__title k-title-class">
     <block wx:if="{{ title }}">{{ title }}</block>
+    <slot wx:else name="title" />
 
     <view class="k-cell__label k-label-class">
       <block wx:if="label">{{ label }}</block>
@@ -27,7 +28,7 @@
     <slot wx:else />
   </view>
 
-  <k-icon wx:if="{{ arrow }}" k-class="k-cell__right-icon" name="chevron-right" />
+  <k-icon wx:if="{{ arrow }}" k-class="k-cell__right-icon" name="right" />
   <slot wx:else name="right-icon" />
 
   <slot name="extra" />

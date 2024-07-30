@@ -2,6 +2,7 @@
   "component": true,
   "styleIsolation": "apply-shared",
   "usingComponents": {
+    "k-root-portal": "../root-portal/root-portal",
     "k-overlay": "../overlay/overlay",
     "k-icon": "../icon/icon"
   }

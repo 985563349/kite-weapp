@@ -1,11 +1,11 @@
 <k-flex style="padding-bottom: 16px" gap="md" vertical>
-  <demo-block title="基本布局">
+  <demo-block title="基本布局" padding>
     <k-flex>
       <view wx:for="{{ 4 }}" wx:key="index" class="block"></view>
     </k-flex>
   </demo-block>
 
-  <demo-block title="垂直布局">
+  <demo-block title="垂直布局" padding>
     <k-flex gap="sm" vertical>
       <k-button type="primary">Primary</k-button>
       <k-button type="secondary">Secondary</k-button>
@@ -13,7 +13,7 @@
     </k-flex>
   </demo-block>
 
-  <demo-block title="对齐方式">
+  <demo-block title="对齐方式" padding>
     <k-flex justify="center" align="center" gap="sm" k-class="layout">
       <k-button type="primary">Primary</k-button>
       <k-button type="secondary">Secondary</k-button>
@@ -21,7 +21,7 @@
     </k-flex>
   </demo-block>
 
-  <demo-block title="间距">
+  <demo-block title="间距" padding>
     <k-flex gap="lg">
       <k-button type="primary">Primary</k-button>
       <k-button type="secondary">Secondary</k-button>
@@ -29,7 +29,7 @@
     </k-flex>
   </demo-block>
 
-  <demo-block title="自动换行">
+  <demo-block title="自动换行" padding>
     <k-flex wrap="wrap" gap="sm" k-class="layout">
       <k-button>Default</k-button>
       <k-button type="primary">Primary</k-button>

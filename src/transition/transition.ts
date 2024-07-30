@@ -11,11 +11,7 @@ KComponent({
     'leave-to-class',
   ],
 
-  properties: {
-    kId: String,
-
-    style: String,
-  },
+  properties: {},
 
   behaviors: [transition()],
 });

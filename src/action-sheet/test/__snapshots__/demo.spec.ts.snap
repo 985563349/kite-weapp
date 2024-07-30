@@ -8,6 +8,7 @@ exports[`should render demo and match snapshot 1`] = `
     vertical="{{true}}"
   >
     <demo-block
+      padding="{{true}}"
       title="基础用法"
     >
       <k-button
@@ -18,7 +19,6 @@ exports[`should render demo and match snapshot 1`] = `
         Open
       </k-button>
       <k-action-sheet
-        open="{{false}}"
         options="{{
           [
             {
@@ -31,11 +31,13 @@ exports[`should render demo and match snapshot 1`] = `
             },
           ]
         }}"
+        visible="{{false}}"
         bind:cancel="onClickBasicCancel"
-        bind:selected="onSelect"
+        bind:select="onSelect"
       />
     </demo-block>
     <demo-block
+      padding="{{true}}"
       title="选项颜色"
     >
       <k-button
@@ -47,7 +49,6 @@ exports[`should render demo and match snapshot 1`] = `
       </k-button>
       <k-action-sheet
         cancelText="Cancel"
-        open="{{false}}"
         options="{{
           [
             {
@@ -62,10 +63,12 @@ exports[`should render demo and match snapshot 1`] = `
             },
           ]
         }}"
+        visible="{{false}}"
         bind:cancel="onClickColorCancel"
       />
     </demo-block>
     <demo-block
+      padding="{{true}}"
       title="选项状态"
     >
       <k-button
@@ -77,7 +80,6 @@ exports[`should render demo and match snapshot 1`] = `
       </k-button>
       <k-action-sheet
         cancelText="Cancel"
-        open="{{false}}"
         options="{{
           [
             {
@@ -93,10 +95,12 @@ exports[`should render demo and match snapshot 1`] = `
             },
           ]
         }}"
+        visible="{{false}}"
         bind:cancel="onClickStateCancel"
       />
     </demo-block>
     <demo-block
+      padding="{{true}}"
       title="标题信息"
     >
       <k-button
@@ -108,7 +112,6 @@ exports[`should render demo and match snapshot 1`] = `
       </k-button>
       <k-action-sheet
         cancelText="Cancel"
-        open="{{false}}"
         options="{{
           [
             {
@@ -122,6 +125,7 @@ exports[`should render demo and match snapshot 1`] = `
           ]
         }}"
         title="Actions"
+        visible="{{false}}"
         bind:cancel="onClickTitleCancel"
       />
     </demo-block>

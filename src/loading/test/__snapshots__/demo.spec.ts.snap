@@ -8,6 +8,7 @@ exports[`should render demo and match snapshot 1`] = `
     vertical="{{true}}"
   >
     <demo-block
+      padding="{{true}}"
       title="主题"
     >
       <k-space>
@@ -30,6 +31,7 @@ exports[`should render demo and match snapshot 1`] = `
       </k-space>
     </demo-block>
     <demo-block
+      padding="{{true}}"
       title="尺寸"
     >
       <k-space
@@ -49,6 +51,7 @@ exports[`should render demo and match snapshot 1`] = `
       </k-space>
     </demo-block>
     <demo-block
+      padding="{{true}}"
       title="标签"
     >
       <k-space>
@@ -58,6 +61,7 @@ exports[`should render demo and match snapshot 1`] = `
       </k-space>
     </demo-block>
     <demo-block
+      padding="{{true}}"
       title="垂直布局"
     >
       <k-space>
@@ -68,6 +72,7 @@ exports[`should render demo and match snapshot 1`] = `
       </k-space>
     </demo-block>
     <demo-block
+      padding="{{true}}"
       title="标签颜色"
     >
       <k-space>

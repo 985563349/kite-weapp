@@ -1,10 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`popup should render popup add match snapshot 1`] = `
-<wx-view
-  class="k-popup k-popup--center  k-class"
-  id=""
-  style="z-index:11000;display: none"
-  bind:transitionend="onTransitionEnd"
-/>
+<main>
+  <wx-root-portal
+    enable="{{false}}"
+  >
+    <wx-view
+      ariaLabel="close"
+      ariaRole="button"
+      class="k-overlay k-fade-enter-to k-fade-enter-active enter-to-class enter-active-class k-class"
+      id=""
+      style="-webkit-transition-duration:300ms;transition-duration:300ms;z-index:11000"
+      bind:tap="onTap"
+      catch:touchmove="noop"
+      bind:transitionend="onTransitionEnd"
+    />
+  </wx-root-portal>
+  <wx-root-portal
+    enable="{{false}}"
+  >
+    <wx-view
+      class="k-popup k-popup--center k-center-enter-to k-center-enter-active enter-to-class enter-active-class k-class"
+      id=""
+      style="-webkit-transition-duration:300ms;transition-duration:300ms;z-index:11000"
+      catch:touchmove="noop"
+      bind:transitionend="onTransitionEnd"
+    />
+  </wx-root-portal>
+</main>
 `;

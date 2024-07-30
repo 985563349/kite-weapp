@@ -3,20 +3,25 @@
 
 <k-overlay
   wx:if="{{ overlay }}"
-  open="{{ open }}"
+  style="{{ overlayStyle }}"
+  visible="{{ visible }}"
   duration="{{ duration }}"
   lock-scroll="{{ lockScroll }}"
-  zIndex="{{ zIndex }}"
+  root-portal="{{ rootPortal }}"
+  z-index="{{ zIndex }}"
   bind:click="onClickOverlay"
 />
 
-<view
-  wx:if="{{ mounted }}"
-  id="{{ kId }}"
-  class="{{ utils.bem('k-popup', [placement, shape]) }} {{ transitionClassNames }} k-class"
-  style="{{ computed.popupStyle({ display, transitionDuration, zIndex, style }) }}"
-  bind:transitionend="onTransitionEnd"
->
-  <slot />
-  <k-icon wx:if="{{ closable }}" k-class="k-popup__close" name="close" bind:tap="onClickClose" />
-</view>
+<k-root-portal enable="{{ rootPortal }}">
+  <view
+    wx:if="{{ mounted }}"
+    id="{{ kId }}"
+    class="{{ utils.bem('k-popup', [placement, shape, safeArea ? 'safe-area' : '']) }} {{ transitionClassNames }} k-class"
+    style="{{ computed.popupStyle({ display, transitionDuration, zIndex, style }) }}"
+    bind:transitionend="onTransitionEnd"
+    catch:touchmove="noop"
+  >
+    <slot />
+    <k-icon wx:if="{{ closable }}" k-class="k-popup__close" name="close" bind:tap="onClose" />
+  </view>
+</k-root-portal>

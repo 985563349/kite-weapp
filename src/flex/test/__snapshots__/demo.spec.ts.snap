@@ -8,6 +8,7 @@ exports[`should render demo and match snapshot 1`] = `
     vertical="{{true}}"
   >
     <demo-block
+      padding="{{true}}"
       title="基本布局"
     >
       <k-flex>
@@ -26,6 +27,7 @@ exports[`should render demo and match snapshot 1`] = `
       </k-flex>
     </demo-block>
     <demo-block
+      padding="{{true}}"
       title="垂直布局"
     >
       <k-flex
@@ -50,6 +52,7 @@ exports[`should render demo and match snapshot 1`] = `
       </k-flex>
     </demo-block>
     <demo-block
+      padding="{{true}}"
       title="对齐方式"
     >
       <k-flex
@@ -76,6 +79,7 @@ exports[`should render demo and match snapshot 1`] = `
       </k-flex>
     </demo-block>
     <demo-block
+      padding="{{true}}"
       title="间距"
     >
       <k-flex
@@ -99,6 +103,7 @@ exports[`should render demo and match snapshot 1`] = `
       </k-flex>
     </demo-block>
     <demo-block
+      padding="{{true}}"
       title="自动换行"
     >
       <k-flex

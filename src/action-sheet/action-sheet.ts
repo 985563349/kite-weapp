@@ -2,11 +2,7 @@ import KComponent from '../shared/component';
 
 KComponent({
   properties: {
-    kId: String,
-
-    style: String,
-
-    open: Boolean,
+    visible: Boolean,
 
     options: {
       type: Array,
@@ -27,6 +23,8 @@ KComponent({
       value: true,
     },
 
+    overlayStyle: String,
+
     duration: {
       type: Object,
       optionalTypes: [Number],
@@ -38,6 +36,8 @@ KComponent({
       value: true,
     },
 
+    rootPortal: Boolean,
+
     zIndex: {
       type: Number,
       value: 11000,
@@ -48,17 +48,17 @@ KComponent({
     onSelect(event: WechatMiniprogram.TouchEvent) {
       const { index } = event.currentTarget.dataset;
       const { options } = this.data;
-      const item = options[index];
+      const option = options[index];
 
-      if (item.disabled) {
+      if (option.disabled || !this.data.visible) {
         return;
       }
 
-      this.triggerEvent('selected', { selected: item, index });
+      this.triggerEvent('select', { option, index });
     },
 
     onCancel() {
-      if (this.data.open) {
+      if (this.data.visible) {
         this.triggerEvent('cancel');
       }
     },

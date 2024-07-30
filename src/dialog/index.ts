@@ -5,7 +5,7 @@ export type DialogAction = 'confirm' | 'cancel';
 export type DialogDispatch = (action: DialogAction) => any;
 
 export interface DialogOptions {
-  open?: boolean;
+  visible?: boolean;
   width?: number | string;
   title?: string;
   content?: string;
@@ -15,6 +15,7 @@ export interface DialogOptions {
   cancelText?: string;
   confirmLoading?: boolean;
   cancelLoading?: boolean;
+  closable?: boolean;
   loadingDelay?: number;
   overlay?: boolean;
   overlayClosable?: boolean;
@@ -28,16 +29,17 @@ export interface DialogOptions {
 }
 
 const defaultOptions: DialogOptions = {
-  open: true,
+  visible: true,
   width: 320,
   title: '',
   content: '',
   showConfirmButton: true,
-  showCancelButton: true,
+  showCancelButton: false,
   confirmText: 'Confirm',
   cancelText: 'Cancel',
   confirmLoading: false,
   cancelLoading: false,
+  closable: false,
   loadingDelay: 300,
   overlay: true,
   overlayClosable: true,
@@ -73,5 +75,13 @@ function Dialog(options: DialogOptions) {
 
   dialog.setData({ ...options, dispatch });
 }
+
+Dialog.alert = (options: Omit<DialogOptions, 'showCancelButton' | 'cancelLoading' | 'onCancel' | 'cancelText'>) => {
+  Dialog({ ...options, showCancelButton: false });
+};
+
+Dialog.confirm = (options: Omit<DialogOptions, 'showCancelButton'>) => {
+  Dialog({ ...options, showCancelButton: true });
+};
 
 export default Dialog;

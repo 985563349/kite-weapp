@@ -3,13 +3,11 @@ import transition from '../mixins/transition';
 
 KComponent({
   properties: {
-    kId: String,
-
-    style: String,
-
     type: String,
 
-    message: String,
+    content: String,
+
+    icon: String,
 
     position: String,
 
@@ -19,12 +17,6 @@ KComponent({
     },
 
     overlay: Boolean,
-
-    duration: {
-      type: Object,
-      optionalTypes: [Number],
-      value: { enter: 300, leave: 300 },
-    },
 
     selector: String,
 
@@ -36,12 +28,12 @@ KComponent({
     },
   },
 
-  behaviors: [transition({ visibleProperty: 'open', name: 'fade' })],
+  behaviors: [transition({ name: 'fade' })],
 
   data: {
     iconMap: {
       success: 'check-circle',
-      warning: 'error-circle',
+      warning: 'exclamation-circle',
       error: 'close-circle',
     },
   },

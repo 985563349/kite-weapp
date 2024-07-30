@@ -2,7 +2,7 @@
 
 @popup-border-radius: var(--k-popup-border-radius, @radius-l);
 @popup-bg-color: var(--k-popup-bg-color, @component-bg-color);
-@popup-close-icon-size: var(--k-popup-close-icon-size, @font-size-m);
+@popup-close-icon-size: var(--k-popup-close-icon-size, 16px);
 @popup-close-icon-offset: var(--k-popup-close-icon-offset, 12px);
 @popup-close-icon-color: var(--k-popup-close-icon-color, @text-color-placeholder);
 @popup-close-icon-color-active: var(--k-popup-close-icon-color-active, @text-color);
@@ -11,9 +11,10 @@
 
 .@{popup} {
   position: fixed;
-  overflow-y: auto;
+  box-sizing: border-box;
   max-height: 100%;
-  transition-timing-function: ease;
+  overflow-y: auto;
+  transition-timing-function: @transition-timing-function;
   -webkit-overflow-scrolling: touch;
   background-color: @popup-bg-color;
 
@@ -21,8 +22,11 @@
     top: 0;
     left: 0;
     width: 100%;
-    padding-top: constant(safe-area-inset-top);
-    padding-top: env(safe-area-inset-top);
+
+    &.@{popup}--safe-area {
+      padding-top: constant(safe-area-inset-top);
+      padding-top: env(safe-area-inset-top);
+    }
 
     &.@{popup}--round {
       border-bottom-left-radius: @popup-border-radius;
@@ -45,8 +49,11 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    padding-bottom: constant(safe-area-inset-bottom);
-    padding-bottom: env(safe-area-inset-bottom);
+
+    &.@{popup}--safe-area {
+      padding-bottom: constant(safe-area-inset-bottom);
+      padding-bottom: env(safe-area-inset-bottom);
+    }
 
     &.@{popup}--round {
       border-top-left-radius: @popup-border-radius;
@@ -68,8 +75,7 @@
   &--center {
     top: 50%;
     left: 50%;
-    transform-origin: 0% 0%;
-    transform: scale(1) translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
 
     &.@{popup}--round {
       border-radius: @popup-border-radius;
@@ -122,11 +128,10 @@
 
 .k-center-enter-active,
 .k-center-leave-active {
-  transition-property: scale opacity;
+  transition-property: opacity;
 }
 
 .k-center-enter,
 .k-center-leave-to {
-  transform: scale(0.8) translate3d(-50%, -50%, 0);
   opacity: 0;
 }

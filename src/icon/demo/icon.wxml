@@ -1,29 +1,29 @@
 <k-flex style="padding-bottom: 16px" gap="md" vertical>
-  <demo-block title="基础用法">
+  <demo-block title="基础用法" padding>
     <k-space>
-      <k-icon name="message" size="32px" />
-      <k-icon name="user" size="32px" />
+      <k-icon name="star" size="32" />
+      <k-icon name="camera" size="32" />
     </k-space>
   </demo-block>
 
-  <demo-block title="图标颜色">
+  <demo-block title="图标颜色" padding>
     <k-space>
-      <k-icon name="store" size="32px" color="#298dff" />
-      <k-icon name="fire" size="32px" color="#f64784" />
+      <k-icon name="star" size="32" color="#298dff" />
+      <k-icon name="delete" size="32" color="#f64784" />
     </k-space>
   </demo-block>
 
-  <demo-block title="图标大小">
+  <demo-block title="图标大小" padding>
     <k-space>
-      <k-icon name="location" size="32px" />
-      <k-icon name="location" size="40px" />
+      <k-icon name="star" size="32" />
+      <k-icon name="star" size="40" />
     </k-space>
   </demo-block>
 
-  <demo-block title="基础图标" wrap>
-    <k-row gutter="{{ [16, 16] }}">
-      <k-col span="8" wx:for="{{ icons }}" wx:key="index">
-        <k-icon name="{{ item }}" size="32px" />
+  <demo-block title="基础图标" padding>
+    <k-row gutter="{{ [0, 16] }}">
+      <k-col span="6" wx:for="{{ icons }}" wx:key="index">
+        <k-icon name="{{ item }}" size="32" />
         <text class="text">{{ item }}</text>
       </k-col>
     </k-row>

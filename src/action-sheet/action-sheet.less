@@ -16,18 +16,20 @@
 @action-sheet-item-color: var(--k-action-sheet-item-color, @text-color);
 @action-sheet-item-bg-color: var(--k-action-sheet-item-bg-color, @component-bg-color);
 @action-sheet-item-bg-color-active: var(--k-action-sheet-item-bg-color-active, @component-bg-color-active);
-@action-sheet-item-disabled-opacity: var(--k-action-sheet-item-disabled-opacity, 0.5);
+@action-sheet-item-disabled-opacity: var(--k-action-sheet-item-disabled-opacity, @disabled-opacity);
+@action-sheet-item-icon-size: var(--k-action-sheet-item-icon-size, 1em);
 
 @action-sheet: ~'k-action-sheet';
 
 .@{action-sheet} {
-  padding: 0 @action-sheet-spacer;
-  padding-bottom: @action-sheet-spacer;
+  box-sizing: border-box;
 
   &-content {
     display: flex;
     flex-direction: column;
     gap: @action-sheet-spacer;
+    padding: 0 @action-sheet-spacer;
+    padding-bottom: @action-sheet-spacer;
   }
 
   &-header {
@@ -86,6 +88,6 @@
   }
 
   &__item-icon {
-    font-size: 1.2em !important;
+    font-size: @action-sheet-item-icon-size !important;
   }
 }

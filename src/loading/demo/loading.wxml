@@ -1,5 +1,5 @@
 <k-flex style="padding-bottom: 16px" gap="md" vertical>
-  <demo-block title="主题">
+  <demo-block title="主题" padding>
     <k-space>
       <k-loading />
       <k-loading type="primary" />
@@ -10,7 +10,7 @@
     </k-space>
   </demo-block>
 
-  <demo-block title="尺寸">
+  <demo-block title="尺寸" padding>
     <k-space align="start">
       <k-loading size="small" label="加载中..." />
       <k-loading label="加载中..." />
@@ -18,19 +18,19 @@
     </k-space>
   </demo-block>
 
-  <demo-block title="标签">
+  <demo-block title="标签" padding>
     <k-space>
       <k-loading label="加载中..." />
     </k-space>
   </demo-block>
 
-  <demo-block title="垂直布局">
+  <demo-block title="垂直布局" padding>
     <k-space>
       <k-loading vertical label="加载中" />
     </k-space>
   </demo-block>
 
-  <demo-block title="标签颜色">
+  <demo-block title="标签颜色" padding>
     <k-space>
       <k-loading vertical label="加载中" />
       <k-loading vertical type="primary" label="加载中" />

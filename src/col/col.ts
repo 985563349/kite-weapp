@@ -1,11 +1,15 @@
 import KComponent from '../shared/component';
+import relation from '../mixins/relation';
 
 KComponent({
+  behaviors: [
+    relation({
+      path: '../row/row',
+      type: 'parent',
+    }),
+  ],
+
   properties: {
-    kId: String,
-
-    style: String,
-
     span: {
       type: null,
       optionalTypes: [Number],
@@ -59,12 +63,6 @@ KComponent({
     xl: {
       type: null,
       optionalTypes: [Number, Object],
-    },
-  },
-
-  relations: {
-    '../row/row': {
-      type: 'parent',
     },
   },
 });

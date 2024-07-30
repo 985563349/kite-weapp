@@ -4,10 +4,6 @@ KComponent({
   externalClasses: ['hover-class', 'k-title-class', 'k-label-class', 'k-value-class'],
 
   properties: {
-    kId: String,
-
-    style: String,
-
     title: String,
 
     label: String,

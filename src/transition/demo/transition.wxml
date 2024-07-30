@@ -1,5 +1,5 @@
 <k-flex style="padding-bottom: 16px" gap="md" vertical>
-  <demo-block title="淡入淡出">
+  <demo-block title="淡入淡出" padding>
     <k-space align="start" vertical>
       <k-button type="primary" size="sm" variant="clear" bind:click="onClickFade">Fade</k-button>
 
@@ -7,7 +7,7 @@
     </k-space>
   </demo-block>
 
-  <demo-block title="旋转">
+  <demo-block title="旋转" padding>
     <k-space align="start" vertical>
       <k-button type="primary" size="sm" variant="clear" bind:click="onClickRotate">Rotate</k-button>
 

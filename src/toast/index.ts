@@ -1,9 +1,10 @@
 type ToastContext = WechatMiniprogram.Component.TrivialInstance | WechatMiniprogram.Page.TrivialInstance;
 
 export interface ToastOptions {
-  open?: boolean;
+  visible?: boolean;
   type?: string;
-  message?: string | number;
+  content?: string | number;
+  icon?: string;
   position?: string;
   stay?: number;
   overlay?: boolean;
@@ -18,9 +19,10 @@ export interface ToastInstance extends WechatMiniprogram.Component.TrivialInstan
 }
 
 const defaultOptions: ToastOptions = {
-  open: true,
+  visible: true,
   type: '',
-  message: '',
+  content: '',
+  icon: '',
   position: '',
   stay: 2000,
   overlay: false,
@@ -45,8 +47,8 @@ function Toast(options: ToastOptions) {
   }
 
   toast.close = () => {
-    if (toast.data.open) {
-      toast.setData({ open: false });
+    if (toast.data.visible) {
+      toast.setData({ visible: false });
       options.onClose?.();
     }
   };
@@ -65,7 +67,7 @@ function Toast(options: ToastOptions) {
 }
 
 const createStaticMethod = (type: string) => (options: Omit<ToastOptions, 'type'>) => {
-  return Toast({ type, ...options });
+  return Toast({ ...options, type });
 };
 
 Toast.loading = createStaticMethod('loading');

@@ -6,17 +6,17 @@
     "pages/icon/icon",
     "pages/space/space",
     "pages/flex/flex",
+    "pages/loading/loading",
     "pages/cell/cell",
     "pages/action-sheet/action-sheet",
     "pages/dialog/dialog",
-    "pages/loading/loading",
     "pages/overlay/overlay",
     "pages/popup/popup",
     "pages/toast/toast",
     "pages/transition/transition"
   ],
   "window": {
-    "navigationBarTitleText": "Kite",
+    "navigationBarTitleText": "Kite Weapp",
     "navigationBarTextStyle": "@navigationBarTextStyle",
     "navigationBarBackgroundColor": "@navigationBarBackgroundColor"
   },

@@ -1,5 +1,5 @@
-import { requestAnimationFrame } from '../shared/raf';
-import { isObject } from '../shared/validator';
+import { requestAnimationFrame, frameDuration } from '../shared/raf';
+import { isObject } from '../shared/utils';
 
 type DurationOption = {
   enter: number;
@@ -14,16 +14,20 @@ type DataOption = {
 };
 
 type PropertyOption = {
-  duration: {
-    type: typeof Object;
-    optionalTypes: [typeof Number];
-    value?: DurationOption;
+  visible: {
+    type: typeof Boolean;
+    value?: boolean;
+    observer?: string;
   };
   name: {
     type: typeof String;
     value?: string;
   };
-  [visibleProperty: string]: WechatMiniprogram.Component.AllProperty;
+  duration: {
+    type: typeof Object;
+    optionalTypes: [typeof Number];
+    value?: DurationOption;
+  };
 };
 
 type MethodOption = {
@@ -40,30 +44,29 @@ type CustomInstanceProperty = {
 };
 
 type TransitionOptions = {
-  visibleProperty?: string;
   name?: string;
 };
 
 export default function transition(options: TransitionOptions = {}) {
-  const { visibleProperty = 'visible', name = 'transition' } = options;
+  const { name = 'transition' } = options;
 
   return Behavior<DataOption, PropertyOption, MethodOption, CustomInstanceProperty>({
     properties: {
-      [visibleProperty]: {
+      visible: {
         type: Boolean,
         value: false,
         observer: 'observeVisible',
+      },
+
+      name: {
+        type: String,
+        value: name,
       },
 
       duration: {
         type: Object,
         optionalTypes: [Number],
         value: { enter: 300, leave: 300 },
-      },
-
-      name: {
-        type: String,
-        value: name,
       },
     },
 
@@ -106,10 +109,10 @@ export default function transition(options: TransitionOptions = {}) {
             requestAnimationFrame(() => {
               if (this.status !== 'enter') return;
 
+              this.transitionEnded = false;
               this.setData({
                 transitionClassNames: `k-${name}-enter-to k-${name}-enter-active enter-to-class enter-active-class`,
               });
-              this.transitionEnded = false;
               resolve();
             });
           });
@@ -140,11 +143,22 @@ export default function transition(options: TransitionOptions = {}) {
             requestAnimationFrame(() => {
               if (this.status !== 'leave') return;
 
+              this.transitionEnded = false;
+              this.enterTransitionPromise = null;
               this.setData({
                 transitionClassNames: `k-${name}-leave-to k-${name}-leave-active leave-to-class leave-active-class`,
               });
-              this.enterTransitionPromise = null;
-              this.transitionEnded = false;
+
+              /**
+               * prevent transitionend from failing to trigger.
+               * delaying the two-frame event ensures that the timer executes after the transitionEnd event executes.
+               */
+              setTimeout(
+                () => {
+                  this.onTransitionEnd();
+                },
+                transitionDuration + frameDuration * 2
+              );
             });
           });
         });
@@ -156,8 +170,7 @@ export default function transition(options: TransitionOptions = {}) {
         this.triggerEvent(`after-${this.status}`);
         this.transitionEnded = true;
 
-        const visible = this.data[visibleProperty];
-        const { display } = this.data;
+        const { visible, display } = this.data;
 
         if (!visible && display) {
           this.setData({ display: false, transitionClassNames: '' });

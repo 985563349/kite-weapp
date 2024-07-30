@@ -8,6 +8,7 @@ exports[`should render demo and match snapshot 1`] = `
     vertical="{{true}}"
   >
     <demo-block
+      padding="{{true}}"
       title="类型"
     >
       <k-space
@@ -44,6 +45,7 @@ exports[`should render demo and match snapshot 1`] = `
       </k-space>
     </demo-block>
     <demo-block
+      padding="{{true}}"
       title="尺寸"
     >
       <k-space>
@@ -67,6 +69,7 @@ exports[`should render demo and match snapshot 1`] = `
       </k-space>
     </demo-block>
     <demo-block
+      padding="{{true}}"
       title="变体"
     >
       <k-space>
@@ -89,24 +92,17 @@ exports[`should render demo and match snapshot 1`] = `
       </k-space>
     </demo-block>
     <demo-block
+      padding="{{true}}"
       title="禁用"
     >
-      <k-space>
-        <k-button
-          disabled="{{true}}"
-          type="primary"
-        >
-          Primary
-        </k-button>
-        <k-button
-          disabled="{{true}}"
-          type="success"
-        >
-          Success
-        </k-button>
-      </k-space>
+      <k-button
+        disabled="{{true}}"
+      >
+        Button
+      </k-button>
     </demo-block>
     <demo-block
+      padding="{{true}}"
       title="加载"
     >
       <k-space>
@@ -124,16 +120,18 @@ exports[`should render demo and match snapshot 1`] = `
       </k-space>
     </demo-block>
     <demo-block
+      padding="{{true}}"
       title="图标"
     >
       <k-button
-        icon="heart"
-        type="danger"
+        icon="download"
+        type="primary"
       >
-        Danger
+        Download
       </k-button>
     </demo-block>
     <demo-block
+      padding="{{true}}"
       title="形状"
     >
       <k-space>
@@ -149,7 +147,7 @@ exports[`should render demo and match snapshot 1`] = `
           Round
         </k-button>
         <k-button
-          icon="add"
+          icon="plus"
           shape="circle"
           type="success"
         />
@@ -162,6 +160,7 @@ exports[`should render demo and match snapshot 1`] = `
       </k-space>
     </demo-block>
     <demo-block
+      padding="{{true}}"
       title="展开"
     >
       <k-space

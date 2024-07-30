@@ -70,13 +70,14 @@ exports[`should render demo and match snapshot 1`] = `
       </k-row>
     </demo-block>
     <demo-block
+      style="overflow: hidden"
       title="区块间距"
     >
       <k-row
         gutter="{{
           [
             16,
-            24,
+            16,
           ]
         }}"
       >
@@ -140,16 +141,16 @@ exports[`should render demo and match snapshot 1`] = `
       </k-row>
       <k-row>
         <k-col
-          offset="6"
-          span="6"
+          offset="4"
+          span="8"
         >
-          col-6 offset-6
+          col-8 offset-4
         </k-col>
         <k-col
-          offset="6"
-          span="6"
+          offset="4"
+          span="8"
         >
-          col-6 offset-6
+          col-8 offset-4
         </k-col>
       </k-row>
       <k-row>
@@ -486,6 +487,34 @@ exports[`should render demo and match snapshot 1`] = `
       </k-row>
     </demo-block>
     <demo-block
+      title="自动换行"
+    >
+      <k-row
+        wrap="{{true}}"
+      >
+        <k-col
+          span="8"
+        >
+          col-8
+        </k-col>
+        <k-col
+          span="8"
+        >
+          col-8
+        </k-col>
+        <k-col
+          span="8"
+        >
+          col-8
+        </k-col>
+        <k-col
+          span="8"
+        >
+          col-8
+        </k-col>
+      </k-row>
+    </demo-block>
+    <demo-block
       title="响应式"
     >
       <k-row>
@@ -513,6 +542,56 @@ exports[`should render demo and match snapshot 1`] = `
           sm="4"
           xl="10"
           xs="2"
+        >
+          Col
+        </k-col>
+      </k-row>
+      <k-row>
+        <k-col
+          lg="{{
+            {
+              "offset": 2,
+              "span": 6,
+            }
+          }}"
+          xs="{{
+            {
+              "offset": 1,
+              "span": 5,
+            }
+          }}"
+        >
+          Col
+        </k-col>
+        <k-col
+          lg="{{
+            {
+              "offset": 2,
+              "span": 6,
+            }
+          }}"
+          xs="{{
+            {
+              "offset": 1,
+              "span": 11,
+            }
+          }}"
+        >
+          Col
+        </k-col>
+        <k-col
+          lg="{{
+            {
+              "offset": 2,
+              "span": 6,
+            }
+          }}"
+          xs="{{
+            {
+              "offset": 1,
+              "span": 5,
+            }
+          }}"
         >
           Col
         </k-col>

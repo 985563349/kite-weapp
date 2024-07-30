@@ -1,8 +1,18 @@
-.demo-block {
-  padding-inline: 16px;
+@demo-block: ~'demo-block';
 
+.@{demo-block} {
   &__title {
-    margin-block: 16px;
+    padding: 16px;
     font-size: 14px;
+    font-weight: 400;
+    color: var(--k-text-color-secondary);
+  }
+
+  &--padding {
+    padding: 0 16px;
+
+    .@{demo-block}__title {
+      padding-left: 0;
+    }
   }
 }

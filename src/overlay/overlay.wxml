@@ -1,13 +1,15 @@
 <wxs src="./overlay.wxs" module="computed" />
 
-<view
-  wx:if="{{ mounted }}"
-  id="{{ kId }}"
-  class="k-overlay {{ transitionClassNames }} k-class"
-  style="{{ computed.overlayStyle({ display, transitionDuration, zIndex, style }) }}"
-  bind:tap="onTap"
-  catch:touchmove="{{ lockScroll ? 'noop' : '' }}"
-  aria-role="{{ ariaRole || 'button' }}"
-  aria-label="{{ ariaLabel || 'close' }}"
-  bind:transitionend="onTransitionEnd"
-/>
+<k-root-portal enable="{{ rootPortal }}">
+  <view
+    wx:if="{{ mounted }}"
+    id="{{ kId }}"
+    class="k-overlay {{ transitionClassNames }} k-class"
+    style="{{ computed.overlayStyle({ display, transitionDuration, zIndex, style }) }}"
+    aria-role="{{ ariaRole || 'button' }}"
+    aria-label="{{ ariaLabel || 'close' }}"
+    bind:transitionend="onTransitionEnd"
+    bind:tap="onTap"
+    catch:touchmove="{{ lockScroll ? 'noop' : '' }}"
+  />
+</k-root-portal>

@@ -1,5 +1,5 @@
 <k-flex style="padding-bottom: 16px" gap="md" vertical>
-  <demo-block title="类型">
+  <demo-block title="类型" padding>
     <k-space wrap>
       <k-button>Default</k-button>
       <k-button type="primary">Primary</k-button>
@@ -10,7 +10,7 @@
     </k-space>
   </demo-block>
 
-  <demo-block title="尺寸">
+  <demo-block title="尺寸" padding>
     <k-space>
       <k-button type="primary" size="small">Small</k-button>
       <k-button type="primary">Default</k-button>
@@ -18,7 +18,7 @@
     </k-space>
   </demo-block>
 
-  <demo-block title="变体">
+  <demo-block title="变体" padding>
     <k-space>
       <k-button type="primary">Default</k-button>
       <k-button type="secondary" variant="ghost">Ghost</k-button>
@@ -26,34 +26,31 @@
     </k-space>
   </demo-block>
 
-  <demo-block title="禁用">
-    <k-space>
-      <k-button type="primary" disabled>Primary</k-button>
-      <k-button type="success" disabled>Success</k-button>
-    </k-space>
+  <demo-block title="禁用" padding>
+    <k-button disabled>Button</k-button>
   </demo-block>
 
-  <demo-block title="加载">
+  <demo-block title="加载" padding>
     <k-space>
       <k-button type="primary" loading />
       <k-button type="primary" variant="outline" loading>Primary</k-button>
     </k-space>
   </demo-block>
 
-  <demo-block title="图标">
-    <k-button type="danger" icon="heart">Danger</k-button>
+  <demo-block title="图标" padding>
+    <k-button type="primary" icon="download">Download</k-button>
   </demo-block>
 
-  <demo-block title="形状">
+  <demo-block title="形状" padding>
     <k-space>
       <k-button type="primary">Default</k-button>
       <k-button type="secondary" shape="round">Round</k-button>
-      <k-button type="success" icon="add" shape="circle" />
+      <k-button type="success" icon="plus" shape="circle" />
       <k-button type="warning" shape="square">Square</k-button>
     </k-space>
   </demo-block>
 
-  <demo-block title="展开">
+  <demo-block title="展开" padding>
     <k-space style="display: flex" vertical align="start">
       <k-button type="primary">Default</k-button>
       <k-button type="primary" expand="block">Block</k-button>

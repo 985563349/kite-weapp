@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`action-sheet should render dialog and match snapshot 1`] = `
+<main>
+  <wx-root-portal
+    enable="{{false}}"
+  >
+    <wx-view
+      ariaLabel="close"
+      ariaRole="button"
+      class="k-overlay k-fade-enter-to k-fade-enter-active enter-to-class enter-active-class k-class"
+      id=""
+      style="-webkit-transition-duration:300ms;transition-duration:300ms;z-index:11000"
+      bind:tap="onTap"
+      catch:touchmove="noop"
+      bind:transitionend="onTransitionEnd"
+    />
+  </wx-root-portal>
+  <wx-root-portal
+    enable="{{false}}"
+  >
+    <wx-view
+      class="k-popup k-popup--bottom k-popup--round k-bottom-enter-to k-bottom-enter-active enter-to-class enter-active-class k-class"
+      id=""
+      style="-webkit-transition-duration:300ms;transition-duration:300ms;z-index:11000;background-color: transparent"
+      catch:touchmove="noop"
+      bind:transitionend="onTransitionEnd"
+    >
+      <wx-view
+        class="k-action-sheet-content"
+      />
+    </wx-view>
+  </wx-root-portal>
+</main>
+`;

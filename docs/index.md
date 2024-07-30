@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: 'iKun WeApp'
+  name: 'Kite Weapp'
   text: '微信小程序组件库'
-  tagline: 厉不厉害你坤哥
+  tagline: 基于小程序语法
   actions:
     - theme: brand
       text: 快速开始

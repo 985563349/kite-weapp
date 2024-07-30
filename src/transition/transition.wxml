@@ -1,6 +1,7 @@
 <wxs src="./transition.wxs" module="computed" />
 
 <view
+  wx:if="{{ mounted }}"
   id="{{ kId }}"
   class="k-transition {{ transitionClassNames }} k-class"
   style="{{ computed.transitionStyle({ display, transitionDuration, style }) }}"

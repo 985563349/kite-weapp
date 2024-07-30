@@ -3,14 +3,12 @@ import transition from '../mixins/transition';
 
 KComponent({
   properties: {
-    kId: String,
-
-    style: String,
-
     lockScroll: {
       type: Boolean,
       value: true,
     },
+
+    rootPortal: Boolean,
 
     zIndex: {
       type: Number,
@@ -22,11 +20,11 @@ KComponent({
     ariaLabel: String,
   },
 
-  behaviors: [transition({ visibleProperty: 'open', name: 'fade' })],
+  behaviors: [transition({ name: 'fade' })],
 
   methods: {
     onTap() {
-      if (this.data.open) {
+      if (this.data.visible) {
         this.triggerEvent('click');
       }
     },

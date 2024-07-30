@@ -1,4 +1,4 @@
-<k-flex style="padding-bottom: 16px; width: 100%" gap="md" vertical>
+<k-flex style="padding-bottom: 16px" gap="md" vertical>
   <demo-block title="基础用法">
     <k-cell-group>
       <k-cell title="单元格" value="内容" />

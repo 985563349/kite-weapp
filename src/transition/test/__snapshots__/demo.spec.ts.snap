@@ -8,6 +8,7 @@ exports[`should render demo and match snapshot 1`] = `
     vertical="{{true}}"
   >
     <demo-block
+      padding="{{true}}"
       title="淡入淡出"
     >
       <k-space
@@ -30,6 +31,7 @@ exports[`should render demo and match snapshot 1`] = `
       </k-space>
     </demo-block>
     <demo-block
+      padding="{{true}}"
       title="旋转"
     >
       <k-space

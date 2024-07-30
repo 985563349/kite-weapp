@@ -1,14 +1,10 @@
 import KComponent from '../shared/component';
-import { debounce } from '../shared/utils';
+import { isThenable } from '../shared/utils';
 import type { DialogAction, DialogDispatch } from './index';
 
 KComponent({
   properties: {
-    kId: String,
-
-    style: String,
-
-    open: Boolean,
+    visible: Boolean,
 
     width: {
       value: 320,
@@ -27,7 +23,7 @@ KComponent({
 
     showCancelButton: {
       type: Boolean,
-      value: true,
+      value: false,
     },
 
     confirmText: {
@@ -44,10 +40,7 @@ KComponent({
 
     cancelLoading: Boolean,
 
-    loadingDelay: {
-      type: Number,
-      value: 300,
-    },
+    closable: Boolean,
 
     overlay: {
       type: Boolean,
@@ -59,6 +52,8 @@ KComponent({
       value: true,
     },
 
+    overlayStyle: String,
+
     duration: {
       type: Object,
       optionalTypes: [Number],
@@ -69,6 +64,8 @@ KComponent({
       type: Boolean,
       value: true,
     },
+
+    rootPortal: Boolean,
 
     zIndex: {
       type: Number,
@@ -82,47 +79,62 @@ KComponent({
 
   methods: {
     triggerDispatch(action: DialogAction) {
-      if (!this.data.open) {
-        return;
-      }
-
-      const debounceSetData = debounce(this.setData.bind(this), this.data.loadingDelay);
       const { dispatch } = this.data;
 
       if (typeof dispatch === 'function') {
-        debounceSetData({ [`${action}Loading`]: true });
+        const returnValue = dispatch(action);
 
-        Promise.resolve(dispatch(action))
-          .then(
-            () => this.setData({ open: false, dispatch: null }),
-            () => {}
-          )
-          .finally(() => debounceSetData({ [`${action}Loading`]: false }));
+        if (isThenable(returnValue)) {
+          this.setData({ [`${action}Loading`]: true });
+
+          returnValue
+            .then(
+              () => this.setData({ visible: false, dispatch: null }),
+              () => {}
+            )
+            .finally(() => {
+              this.setData({ [`${action}Loading`]: false });
+            });
+        } else {
+          this.setData({ visible: false, dispatch: null });
+        }
       }
 
       this.triggerEvent(action);
     },
 
     onConfirm() {
+      if (!this.data.visible || this.data.confirmLoading) {
+        return;
+      }
+
       this.triggerDispatch('confirm');
     },
 
     onCancel() {
+      if (!this.data.visible || this.data.cancelLoading) {
+        return;
+      }
+
       this.triggerDispatch('cancel');
+    },
+
+    onClose() {
+      const { dispatch } = this.data;
+
+      if (typeof dispatch === 'function') {
+        this.setData({ visible: false, dispatch: null });
+        Promise.resolve(dispatch('cancel')).catch(() => {});
+      }
+
+      this.triggerEvent('cancel');
     },
 
     onClickOverlay() {
       this.triggerEvent('click-overlay');
 
       if (this.data.overlayClosable) {
-        const { dispatch } = this.data;
-
-        if (typeof dispatch === 'function') {
-          this.setData({ open: false, dispatch: null });
-          Promise.resolve(dispatch('cancel')).catch(() => {});
-        }
-
-        this.triggerEvent('cancel');
+        this.onClose();
       }
     },
   },

@@ -1,19 +1,24 @@
 <k-flex style="padding-bottom: 16px" gap="md" vertical>
-  <demo-block title="基础用法">
+  <demo-block title="基础用法" padding>
     <k-button type="primary" bind:click="onClickBasicOpen">Open</k-button>
   </demo-block>
 
-  <demo-block title="异步关闭">
+  <demo-block title="异步关闭" padding>
     <k-button type="primary" bind:click="onClickAsyncOpen">Open</k-button>
   </demo-block>
 
-  <demo-block title="组件用法">
+  <demo-block title="组件用法" padding>
     <k-button type="primary" bind:click="onClickComponentOpen">Open</k-button>
   </demo-block>
 
   <k-dialog id="k-dialog" />
 
-  <k-dialog open="{{ open }}" title="Title" bind:confirm="onClickComponentConfirm" bind:cancel="onClickComponentCancel">
+  <k-dialog
+    visible="{{ visible }}"
+    title="Title"
+    bind:confirm="onClickComponentConfirm"
+    bind:cancel="onClickComponentCancel"
+  >
     <view>If the solution is ugly, then there must be a better solution, but it has not been discovered yet.</view>
   </k-dialog>
 </k-flex>

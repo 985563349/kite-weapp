@@ -6,7 +6,18 @@ function ensureArray(value) {
   return isArray(value) ? value : [value];
 }
 
+function includes(array, value) {
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] === value) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
 module.exports = {
   isArray: isArray,
   ensureArray: ensureArray,
+  includes: includes,
 };

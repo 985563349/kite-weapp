@@ -2,28 +2,22 @@
 @import '../shared/style/mixins/hairline.less';
 
 @dialog-max-width: var(--k-dialog-max-width, 90%);
-@dialog-font-size: var(--k-dialog-font-size, @font-size-s);
 @dialog-line-height: var(--k-dialog-line-height, @line-height-s);
+@dialog-font-size: var(--k-dialog-font-size, @font-size-s);
 @dialog-color: var(--k-dialog-color, @text-color-secondary);
 
 @dialog-header-padding-top: var(--k-dialog-header-padding-top, 26px);
 @dialog-header-padding-inline: var(--k-dialog-header-padding-inline, 24px);
 
-@dialog-title-font-size: var(--k-dialog-title-font-size, @font-size-m);
 @dialog-title-line-height: var(--k-dialog-title-line-height, @line-height-m);
+@dialog-title-font-size: var(--k-dialog-title-font-size, @font-size-m);
 @dialog-title-color: var(--k-dialog-title-color, @text-color);
 
 @dialog-body-padding-top: var(--k-dialog-body-padding, 8px);
 @dialog-body-padding: var(--k-dialog-body-padding, 24px);
 
-@dialog-button-padding-inline: var(--k-dialog-button-padding-inline, 20px);
 @dialog-button-height: var(--k-dialog-button-height, 50px);
-@dialog-button-font-size: var(--k-dialog-button-font-size, @font-size-m);
-@dialog-button-color: var(--k-dialog-button-color, @text-color);
-@dialog-button-bg-color: var(--k-dialog-button-bg-color, @component-bg-color);
-@dialog-button-bg-color-active: var(--k-dialog-button-bg-color-active, @component-bg-color-active);
-@dialog-button-loading-size: var(--k-dialog-button-loading-size, 1em);
-
+@dialog-button-font-weight: var(--k-dialog-button-font-weight, normal);
 @dialog-confirm-button-color: var(--k-dialog-confirm-button-color, @primary-color);
 
 @dialog: ~'k-dialog';
@@ -69,49 +63,24 @@
 
   &__confirm,
   &__cancel {
-    position: relative;
     flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: @spacer-xs;
-    box-sizing: border-box;
-    white-space: nowrap;
-    outline: none;
-    margin: 0;
-    border-radius: 0;
-    padding-left: @dialog-button-padding-inline;
-    padding-right: @dialog-button-padding-inline;
-    height: @dialog-button-height;
-    font-size: @dialog-button-font-size;
-    color: @dialog-button-color;
-    background-color: @dialog-button-bg-color;
-
-    &::after {
-      display: none;
-    }
+    height: @dialog-button-height !important;
+    font-weight: @dialog-button-font-weight !important;
 
     &::before {
       .hairline-left();
     }
 
-    &:first-child {
-      &::before {
-        display: none;
-      }
+    &:first-child::before {
+      display: none;
     }
 
     &--active {
-      background-color: @component-bg-color-active;
-    }
-
-    &-loading {
-      width: @dialog-button-loading-size !important;
-      height: @dialog-button-loading-size !important;
+      background-color: @component-bg-color-active !important;
     }
   }
 
   &__confirm {
-    color: @dialog-confirm-button-color;
+    color: @dialog-confirm-button-color !important;
   }
 }
