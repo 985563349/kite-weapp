@@ -1,0 +1,13 @@
+function renderTitle(data) {
+  var match = data.options.filter(function (option) {
+    return option.value === data.value;
+  });
+
+  var title = match.length ? match[0].label : '';
+
+  return title;
+}
+
+module.exports = {
+  renderTitle: renderTitle,
+};

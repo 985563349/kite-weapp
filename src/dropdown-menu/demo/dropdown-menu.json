@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "DropdownMenu",
+  "usingComponents": {
+    "k-flex": "kite-weapp/flex/flex",
+    "k-dropdown-menu": "kite-weapp/dropdown-menu/dropdown-menu",
+    "k-dropdown-item": "kite-weapp/dropdown-item/dropdown-item"
+  }
+}

@@ -10,6 +10,7 @@
     "pages/cell/cell",
     "pages/action-sheet/action-sheet",
     "pages/dialog/dialog",
+    "pages/dropdown-menu/dropdown-menu",
     "pages/overlay/overlay",
     "pages/popup/popup",
     "pages/toast/toast",

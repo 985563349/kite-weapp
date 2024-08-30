@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "styleIsolation": "apply-shared",
+  "usingComponents": {
+    "k-popup": "../popup/popup",
+    "k-cell": "../cell/cell",
+    "k-icon": "../icon/icon"
+  }
+}

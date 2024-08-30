@@ -1,0 +1,33 @@
+var utils = require('../shared/wxs/utils.wxs');
+
+function dropdownItemStyle(data) {
+  var isDown = data.direction === 'down';
+  var offset = isDown ? data.clientRect.bottom : data.windowHeight - data.clientRect.top;
+
+  return utils.style([
+    {
+      'z-index': data.zIndex,
+    },
+    (isDown ? 'top: ' : 'bottom: ') + utils.addUnit(offset),
+  ]);
+}
+
+function dropdownItemCoverStyle(data) {
+  var isDown = data.direction === 'down';
+  var offset = isDown ? data.windowHeight - data.clientRect.top : data.clientRect.bottom;
+
+  return utils.style([
+    {
+      position: 'fixed',
+      left: 0,
+      right: 0,
+    },
+    isDown ? 'top: 0' : 'bottom: 0',
+    (isDown ? 'bottom: ' : 'top: ') + utils.addUnit(offset),
+  ]);
+}
+
+module.exports = {
+  dropdownItemStyle: dropdownItemStyle,
+  dropdownItemCoverStyle: dropdownItemCoverStyle,
+};

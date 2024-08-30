@@ -6,9 +6,9 @@ type QueueRecordRaw = {
   cancelled: boolean;
 };
 
-export const frameDuration = 1000 / 30;
-
 const queue: QueueRecordRaw[] = [];
+
+export const frameDuration = 1000 / 30;
 
 let id = 0;
 let last = 0;
