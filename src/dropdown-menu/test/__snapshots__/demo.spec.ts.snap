@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render demo and match snapshot 1`] = `
+<main>
+  <k-flex
+    gap="md"
+    style="padding-bottom: 16px"
+    vertical="{{true}}"
+  >
+    <demo-block
+      title="基础用法"
+    >
+      <k-dropdown-menu>
+        <k-dropdown-item
+          options="{{
+            [
+              {
+                "label": "All",
+                "value": "1",
+              },
+              {
+                "label": "New",
+                "value": "2",
+              },
+              {
+                "label": "Activity",
+                "value": "3",
+              },
+            ]
+          }}"
+          value="1"
+          bind:change="onChange"
+          bind:select="onSelect"
+        />
+        <k-dropdown-item
+          defaultValue="2"
+          options="{{
+            [
+              {
+                "label": "Default",
+                "value": "1",
+              },
+              {
+                "label": "Good",
+                "value": "2",
+              },
+              {
+                "label": "Sales",
+                "value": "3",
+              },
+            ]
+          }}"
+          bind:select="onSelect"
+        />
+      </k-dropdown-menu>
+    </demo-block>
+    <demo-block
+      title="禁用状态"
+    >
+      <k-dropdown-menu>
+        <k-dropdown-item
+          defaultValue="1"
+          disabled="{{true}}"
+          options="{{
+            [
+              {
+                "label": "All",
+                "value": "1",
+              },
+              {
+                "label": "New",
+                "value": "2",
+              },
+              {
+                "label": "Activity",
+                "value": "3",
+              },
+            ]
+          }}"
+        />
+        <k-dropdown-item
+          defaultValue="2"
+          options="{{
+            [
+              {
+                "disabled": true,
+                "label": "Default",
+                "value": "1",
+              },
+              {
+                "label": "Good",
+                "value": "2",
+              },
+              {
+                "label": "Sales",
+                "value": "3",
+              },
+            ]
+          }}"
+        />
+      </k-dropdown-menu>
+    </demo-block>
+    <demo-block
+      title="向上展开"
+    >
+      <k-dropdown-menu
+        direction="up"
+      >
+        <k-dropdown-item
+          defaultValue="1"
+          options="{{
+            [
+              {
+                "label": "All",
+                "value": "1",
+              },
+              {
+                "label": "New",
+                "value": "2",
+              },
+              {
+                "label": "Activity",
+                "value": "3",
+              },
+            ]
+          }}"
+        />
+        <k-dropdown-item
+          defaultValue="2"
+          options="{{
+            [
+              {
+                "label": "Default",
+                "value": "1",
+              },
+              {
+                "label": "Good",
+                "value": "2",
+              },
+              {
+                "label": "Sales",
+                "value": "3",
+              },
+            ]
+          }}"
+        />
+      </k-dropdown-menu>
+    </demo-block>
+  </k-flex>
+</main>
+`;

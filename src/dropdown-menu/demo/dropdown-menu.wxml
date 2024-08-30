@@ -1,0 +1,22 @@
+<k-flex style="padding-bottom: 16px" gap="md" vertical>
+  <demo-block title="基础用法">
+    <k-dropdown-menu>
+      <k-dropdown-item value="{{ value }}" options="{{ options1 }}" bind:change="onChange" bind:select="onSelect" />
+      <k-dropdown-item default-value="2" options="{{ options3 }}" bind:select="onSelect" />
+    </k-dropdown-menu>
+  </demo-block>
+
+  <demo-block title="禁用状态">
+    <k-dropdown-menu>
+      <k-dropdown-item default-value="1" options="{{ options1 }}" disabled />
+      <k-dropdown-item default-value="2" options="{{ options2 }}" />
+    </k-dropdown-menu>
+  </demo-block>
+
+  <demo-block title="向上展开">
+    <k-dropdown-menu direction="up">
+      <k-dropdown-item default-value="1" options="{{ options1 }}" />
+      <k-dropdown-item default-value="2" options="{{ options3 }}" />
+    </k-dropdown-menu>
+  </demo-block>
+</k-flex>

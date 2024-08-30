@@ -1,0 +1,15 @@
+function renderTitle(data) {
+  var mergedValue = data.value != null ? data.value : data.defaultValue;
+
+  var match = data.options.filter(function (option) {
+    return option.value === mergedValue;
+  });
+
+  var title = match.length ? match[0].label : '';
+
+  return title;
+}
+
+module.exports = {
+  renderTitle: renderTitle,
+};

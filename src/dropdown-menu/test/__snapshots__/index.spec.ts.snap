@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`dropdown-menu should render dropdown-menu and match snapshot 1`] = `
+<wx-view
+  class="k-dropdown-menu"
+  catch:touchmove="noop"
+/>
+`;

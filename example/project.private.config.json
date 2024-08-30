@@ -68,6 +68,13 @@
           "scene": null
         },
         {
+          "name": "dropdown-menu",
+          "pathName": "pages/dropdown-menu/dropdown-menu",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "overlay",
           "pathName": "pages/overlay/overlay",
           "query": "",

@@ -1,0 +1,46 @@
+<wxs src="../shared/wxs/utils.wxs" module="utils" />
+<wxs src="./dropdown-item.wxs" module="computed" />
+
+<view
+  wx:if="{{ display }}"
+  class="{{ utils.bem('k-dropdown-item', direction) }}"
+  style="{{ computed.dropdownItemStyle({ direction, clientRect, windowHeight, zIndex }) }}"
+>
+  <view
+    wx:if="{{ visible }}"
+    style="{{ computed.dropdownItemCoverStyle({ direction, clientRect, windowHeight }) }}"
+    bind:tap="onClickCover"
+    catch:touchmove="noop"
+  />
+  <k-popup
+    visible="{{ visible }}"
+    style="position: absolute"
+    placement="{{ direction === 'down' ? 'top' : 'bottom' }}"
+    shape="{{ shape }}"
+    overlay="{{ overlay }}"
+    overlay-closable="{{ overlayClosable }}"
+    overlay-style="position: absolute; {{ overlayStyle }}"
+    safe-area="{{ false }}"
+    duration="{{ immediate ? 0 : duration }}"
+    bind:after-leave="onAfterLeave"
+    bind:close="toggle"
+    bind:click-overlay="onClickOverlay"
+  >
+    <view
+      wx:for="{{ options }}"
+      wx:key="value"
+      class="{{ utils.bem('k-dropdown-item__option', { selected: item.value === (value != null ? value : defaultValue), disabled: item.disabled }) }}"
+      hover-stay-time="70"
+      hover-class="{{ item.disabled ? '' : 'k-dropdown-item__option--active' }}"
+      data-index="{{ index }}"
+      bind:tap="onTap"
+    >
+      <view class="k-dropdown-item__title">{{ item.label }}</view>
+      <k-icon
+        wx:if="{{ item.value === (value != null ? value : defaultValue) }}"
+        k-class="k-dropdown-item__icon"
+        name="check"
+      />
+    </view>
+  </k-popup>
+</view>

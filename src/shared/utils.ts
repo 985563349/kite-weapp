@@ -1,3 +1,11 @@
+export function isObject(value: any): boolean {
+  return typeof value === 'object' && value !== null;
+}
+
+export function isThenable(value?: any): boolean {
+  return isObject(value) && typeof value.then === 'function';
+}
+
 export function debounce<T extends (...args: any[]) => any>(func: T, wait: number) {
   let timer: ReturnType<typeof setTimeout>;
 
@@ -7,14 +15,36 @@ export function debounce<T extends (...args: any[]) => any>(func: T, wait: numbe
   };
 }
 
-export function isThenable(value?: any): boolean {
-  return isObject(value) && typeof value.then === 'function';
-}
-
 export function ensureArray<T = any>(value: T | T[]): T[] {
   return Array.isArray(value) ? value : [value];
 }
 
-export function isObject(value: any): boolean {
-  return typeof value === 'object' && value !== null;
+export function pick<T extends Record<string, any>, K extends keyof T>(object: T, keys: K[]): Pick<T, K> {
+  return keys.reduce(
+    (acc, key) => {
+      acc[key] = object[key];
+      return acc;
+    },
+    {} as Pick<T, K>
+  );
+}
+
+export function getBoundingClientRect(context: WechatMiniprogram.Component.TrivialInstance, selector: string) {
+  return new Promise<WechatMiniprogram.BoundingClientRectCallbackResult>((resolve) => {
+    wx.createSelectorQuery()
+      .in(context)
+      .select(selector)
+      .boundingClientRect()
+      .exec((rect = []) => resolve(rect[0]));
+  });
+}
+
+let systemInfo: WechatMiniprogram.SystemInfo;
+
+export function getSystemInfoSync() {
+  if (systemInfo == null) {
+    systemInfo = wx.getSystemInfoSync();
+  }
+
+  return systemInfo;
 }

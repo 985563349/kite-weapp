@@ -89,14 +89,14 @@ export default function transition(options: TransitionOptions = {}) {
         this.enterTransitionPromise = new Promise((resolve) => {
           if (this.status === 'enter') return;
 
-          const { duration, name } = this.data;
-          const transitionDuration = isObject(duration) ? duration.enter : duration;
-
           this.status = 'enter';
           this.triggerEvent('before-enter');
 
           requestAnimationFrame(() => {
             if (this.status !== 'enter') return;
+
+            const { duration, name } = this.data;
+            const transitionDuration = isObject(duration) ? duration.enter : duration;
 
             this.triggerEvent('enter');
             this.setData({
