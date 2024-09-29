@@ -26,7 +26,7 @@
       <button
         wx:for="{{ options }}"
         wx:key="index"
-        class="{{ utils.bem('k-action-sheet__item', [{ disabled: item.disabled }]) }} {{ item.class }}"
+        class="{{ utils.bem('k-action-sheet__item', { disabled: item.disabled }) }} {{ item.class }}"
         hover-class="{{ item.disabled ? '' : 'k-action-sheet__item--active' }}"
         style="{{ item.color ? 'color: ' + item.color : '' }}"
         data-index="{{ index }}"
