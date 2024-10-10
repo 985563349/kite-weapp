@@ -1,0 +1,28 @@
+<wxs src="./swipe-cell.wxs" module="methods" />
+
+<view
+  id="{{ kId }}"
+  class="k-swipe-cell k-class"
+  opened="{{ opened }}"
+  change:opened="{{ methods.onOpenedChange }}"
+  disabled="{{ disabled }}"
+  change:disabled="{{ methods.onDisabledChange }}"
+  bind:touchstart="{{ methods.onTouchStart }}"
+  catch:touchmove="noop"
+  capture-bind:touchmove="{{ methods.onTouchMove }}"
+  bind:touchend="{{ methods.onTouchEnd }}"
+  bind:touchcancel="{{ methods.onTouchEnd }}"
+  bind:tap="onTap"
+>
+  <view class="k-swipe-cell__content">
+    <view class="k-swipe-cell__left">
+      <slot name="left" />
+    </view>
+
+    <slot />
+
+    <view class="k-swipe-cell__right">
+      <slot name="right" />
+    </view>
+  </view>
+</view>

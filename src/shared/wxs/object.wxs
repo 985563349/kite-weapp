@@ -1,10 +1,24 @@
-function keys(value) {
-  return JSON.stringify(value)
+function keys(target) {
+  return JSON.stringify(target)
     .replace(getRegExp('{|}|"', 'g'), '')
     .split(',')
+    .filter(function (item) {
+      return item.trim() !== '';
+    })
     .map(function (item) {
       return item.split(':')[0];
     });
+}
+
+function assign(target, source) {
+  var sourceKeys = keys(source);
+
+  for (var i = 0; i < sourceKeys.length; i++) {
+    var key = sourceKeys[i];
+    target[key] = source[key];
+  }
+
+  return target;
 }
 
 function isObject(value) {
@@ -14,4 +28,5 @@ function isObject(value) {
 module.exports = {
   keys: keys,
   isObject: isObject,
+  assign: assign,
 };

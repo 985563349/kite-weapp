@@ -18,7 +18,8 @@
     <k-cell title="DropdownMenu 下拉菜单" url="/pages/dropdown-menu/dropdown-menu" arrow clickable />
     <k-cell title="Overlay 遮罩层" url="/pages/overlay/overlay" arrow clickable />
     <k-cell title="Popup 弹出层" url="/pages/popup/popup" arrow clickable />
-    <k-cell title="Toast 轻提示" url="/pages/toast/toast" arrow clickable border="{{ false }}" />
+    <k-cell title="Toast 轻提示" url="/pages/toast/toast" arrow clickable />
+    <k-cell title="SwipeCell 滑动单元格" url="/pages/swipe-cell/swipe-cell" arrow clickable border="{{ false }}" />
   </k-cell-group>
 
   <k-cell-group title="动画" variant="card">

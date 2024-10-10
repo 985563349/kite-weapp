@@ -1,0 +1,30 @@
+@swipe-cell-duration: var(--k-swipe-cell-duration, 0.6s);
+@swipe-cell-timing-function: var(--k-swipe-cell-timing-function, cubic-bezier(0.18, 0.89, 0.32, 1));
+
+@swipe-cell: ~'k-swipe-cell';
+
+.@{swipe-cell} {
+  position: relative;
+  overflow: hidden;
+
+  &__content {
+    transition: transform @swipe-cell-duration @swipe-cell-timing-function;
+  }
+
+  &__left,
+  &__right {
+    position: absolute;
+    top: 0;
+    height: 100%;
+  }
+
+  &__left {
+    left: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  &__right {
+    right: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+}

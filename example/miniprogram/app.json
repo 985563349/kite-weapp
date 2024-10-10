@@ -14,6 +14,7 @@
     "pages/overlay/overlay",
     "pages/popup/popup",
     "pages/toast/toast",
+    "pages/swipe-cell/swipe-cell",
     "pages/transition/transition"
   ],
   "window": {

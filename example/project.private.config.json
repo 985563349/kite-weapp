@@ -96,6 +96,13 @@
           "scene": null
         },
         {
+          "name": "swipe-cell",
+          "pathName": "pages/swipe-cell/swipe-cell",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "transition",
           "pathName": "pages/transition/transition",
           "query": "",
