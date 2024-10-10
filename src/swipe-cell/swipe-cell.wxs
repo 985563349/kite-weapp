@@ -1,0 +1,210 @@
+var object = require('../shared/wxs/object.wxs');
+var native = require('../shared/wxs/native.wxs');
+var utils = require('../shared/wxs/utils.wxs');
+
+var threshold = 0.3;
+var distance = 10;
+
+var owner = null;
+
+function getInitialState() {
+  return {
+    left: 0,
+    right: 0,
+    startX: 0,
+    startY: 0,
+    deltaX: 0,
+    deltaY: 0,
+    direction: null,
+    offset: 0,
+    startOffset: 0,
+    opened: null,
+  };
+}
+
+function getOffsetBoundary(context) {
+  var boundary = { left: 0, right: 0 };
+
+  var leftRect = native.getBoundingClientRect(context, '.k-swipe-cell__left');
+  var rightRect = native.getBoundingClientRect(context, '.k-swipe-cell__right');
+
+  if (leftRect) {
+    boundary.left = leftRect.width;
+  }
+
+  if (rightRect) {
+    boundary.right = rightRect.width;
+  }
+
+  return boundary;
+}
+
+function getComponent(context) {
+  return context.selectComponent('.k-swipe-cell__content');
+}
+
+function getDirection(x, y, d) {
+  d = d || distance;
+  x = Math.abs(x);
+  y = Math.abs(y);
+
+  if (x > y && x > d) {
+    return 'horizontal';
+  }
+
+  if (y > x && y > d) {
+    return 'vertical';
+  }
+
+  return null;
+}
+
+function range(val, min, max) {
+  return Math.min(Math.max(val, min), max);
+}
+
+function move(offset) {
+  var state = owner.getState();
+  var component = state.component;
+
+  offset = offset || 0;
+  state.offset = range(offset, -state.right, state.left);
+
+  var transform = 'translate3d(' + state.offset + 'px, 0, 0)';
+
+  component.setStyle({ transform: transform });
+}
+
+function open(direction) {
+  var state = owner.getState();
+  state.opened = direction;
+
+  move(direction === 'left' ? state.left : -state.right);
+  owner.triggerEvent('open', direction);
+}
+
+function close() {
+  var state = owner.getState();
+  state.opened = null;
+
+  move(0);
+  owner.triggerEvent('close');
+}
+
+function onTouchStart(event, ownerInstance) {
+  owner = ownerInstance;
+  var state = owner.getState();
+  var touchPoint = event.touches[0];
+
+  if (state.disabled) {
+    return;
+  }
+
+  if (!state.component) {
+    object.assign(state, getInitialState());
+  }
+
+  state.component = getComponent(owner);
+  state.startX = touchPoint.clientX;
+  state.startY = touchPoint.clientY;
+  state.startOffset = state.offset;
+
+  state = object.assign(state, getOffsetBoundary(owner));
+
+  owner.callMethod('closeOther');
+}
+
+function onTouchMove(event, ownerInstance) {
+  owner = ownerInstance;
+  var state = owner.getState();
+  var touchPoint = event.touches[0];
+
+  if (state.disabled) {
+    return;
+  }
+
+  state.deltaX = touchPoint.clientX - state.startX;
+  state.deltaY = touchPoint.clientY - state.startY;
+  state.direction = getDirection(state.deltaX, state.deltaY);
+
+  if (state.direction !== 'horizontal') {
+    return;
+  }
+
+  move(state.startOffset + state.deltaX);
+}
+
+function onTouchEnd(_, ownerInstance) {
+  owner = ownerInstance;
+  var state = owner.getState();
+
+  if (state.disabled) {
+    return;
+  }
+
+  var right = state.right;
+  var left = state.left;
+  var startOffset = state.startOffset;
+  var offset = state.offset;
+
+  if (right > 0 && -startOffset < right && -offset > right * threshold) {
+    open('right');
+    return;
+  }
+
+  if (left > 0 && startOffset < left && offset > left * threshold) {
+    open('left');
+    return;
+  }
+
+  if (startOffset !== offset) {
+    close();
+    return;
+  }
+}
+
+function onOpenedChange(newValue, oldValue, ownerInstance) {
+  // skip component initialization calls.
+  if (utils.isNull(newValue) && utils.isUndefined(oldValue)) {
+    return;
+  }
+
+  owner = ownerInstance;
+  var state = owner.getState();
+
+  if (state.disabled) {
+    return;
+  }
+
+  if (!state.component) {
+    object.assign(state, getInitialState());
+  }
+
+  if (newValue === state.opened) {
+    return;
+  }
+
+  state.component = getComponent(owner);
+  state = object.assign(state, getOffsetBoundary(owner));
+
+  if (!newValue) {
+    close();
+  } else {
+    open(newValue);
+  }
+}
+
+function onDisabledChange(disabled, _, ownerInstance) {
+  owner = ownerInstance;
+  var state = owner.getState();
+
+  state.disabled = disabled;
+}
+
+module.exports = {
+  onTouchStart: onTouchStart,
+  onTouchMove: onTouchMove,
+  onTouchEnd: onTouchEnd,
+  onOpenedChange: onOpenedChange,
+  onDisabledChange: onDisabledChange,
+};
