@@ -1,0 +1,7 @@
+function getBoundingClientRect(context, selector) {
+  return context.selectComponent(selector).getBoundingClientRect();
+}
+
+module.exports = {
+  getBoundingClientRect: getBoundingClientRect,
+};

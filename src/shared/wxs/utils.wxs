@@ -12,14 +12,27 @@ function isStyleUnitValue(value) {
   return getRegExp('^\d+(\.\d+)?(px|rpx|em|rem|%)$').test('' + value);
 }
 
+function isNull(value) {
+  return value === null;
+}
+
+function isUndefined(value) {
+  return value === undefined;
+}
+
 function addUnit(value) {
-  if (value == null) return;
+  if (isNull(value) || isUndefined(value)) {
+    return;
+  }
+
   return isNumeric(value) ? value + 'px' : value;
 }
 
 module.exports = {
   isNumeric: isNumeric,
   isStyleUnitValue: isStyleUnitValue,
+  isNull: isNull,
+  isUndefined: isUndefined,
   addUnit: addUnit,
   bem: memoize(bem),
   memoize: memoize,

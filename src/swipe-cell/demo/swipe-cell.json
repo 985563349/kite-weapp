@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "SwipeCell",
+  "usingComponents": {
+    "k-flex": "kite-weapp/flex/flex",
+    "k-cell": "kite-weapp/cell/cell",
+    "k-button": "kite-weapp/button/button",
+    "k-swipe-cell": "kite-weapp/swipe-cell/swipe-cell"
+  }
+}
