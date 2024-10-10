@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`swipe-cell should render swipe-cell and match snapshot 1`] = `
+<wx-view
+  $gdc="{{[Function]}}"
+  $wxs:bind:touchcancel="{{[Function]}}"
+  $wxs:bind:touchend="{{[Function]}}"
+  $wxs:bind:touchstart="{{[Function]}}"
+  $wxs:capture-bind:touchmove="{{[Function]}}"
+  $wxs:change:disabled="{{[Function]}}"
+  $wxs:change:opened="{{[Function]}}"
+  class="k-swipe-cell k-class"
+  disabled="{{false}}"
+  id=""
+  opened="{{null}}"
+  bind:tap="onTap"
+  catch:touchmove="noop"
+>
+  <wx-view
+    class="k-swipe-cell__content"
+  >
+    <wx-view
+      class="k-swipe-cell__left"
+    />
+    <wx-view
+      class="k-swipe-cell__right"
+    />
+  </wx-view>
+</wx-view>
+`;
