@@ -5,7 +5,7 @@
   <view
     wx:for="{{ items }}"
     wx:key="index"
-    data-active="{{ index }}"
+    data-key="{{ index }}"
     class="{{ utils.bem('k-dropdown-menu__item', { active: item.visible, disabled: item.disabled }) }}"
     bind:tap="onTap"
   >

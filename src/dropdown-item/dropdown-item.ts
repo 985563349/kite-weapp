@@ -29,6 +29,8 @@ KComponent({
       observer: 'notify',
     },
 
+    key: String,
+
     disabled: Boolean,
   },
 

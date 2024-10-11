@@ -75,28 +75,34 @@ KComponent({
       return getBoundingClientRect(this, '.k-dropdown-menu');
     },
 
-    close() {
-      this.children?.forEach((child) => {
-        child.toggle(false);
+    toggle(activeKey: string | number, visible?: boolean, options?: { immediate?: boolean }) {
+      const children = this.children;
+      const target = children?.find((child, index) => child.data.key === activeKey || index === activeKey);
+
+      if (!target || target.data.disabled) {
+        return;
+      }
+
+      children?.forEach((child, index) => {
+        if (child.data.key === activeKey || index === activeKey) {
+          child.toggle(visible, options);
+        } else {
+          child.toggle(false, { immediate: true });
+        }
       });
     },
 
     onTap(event: WechatMiniprogram.TouchEvent) {
-      const { active } = event.currentTarget.dataset;
+      this.toggle(event.currentTarget.dataset.key);
+    },
 
-      const children = this.children;
-      const current = children?.[active];
+    open(activeKey: string | number, immediate?: boolean) {
+      this.toggle(activeKey, true, { immediate });
+    },
 
-      if (!current || current.data.disabled) {
-        return;
-      }
-
-      children.forEach((child, index) => {
-        if (index === active) {
-          child.toggle();
-        } else {
-          child.toggle(false, { immediate: true });
-        }
+    close(immediate?: boolean) {
+      this.children?.forEach((child) => {
+        child.toggle(false, { immediate });
       });
     },
 
