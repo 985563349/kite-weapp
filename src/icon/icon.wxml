@@ -6,10 +6,5 @@
   class="{{ computed.iconClass({ prefix, name }) }} k-class"
   bind:tap="onTap"
 >
-  <image
-    wx:if="{{ computed.isImage(name) }}"
-    class="k-icon__image"
-    src="{{ name }}"
-    mode="aspectFit"
-  />
+  <image wx:if="{{ computed.isImage(name) }}" class="k-icon__image" src="{{ name }}" mode="aspectFit" />
 </view>

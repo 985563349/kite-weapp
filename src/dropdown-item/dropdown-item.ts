@@ -1,5 +1,6 @@
 import KComponent from '../shared/component';
-import { getSystemInfoSync, pick } from '../shared/utils';
+import { pick } from '../shared/utils';
+import { getSystemInfoSync } from '../shared/native';
 import relation from '../mixins/relation';
 
 KComponent({

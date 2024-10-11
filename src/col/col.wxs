@@ -1,13 +1,12 @@
 var utils = require('../shared/wxs/utils.wxs');
 var object = require('../shared/wxs/object.wxs');
-var validator = require('../shared/wxs/validator.wxs');
 
 function parsetFlex(flex) {
-  if (validator.isNumeric(flex)) {
+  if (utils.isNumeric(flex)) {
     return flex + ' ' + flex + ' ' + 'auto';
   }
 
-  if (validator.isStyleUnitValue(flex)) {
+  if (utils.isStyleUnitValue(flex)) {
     return '0 0 ' + flex;
   }
 

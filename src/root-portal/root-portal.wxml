@@ -1,4 +1,5 @@
 <root-portal wx:if="{{ enable }}" enable>
   <slot />
 </root-portal>
+
 <slot wx:else />

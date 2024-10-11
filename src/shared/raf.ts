@@ -1,5 +1,7 @@
 export type FrameRequestCallback = (timestamp: number) => void;
 
+export const frameDuration = 1000 / 30;
+
 type QueueRecordRaw = {
   id: number;
   callback: FrameRequestCallback;
@@ -7,8 +9,6 @@ type QueueRecordRaw = {
 };
 
 const queue: QueueRecordRaw[] = [];
-
-export const frameDuration = 1000 / 30;
 
 let id = 0;
 let last = 0;

@@ -1,11 +1,27 @@
 var bem = require('./bem.wxs');
 var memoize = require('./memoize.wxs');
-var addUnit = require('./add-unit.wxs');
 var style = require('./style.wxs');
 
+function isNumeric(value) {
+  // prettier-ignore
+  return getRegExp('^-?\d+(\.\d+)?$').test('' + value);
+}
+
+function isStyleUnitValue(value) {
+  // prettier-ignore
+  return getRegExp('^\d+(\.\d+)?(px|rpx|em|rem|%)$').test('' + value);
+}
+
+function addUnit(value) {
+  if (value == null) return;
+  return isNumeric(value) ? value + 'px' : value;
+}
+
 module.exports = {
+  isNumeric: isNumeric,
+  isStyleUnitValue: isStyleUnitValue,
+  addUnit: addUnit,
   bem: memoize(bem),
   memoize: memoize,
-  addUnit: addUnit,
   style: style,
 };

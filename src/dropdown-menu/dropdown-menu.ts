@@ -1,5 +1,5 @@
 import KComponent from '../shared/component';
-import { getBoundingClientRect } from '../shared/utils';
+import { getBoundingClientRect } from '../shared/native';
 import relation from '../mixins/relation';
 
 KComponent({
