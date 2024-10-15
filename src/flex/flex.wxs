@@ -1,0 +1,48 @@
+var utils = require('../shared/wxs/utils.wxs');
+var object = require('../shared/wxs/object.wxs');
+var array = require('../shared/wxs/array.wxs');
+var validator = require('../shared/wxs/validator.wxs');
+
+function flexStyle(data) {
+  var gapStyle = {};
+
+  var gaps = array.isArray(data.gap) ? data.gap : [data.gap, data.gap];
+  var columnGap = validator.isNumeric(gaps[0]) ? utils.addUnit(gaps[0]) : null;
+  var rowGap = validator.isNumeric(gaps[1]) ? utils.addUnit(gaps[1]) : null;
+
+  if (columnGap !== rowGap) {
+    gapStyle.columnGap = columnGap;
+    gapStyle.rowGap = rowGap;
+  } else {
+    gapStyle.gap = columnGap;
+  }
+
+  return utils.style([gapStyle, data.style]);
+}
+
+function flexClass(data) {
+  var classList = [{ vertical: data.vertical, wrap: data.wrap }];
+
+  var map = {
+    justify: {
+      'flex-start': 'justify-start',
+      center: 'justify-center',
+      'flex-end': 'justify-end',
+    },
+    align: {
+      'flex-start': 'align-start',
+      center: 'align-center',
+      'flex-end': 'align-end',
+    },
+  };
+
+  object.keys(data).forEach(function (key) {
+    if (typeof data[key] === 'string') {
+      map[key] ? classList.push(map[key][data[key]]) : classList.push(data[key]);
+    }
+  });
+
+  return utils.bem('k-flex', classList);
+}
+
+module.exports = { flexStyle: flexStyle, flexClass: flexClass };

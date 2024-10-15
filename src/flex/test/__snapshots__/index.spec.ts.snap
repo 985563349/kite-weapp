@@ -2,7 +2,7 @@
 
 exports[`flex should render flex and match snapshot 1`] = `
 <wx-view
-  class="k-flex k-class"
+  class="k-class k-flex "
   id=""
   style=""
 />
