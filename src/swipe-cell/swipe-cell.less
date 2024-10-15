@@ -7,23 +7,23 @@
   position: relative;
   overflow: hidden;
 
-  &__content {
+  &-content {
     transition: transform @swipe-cell-duration @swipe-cell-timing-function;
   }
 
-  &__left,
-  &__right {
+  &-left,
+  &-right {
     position: absolute;
     top: 0;
     height: 100%;
   }
 
-  &__left {
+  &-left {
     left: 0;
     transform: translate3d(-100%, 0, 0);
   }
 
-  &__right {
+  &-right {
     right: 0;
     transform: translate3d(100%, 0, 0);
   }

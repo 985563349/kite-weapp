@@ -4,7 +4,8 @@
 @dropdown-menu-font-size: var(--k-dropdown-menu-font-size, @font-size-m);
 @dropdown-menu-line-height: var(--k-dropdown-menu-line-height, @line-height-m);
 @dropdown-menu-color: var(--k-dropdown-menu-color, @text-color);
-@dropdown-menu-color-active: var(--k-dropdown-menu-color-active, @primary-color);
+@dropdown-menu-color-selected: var(--k-dropdown-menu-color-selected, @primary-color);
+@dropdown-menu-color-active: var(--k-dropdown-menu-color-active, @primary-color-active);
 @dropdown-menu-bg-color: var(--k-dropdown-menu-bg-color, @component-bg-color);
 @dropdown-menu-disabled-opacity: var(--k-dropdown-menu-disabled-opacity, @disabled-opacity);
 
@@ -15,7 +16,7 @@
   height: @dropdown-menu-height;
   background-color: @dropdown-menu-bg-color;
 
-  &__item {
+  &-option {
     flex: 1;
     display: flex;
     align-items: center;
@@ -26,12 +27,16 @@
     font-size: @dropdown-menu-font-size;
     color: @dropdown-menu-color;
 
-    &--active {
-      color: @dropdown-menu-color-active;
+    &--selected {
+      color: @dropdown-menu-color-selected;
 
       .@{dropdown-menu}__icon {
         transform: rotate(180deg);
       }
+    }
+
+    &--active {
+      color: @dropdown-menu-color-active;
     }
 
     &--disabled {

@@ -4,7 +4,7 @@
   visible="{{ visible }}"
   k-id="{{ id }}"
   k-class="k-action-sheet k-class"
-  style="background-color: transparent"
+  style="background-color: transparent; {{ style }}"
   placement="bottom"
   shape="round"
   overlay="{{ overlay }}"
@@ -26,13 +26,13 @@
       <button
         wx:for="{{ options }}"
         wx:key="index"
-        class="{{ utils.bem('k-action-sheet__item', { disabled: item.disabled }) }} {{ item.class }}"
-        hover-class="{{ item.disabled ? '' : 'k-action-sheet__item--active' }}"
+        class="{{ utils.bem('k-action-sheet__option', { disabled: item.disabled }) }} {{ item.class }}"
+        hover-class="{{ item.disabled ? '' : 'k-action-sheet__option--active' }}"
         style="{{ item.color ? 'color: ' + item.color : '' }}"
         data-index="{{ index }}"
         bind:tap="onSelect"
       >
-        <k-icon wx:if="{{ item.icon }}" name="{{ item.icon }}" k-class="k-action-sheet__item-icon" />
+        <k-icon wx:if="{{ item.icon }}" name="{{ item.icon }}" k-class="k-action-sheet__icon" />
         {{ item.label }}
       </button>
     </view>

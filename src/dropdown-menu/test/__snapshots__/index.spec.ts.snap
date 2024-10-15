@@ -2,7 +2,9 @@
 
 exports[`dropdown-menu should render dropdown-menu and match snapshot 1`] = `
 <wx-view
-  class="k-dropdown-menu"
+  class="k-dropdown-menu k-class"
+  id=""
+  style=""
   catch:touchmove="noop"
 />
 `;

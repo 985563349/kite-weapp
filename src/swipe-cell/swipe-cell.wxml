@@ -15,14 +15,14 @@
   bind:touchcancel="{{ methods.onTouchEnd }}"
   bind:tap="onTap"
 >
-  <view class="k-swipe-cell__content">
-    <view class="k-swipe-cell__left">
+  <view class="k-swipe-cell-content">
+    <view class="k-swipe-cell-left">
       <slot name="left" />
     </view>
 
     <slot />
 
-    <view class="k-swipe-cell__right">
+    <view class="k-swipe-cell-right">
       <slot name="right" />
     </view>
   </view>

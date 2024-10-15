@@ -57,7 +57,7 @@ KComponent({
   },
 
   data: {
-    items: [] as Record<string, unknown>[],
+    options: [] as Record<string, unknown>[],
   },
 
   methods: {
@@ -67,7 +67,7 @@ KComponent({
 
     extract() {
       this.setData({
-        items: this.children?.map((child) => child.data),
+        options: this.children?.map((child) => child.data),
       });
     },
 

@@ -1,16 +1,19 @@
 <wxs src="../shared/wxs/utils.wxs" module="utils" />
 <wxs src="./dropdown-menu.wxs" module="computed" />
 
-<view class="k-dropdown-menu" catch:touchmove="noop">
+<view id="{{ kId }}" class="k-dropdown-menu k-class" style="{{ style }}" catch:touchmove="noop">
   <view
-    wx:for="{{ items }}"
+    wx:for="{{ options }}"
     wx:key="index"
+    wx:for-item="option"
     data-key="{{ index }}"
-    class="{{ utils.bem('k-dropdown-menu__item', { active: item.visible, disabled: item.disabled }) }}"
+    class="{{ utils.bem('k-dropdown-menu-option', { selected: option.visible, disabled: option.disabled }) }}"
+    hover-stay-time="70"
+    hover-class="k-dropdown-menu-option--active"
     bind:tap="onTap"
   >
-    <text wx:if="{{ item.value || item.defaultValue }}" class="k-dropdown-menu__title"
-      >{{ computed.renderTitle(item) }}</text
+    <text wx:if="{{ option.value || option.defaultValue }}" class="k-dropdown-menu__title"
+      >{{ computed.renderTitle(option) }}</text
     >
     <k-icon name="{{ direction === 'down' ? 'caret-down' : 'caret-up' }}" k-class="k-dropdown-menu__icon" />
   </view>

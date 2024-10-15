@@ -10,14 +10,15 @@
 @action-sheet-title-line-height: var(--k-action-sheet-title-line-height, @line-height-s);
 @action-sheet-title-color: var(--k-action-sheet-title-color, @text-color-placeholder);
 
-@action-sheet-item-padding-inline: var(--k-action-sheet-item-padding-inline, 20px);
-@action-sheet-item-height: var(--k-action-sheet-item-height, 50px);
-@action-sheet-item-font-size: var(--k-action-sheet-item-font-size, @font-size-l);
-@action-sheet-item-color: var(--k-action-sheet-item-color, @text-color);
-@action-sheet-item-bg-color: var(--k-action-sheet-item-bg-color, @component-bg-color);
-@action-sheet-item-bg-color-active: var(--k-action-sheet-item-bg-color-active, @component-bg-color-active);
-@action-sheet-item-disabled-opacity: var(--k-action-sheet-item-disabled-opacity, @disabled-opacity);
-@action-sheet-item-icon-size: var(--k-action-sheet-item-icon-size, 1em);
+@action-sheet-option-padding-inline: var(--k-action-sheet-option-padding-inline, 20px);
+@action-sheet-option-height: var(--k-action-sheet-option-height, 50px);
+@action-sheet-option-font-size: var(--k-action-sheet-option-font-size, @font-size-l);
+@action-sheet-option-color: var(--k-action-sheet-option-color, @text-color);
+@action-sheet-option-bg-color: var(--k-action-sheet-option-bg-color, @component-bg-color);
+@action-sheet-option-bg-color-active: var(--k-action-sheet-option-bg-color-active, @component-bg-color-active);
+@action-sheet-option-disabled-opacity: var(--k-action-sheet-option-disabled-opacity, @disabled-opacity);
+
+@action-sheet-icon-size: var(--k-action-sheet-icon-size, 1em);
 
 @action-sheet: ~'k-action-sheet';
 
@@ -54,10 +55,10 @@
   &-group {
     border-radius: @action-sheet-border-radius;
     overflow: hidden;
-    background-color: @action-sheet-item-bg-color;
+    background-color: @action-sheet-option-bg-color;
   }
 
-  &__item,
+  &__option,
   &__cancel {
     display: flex;
     align-items: center;
@@ -68,10 +69,10 @@
     outline: none;
     margin: 0;
     border-radius: 0;
-    padding: 0 @action-sheet-item-padding-inline;
-    height: @action-sheet-item-height;
-    font-size: @action-sheet-item-font-size;
-    color: @action-sheet-item-color;
+    padding: 0 @action-sheet-option-padding-inline;
+    height: @action-sheet-option-height;
+    font-size: @action-sheet-option-font-size;
+    color: @action-sheet-option-color;
     background-color: transparent;
 
     &::after {
@@ -79,15 +80,15 @@
     }
 
     &--disabled {
-      opacity: @action-sheet-item-disabled-opacity;
+      opacity: @action-sheet-option-disabled-opacity;
     }
 
     &--active {
-      background-color: @action-sheet-item-bg-color-active;
+      background-color: @action-sheet-option-bg-color-active;
     }
   }
 
-  &__item-icon {
-    font-size: @action-sheet-item-icon-size !important;
+  &__icon {
+    font-size: @action-sheet-icon-size !important;
   }
 }

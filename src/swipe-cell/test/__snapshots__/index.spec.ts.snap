@@ -13,17 +13,18 @@ exports[`swipe-cell should render swipe-cell and match snapshot 1`] = `
   disabled="{{false}}"
   id=""
   opened="{{null}}"
+  style=""
   bind:tap="onTap"
   catch:touchmove="noop"
 >
   <wx-view
-    class="k-swipe-cell__content"
+    class="k-swipe-cell-content"
   >
     <wx-view
-      class="k-swipe-cell__left"
+      class="k-swipe-cell-left"
     />
     <wx-view
-      class="k-swipe-cell__right"
+      class="k-swipe-cell-right"
     />
   </wx-view>
 </wx-view>

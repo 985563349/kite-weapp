@@ -16,7 +16,7 @@
     visible="{{ visible }}"
     style="position: absolute"
     placement="{{ direction === 'down' ? 'top' : 'bottom' }}"
-    shape="{{ shape }}"
+    shape="round"
     overlay="{{ overlay }}"
     overlay-closable="{{ overlayClosable }}"
     overlay-style="position: absolute; {{ overlayStyle }}"
@@ -29,9 +29,9 @@
     <view
       wx:for="{{ options }}"
       wx:key="value"
-      class="{{ utils.bem('k-dropdown-item__option', { selected: item.value === (value != null ? value : defaultValue), disabled: item.disabled }) }}"
+      class="{{ utils.bem('k-dropdown-item-option', { selected: item.value === (value != null ? value : defaultValue), disabled: item.disabled }) }}"
       hover-stay-time="70"
-      hover-class="{{ item.disabled ? '' : 'k-dropdown-item__option--active' }}"
+      hover-class="{{ item.disabled ? '' : 'k-dropdown-item-option--active' }}"
       data-index="{{ index }}"
       bind:tap="onTap"
     >
