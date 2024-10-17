@@ -2,6 +2,6 @@
   <demo-block title="基础用法" padding>
     <k-button type="primary" size="sm" variant="clear" bind:click="onClickOpen">Open</k-button>
 
-    <k-overlay visible="{{ visible }}" bind:click="onClickClose" />
+    <k-overlay open="{{ open }}" bind:click="onClickClose" />
   </demo-block>
 </k-flex>

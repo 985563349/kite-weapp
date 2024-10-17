@@ -31,18 +31,16 @@ exports[`should render demo and match snapshot 1`] = `
       title="垂直布局"
     >
       <k-flex
-        gap="sm"
+        gap="small"
         vertical="{{true}}"
       >
+        <k-button>
+          Default
+        </k-button>
         <k-button
           type="primary"
         >
           Primary
-        </k-button>
-        <k-button
-          type="secondary"
-        >
-          Secondary
         </k-button>
         <k-button
           type="success"
@@ -57,19 +55,17 @@ exports[`should render demo and match snapshot 1`] = `
     >
       <k-flex
         align="center"
-        gap="sm"
-        justify="center"
-        kClass="layout"
+        gap="small"
+        justify="flex-start"
+        kClass="layout box"
       >
+        <k-button>
+          Default
+        </k-button>
         <k-button
           type="primary"
         >
           Primary
-        </k-button>
-        <k-button
-          type="secondary"
-        >
-          Secondary
         </k-button>
         <k-button
           type="success"
@@ -80,25 +76,36 @@ exports[`should render demo and match snapshot 1`] = `
     </demo-block>
     <demo-block
       padding="{{true}}"
-      title="间距"
+      title="默认间距选项"
     >
       <k-flex
-        gap="lg"
+        gap="small"
       >
+        <k-button
+          data-gap="small"
+          type="primary"
+          bind:click="changeGap"
+        >
+          small
+        </k-button>
+        <k-button
+          data-gap="middle"
+          type="primary"
+          bind:click="changeGap"
+        >
+          middle
+        </k-button>
+        <k-button
+          data-gap="large"
+          type="primary"
+          bind:click="changeGap"
+        >
+          large
+        </k-button>
         <k-button
           type="primary"
         >
-          Primary
-        </k-button>
-        <k-button
-          type="secondary"
-        >
-          Secondary
-        </k-button>
-        <k-button
-          type="success"
-        >
-          Success
+          自定义间距
         </k-button>
       </k-flex>
     </demo-block>
@@ -107,9 +114,14 @@ exports[`should render demo and match snapshot 1`] = `
       title="自动换行"
     >
       <k-flex
-        gap="sm"
+        gap="{{
+          [
+            10,
+            20,
+          ]
+        }}"
         kClass="layout"
-        wrap="wrap"
+        wrap="{{true}}"
       >
         <k-button>
           Default
