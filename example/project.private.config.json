@@ -114,5 +114,6 @@
   },
   "setting": {
     "compileHotReLoad": true
-  }
+  },
+  "libVersion": "trial"
 }

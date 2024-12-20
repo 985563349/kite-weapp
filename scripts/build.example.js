@@ -1,6 +1,7 @@
 import { createRequire } from 'node:module';
 import gulp from 'gulp';
 import rename from 'gulp-rename';
+import changed from 'gulp-changed';
 import del from 'del';
 
 const require = createRequire(import.meta.url);
@@ -8,7 +9,7 @@ const pkg = require('../package.json');
 
 const entry = 'src/**/demo/**/*.*';
 const output = 'example/miniprogram/pages';
-const source = 'miniprogram_dist/';
+const source = 'miniprogram_dist/**';
 const target = `example/miniprogram/miniprogram_npm/${pkg.name}`;
 
 function clean() {
@@ -32,15 +33,21 @@ function copier() {
 }
 
 function link() {
-  return gulp.src(source).pipe(gulp.symlink(target));
+  return gulp
+    .src(source, {
+      since: (task) => (file) => (gulp.lastRun(task) > file.stat.ctime ? gulp.lastRun(task) : 0),
+    })
+    .pipe(changed(target))
+    .pipe(gulp.dest(target));
 }
 
 function unlink() {
-  return del(target);
+  return del(`${target}/**`);
 }
 
 export const build = gulp.series(clean, unlink, copier, link);
 
 export const watch = () => {
   gulp.watch(entry, copier);
+  gulp.watch(source, link);
 };
